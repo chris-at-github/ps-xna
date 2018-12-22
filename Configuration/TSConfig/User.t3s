@@ -1,1 +1,1 @@
-admPanel.override.tsdebug.forceTemplateParsing = 1
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xo/Configuration/TSConfig/User.t3s">
