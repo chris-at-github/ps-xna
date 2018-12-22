@@ -1,0 +1,27 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/" extensions="t3c">
+
+plugin.tx_wax {
+	view {
+		# cat=plugin.wax/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:wax/Resources/Private/Templates/
+
+		# cat=plugin.wax/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:wax/Resources/Private/Partials/
+
+		# cat=plugin.wax/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:wax/Resources/Private/Layouts/
+	}
+
+	settings {
+		svg {
+			# cat=plugin.wax/settings; type=string; label=Default path for svg files
+			path = EXT:wax/Resources/Public/Svg/
+		}
+	}
+}
+
+// Default paths for resources.
+folders {
+	private = typo3conf/ext/wax/Resources/Private
+	public = typo3conf/ext/wax/Resources/Public
+}

@@ -1,0 +1,31 @@
+TCEFORM.tt_content {
+	layout {
+		removeItems = 1,2,3
+	}
+
+	frame_class {
+		removeItems = default, ruler-before, ruler-after, indent, indent-left, indent-right, none
+		addItems.0 = Default
+	}
+
+	space_before_class {
+		addItems {
+			auto = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.auto
+			small = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.small
+			medium = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.medium
+		}
+	}
+
+	space_after_class {
+		addItems {
+			auto = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.auto
+			small = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.small
+			medium = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.medium
+		}
+	}
+}
+
+TCAdefaults.tt_content {
+	space_before_class = auto
+	space_after_class = auto
+}
