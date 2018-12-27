@@ -20,5 +20,36 @@ body {
 	}
 }
 
+.cke_editable {
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}
+
+// Styles in der Formatauswahl zuruecksetzen
+.cke_panel_container {
+	body {
+		font-size: 13px;
+	}
+
+	.h1, .h2, .h3, .h4 {
+		margin-top: 0;
+	}
+
+	li {
+		& {
+			position: static;
+			padding: 2px;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+
+	& + li {
+		margin: 0;
+	}
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Styles for Editor
