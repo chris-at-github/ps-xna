@@ -32,6 +32,7 @@ mix.autoload({
  */
 mix.js('typo3conf/ext/wax/Resources/Public/Js/wax.js', 'fileadmin/Resources/Public/Js/wax.js')
  	.sass('typo3conf/ext/wax/Resources/Public/Sass/wax.scss', 'fileadmin/Resources/Public/Css/wax.css')
+	.sass('typo3conf/ext/wax/Resources/Public/Sass/editor.scss', 'fileadmin/Resources/Public/Css/editor.css')
 	.webpackConfig({
 		plugins: [
 			new spritemap({
