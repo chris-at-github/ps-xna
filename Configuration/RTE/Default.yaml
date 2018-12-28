@@ -1,0 +1,11 @@
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+  - { resource: "EXT:xo/Configuration/RTE/Xo.yaml" }
+
+editor:
+  config:
+    stylesSet:
+      - { name: 'LLL:EXT:wax/Resources/Private/Language/locallang_rte.xlf:tx_wax_rte.link.download', element: 'a', attributes: { class: 'link--download' } }
