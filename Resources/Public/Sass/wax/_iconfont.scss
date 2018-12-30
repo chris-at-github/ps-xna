@@ -1,0 +1,33 @@
+@import 'icons';
+
+// creates the font face tag if the variable is set to true (default)
+@if $create-font-face == false {
+	@font-face {
+	 font-family: "icons";
+	 src: url('../Font/icons.eot'); /* IE9 Compat Modes */
+	 src: url('../Font/icons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		  url('../Font/icons.woff') format('woff'), /* Pretty Modern Browsers */
+		  url('../Font/icons.ttf')  format('truetype'), /* Safari, Android, iOS */
+		  url('../Font/icons.svg') format('svg'); /* Legacy iOS */
+	 
+	}
+}
+
+// creates icon classes for each individual loaded svg (default)
+@if $create-icon-classes == false {
+	.#{$icon-common-class}{
+		font-family: "icons";
+		font-style: normal;
+		font-weight: 400;
+		
+		@each $family, $map in $__iconfont__data {
+			@each $icon, $content in $map {
+				&.#{$icon-prefix}#{$icon}{
+					&:before{
+						content: iconfont-item($icon);
+					}
+				}
+			}
+		}
+	}
+}
