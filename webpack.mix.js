@@ -37,7 +37,7 @@ mix.js('typo3conf/ext/wax/Resources/Public/Js/wax.js', 'fileadmin/Resources/Publ
 		plugins: [
 			new spritemap({
 				src: 'typo3conf/ext/wax/Resources/Public/Svg/Sprite/*.svg',
-				filename: 'fileadmin/Resources/Public/Svg/spritemap.svg',
+				filename: 'fileadmin/Resources/Public/Svg/sprite.svg',
 				svgo: false
 			})
 		]
