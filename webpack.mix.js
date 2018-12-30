@@ -1,12 +1,8 @@
 var mix = require('laravel-mix');
 		mix.setPublicPath('.');
 
-// var argv = require('yargs').argv;
-
 var spritemap = require('svg-spritemap-webpack-plugin');
 var iconfont = require('iconfont-plugin-webpack');
-
-// const spriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 // Autoload jQuery
 // @see: https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md
@@ -22,6 +18,7 @@ mix.options({
 
 // Shot
 // @see: https://github.com/JeffreyWay/laravel-mix/issues/1086
+// var argv = require('yargs').argv;
 // var shot = null
 // if(argv.env.shot !== undefined) {
 // 	shot = argv.env.shot;
