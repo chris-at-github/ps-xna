@@ -6,24 +6,24 @@
 
 page {
 	includeCSS {
-		application = fileadmin/Resources/Public/Css/wax.css
+		application = fileadmin/Resources/Public/Css/no.css
 	}
 
 	includeJSFooter {
-		application = fileadmin/Resources/Public/Js/wax.js
+		application = fileadmin/Resources/Public/Js/no.js
 	}
 
 	10 {
 		templateRootPaths {
-			20 = {$plugin.tx_wax.view.templateRootPath}
+			20 = {$plugin.tx_no.view.templateRootPath}
 		}
 
 		layoutRootPaths {
-			20 = {$plugin.tx_wax.view.layoutRootPath}
+			20 = {$plugin.tx_no.view.layoutRootPath}
 		}
 
 		partialRootPaths {
-			20 = {$plugin.tx_wax.view.partialRootPath}
+			20 = {$plugin.tx_no.view.partialRootPath}
 		}
 	}
 }

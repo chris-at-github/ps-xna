@@ -1,10 +1,10 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext: "Wax"
+ * Extension Manager/Repository config file for ext: "No"
  ***************************************************************/
 $EM_CONF[$_EXTKEY] = [
-	'title' => 'PS Wax',
+	'title' => 'PS No',
 	'description' => '',
 	'category' => 'plugin',
 	'author' => 'Christian Pschorr',
@@ -25,7 +25,7 @@ $EM_CONF[$_EXTKEY] = [
 	],
 	'autoload' => [
 		'psr-4' => [
-			'Ps\\Wax\\' => 'Classes',
+			'Ps\\No\\' => 'Classes',
 		],
 	],
 ];

@@ -5,4 +5,4 @@ if(!defined('TYPO3_MODE')) {
 }
 
 // Konfiguration fuer den (CKE) Editor im Backend
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['xo'] = 'EXT:wax/Configuration/RTE/Default.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['xo'] = 'EXT:no/Configuration/RTE/Default.yaml';

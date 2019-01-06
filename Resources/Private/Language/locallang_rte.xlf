@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-27T06:25:54Z" product-name="wax">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-27T06:25:54Z" product-name="no">
 		<header/>
 		<body>
-			<trans-unit id="tx_wax_rte.link.download">
+			<trans-unit id="tx_no_rte.link.download">
 				<source>Download Link</source>
 			</trans-unit>
 		</body>

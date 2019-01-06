@@ -34,9 +34,9 @@ mix.options({
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.js('typo3conf/ext/wax/Resources/Public/Js/wax.js', 'fileadmin/Resources/Public/Js/wax.js')
- 	.sass('typo3conf/ext/wax/Resources/Public/Sass/wax.scss', 'fileadmin/Resources/Public/Css/wax.css')
-	.sass('typo3conf/ext/wax/Resources/Public/Sass/editor.scss', 'fileadmin/Resources/Public/Css/editor.css')
+mix.js('typo3conf/ext/no/Resources/Public/Js/no.js', 'fileadmin/Resources/Public/Js/no.js')
+ 	.sass('typo3conf/ext/no/Resources/Public/Sass/no.scss', 'fileadmin/Resources/Public/Css/no.css')
+	.sass('typo3conf/ext/no/Resources/Public/Sass/editor.scss', 'fileadmin/Resources/Public/Css/editor.css')
 	.webpackConfig({
 		output: {
 			publicPath: '/fileadmin/Resources/Public/'
@@ -44,19 +44,19 @@ mix.js('typo3conf/ext/wax/Resources/Public/Js/wax.js', 'fileadmin/Resources/Publ
 
 		plugins: [
 			new spritemap({
-				src: 'typo3conf/ext/wax/Resources/Public/Svg/Sprite/*.svg',
+				src: 'typo3conf/ext/no/Resources/Public/Svg/Sprite/*.svg',
 				filename: 'fileadmin/Resources/Public/Svg/sprite.svg',
 				svgo: false
 			}),
 			new iconfont({
-				src: './typo3conf/ext/wax/Resources/Public/Svg/Font', // required - directory where your .svg files are located
+				src: './typo3conf/ext/no/Resources/Public/Svg/Font', // required - directory where your .svg files are located
 				family: 'icons', // optional - the `font-family` name. if multiple iconfonts are generated, the dir names will be used.
 				dest: {
 					font: './fileadmin/Resources/Public/Font/[family].[type]', // required - paths of generated font files
-					css: './typo3conf/ext/wax/Resources/Public/Sass/wax/_icons.scss' // required - paths of generated css files
+					css: './typo3conf/ext/no/Resources/Public/Sass/no/_icons.scss' // required - paths of generated css files
 				},
 				watch: {
-					pattern: './typo3conf/ext/wax/Resources/Public/Svg/Font/*.svg', // required - watch these files to reload
+					pattern: './typo3conf/ext/no/Resources/Public/Svg/Font/*.svg', // required - watch these files to reload
 					cwd: undefined // optional - current working dir for watching
 				},
 			})
