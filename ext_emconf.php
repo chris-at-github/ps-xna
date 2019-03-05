@@ -1,10 +1,10 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext: "No"
+ * Extension Manager/Repository config file for ext: "Zn"
  ***************************************************************/
 $EM_CONF[$_EXTKEY] = [
-	'title' => 'PS No',
+	'title' => 'PS Zeen',
 	'description' => '',
 	'category' => 'plugin',
 	'author' => 'Christian Pschorr',
@@ -25,7 +25,7 @@ $EM_CONF[$_EXTKEY] = [
 	],
 	'autoload' => [
 		'psr-4' => [
-			'Ps\\No\\' => 'Classes',
+			'Ps\\Zn\\' => 'Classes',
 		],
 	],
 ];

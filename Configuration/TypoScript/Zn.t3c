@@ -1,0 +1,27 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/" extensions="t3c">
+
+plugin.tx_zn {
+	view {
+		# cat=plugin.zn/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:zn/Resources/Private/Templates/
+
+		# cat=plugin.zn/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:zn/Resources/Private/Partials/
+
+		# cat=plugin.zn/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:zn/Resources/Private/Layouts/
+	}
+
+	settings {
+		svg {
+			# cat=plugin.zn/settings; type=string; label=Default path for svg files
+			path = EXT:zn/Resources/Public/Svg/
+		}
+	}
+}
+
+// Default paths for resources.
+folders {
+	private = typo3conf/ext/zn/Resources/Private
+	public = typo3conf/ext/zn/Resources/Public
+}
