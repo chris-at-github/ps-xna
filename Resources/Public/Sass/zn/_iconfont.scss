@@ -4,11 +4,11 @@
 @if $create-font-face == false {
 	@font-face {
 	 font-family: "icons";
-	 src: url('../Font/icons.eot'); /* IE9 Compat Modes */
-	 src: url('../Font/icons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		  url('../Font/icons.woff') format('woff'), /* Pretty Modern Browsers */
-		  url('../Font/icons.ttf')  format('truetype'), /* Safari, Android, iOS */
-		  url('../Font/icons.svg') format('svg'); /* Legacy iOS */
+	 src: url('#{$icon-public-path}icons.eot'); /* IE9 Compat Modes */
+	 src: url('#{$icon-public-path}icons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		  url('#{$icon-public-path}icons.woff') format('woff'), /* Pretty Modern Browsers */
+		  url('#{$icon-public-path}icons.ttf')  format('truetype'), /* Safari, Android, iOS */
+		  url('#{$icon-public-path}icons.svg') format('svg'); /* Legacy iOS */
 	 
 	}
 }
