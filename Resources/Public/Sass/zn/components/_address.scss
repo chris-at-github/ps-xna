@@ -1,0 +1,13 @@
+@import '../../../../../../xo/Resources/Public/Sass/xo/components/address';
+
+.c-address {
+	.c-address--name {
+		font-weight: $font-weight-bold;
+	}
+
+	.c-address--location {
+		&, & + .c-address--item {
+			margin: 5px 0 0 0;
+		}
+	}
+}
