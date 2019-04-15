@@ -4,6 +4,10 @@ var mix = require('laravel-mix');
 var spritemap = require('svg-spritemap-webpack-plugin');
 var iconfont = require('iconfont-plugin-webpack');
 
+var ImageminPlugin = require('imagemin-webpack-plugin').default;
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var imageminMozjpeg = require('imagemin-mozjpeg');
+
 // Autoload jQuery
 // @see: https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md
 mix.autoload({
@@ -43,11 +47,29 @@ mix.js('typo3conf/ext/zn/Resources/Public/Js/zn.js', 'fileadmin/Resources/Public
 		},
 
 		plugins: [
-			new spritemap({
-				src: 'typo3conf/ext/zn/Resources/Public/Svg/Sprite/*.svg',
-				filename: 'fileadmin/Resources/Public/Svg/sprite.svg',
-				svgo: false
+			new spritemap('typo3conf/ext/zn/Resources/Public/Svg/Sprite/*.svg', {
+				output: {
+					filename: 'fileadmin/Resources/Public/Svg/sprite.svg',
+					svgo: false
+					// svg: {
+					// 	sizes: false
+					// }
+				},
+				sprite: {
+					generate: {
+						// Generate <use> tags within the spritemap as the <view> tag will use this
+						use: true,
+						//
+						// // Generate <view> tags within the svg to use in css via fragment identifier url
+						// // and add -fragment suffix for the identifier to prevent naming colissions with the symbol identifier
+						// view: '-fragment',
+
+						// Generate <symbol> tags within the SVG to use in HTML via <use> tag
+						symbol: true
+					},
+				},
 			}),
+
 			new iconfont({
 				src: './typo3conf/ext/zn/Resources/Public/Svg/Font', // required - directory where your .svg files are located
 				family: 'icons', // optional - the `font-family` name. if multiple iconfonts are generated, the dir names will be used.
@@ -59,6 +81,20 @@ mix.js('typo3conf/ext/zn/Resources/Public/Js/zn.js', 'fileadmin/Resources/Public
 					pattern: './typo3conf/ext/zn/Resources/Public/Svg/Font/*.svg', // required - watch these files to reload
 					cwd: undefined // optional - current working dir for watching
 				},
+			}),
+
+			new CopyWebpackPlugin([{
+				from: './typo3conf/ext/zn/Resources/Public/Images',
+				to: './fileadmin/Resources/Public/Images', // Laravel mix will place this in 'public/img'
+			}]),
+
+			new ImageminPlugin({
+				test: /\.(jpe?g|png|gif|svg)$/i,
+				plugins: [
+					imageminMozjpeg({
+						quality: 80,
+					})
+				]
 			})
 		]
 	});
