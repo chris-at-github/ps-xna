@@ -1,2 +1,19 @@
 // ---------------------------------------------------------------------------------------------------------------------
-//
+// Grundelemente
+.container--outer {
+	& {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	& > .container--inner {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+// Laufweite
+.container--outer-width-0 > .container--inner {
+	width: $page-width;
+}
