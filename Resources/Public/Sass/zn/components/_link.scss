@@ -1,0 +1,13 @@
+.c-link--external {
+	& {
+		@include iconfont(external);
+		position: relative;
+		padding: 0 0 0 rem(20px);
+	}
+
+	&:before {
+		position: absolute;
+		top: 1px; left: 1px;
+		font-size: rem(11px);
+	}
+}
