@@ -1,27 +1,62 @@
-.c-icon-text {
-	.c-icon-text--icon-container {
-		width: 30px;
-		height: 30px;
+.icon-text {
+	.icon-text--icon-container {
+		position: relative;
+		width: rem(61px);
+		height: rem(61px);
+		text-align: center;
 	}
 
-	.c-icon-text--title {
+	.icon-text--icon-background {
+		position: absolute;
+		top: 0; left: 0;
+		z-index: -1;
+		fill: #009ee0;
+	}
+
+	.icon-text--icon {
+		display: inline-block;
+		width: rem(30px);
+		height: rem(30px);
+		fill: #fff;
+	}
+
+	.icon-text--title {
 		& {
-			margin: rem(10px 0 0 0);
+			margin: rem(20px 0 0 0);
 		}
 
 		h1, h2, h3, h4, h5, h6 {
 			margin: 0;
+			line-height: 1.4;
 			font-size: rem(20px);
 		}
 	}
 
-	.c-icon-text--body {
+	.icon-text--body {
 		& {
-			margin: rem(10px 0 0 0);
+			margin: rem(20px 0 0 0);
 		}
 
 		p, ul {
 			margin: rem(5px 0 0 0);
+		}
+	}
+
+	&.icon-text--open-hours {
+		.icon-text--icon {
+			padding: rem(16px 0 0 0);
+		}
+	}
+
+	&.icon-text--24h-service {
+		.icon-text--icon {
+			padding: rem(17px 0 0 0);
+		}
+	}
+
+	&.icon-text--top-service {
+		.icon-text--icon {
+			padding: rem(17px 0 0 2px);
 		}
 	}
 }

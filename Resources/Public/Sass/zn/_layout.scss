@@ -18,9 +18,19 @@
 	width: $page-max-width;
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// Seitenbereiche
+#content-main {
+	margin: rem(60px 0 0 0);
+}
+
 @include media-breakpoint-up(sm) {
 	.container-outer {
 		padding-left: rem(40px);
 		padding-right: rem(40px);
+	}
+
+	#content-main {
+		margin-top: rem(100px);
 	}
 }
