@@ -1,7 +1,35 @@
 #header {
-	margin: rem(10px 0);
+	//margin: rem(10px 0);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Logo
+.logo--container {
+	position: relative;
+	width: 500px;
+	height: 190px;
+	padding: rem(60px 0 0 0);
+}
+
+.logo--background {
+	position: absolute;
+	top: -338px; left: -215px;
+	transform: rotate(55deg);
+	fill: #009ee0;
 }
 
 #logo {
-	width: 100px;
+	& {
+		position: relative;
+		width: 320px;
+		height: 140px;
+	}
+
+	.logo--bicycle {
+		fill: #fff;
+	}
+
+	.logo--lettering {
+		fill: #009ee0;
+	}
 }
