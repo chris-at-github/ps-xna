@@ -2,8 +2,8 @@
 // Grundelemente
 .container-outer {
 	& {
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding-left: rem(20px);
+		padding-right: rem(20px);
 	}
 
 	& > .container-inner {
@@ -16,4 +16,11 @@
 // Laufweite
 .container-outer--width-normal > .container-inner {
 	width: $page-max-width;
+}
+
+@include media-breakpoint-up(sm) {
+	.container-outer {
+		padding-left: rem(40px);
+		padding-right: rem(40px);
+	}
 }

@@ -6,14 +6,14 @@
 // Logo
 .logo--container {
 	position: relative;
-	width: 500px;
-	height: 190px;
-	padding: rem(60px 0 0 0);
+	padding: rem(30px 0 0 0);
 }
 
 .logo--background {
 	position: absolute;
-	top: -338px; left: -215px;
+	top: -185px;
+	left: -102px;
+	width: 280px;
 	transform: rotate(55deg);
 	fill: #009ee0;
 }
@@ -21,8 +21,8 @@
 #logo {
 	& {
 		position: relative;
-		width: 320px;
-		height: 140px;
+		width: 220px;
+		height: 96px;
 	}
 
 	.logo--bicycle {
@@ -31,5 +31,22 @@
 
 	.logo--lettering {
 		fill: #009ee0;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.logo--container {
+		padding: rem(60px 0 0 0);
+	}
+
+	.logo--background {
+		width: 500px;
+		top: -338px;
+		left: -215px;
+	}
+
+	#logo {
+		width: 320px;
+		height: 140px;
 	}
 }
