@@ -1,0 +1,10 @@
+.logo {
+	& {
+		display: block;
+	}
+
+	img, svg {
+		max-width: 100%;
+		display: block;
+	}
+}

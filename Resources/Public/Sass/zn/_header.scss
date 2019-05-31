@@ -1,15 +1,7 @@
 #header {
-	margin: 1rem 0;
+	margin: rem(10px 0);
 }
 
 #logo {
-	& {
-		width: 100px;
-	}
-
-	&:hover, &:focus {
-		svg {
-			fill: $link-color-hover;
-		}
-	}
+	width: 100px;
 }
