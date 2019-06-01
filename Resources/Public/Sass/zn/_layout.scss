@@ -14,7 +14,8 @@
 }
 
 // Laufweite
-.container-outer--width-normal > .container-inner {
+.container-outer--width-normal > .container-inner,
+.container-outer--width-indent-left > .container-inner {
 	width: $page-max-width;
 }
 
@@ -32,5 +33,13 @@
 
 	#content-main {
 		margin-top: rem(100px);
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.container-outer--width-indent-left > .container-inner {
+		& > .ce-header, & > .ce-bodytext {
+			width: percentage(2 / 3);
+		}
 	}
 }
