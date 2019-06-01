@@ -1,0 +1,77 @@
+.ce-address {
+	& {
+		position: relative;
+		z-index: 10;
+		min-height: 80px;
+		color: #fff;
+	}
+
+	.ce-address--inner {
+		position: absolute;
+		top: 85px;
+		right: 0;
+	}
+
+	.ce-address--background-container {
+		position: absolute;
+		top: -105px; right: rem(-20px);
+		z-index: -1;
+		width: 300px;
+		height: 335px;
+		overflow: hidden;
+	}
+
+	.ce-address--background {
+		position: absolute;
+		bottom: 20px; left: 15px;
+		fill: #009ee0;
+		width: 330px;
+		transform: rotate(48deg);
+	}
+
+	.address {
+		& {
+			padding: rem(10px 0 0 0);
+		}
+
+		.link--phone, .link--mail {
+			color: #fff;
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.ce-address {
+		.ce-address--background-container {
+			right: rem(-40px);
+			width: 320px;
+			height: 345px;
+		}
+
+		.ce-address--background {
+			bottom: 20px;
+			width: 340px;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.ce-address {
+		& {
+			min-height: 0;
+		}
+
+		.ce-address--background-container {
+			width: 350px;
+			height: 360px;
+		}
+
+		.ce-address--background {
+			width: 355px;
+		}
+
+		.address {
+			padding: rem(25px 20px 0 0);
+		}
+	}
+}
