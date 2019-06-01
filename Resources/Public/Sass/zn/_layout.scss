@@ -19,7 +19,12 @@
 	width: $page-max-width;
 }
 
-// ---------------------------------------------------------------------------------------------------------------------
+.container-outer--width-full {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+	// ---------------------------------------------------------------------------------------------------------------------
 // Seitenbereiche
 #content-main {
 	margin: rem(60px 0 0 0);
@@ -29,6 +34,11 @@
 	.container-outer {
 		padding-left: rem(40px);
 		padding-right: rem(40px);
+	}
+
+	.container-outer--width-full {
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	#content-main {
