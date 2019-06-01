@@ -35,11 +35,3 @@
 		margin-top: rem(100px);
 	}
 }
-
-@include media-breakpoint-up(md) {
-	.container-outer--width-indent-left > .container-inner {
-		& > .ce-header, & > .ce-bodytext {
-			width: percentage(2 / 3);
-		}
-	}
-}

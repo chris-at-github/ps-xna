@@ -14,7 +14,8 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 2.3rem;
+	font-size: rem(30px);
+	color: #009ee0;
 }
 
 h3, .h3 {
@@ -27,6 +28,18 @@ p, ul, ol, table {
 
 b, strong {
 	font-weight: $font-weight-bold;
+}
+
+a {
+	& {
+		font-weight: $font-weight-bold;
+		color: $link-color;
+		text-decoration: none;
+	}
+
+	&:hover, &:focus {
+		color: $link-color-hover;
+	}
 }
 
 ul {
@@ -57,5 +70,11 @@ ol {
 
 	li {
 		padding: 0 0 0 0.15rem;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	h2, .h2 {
+		font-size: rem(40px);
 	}
 }
