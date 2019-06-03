@@ -22,3 +22,11 @@
 		text-align: right;
 	}
 }
+
+@include media-breakpoint-up(md) {
+	.ce-block-image-text {
+		.ce-bodytext {
+			padding: 0 rem(30px) 0 0;
+		}
+	}
+}
