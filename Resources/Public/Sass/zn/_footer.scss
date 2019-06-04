@@ -84,3 +84,13 @@
 		}
 	}
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IE10 / 11
+// @see: https://krony.de/css-hacks-selektoren-fuer-microsoft-edge-spartan-ie11-ie10-und-ie9.html
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	#footer .footer--background {
+		width: 700px;
+		height: 700px;
+	}
+}

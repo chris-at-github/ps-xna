@@ -103,3 +103,11 @@
 		height: 140px;
 	}
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IE10 / 11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.logo--background {
+		height: 483px;
+	}
+}

@@ -61,3 +61,20 @@
 		}
 	}
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IE10 / 11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.icon-text {
+		.icon-text--icon svg {
+			width: rem(30px);
+			height: rem(30px);
+		}
+
+		&.icon-text--open-hours, &.icon-text--24h-service {
+			.icon-text--icon {
+				padding: rem(18px 0 0 0);
+			}
+		}
+	}
+}
