@@ -70,6 +70,10 @@
 	margin-top: rem(20px);
 }
 
+.ce-header--layout-3 + .ce-bodytext {
+	margin-top: rem(20px);
+}
+
 @include media-breakpoint-up(md) {
 	.container-outer--width-indent-left > .container-inner {
 		& > .ce-header, & > .ce-bodytext {

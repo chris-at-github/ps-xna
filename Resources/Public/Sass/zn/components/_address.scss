@@ -13,6 +13,10 @@
 		}
 	}
 
+	.address--zip + .address--city {
+		margin-left: 5px;
+	}
+
 	.link--phone {
 		color: $font-color-base;
 		text-decoration: none;
