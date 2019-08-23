@@ -8,4 +8,4 @@ imports:
 editor:
   config:
     stylesSet:
-      - { name: 'LLL:EXT:zn/Resources/Private/Language/locallang_rte.xlf:tx_zn_rte.link.download', element: 'a', attributes: { class: 'link--download' } }
+      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.download', element: 'a', attributes: { class: 'link--download' } }

@@ -1,10 +1,10 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext: "Zn"
+ * Extension Manager/Repository config file for ext: "Xna"
  ***************************************************************/
 $EM_CONF[$_EXTKEY] = [
-	'title' => 'PS Zeen',
+	'title' => 'PS XNA',
 	'description' => '',
 	'category' => 'plugin',
 	'author' => 'Christian Pschorr',
@@ -25,7 +25,7 @@ $EM_CONF[$_EXTKEY] = [
 	],
 	'autoload' => [
 		'psr-4' => [
-			'Ps\\Zn\\' => 'Classes',
+			'Ps\\Xna\\' => 'Classes',
 		],
 	],
 ];
