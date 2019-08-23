@@ -1,6 +1,8 @@
 #footer {
 	& {
-		margin: rem(200px 0 80px 0);
+		overflow: hidden;
+		padding-top: rem(200px);
+		padding-bottom: rem(80px);
 	}
 
 	.container-inner {
@@ -57,6 +59,10 @@
 
 @include media-breakpoint-up(md) {
 	#footer {
+		& {
+			overflow: inherit;
+		}
+
 		.footer--background-container {
 			top: -320px;
 			left: -150px;
@@ -69,7 +75,8 @@
 @include media-breakpoint-up(lg) {
 	#footer {
 		& {
-			margin: rem(150px 0 50px 0);
+			padding-top: rem(150px);
+			padding-bottom: rem(50px);
 		}
 
 		.footer--background-container {
