@@ -7,11 +7,11 @@
 
 page {
 	includeCSS {
-		application = fileadmin/Resources/Public/Css/xna.css
+		application = assets/css/xna.css
 	}
 
 	includeJSFooter {
-		application = fileadmin/Resources/Public/Js/xna.js
+		application = assets/js/xna.js
 	}
 
 	10 {

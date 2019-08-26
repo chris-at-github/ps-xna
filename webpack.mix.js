@@ -38,18 +38,18 @@ mix.options({
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'fileadmin/Resources/Public/Js/xna.js')
- 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'fileadmin/Resources/Public/Css/xna.css')
-	.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'fileadmin/Resources/Public/Css/editor.css')
+mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
+ 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'assets/css/xna.css')
+	.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
 	.webpackConfig({
 		output: {
-			publicPath: '/fileadmin/Resources/Public/'
+			publicPath: '/assets/'
 		},
 
 		plugins: [
 			new spritemap('typo3conf/ext/xna/Resources/Public/Svg/Sprite/*.svg', {
 				output: {
-					filename: 'fileadmin/Resources/Public/Svg/sprite.svg',
+					filename: 'assets/svg/sprite.svg',
 					svgo: false
 					// svg: {
 					// 	sizes: false
@@ -74,7 +74,7 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'fileadmin/Resources/Publ
 				src: './typo3conf/ext/xna/Resources/Public/Svg/Font', // required - directory where your .svg files are located
 				family: 'icons', // optional - the `font-family` name. if multiple iconfonts are generated, the dir names will be used.
 				dest: {
-					font: './fileadmin/Resources/Public/Font/[family].[type]', // required - paths of generated font files
+					font: './assets/font/[family].[type]', // required - paths of generated font files
 					css: './typo3conf/ext/xna/Resources/Public/Sass/xna/_icons.scss' // required - paths of generated css files
 				},
 				watch: {
@@ -85,7 +85,7 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'fileadmin/Resources/Publ
 
 			new CopyWebpackPlugin([{
 				from: './typo3conf/ext/xna/Resources/Public/Images',
-				to: './fileadmin/Resources/Public/Images', // Laravel mix will place this in 'public/img'
+				to: './assets/images', // Laravel mix will place this in 'public/img'
 			}]),
 
 			new ImageminPlugin({
