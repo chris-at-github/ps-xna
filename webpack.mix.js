@@ -51,10 +51,10 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 			new spritemap('typo3conf/ext/xna/Resources/Public/Svg/Sprite/*.svg', {
 				output: {
 					filename: 'assets/svg/sprite.svg',
-					svgo: false
-					// svg: {
-					// 	sizes: false
-					// }
+					svgo: true,
+					svg: {
+						sizes: false
+					}
 				},
 				sprite: {
 					generate: {
@@ -90,12 +90,36 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 			}]),
 
 			new ImageminPlugin({
-				test: /\.(jpe?g|png|gif|svg)$/i,
+				test: /\.(jpe?g|png|gif)$/i,
 				plugins: [
 					imageminMozjpeg({
-						quality: 80,
+						quality: 90,
 					})
 				]
-			})
+			}),
+
+			new CopyWebpackPlugin([{
+				from: './typo3conf/ext/xna/Resources/Public/Svg/Embed/',
+				to: './assets/svg', // Laravel mix will place this in 'public/img'
+			}]),
+
+			new CopyWebpackPlugin([{
+				from: './typo3conf/ext/xna/Resources/Public/Icons',
+				to: './assets/icons',
+				transform: function(content, path) {
+					let regex = new RegExp('assets\/icons', 'gmi');
+
+					if(path.indexOf('.xml') !== -1 || path.indexOf('.webmanifest') !== -1) {
+						return content.toString().replace(regex, 'icon');
+					}
+
+					return content;
+				}
+			}]),
+
+			new CopyWebpackPlugin([{
+				from: './typo3conf/ext/xna/Resources/Public/Fonts',
+				to: './assets/fonts'
+			}]),
 		]
 	});
