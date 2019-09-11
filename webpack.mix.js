@@ -38,16 +38,16 @@ mix.options({
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.js('typo3conf/ext/zn/Resources/Public/Js/zn.js', 'fileadmin/Resources/Public/Js/zn.js')
- 	.sass('typo3conf/ext/zn/Resources/Public/Sass/zn.scss', 'fileadmin/Resources/Public/Css/zn.css')
-	.sass('typo3conf/ext/zn/Resources/Public/Sass/editor.scss', 'fileadmin/Resources/Public/Css/editor.css')
+mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'fileadmin/Resources/Public/Js/xna.js')
+ 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'fileadmin/Resources/Public/Css/xna.css')
+	.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'fileadmin/Resources/Public/Css/editor.css')
 	.webpackConfig({
 		output: {
 			publicPath: '/fileadmin/Resources/Public/'
 		},
 
 		plugins: [
-			new spritemap('typo3conf/ext/zn/Resources/Public/Svg/Sprite/*.svg', {
+			new spritemap('typo3conf/ext/xna/Resources/Public/Svg/Sprite/*.svg', {
 				output: {
 					filename: 'fileadmin/Resources/Public/Svg/sprite.svg',
 					svgo: false
@@ -71,20 +71,20 @@ mix.js('typo3conf/ext/zn/Resources/Public/Js/zn.js', 'fileadmin/Resources/Public
 			}),
 
 			new iconfont({
-				src: './typo3conf/ext/zn/Resources/Public/Svg/Font', // required - directory where your .svg files are located
+				src: './typo3conf/ext/xna/Resources/Public/Svg/Font', // required - directory where your .svg files are located
 				family: 'icons', // optional - the `font-family` name. if multiple iconfonts are generated, the dir names will be used.
 				dest: {
 					font: './fileadmin/Resources/Public/Font/[family].[type]', // required - paths of generated font files
-					css: './typo3conf/ext/zn/Resources/Public/Sass/zn/_icons.scss' // required - paths of generated css files
+					css: './typo3conf/ext/xna/Resources/Public/Sass/xna/_icons.scss' // required - paths of generated css files
 				},
 				watch: {
-					pattern: './typo3conf/ext/zn/Resources/Public/Svg/Font/*.svg', // required - watch these files to reload
+					pattern: './typo3conf/ext/xna/Resources/Public/Svg/Font/*.svg', // required - watch these files to reload
 					cwd: undefined // optional - current working dir for watching
 				},
 			}),
 
 			new CopyWebpackPlugin([{
-				from: './typo3conf/ext/zn/Resources/Public/Images',
+				from: './typo3conf/ext/xna/Resources/Public/Images',
 				to: './fileadmin/Resources/Public/Images', // Laravel mix will place this in 'public/img'
 			}]),
 

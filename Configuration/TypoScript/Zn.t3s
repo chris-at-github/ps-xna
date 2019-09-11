@@ -7,24 +7,24 @@
 
 page {
 	includeCSS {
-		application = fileadmin/Resources/Public/Css/zn.css
+		application = fileadmin/Resources/Public/Css/xna.css
 	}
 
 	includeJSFooter {
-		application = fileadmin/Resources/Public/Js/zn.js
+		application = fileadmin/Resources/Public/Js/xna.js
 	}
 
 	10 {
 		templateRootPaths {
-			20 = {$plugin.tx_zn.view.templateRootPath}
+			20 = {$plugin.tx_xna.view.templateRootPath}
 		}
 
 		layoutRootPaths {
-			20 = {$plugin.tx_zn.view.layoutRootPath}
+			20 = {$plugin.tx_xna.view.layoutRootPath}
 		}
 
 		partialRootPaths {
-			20 = {$plugin.tx_zn.view.partialRootPath}
+			20 = {$plugin.tx_xna.view.partialRootPath}
 		}
 	}
 }

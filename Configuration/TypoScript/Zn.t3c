@@ -1,27 +1,27 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/" extensions="t3c">
 
-plugin.tx_zn {
+plugin.tx_xna {
 	view {
-		# cat=plugin.zn/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:zn/Resources/Private/Templates/
+		# cat=plugin.xna/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:xna/Resources/Private/Templates/
 
-		# cat=plugin.zn/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:zn/Resources/Private/Partials/
+		# cat=plugin.xna/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:xna/Resources/Private/Partials/
 
-		# cat=plugin.zn/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:zn/Resources/Private/Layouts/
+		# cat=plugin.xna/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:xna/Resources/Private/Layouts/
 	}
 
 	settings {
 		svg {
-			# cat=plugin.zn/settings; type=string; label=Default path for svg files
-			path = EXT:zn/Resources/Public/Svg/
+			# cat=plugin.xna/settings; type=string; label=Default path for svg files
+			path = EXT:xna/Resources/Public/Svg/
 		}
 	}
 }
 
 // Default paths for resources.
 folders {
-	private = typo3conf/ext/zn/Resources/Private
-	public = typo3conf/ext/zn/Resources/Public
+	private = typo3conf/ext/xna/Resources/Private
+	public = typo3conf/ext/xna/Resources/Public
 }
