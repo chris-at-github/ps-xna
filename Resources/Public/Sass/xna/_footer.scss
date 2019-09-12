@@ -61,33 +61,19 @@
 	#footer {
 		& {
 			overflow: inherit;
+			padding-top: rem(220px);
+			padding-bottom: rem(100px);
 		}
 
 		.footer--background-container {
-			top: -320px;
-			left: -150px;
-			width: 625px;
-			height: 510px;
-		}
-	}
-}
-
-@include media-breakpoint-up(lg) {
-	#footer {
-		& {
-			padding-top: rem(150px);
-			padding-bottom: rem(50px);
-		}
-
-		.footer--background-container {
-			top: -365px;
-			width: 700px;
-			height: 470px;
+			top: -175px;
+			left: -90px;
+			width: 410px;
+			height: 330px;
 		}
 
 		.footer--background {
-			position: absolute;
-			left: 30px;
+			transform: rotate(25deg);
 		}
 	}
 }
@@ -97,7 +83,7 @@
 // @see: https://krony.de/css-hacks-selektoren-fuer-microsoft-edge-spartan-ie11-ie10-und-ie9.html
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	#footer .footer--background {
-		width: 700px;
-		height: 700px;
+		width: 400px;
+		height: 400px;
 	}
 }
