@@ -1,0 +1,76 @@
+.ce-special--jobrad {
+	& {
+		min-height: 300px;
+	}
+
+	.ce-header {
+		h2, .h2 {
+			color: #76b82a;
+		}
+	}
+
+	.flash {
+		& {
+			position: relative;
+			z-index: 10;
+			overflow: hidden;
+			margin: 0 rem(-20px);
+			min-height: 375px;
+			color: #fff;
+		}
+	
+		.flash--background-container {
+			position: absolute;
+			top: 0; left: -50px;
+			z-index: -1;
+			width: 365px;
+			height: 365px;
+			overflow: hidden;
+		}
+	
+		.flash--background {
+			position: absolute;
+			bottom: 25px; left: 0;
+			fill: #76b82a;
+			width: 360px;
+			transform: rotate(25deg);
+		}
+	}
+
+	.flash--body {
+		position: absolute;
+		top: 100px; left: 0; 
+		max-width: 260px;
+		padding: 0 rem(20px);
+	}
+
+	.flash--header {
+		font-weight: $font-weight-bold;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.ce-special--jobrad {
+		.flash {
+			overflow: inherit;
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.ce-special--jobrad {
+		.ce-frame--inner {
+			position: relative;
+		}
+
+		.flash {
+			position: absolute;
+			top: 70px; left: 0;
+			width: 365px;
+		}
+
+		.ce-bodytext {
+			margin-left: 335px;
+		}
+	}
+}
