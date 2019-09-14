@@ -23,6 +23,20 @@
 		}
 	}
 
+	.ce-bodytext {
+		margin: rem(0 0 40px 0);
+	}
+
+	.link--cta {
+		& {
+			background: #76b82a;
+		}
+
+		&:hover, &:focus {
+			background: #4e8d2c;
+		}
+	}
+
 	.flash {
 		& {
 			position: relative;
