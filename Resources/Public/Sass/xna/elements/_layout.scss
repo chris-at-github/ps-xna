@@ -49,19 +49,19 @@
 }
 
 .ce-frame--space-before-medium > .ce-frame--inner {
-	margin-top: 3rem;
+	margin-top: 2rem;
 }
 
 .ce-frame--space-after-medium > .ce-frame--inner {
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 }
 
 .ce-frame--space-before-large > .ce-frame--inner {
-	margin-top: 6rem;
+	margin-top: 4rem;
 }
 
 .ce-frame--space-after-large > .ce-frame--inner {
-	margin-bottom: 6rem;
+	margin-bottom: 4rem;
 }
 
 // Inhalte
@@ -83,5 +83,21 @@
 
 	.ce-header--layout-2 + .ce-bodytext {
 		margin-top: rem(30px);
+	}
+	
+	.ce-frame--space-before-medium > .ce-frame--inner {
+		margin-top: 3rem;
+	}
+	
+	.ce-frame--space-after-medium > .ce-frame--inner {
+		margin-bottom: 3rem;
+	}
+	
+	.ce-frame--space-before-large > .ce-frame--inner {
+		margin-top: 6rem;
+	}
+	
+	.ce-frame--space-after-large > .ce-frame--inner {
+		margin-bottom: 6rem;
 	}
 }
