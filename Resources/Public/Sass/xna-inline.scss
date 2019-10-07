@@ -10,9 +10,16 @@
 @import 'xna/type';
 @import 'xna/components/logo';
 @import 'xna/layout';
+@import 'xna/navigation';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Header
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
 #header {
 	& {
 		margin: rem(30px 0 0 0);
@@ -31,6 +38,10 @@
 }
 
 #content-main {
+	& {
+		flex: 1;
+	}
+
 	.container-outer {
 		& {
 			margin: rem(140px 0 0 0);
@@ -79,7 +90,27 @@
 }
 
 #footer {
-	display: none;
+	& {
+		margin: rem(0 0 20px 0);
+		font-size: rem(14px);
+		color: #6b6b6b;
+	}
+
+	.navigation {
+		& {
+			margin: rem(10px 0 0 0);
+		}
+
+		a {
+			& {
+				color: $font-color-base
+			}
+
+			&:hover, &:focus {
+				color: $link-color;
+			}
+		}
+	}
 }
 
 @include media-breakpoint-up(sm) {
@@ -103,6 +134,16 @@
 			& > .container-inner {
 				padding: rem(0 0 0 175px);
 			}
+		}
+	}
+
+	#footer {
+		.container-inner {
+			display: flex;
+		}
+
+		.navigation {
+			margin: rem(0 0 0 40px);
 		}
 	}
 }
@@ -129,7 +170,7 @@
 			}
 
 			& > .container-inner {
-				padding: rem(0 0 0 310px);
+				padding: rem(0 0 0 345px);
 			}
 		}
 	}
