@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-	font-size: 3rem;
+	font-size: rem(22px);
 }
 
 h2, .h2 {
@@ -23,6 +23,18 @@ h3, .h3 {
 
 p, ul, ol, table {
 	margin: 1rem 0 0 0;
+}
+
+a {
+	& {
+		font-weight: $font-weight-normal;
+		color: $link-color;
+		text-decoration: none;
+	}
+
+	&:hover, &:focus {
+		color: $link-color-hover;
+	}
 }
 
 b, strong {
