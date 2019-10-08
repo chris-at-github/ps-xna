@@ -68,17 +68,17 @@ body {
 		.address--item {
 			& {
 				position: relative;
-				padding: rem(0 0 0 40px);
+				padding: rem(0 0 0 45px);
 			}
 
 			& + .address--item {
-				margin: rem(15px 0 0 0);
+				margin: rem(20px 0 0 0);
 			}
 
 			svg {
 				position: absolute;
-				top: -1px; left: 0;
-				width: rem(30px);
+				top: -2px; left: 0;
+				width: rem(34px);
 			}
 		}
 
@@ -92,7 +92,7 @@ body {
 #footer {
 	& {
 		margin: rem(0 0 20px 0);
-		font-size: rem(14px);
+		font-size: rem(13px);
 		color: #6b6b6b;
 	}
 
@@ -162,7 +162,7 @@ body {
 	#content-main {
 		.container-outer {
 			& {
-				margin: rem(105px 0 0 0);
+				margin: rem(95px 0 0 0);
 			}
 
 			& + .container-outer {
@@ -171,6 +171,13 @@ body {
 
 			& > .container-inner {
 				padding: rem(0 0 0 345px);
+			}
+		}
+
+		.csc-header--layout-1 {
+			h1 {
+				font-size: rem(34px);
+				font-weight: 300;
 			}
 		}
 	}
