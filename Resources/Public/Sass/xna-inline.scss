@@ -9,6 +9,7 @@
 @import 'xna/reboot';
 @import 'xna/type';
 @import 'xna/components/logo';
+@import 'xna/components/address';
 @import 'xna/layout';
 @import 'xna/navigation';
 
@@ -52,19 +53,19 @@ body {
 		}
 	}
 
-	.csc-header--layout-1 {
-		h1 {
+	.ce-header {
+		h1, h2 {
 			margin: 0;
 		}
 
-		.csc-sub-header {
+		.ce-sub-header {
 			margin: rem(5px 0 0 0);
 			font-size: rem(16px);
 			color: #6b6b6b;
 		}
 	}
 
-	.address {
+	.ce-address--variant-1 {
 		.address--item {
 			& {
 				position: relative;
@@ -81,17 +82,12 @@ body {
 				width: rem(34px);
 			}
 		}
-
-		.link--phone {
-			color: $font-color-base;
-			text-decoration: none;
-		}
 	}
 }
 
 #footer {
 	& {
-		margin: rem(0 0 20px 0);
+		margin: rem(45px 0 20px 0);
 		font-size: rem(13px);
 		color: #6b6b6b;
 	}
@@ -149,6 +145,10 @@ body {
 }
 
 @include media-breakpoint-up(md) {
+	body {
+		font-size: 1rem;
+	}
+
 	#header {
 		& {
 			margin: rem(60px 0 0 0);
@@ -174,10 +174,18 @@ body {
 			}
 		}
 
-		.csc-header--layout-1 {
+		.ce-header, .ce-bodytext {
 			h1 {
 				font-size: rem(34px);
 				font-weight: 300;
+			}
+
+			h2 {
+				font-size: rem(22px);
+			}
+
+			h3 {
+				font-size: rem(18px);
 			}
 		}
 	}
