@@ -331,7 +331,7 @@ th {
 
 label {
 	display: block;
-	font-weight: 600;
+	font-weight: $font-weight-bold;
 }
 
 // Remove the default `border-radius` that macOS Chrome adds.

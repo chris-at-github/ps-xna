@@ -1,13 +1,24 @@
-@import '../../../../../../xo/Resources/Public/Sass/xo/components/address';
+.address {
+	& {
+		font-style: normal;
+	}
 
-.c-address {
-	.c-address--name {
+	.address--name {
 		font-weight: $font-weight-bold;
 	}
 
-	.c-address--location {
-		&, & + .c-address--item {
+	.address--location {
+		&, & + .address--item {
 			margin: 5px 0 0 0;
 		}
+	}
+
+	.address--zip + .address--city {
+		margin-left: 5px;
+	}
+
+	.link--phone {
+		color: $font-color-base;
+		text-decoration: none;
 	}
 }

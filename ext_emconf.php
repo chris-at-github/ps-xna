@@ -1,7 +1,7 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext: "Xna"
+ * Extension Manager/Repository config file for ext: "XNA"
  ***************************************************************/
 $EM_CONF[$_EXTKEY] = [
 	'title' => 'PS XNA',

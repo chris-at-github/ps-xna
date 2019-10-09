@@ -75,7 +75,7 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 				src: './typo3conf/ext/xna/Resources/Public/Svg/Font', // required - directory where your .svg files are located
 				family: 'icons', // optional - the `font-family` name. if multiple iconfonts are generated, the dir names will be used.
 				dest: {
-					font: './assets/font/[family].[type]', // required - paths of generated font files
+					font: './assets/fonts/[family].[type]', // required - paths of generated font files
 					css: './typo3conf/ext/xna/Resources/Public/Sass/xna/_icons.scss' // required - paths of generated css files
 				},
 				watch: {
@@ -101,20 +101,6 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 			new CopyWebpackPlugin([{
 				from: './typo3conf/ext/xna/Resources/Public/Svg/Embed/',
 				to: './assets/svg', // Laravel mix will place this in 'public/img'
-			}]),
-
-			new CopyWebpackPlugin([{
-				from: './typo3conf/ext/xna/Resources/Public/Icons',
-				to: './assets/icons',
-				transform: function(content, path) {
-					let regex = new RegExp('assets\/icons', 'gmi');
-
-					if(path.indexOf('.xml') !== -1 || path.indexOf('.webmanifest') !== -1) {
-						return content.toString().replace(regex, 'icon');
-					}
-
-					return content;
-				}
 			}]),
 
 			new CopyWebpackPlugin([{

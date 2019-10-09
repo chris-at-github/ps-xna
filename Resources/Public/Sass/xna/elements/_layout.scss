@@ -1,4 +1,5 @@
 // Aussenabstaende
+// ---------------------------------------------------------------------------------------------------------------------
 .ce-frame--outer {
 	& {
 		padding-left: 1rem;
@@ -13,8 +14,9 @@
 }
 
 // Laufweite
+// ---------------------------------------------------------------------------------------------------------------------
 .ce-frame--width-0 > .ce-frame--inner {
-	width: $page-width;
+	width: $page-max-width;
 }
 
 .ce-frame--width-1  {
@@ -23,15 +25,18 @@
 }
 
 // Abstaende
+// ---------------------------------------------------------------------------------------------------------------------
 .ce-frame--space-before-none,
 .ce-frame--space-before-small,
-.ce-frame--space-before-medium {
+.ce-frame--space-before-medium,
+.ce-frame--space-before-large {
 	padding-top: 0.1px;
 }
 
 .ce-frame--space-after-none,
 .ce-frame--space-after-small,
-.ce-frame--space-after-medium {
+.ce-frame--space-after-medium,
+.ce-frame--space-after-large {
 	padding-bottom: 0.1px;
 }
 
@@ -44,9 +49,55 @@
 }
 
 .ce-frame--space-before-medium > .ce-frame--inner {
-	margin-top: 3rem;
+	margin-top: 2rem;
 }
 
 .ce-frame--space-after-medium > .ce-frame--inner {
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
+}
+
+.ce-frame--space-before-large > .ce-frame--inner {
+	margin-top: 4rem;
+}
+
+.ce-frame--space-after-large > .ce-frame--inner {
+	margin-bottom: 4rem;
+}
+
+// Inhalte
+// ---------------------------------------------------------------------------------------------------------------------
+.ce-header--layout-2 + .ce-bodytext {
+	margin-top: rem(20px);
+}
+
+.ce-header--layout-3 + .ce-bodytext {
+	margin-top: rem(20px);
+}
+
+@include media-breakpoint-up(md) {
+	.container-outer--width-indent-left > .container-inner {
+		& > .ce-header, & > .ce-bodytext {
+			width: percentage(2 / 3);
+		}
+	}
+
+	.ce-header--layout-2 + .ce-bodytext {
+		margin-top: rem(30px);
+	}
+
+	.ce-frame--space-before-medium > .ce-frame--inner {
+		margin-top: 3rem;
+	}
+
+	.ce-frame--space-after-medium > .ce-frame--inner {
+		margin-bottom: 3rem;
+	}
+
+	.ce-frame--space-before-large > .ce-frame--inner {
+		margin-top: 6rem;
+	}
+
+	.ce-frame--space-after-large > .ce-frame--inner {
+		margin-bottom: 6rem;
+	}
 }
