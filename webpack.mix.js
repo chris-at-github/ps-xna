@@ -39,9 +39,6 @@ mix.options({
  |
  */
 mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
-	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/xna-inline.css')
- 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'assets/css/xna.css')
-	.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
 	.webpackConfig({
 		output: {
 			publicPath: '/assets/'
@@ -109,3 +106,16 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 			}]),
 		]
 	});
+
+mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/xna-inline.css')
+	.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
+	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'assets/css/xna.css')
+	.options({
+			postCss: [
+				require('postcss-cachebuster'),
+				require('postcss-combine-duplicated-selectors')({
+					removeDuplicatedProperties: true
+				})
+			]
+		}
+	);
