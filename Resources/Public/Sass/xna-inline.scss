@@ -5,11 +5,15 @@
 @import 'mixins';
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Xo
+@import '../../../../xo/Resources/Public/Sass/xo/reboot';
+@import '../../../../xo/Resources/Public/Sass/xo/type';
+@import '../../../../xo/Resources/Public/Sass/xo/svg';
+@import '../../../../xo/Resources/Public/Sass/xo/grid';
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Basics | Utitity
-@import 'xna/reboot';
 @import 'xna/type';
-@import 'xna/svg';
-@import 'xna/grid';
 @import 'xna/iconfont';
 
 // // ---------------------------------------------------------------------------------------------------------------------
