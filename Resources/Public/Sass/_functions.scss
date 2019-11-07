@@ -1,3 +1,7 @@
-@import 'bootstrap/functions';
-@import 'xna/functions/rem';
-//@import 'xna/functions/list';
+// ---------------------------------------------------------------------------
+// Bootstrap
+@import '../../../../xo/Resources/Public/Sass/bootstrap/functions';
+
+// ---------------------------------------------------------------------------
+// Xo
+@import '../../../../xo/Resources/Public/Sass/xo/functions/rem';
