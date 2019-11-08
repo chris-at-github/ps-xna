@@ -1,9 +1,8 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Bootstrap
 @import 'bootstrap/mixins/breakpoints';
-@import 'bootstrap/mixins/grid-framework';
 @import 'bootstrap/mixins/grid';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // xo
-//@import '../../../../xo/Resources/Public/Sass/xo/mixins/list';
+@import '../../../../xo/Resources/Public/Sass/xo/mixins/grid-column';
