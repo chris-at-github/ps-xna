@@ -5,6 +5,11 @@
 @import 'mixins';
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Definitions
+@import '../../../../xo/Resources/Public/Sass/xo/definitions/layout';
+@import '../../../../xo/Resources/Public/Sass/xo/definitions/navigation';
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Xo
 @import '../../../../xo/Resources/Public/Sass/xo/reboot';
 @import '../../../../xo/Resources/Public/Sass/xo/type';
@@ -15,6 +20,10 @@
 // Basics | Utitity
 @import 'xna/type';
 @import 'xna/iconfont';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Navigation
+@import '../../../../xo/Resources/Public/Sass/xo/navigation/navigation-layout-1';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
