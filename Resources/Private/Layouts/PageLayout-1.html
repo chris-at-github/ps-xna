@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:spaceless>
+		<div id="page">
+			<div id="sidebar">
+				<div id="sidebar--inner">
+					<f:render partial="Page/Logo" section="Image" />
+
+					<f:if condition="{navigationMain}">
+						<nav id="navigation--main" class="navigation navigation--layout-1">
+							<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationMain}" />
+						</nav>
+					</f:if>
+
+					<f:if condition="{navigationFooter}">
+						<nav id="navigation--footer" class="navigation navigation-horizontal">
+							<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationFooter}" />
+						</nav>
+					</f:if>
+				</div>
+			</div>
+
+			<div id="content--main">
+				<f:render section="Main" />
+			</div>
+		</div>
+
+		<div class="svg-sprite--container">
+			<xo:svg.inline source="assets/svg/sprite.svg" />
+		</div>
+
+		<f:render partial="Page/FooterScript" section="Main" />
+	</f:spaceless>
+</html>

@@ -1,51 +1,36 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Xo
 @import '../../../../../xo/Resources/Public/Sass/xo/layout/page-layout-1';
 
-
-/*
 // ---------------------------------------------------------------------------------------------------------------------
-// Grundelemente
-.container-outer {
-	& {
-		padding-left: rem(20px);
-		padding-right: rem(20px);
-	}
-
-	& > .container-inner {
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
+// Basic
+body {
+	margin: 0;
+	background: #c8c8c8;
 }
 
-// Laufweite
-.container-outer--width-normal > .container-inner {
-	width: $page-max-width;
+#page {
+	display: flex;
+	padding: 0;
+	overflow-x: hidden;
 }
 
-.container-outer--width-full {
-	padding-left: 0;
-	padding-right: 0;
+#sidebar {
+	background: #fff;
+	min-height: 100%;
 }
 
-// ---------------------------------------------------------------------------------------------------------------------
-// Seitenbereiche
-#content-main {
-	margin: rem(60px 0 0 0);
+#sidebar--inner {
+	display: flex;
+	flex-direction: column;
+	width: 180px;
+	min-height: 100%;
 }
 
-@include media-breakpoint-up(sm) {
-	.container-outer {
-		padding-left: rem(40px);
-		padding-right: rem(40px);
-	}
-
-	.container-outer--width-full {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	#content-main {
-		margin-top: rem(100px);
-	}
+#navigation--main {
+	flex: 1;
 }
-*/
+
+#content--main {
+	padding: 0 15px;
+}
