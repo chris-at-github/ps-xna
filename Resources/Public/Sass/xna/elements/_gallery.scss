@@ -1,0 +1,18 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Vendors | Xo
+@import '../../../../../../xo/Resources/Public/Sass/xo/vendors/tobi';
+@import '../../../../../../xo/Resources/Public/Sass/xo/elements/gallery';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// XNA Styles
+.ce-gallery {
+	& {
+		margin-top: rem(20px);
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.ce-gallery {
+		margin-top: rem(35px);
+	}
+}

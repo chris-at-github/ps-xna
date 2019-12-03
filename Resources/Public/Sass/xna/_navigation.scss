@@ -3,6 +3,26 @@
 @import '../../../../../xo/Resources/Public/Sass/xo/navigation/navigation-layout-1';
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Global
+.navigation {
+	a {
+		& {
+			font-weight: $font-weight-base;
+		}
+
+		&:hover, &:focus {
+			color: $link-color-hover;
+		}
+	}
+
+
+	.current > span {
+		color: $link-color-hover;
+		font-weight: $font-weight-bold;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Main
 #navigation--main {
 	& {

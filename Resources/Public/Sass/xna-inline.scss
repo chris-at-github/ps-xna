@@ -22,10 +22,6 @@
 @import 'xna/iconfont';
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Vendors
-@import '../../../../xo/Resources/Public/Sass/xo/vendors/tobi';
-
-// ---------------------------------------------------------------------------------------------------------------------
 // Components
 @import '../../../../xo/Resources/Public/Sass/xo/components/logo';
 
@@ -33,17 +29,7 @@
 // Layout
 @import 'xna/layout';
 @import 'xna/navigation';
-// @import 'zn/header';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements
-@import '../../../../xo/Resources/Public/Sass/xo/elements/gallery';
-//@import 'zn/elements/icon-text';
-//@import 'zn/elements/google-map';
-//
-//// ---------------------------------------------------------------------------------------------------------------------
-//// Components
-//@import 'zn/components/icon-text';
-//@import 'zn/components/address';
-//@import 'zn/components/link';
-//@import 'zn/components/list';
+@import 'xna/elements/gallery';
