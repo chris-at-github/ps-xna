@@ -8,6 +8,11 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/Extensions/" extensions="t3s">
 
 page {
+	headerData {
+		// nicht alle Icons koennen erstellt werden -> zu kleines Logo / kein SVG
+		1567860045 >
+	}
+
 	cssInline {
 		10 = FILE
 		10.file = assets/css/xna-inline.css

@@ -104,6 +104,11 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 				from: './typo3conf/ext/xna/Resources/Public/Fonts',
 				to: './assets/fonts'
 			}]),
+
+			new CopyWebpackPlugin([{
+				from: './typo3conf/ext/xna/Resources/Public/Icons',
+				to: './assets/icons'
+			}]),
 		]
 	});
 
