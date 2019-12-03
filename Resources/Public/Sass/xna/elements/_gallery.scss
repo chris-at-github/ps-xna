@@ -9,6 +9,16 @@
 	& {
 		margin-top: rem(20px);
 	}
+
+	.gallery--image {
+		& {
+			border: 5px solid #b1b1b1;
+		}
+
+		&:hover {
+			border-color: #fff;
+		}
+	}
 }
 
 @include media-breakpoint-up(md) {

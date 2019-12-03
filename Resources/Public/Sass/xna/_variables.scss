@@ -1,17 +1,14 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Header
 $headings-font-weight: 500 !default;
-$headings-line-height: 1.15 !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Font
 $font-family-base: 'Candara', Arial, sans-serif !default;
 $font-color-base: #505050 !default;
 $font-size-base-px: 16px !default;
-$font-size-base: 1rem !default;
 $font-weight-base: 400;
 $font-weight-bold: 700;
-$line-height-base: 1.5 !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Links
@@ -27,8 +24,7 @@ $grid-gutter-width: 20px !default;
 $page-max-width: 1120px !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Icon Font
-$create-font-face: false !default;
-$create-icon-classes: true !default;
-$icon-prefix: 'icon-' !default;
-$icon-public-path: '/assets/fonts/' !default;
+// Tobi
+$tobi-lightbox-background: rgba(80, 80, 80, 0.95) !default;
+$tobi-caption-background: rgba(255, 255, 255, 0.9) !default;
+$tobi-caption-color: $font-color-base !default;
