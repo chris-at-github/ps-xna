@@ -4,17 +4,19 @@ h1, .h1 {
 	font-weight: $headings-font-weight;
 }
 
+td, th {
+	padding: 3px 10px 3px 3px;
+	border-top: 1px solid #b1b1b1;
+	border-bottom: 0;
+}
+
 @include media-breakpoint-up(sm) {
 	h1, .h1 {
 		font-size: rem(38px);
 	}
 
-	h2, .h2 {
-		font-size: rem(40px);
-	}
-
-	h3, .h3 {
-		font-size: rem(24px);
+	td, th {
+		min-width: 125px;
 	}
 }
 
