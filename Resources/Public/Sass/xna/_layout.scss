@@ -43,6 +43,10 @@ body {
 	#sidebar--inner {
 		width: 220px;
 	}
+
+	#content--main {
+		padding: 0 20px;
+	}
 }
 
 @include media-breakpoint-up(md) {
