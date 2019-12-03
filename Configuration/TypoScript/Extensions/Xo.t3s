@@ -1,7 +1,7 @@
 plugin.tx_xo {
 	settings {
 		environment {
-			sitename = XNA
+			sitename = Isa Jauch
 		}
 	}
 }
