@@ -25,3 +25,8 @@ folders {
 	private = typo3conf/ext/xna/Resources/Private
 	public = typo3conf/ext/xna/Resources/Public
 }
+
+googleMaps {
+	# cat=googleMaps; type=string; label=Google Maps API Key
+	apiKey =
+}
