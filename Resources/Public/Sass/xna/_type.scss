@@ -4,15 +4,27 @@ h1, .h1 {
 	font-weight: $headings-font-weight;
 }
 
+h2, .h2 {
+	font-size: rem(20px);
+}
+
 td, th {
 	padding: 3px 10px 3px 3px;
 	border-top: 1px solid #b1b1b1;
 	border-bottom: 0;
 }
 
+a {
+	text-decoration: underline;
+}
+
 @include media-breakpoint-up(sm) {
 	h1, .h1 {
 		font-size: rem(38px);
+	}
+
+	h2, .h2 {
+		font-size: rem(30px);
 	}
 
 	td, th {

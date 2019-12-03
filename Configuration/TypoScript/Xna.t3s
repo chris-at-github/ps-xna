@@ -19,7 +19,9 @@ page {
 	}
 
 	includeCSS {
-		application = assets/css/xna.css
+
+		// Styles sind so klein, dass alle Inline eingebunden werden
+		application >
 	}
 
 	includeJSFooter {
