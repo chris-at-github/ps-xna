@@ -1,0 +1,86 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Xo
+@import '../../../../../xo/Resources/Public/Sass/xo/navigation/navigation-layout-1';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Main
+#navigation--main {
+	& {
+		padding: 35px 15px 0 15px;
+		font-size: 15px;
+	}
+
+	a, .current > span {
+		padding: 7px 1px;
+	}
+
+	& > ul > li {
+		& {
+			border-top: 1px solid #f1f1f1;
+		}
+
+		&:first-child {
+			border: 0;
+		}
+	}
+
+	& > ul > li > ul {
+		& {
+			margin: 0 0 15px 0;
+		}
+
+		a, .current > span {
+			padding: 7px 1px 7px 15px;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Footer
+#navigation--footer {
+	& {
+		@extend %navigation;
+		margin: 25px 0 0 0;
+		padding: 0 15px 10px 15px;
+		font-size: 13px;
+	}
+
+	a, .current > span {
+		@extend %navigation-item;
+		padding: 5px 1px;
+	}
+
+	li {
+		& {
+			border-top: 1px solid #f1f1f1;
+		}
+
+		&:first-child {
+			border: 0;
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	#navigation--main {
+		font-size: $font-size-base;
+	}
+
+	#navigation--footer {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+
+		li {
+			border: 0;
+		}
+
+		a, .current > span {
+			padding: 5px;
+		}
+
+	}
+}
