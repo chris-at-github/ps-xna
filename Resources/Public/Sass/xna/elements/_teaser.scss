@@ -1,0 +1,40 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Xo
+@import '../../../../../../xo/Resources/Public/Sass/xo/elements/teaser';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// XNA Styles
+.ce-xo-teaser {
+	.teaser--item {
+		& {
+			position: relative;
+			border: 5px solid #b1b1b1;
+		}
+
+		&:hover {
+			& {
+				border-color: #fff;
+			}
+
+			.teaser--item-title {
+				background: #fff;
+			}
+		}
+	}
+
+	.teaser--item-title {
+		& {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 5px 0 0 0;
+			background: #b1b1b1;
+		}
+
+		a {
+			display: block;
+			text-decoration: none;
+		}
+	}
+}

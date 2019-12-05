@@ -5,3 +5,14 @@ plugin.tx_xo {
 		}
 	}
 }
+
+tt_content {
+	xo_teaser.dataProcessing {
+		35 {
+			settings.teaser.media {
+				width = 370
+				height = 370
+			}
+		}
+	}
+}
