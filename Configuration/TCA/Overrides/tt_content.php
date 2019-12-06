@@ -25,3 +25,18 @@ $GLOBALS['TCA']['tt_content']['types']['xo_gallery']['columnsOverrides']['tx_xo_
 		'selectedRatio' => '1_1',
 	],
 ];
+
+// ---------------------------------------------------------------------------------------------------------------------
+// XO Teaser
+$GLOBALS['TCA']['tx_xo_domain_model_elements']['types'][0]['columnsOverrides']['media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
+	'default' => [
+		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.default',
+		'allowedAspectRatios' => [
+			'1_1' => [
+				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',
+				'value' => 1
+			],
+		],
+		'selectedRatio' => '1_1',
+	],
+];
