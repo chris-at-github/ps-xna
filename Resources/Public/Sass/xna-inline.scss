@@ -3,13 +3,7 @@
 @import 'functions';
 @import 'variables';
 @import 'mixins';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Definitions
-@import '../../../../xo/Resources/Public/Sass/xo/definitions/layout';
-@import '../../../../xo/Resources/Public/Sass/xo/definitions/navigation';
-@import '../../../../xo/Resources/Public/Sass/xo/definitions/accessibility';
-@import '../../../../xo/Resources/Public/Sass/xo/definitions/fluid-styled-content';
+@import 'definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Xo
