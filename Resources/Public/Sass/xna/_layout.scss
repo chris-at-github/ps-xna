@@ -52,6 +52,7 @@ body {
 	}
 
 	#content--main {
+		margin-top: 45px;
 		padding-left: 20px;
 		padding-right: 20px;
 	}
@@ -66,6 +67,10 @@ body {
 @include media-breakpoint-up(lg) {
 	#sidebar--inner {
 		width: 300px;
+	}
+
+	#content--main {
+		margin-top: 65px;
 	}
 
 	#logo {

@@ -1,12 +1,12 @@
 %ce-header-1 {
-	& + %ce-bodytext, & + %ce-container {
+	& + %ce-bodytext, & + %ce-container, & + %ce-header-sibling {
 		margin-top: rem(30px);
 	}
 }
 
 @include media-breakpoint-up(md) {
 	%ce-header-1 {
-		& + %ce-bodytext, & + %ce-container {
+		& + %ce-bodytext, & + %ce-container, & + %ce-header-sibling {
 			margin-top: $spacing-medium;
 		}
 	}
