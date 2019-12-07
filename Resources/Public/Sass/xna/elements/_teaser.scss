@@ -33,8 +33,17 @@
 		}
 
 		a {
+			padding: 0 2px;
 			display: block;
 			text-decoration: none;
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.ce-xo-teaser {
+		.teaser--item-title a {
+			font-size: rem(17px);
 		}
 	}
 }

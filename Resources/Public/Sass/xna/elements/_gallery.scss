@@ -6,10 +6,6 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // XNA Styles
 .ce-gallery {
-	& {
-		margin-top: rem(20px);
-	}
-
 	.gallery--image {
 		& {
 			border: 5px solid #b1b1b1;
@@ -21,8 +17,14 @@
 	}
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
 	.ce-gallery {
-		margin-top: rem(35px);
+		.gallery--image-container {
+			margin-top: -$grid-gutter-width;
+		}
+
+		.gallery--image {
+			margin-top: $grid-gutter-width;
+		}
 	}
 }
