@@ -3,51 +3,18 @@
 @import 'functions';
 @import 'variables';
 @import 'mixins';
+@import 'definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Definitions
-@import '../../../../xo/Resources/Public/Sass/xo/definitions/layout';
-@import '../../../../xo/Resources/Public/Sass/xo/definitions/navigation';
-@import '../../../../xo/Resources/Public/Sass/xo/definitions/table';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Xo
+// Xo| Utitity
 @import '../../../../xo/Resources/Public/Sass/xo/reboot';
 @import '../../../../xo/Resources/Public/Sass/xo/type';
 @import '../../../../xo/Resources/Public/Sass/xo/svg';
 @import '../../../../xo/Resources/Public/Sass/xo/grid';
 
+@import '../../../../xo/Resources/Public/Sass/xo/navigation/navigation-skip';
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Basics | Utitity
 @import 'xna/type';
 @import 'xna/iconfont';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Navigation
-@import '../../../../xo/Resources/Public/Sass/xo/navigation/navigation-layout-1';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Vendors
-@import '../../../../xo/Resources/Public/Sass/xo/vendors/tobi';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Components
-// @import 'xna/components/logo';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Layout
-@import 'xna/layout';
-// @import 'zn/header';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Elements
-@import '../../../../xo/Resources/Public/Sass/xo/elements/gallery';
-//@import 'zn/elements/icon-text';
-//@import 'zn/elements/google-map';
-//
-//// ---------------------------------------------------------------------------------------------------------------------
-//// Components
-//@import 'zn/components/icon-text';
-//@import 'zn/components/address';
-//@import 'zn/components/link';
-//@import 'zn/components/list';
