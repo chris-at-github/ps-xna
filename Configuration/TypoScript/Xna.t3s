@@ -14,11 +14,11 @@ page {
 	}
 
 	includeCSS {
-		application = assets/css/xna.css
+		application = /assets/css/xna.css
 	}
 
 	includeJSFooter {
-		application = assets/js/xna.js
+		application = /assets/js/xna.js
 	}
 
 	10 {

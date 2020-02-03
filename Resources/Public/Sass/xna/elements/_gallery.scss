@@ -1,0 +1,30 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Vendors | Xo
+@import '../../../../../../xo/Resources/Public/Sass/xo/vendors/tobi';
+@import '../../../../../../xo/Resources/Public/Sass/xo/elements/gallery';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// XNA Styles
+.ce-gallery {
+	.gallery--image {
+		& {
+			border: 5px solid #b1b1b1;
+		}
+
+		&:hover {
+			border-color: #fff;
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.ce-gallery {
+		.gallery--image-container {
+			margin-top: -$grid-gutter-width;
+		}
+
+		.gallery--image {
+			margin-top: $grid-gutter-width;
+		}
+	}
+}

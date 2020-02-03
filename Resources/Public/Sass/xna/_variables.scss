@@ -33,3 +33,9 @@ $create-font-face: false !default;
 $create-icon-classes: true !default;
 $icon-prefix: 'icon-' !default;
 $icon-public-path: '/assets/fonts/' !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Tobi
+$tobi-lightbox-background: rgba(80, 80, 80, 0.95) !default;
+$tobi-caption-background: rgba(255, 255, 255, 0.9) !default;
+$tobi-caption-color: $font-color-base !default;
