@@ -18,4 +18,4 @@
 // 	});
 // }
 
-require('../../../../xo/Resources/Public/Js/components/validation/phone');
+//require('../../../../xo/Resources/Public/Js/components/validation/phone');
