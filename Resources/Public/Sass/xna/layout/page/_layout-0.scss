@@ -1,0 +1,9 @@
+.container-outer {
+  @extend %container-outer;
+  @extend %container-width-normal;
+  @extend %container-align-center;
+}
+
+.container-inner {
+  @extend %container-inner;
+}
