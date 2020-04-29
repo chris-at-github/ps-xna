@@ -1,0 +1,19 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Allgemeine Container
+.container-outer {
+  @extend %container-outer;
+}
+
+.container-inner {
+  @extend %container-inner;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// TYPO3 Container
+.ce-frame {
+  @extend %container-outer;
+}
+
+.ce-frame--inner {
+  @extend %container-inner;
+}
