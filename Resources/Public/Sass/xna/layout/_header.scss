@@ -5,9 +5,10 @@
 
   .container-inner {
     display: grid;
-    grid-template-columns: 100px auto 100px 50px;
+    grid-template-columns: 100px auto 60px 60px;
     grid-gap: 10px;
 		align-items: center;
+		min-height: 60px;
   }
 }
 
@@ -24,5 +25,23 @@
 
 #logo, .navigation {
   display: block;
-  background: gold;
+}
+
+.header--search {
+	& {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&:hover {
+		background: #eaeaea;
+	}
+
+	svg {
+		display: block;
+		width: 32px;
+		height: 32px;
+	}
 }
