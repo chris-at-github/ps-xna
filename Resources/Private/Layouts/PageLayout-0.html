@@ -20,21 +20,21 @@
 		<f:render section="Main" />
 	</div>
 
-	<f:comment>
-		<div id="footer">
+	<div id="footer" class="container-outer">
+		<div class="container-inner">
 			<f:render partial="Page/Copyright" section="Main" />
 
 			<f:if condition="{navigationFooter}">
-				<nav class="navigation navigation-horizontal">
+				<nav class="navigation navigation--layout-0">
 					<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationFooter}" />
 				</nav>
 			</f:if>
-		</div>
-
-		<f:render partial="Page/FooterScript" section="Main" />
-	</f:comment>
+			</div>
+	</div>
 
 	<div class="svg-sprite--container">
 		<xo:svg.inline source="assets/svg/sprite.svg" />
 	</div>
+
+	<f:render partial="Page/FooterScript" section="Main" />
 </html>
