@@ -1,0 +1,47 @@
+.header--layout-0 {
+	& {
+		padding-top: rem(10px);
+		padding-bottom: rem(10px);
+	}
+
+	.container-inner {
+		display: grid;
+		grid-template-columns: 100px auto 60px;
+		grid-gap: 10px;
+		align-items: center;
+		min-height: 60px;
+	}
+
+	.logo {
+		& {
+			@extend %logo;
+		}
+
+		&:hover svg {
+			fill: $link-color-hover;
+		}
+	}
+
+	.navigation {
+		padding-left: 10px;
+	}
+
+	.search {
+		& {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+		}
+
+		&:hover svg {
+			fill: $link-color-hover;
+		}
+
+		svg {
+			display: block;
+			width: 25px;
+			height: 25px;
+		}
+	}
+}

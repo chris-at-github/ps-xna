@@ -1,3 +1,11 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Typography
+%link--default {
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
+}
+
 %ce-header-1 {
 	& + %ce-bodytext, & + %ce-container, & + %ce-header-sibling {
 		margin-top: rem(30px);
