@@ -1,4 +1,33 @@
 // ---------------------------------------------------------------------------------------------------------------------
-// Vendors | Xo
-@import '../../../../../../xo/Resources/Public/Sass/xo/vendors/fluid-styled-content';
-@import '../../../../../../xo/Resources/Public/Sass/xo/elements/fluid_styled_content';
+// Standard-Elemente
+.ce-header--layout-1 {
+	@extend %ce-header-1;
+}
+
+.ce-bodytext  {
+	@extend %ce-bodytext;
+}
+
+.ce-container {
+	@extend %ce-container;
+}
+
+p, ul, ol, table, dl {
+	@extend %ce-header-sibling;
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// TYPO3 Bildelement
+.ce-textpic {
+	@extend %ce-container;
+
+	.ce-gallery {
+		margin-top: 0;
+	}
+}
+
+.image-embed-item {
+	max-width: 100%;
+	height: auto;
+}

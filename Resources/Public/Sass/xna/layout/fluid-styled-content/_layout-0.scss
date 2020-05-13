@@ -1,0 +1,16 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Allgemeine Definitionen
+.ce-frame--outer {
+	@extend %container-outer;
+	@extend %container-align-center;
+}
+
+.ce-frame--inner {
+	@extend %container-inner;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Laufweiten
+.ce-frame--layout-0 {
+	@extend %container-width-normal;
+}
