@@ -1,3 +1,5 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Container
 .container-outer {
   @extend %container-outer;
   @extend %container-width-normal;
@@ -6,4 +8,26 @@
 
 .container-inner {
   @extend %container-inner;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Hauptbereiche
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	padding: rem(83px 0 0 0);
+}
+
+#header {
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+}
+
+#content--main {
+	flex: 1;
+}
+
+#footer {
 }
