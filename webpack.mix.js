@@ -1,5 +1,12 @@
 var mix = require('laravel-mix');
-		mix.setPublicPath('.');
+
+// Stopping at 95% emitting
+// @see: https://github.com/JeffreyWay/laravel-mix/issues/1126
+mix.setPublicPath('.');
+
+// No Noise
+// @see: https://laravel.com/docs/5.6/mix#notifications
+mix.disableSuccessNotifications();
 
 var spritemap = require('svg-spritemap-webpack-plugin');
 var iconfont = require('iconfont-plugin-webpack');
