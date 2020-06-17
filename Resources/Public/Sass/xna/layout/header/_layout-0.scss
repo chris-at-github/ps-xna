@@ -24,7 +24,13 @@
 	}
 
 	.navigation {
-		padding-left: 10px;
+		& {
+			padding-left: 10px;
+		}
+
+		&.navigation--layout-0 ul ul {
+			display: none;
+		}
 	}
 
 	.search {
