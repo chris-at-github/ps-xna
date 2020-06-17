@@ -16,6 +16,12 @@
 		</div>
 	</div>
 
+	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentHeader')}">
+		<div id="content--header" role="main">
+			<f:render section="Header" />
+		</div>
+	</f:if>
+
 	<div id="content--main" role="main">
 		<f:render section="Main" />
 	</div>

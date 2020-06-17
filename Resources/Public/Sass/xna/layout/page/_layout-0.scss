@@ -25,6 +25,16 @@ body {
 	width: 100%;
 }
 
+#content--header {
+	background: #eaeaea;
+}
+
 #content--main {
 	flex: 1;
+}
+
+#content--header, #content--main {
+	& > .ce-frame--space-after-auto:last-child {
+		@extend %container-space-after-medium;
+	}
 }
