@@ -4,6 +4,7 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/Plugin/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/ContentElement/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/Page/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/DataProcessing/" extensions="t3s">
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/Extensions/" extensions="t3s">
 
@@ -32,6 +33,18 @@ page {
 
 		partialRootPaths {
 			20 = {$plugin.tx_xna.view.partialRootPath}
+		}
+
+		dataProcessing {
+
+			// Navigationen
+			10 < navigation.main
+			20 < navigation.footer
+
+			// Page DataProcessing
+			100 < dataProcessing.settings
+			110 < dataProcessing.pageLayout
+			120 < dataProcessing.flash
 		}
 	}
 }
