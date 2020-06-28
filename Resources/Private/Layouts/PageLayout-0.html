@@ -16,7 +16,7 @@
 		</div>
 	</div>
 
-	<f:debug>{_all}</f:debug>
+	<f:render partial="Page/Flash" section="Main" arguments="{_all}" />
 
 	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentHeader')}">
 		<div id="content--header" role="main">
