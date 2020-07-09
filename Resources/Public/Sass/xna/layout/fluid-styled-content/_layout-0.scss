@@ -18,13 +18,13 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Styles (Farben)
 .ce-frame--class-0 {
+	@extend %container-class-0;
 }
 
 .ce-frame--class-1 {
-	background: #eaeaea;
+	@extend %container-class-1;
 }
 
 .ce-frame--class-2 {
-	background: #0067b8;
-	color: #fff;
+	@extend %container-class-2;
 }

@@ -22,6 +22,7 @@ body {
 #header {
 	position: absolute;
 	top: 0; left: 0;
+	z-index: 10;
 	width: 100%;
 }
 
@@ -36,5 +37,19 @@ body {
 #content--header, #content--main {
 	& > .ce-frame--space-after-auto:last-child {
 		@extend %container-space-after-medium;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Flash
+#flash {
+	& {
+		@extend %container-class-2;
+		@extend %container-space-before-small;
+		@extend %container-space-after-small;
+
+		position: relative;
+		z-index: 20;
+		margin-top: -3px;
 	}
 }
