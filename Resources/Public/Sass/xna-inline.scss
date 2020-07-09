@@ -6,15 +6,10 @@
 @import 'definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Xo| Utitity
-@import '../../../../xo/Resources/Public/Sass/xo/reboot';
-@import '../../../../xo/Resources/Public/Sass/xo/type';
-@import '../../../../xo/Resources/Public/Sass/xo/svg';
-@import '../../../../xo/Resources/Public/Sass/xo/grid';
-
-@import '../../../../xo/Resources/Public/Sass/xo/navigation/navigation-skip';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Basics | Utitity
+// XNA
+@import 'xna/reboot';
+@import 'xna/type';
+@import 'xna/svg';
+@import 'xna/grid';
 @import 'xna/type';
 @import 'xna/iconfont';

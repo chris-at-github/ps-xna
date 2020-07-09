@@ -5,14 +5,6 @@
 @import 'mixins';
 @import 'definitions';
 
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Xo| Utitity
-// @import '../../../../xo/Resources/Public/Sass/xo/reboot';
-// @import '../../../../xo/Resources/Public/Sass/xo/type';
-// @import '../../../../xo/Resources/Public/Sass/xo/svg';
-// @import '../../../../xo/Resources/Public/Sass/xo/grid';
-
 // ---------------------------------------------------------------------------------------------------------------------
 // Forms
 @import 'xna/components/form';
@@ -32,7 +24,9 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Navigation
+@import 'xna/components/navigation/skip';
 @import 'xna/components/navigation/layout-0';
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Vendors
 //@import '../../../../xo/Resources/Public/Sass/xo/vendors/tobi';
@@ -45,7 +39,6 @@
 // @import 'zn/header';
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements
-//@import '../../../../xo/Resources/Public/Sass/xo/elements/gallery';
 //@import 'zn/elements/icon-text';
 //@import 'zn/elements/google-map';
 //
