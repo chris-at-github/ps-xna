@@ -1,6 +1,6 @@
 .ce-icon-text {
 	.icon-text + .icon-text {
-		margin: rem($spacing-default 0 0 0);
+		margin: $spacing-default 0 0 0;
 	}
 }
 
@@ -14,7 +14,7 @@
 	}
 }
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(sm) {
 	.ce-icon-text {
 		.icon-text + .icon-text {
 			margin-top: 0;
