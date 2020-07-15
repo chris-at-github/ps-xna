@@ -1,26 +1,22 @@
-.m-icon-text {
-	& {
-		margin-top: rem(10px);
-	}
-
-	.c-icon-text + .c-icon-text {
-		margin: rem(10px 0 0 0);
+.ce-icon-text {
+	.icon-text + .icon-text {
+		margin: rem($spacing-default 0 0 0);
 	}
 }
 
-.m-icon-text--center {
-	.c-icon-text {
+.ce-icon-text--center {
+	.icon-text {
 		text-align: center;
 	}
 
-	.c-icon-text--icon-container {
+	.icon-text--icon-container {
 		margin: 0 auto;
 	}
 }
 
 @include media-breakpoint-up(md) {
-	.m-icon-text {
-		.c-icon-text + .c-icon-text {
+	.ce-icon-text {
+		.icon-text + .icon-text {
 			margin-top: 0;
 		}
 	}

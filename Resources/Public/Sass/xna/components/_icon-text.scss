@@ -1,0 +1,52 @@
+.icon-text {
+	.icon-text--icon-container {
+		position: relative;
+		width: rem(64px);
+		height: rem(64px);
+	}
+
+	.icon-text--icon {
+		display: inline-block;
+		width: rem(64px);
+		height: rem(64px);
+		fill: $font-color-base;
+	}
+
+	.icon-text--title {
+		& {
+			margin: rem(20px 0 0 0);
+		}
+
+		&, h1, h2, h3, h4, h5, h6 {
+			line-height: 1.4;
+			font-size: rem(20px);
+			font-weight: $font-weight-bold;
+			color: $font-color-base;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0;
+		}
+	}
+
+	.icon-text--body {
+		& {
+			margin: rem(20px 0 0 0);
+		}
+
+		p, ul {
+			margin: rem(5px 0 0 0);
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IE10 / 11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.icon-text {
+		.icon-text--icon svg {
+			width: rem(64px);
+			height: rem(64px);
+		}
+	}
+}
