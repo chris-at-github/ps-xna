@@ -19,3 +19,7 @@
 // }
 
 //require('../../../../xo/Resources/Public/Js/components/validation/phone');
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Elements
+require('./elements/google-map');
