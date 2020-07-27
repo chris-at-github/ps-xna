@@ -19,6 +19,10 @@
 	@extend %container-width-indent-right;
 }
 
+.ce-frame--layout-2 {
+	@extend %container-width-full;
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Styles (Farben)
 .ce-frame--class-0 {
