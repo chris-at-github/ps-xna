@@ -6,12 +6,18 @@
 @import 'definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Vendors
+@import '../../../../xo/Resources/Public/Sass/xo/vendors/tiny-slider';
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Components
 @import 'xna/components/form';
 @import 'xna/components/form/layout-0';
 
 @import 'xna/components/address';
 @import 'xna/components/icon-text';
+
+@import 'xna/components/slider/layout-0';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
@@ -32,8 +38,7 @@
 @import 'xna/components/navigation/skip';
 @import 'xna/components/navigation/layout-0';
 
-// ---------------------------------------------------------------------------------------------------------------------
-// Vendors
+
 //@import '../../../../xo/Resources/Public/Sass/xo/vendors/tobi';
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
