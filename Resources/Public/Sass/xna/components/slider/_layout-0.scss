@@ -6,7 +6,9 @@
 
 	.slider--item {
 		min-height: rem(400px);
-		background: #eaeaea;
+		background-color: #eaeaea;
+		background-position: center center;
+		background-size: cover;
 		position: relative;
 		z-index: 5;
 	}
@@ -16,7 +18,6 @@
 			position: absolute;
 			top: 0;
 			width: 100%;
-			background: gold;
 		}
 
 		.container-inner {
