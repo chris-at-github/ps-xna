@@ -1,6 +1,61 @@
 .slider--layout-0 {
+	& {
+		position: relative;
+		min-height: rem(400px);
+	}
+
 	.slider--item {
-		height: 500px;
+		min-height: rem(400px);
 		background: #eaeaea;
+		position: relative;
+		z-index: 5;
+	}
+
+	.slider--controls {
+		& {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			background: gold;
+		}
+
+		.container-inner {
+			position: relative;
+		}
+	}
+
+	.slider--prev, .slider--next {
+		& {
+			position: absolute;
+			z-index: 10;
+			display: flex;
+			align-items: center;
+			min-height: rem(400px);
+		}
+
+		button {
+			& {
+				display: block;
+				width: $spacing-medium;
+				height: 100px;
+				cursor: pointer;
+				border: 0;
+				background: #ccc;
+				outline: 0;
+			}
+
+			&:hover {
+				background: #bbb;
+			}
+		}
+	}
+
+	// Padding von .container-outer wieder aufheben
+	.slider--prev {
+		left: -$spacing-medium;
+	}
+
+	.slider--next {
+		right: -$spacing-medium;
 	}
 }

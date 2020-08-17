@@ -5,6 +5,6 @@ var slider = tns({
 	items: 1,
 	autoplay: false,
 	controls: true,
-	controlsContainer: ".slider--controls",
+	controlsContainer: ".slider--controls .container-inner",
 	nav: false
 });
