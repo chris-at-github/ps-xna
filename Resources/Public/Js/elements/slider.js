@@ -12,7 +12,8 @@ import { tns } from '../../../../../xo/Resources/Public/Js/vendors/tiny-slider';
 			autoplay: false,
 			controls: true,
 			controlsContainer: node.querySelector('.slider--controls .container-inner'),
-			nav: true
+			nav: true,
+			navContainer: node.querySelector('.slider--navigation .container-inner ul')
 		});
 	});
 })();
