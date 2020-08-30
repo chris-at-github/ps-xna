@@ -12,7 +12,6 @@ var spritemap = require('svg-spritemap-webpack-plugin');
 var iconfont = require('iconfont-plugin-webpack');
 
 var ImageminPlugin = require('imagemin-webpack-plugin').default;
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 var imageminMozjpeg = require('imagemin-mozjpeg');
 
 // Autoload jQuery
@@ -88,11 +87,6 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 				},
 			}),
 
-			new CopyWebpackPlugin([{
-				from: './typo3conf/ext/xna/Resources/Public/Images',
-				to: './assets/images', // Laravel mix will place this in 'public/img'
-			}]),
-
 			new ImageminPlugin({
 				test: /\.(jpe?g|png|gif)$/i,
 				plugins: [
@@ -100,24 +94,14 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 						quality: 90,
 					})
 				]
-			}),
-
-			new CopyWebpackPlugin([{
-				from: './typo3conf/ext/xna/Resources/Public/Svg/Embed/',
-				to: './assets/svg', // Laravel mix will place this in 'public/img'
-			}]),
-
-			new CopyWebpackPlugin([{
-				from: './typo3conf/ext/xna/Resources/Public/Fonts',
-				to: './assets/fonts'
-			}]),
-
-			new CopyWebpackPlugin([{
-				from: './typo3conf/ext/xna/Resources/Public/Icons',
-				to: './assets/icons'
-			}]),
+			})
 		]
 	});
+
+mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
+	.copy('./typo3conf/ext/xna/Resources/Public/Svg/Embed/*', './assets/svg')
+	.copy('./typo3conf/ext/xna/Resources/Public/Fonts/*', './assets/fonts')
+	.copy('./typo3conf/ext/xna/Resources/Public/Icons/*', './assets/icons');
 
 mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/xna-inline.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
