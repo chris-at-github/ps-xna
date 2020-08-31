@@ -18,6 +18,15 @@
 }
 
 .link--cta {
-	display: inline-block;
-	padding: rem(10px 20px);
+	& {
+		display: inline-block;
+		padding: rem(10px 20px);
+		border: 2px solid $font-color-base;
+		color: $font-color-base;
+	}
+
+	&:hover {
+		border-color: $link-color-hover;
+		text-decoration: none;
+	}
 }

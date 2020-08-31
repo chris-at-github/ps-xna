@@ -9,3 +9,4 @@ editor:
   config:
     stylesSet:
       - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.download', element: 'a', attributes: { class: 'link--download' } }
+      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.cta', element: 'a', attributes: { class: 'link--cta' } }
