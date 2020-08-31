@@ -1,16 +1,28 @@
+// 1: bis vollstaendigen initialisieren des Sliders nur das erste Element anzeigen
+// 2: Margin von Elementen nutzen um das Element (Hintergrundbild) aufzuspannen
+
 .slider--layout-0 {
 	& {
 		position: relative;
-		min-height: rem(400px);
+		height: rem(400px);
+		overflow: hidden; // 1
 	}
 
 	.slider--item {
-		min-height: rem(400px);
-		background-color: #eaeaea;
-		background-position: center center;
-		background-size: cover;
-		position: relative;
-		z-index: 5;
+		& {
+			min-height: rem(400px);
+			padding-top: 0.1px; // 2
+			padding-bottom: 0.1px;
+			background-color: #eaeaea;
+			background-position: center center;
+			background-size: cover;
+			position: relative;
+			z-index: 5;
+		}
+
+		& + .slider--item {
+			visibility: hidden; // 1
+		}
 	}
 
 	.slider--item-title {
@@ -33,6 +45,7 @@
 			position: absolute;
 			top: 0;
 			width: 100%;
+			opacity: 0; // 1
 		}
 
 		.container-inner {
@@ -80,6 +93,7 @@
 			position: absolute;
 			bottom: rem(35px);
 			width: 100%;
+			opacity: 0; // 1
 		}
 
 		ul {
@@ -132,6 +146,16 @@
 		span {
 			@extend %screenreader-hidden;
 			@extend %screenreader-hidden-focusable;
+		}
+	}
+
+	&.slider--initialized {
+		.slider--item + .slider--item {
+			visibility: visible;
+		}
+
+		.slider--controls, .slider--navigation {
+			opacity: 1;
 		}
 	}
 }

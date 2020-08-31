@@ -14,11 +14,11 @@ var iconfont = require('iconfont-plugin-webpack');
 var ImageminPlugin = require('imagemin-webpack-plugin').default;
 var imageminMozjpeg = require('imagemin-mozjpeg');
 
-// Autoload jQuery
-// @see: https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md
-mix.autoload({
-	jquery: ['$', 'window.jQuery']
-});
+// // Autoload jQuery
+// // @see: https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md
+// mix.autoload({
+// 	jquery: ['$', 'window.jQuery']
+// });
 
 // Disable Process CSS Urls
 // @see: https://laravel.com/docs/5.7/mix#working-with-stylesheets
@@ -44,7 +44,8 @@ mix.options({
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
+mix.js('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
+	.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 	.webpackConfig({
 		output: {
 			publicPath: '/assets/'
