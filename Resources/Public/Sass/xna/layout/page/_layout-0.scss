@@ -26,10 +26,6 @@ body {
 	width: 100%;
 }
 
-#content--header {
-	background: #eaeaea;
-}
-
 #content--main {
 	flex: 1;
 }
@@ -44,7 +40,7 @@ body {
 // Flash
 #flash {
 	& {
-		@extend %container-class-2;
+		@extend %container-class-1;
 		@extend %container-space-before-small;
 		@extend %container-space-after-small;
 
