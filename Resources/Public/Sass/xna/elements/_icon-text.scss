@@ -1,5 +1,5 @@
 .ce-icon-text {
-	.ce-header + %ce-header-sibling, .ce-header + .icon-text--container {
+	.ce-header + %ce-header-sibling, .ce-header + .icon-text--container, %ce-header-sibling + .icon-text--container {
 		margin-top: $spacing-default;
 	}
 
