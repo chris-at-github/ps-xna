@@ -1,8 +1,14 @@
 .icon-text {
 	.icon-text--icon-container {
-		position: relative;
-		width: rem(64px);
-		height: rem(64px);
+		& {
+			position: relative;
+			width: rem(64px);
+			height: rem(64px);
+		}
+
+		& + .icon-text--title {
+			margin: rem(20px 0 0 0);
+		}
 	}
 
 	.icon-text--icon {
@@ -13,10 +19,6 @@
 	}
 
 	.icon-text--title {
-		& {
-			margin: rem(20px 0 0 0);
-		}
-
 		&, a, h1, h2, h3, h4, h5, h6 {
 			line-height: 1.4;
 			font-size: rem(20px);
