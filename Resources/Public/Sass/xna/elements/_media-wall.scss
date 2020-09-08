@@ -1,7 +1,37 @@
 .ce-media-wall {
+	.media-wall--container {
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-gap: 2px;
+	}
+
 	.media-wall--item {
-		width: 10vw;
-		height: 10vw;
-		background: #ccc;
+		& {
+			position: relative;
+			background: #ccc;
+			float: left;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			padding-top: 100%;
+		}
+
+		&:nth-child(5) {
+			background: #bbb;
+			grid-area: 1 / 5 / span 2 / span 2;
+		}
+
+		&:nth-child(10) {
+			background: #bbb;
+			grid-area: 2 / 2 / span 2 / span 2;
+		}
+
+		&:nth-child(14) {
+			background: #bbb;
+			grid-area: 2 / 8 / span 2 / span 2;
+		}
 	}
 }

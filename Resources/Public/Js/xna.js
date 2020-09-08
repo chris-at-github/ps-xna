@@ -33,3 +33,4 @@ require('./components/icon-text');
 // Elements
 require('./elements/google-map');
 require('./elements/slider');
+require('./elements/media-wall');
