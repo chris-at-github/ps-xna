@@ -15,7 +15,8 @@ import Tobii from 'tobii/src/js/tobii';
 				counter: false,
 				zoom: false,
 				navLabel: ['Vorheriges Element', 'Nächstes Element'],
-				closeLabel: 'Vollansicht schliessen'
+				closeLabel: 'Vollansicht schliessen',
+				autoplayVideo: true
 			});
 		});
 	});
