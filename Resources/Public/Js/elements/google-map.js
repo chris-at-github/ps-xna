@@ -1,4 +1,4 @@
-const GoogleMaps = require('../../../../../xo/Resources/Public/Js/modules/googleMaps');
+const GoogleMaps = require('../modules/googleMaps');
 
 var map = new GoogleMaps('.map--container', {
 	coordinates: {

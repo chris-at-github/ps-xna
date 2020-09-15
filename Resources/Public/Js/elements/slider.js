@@ -1,4 +1,4 @@
-import { tns } from '../../../../../xo/Resources/Public/Js/vendors/tiny-slider';
+import { tns } from '../vendors/tiny-slider';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout 01
