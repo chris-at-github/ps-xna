@@ -7,12 +7,15 @@
 			<f:render partial="Page/Logo" section="Svg" />
 
 			<f:if condition="{navigationMain}">
-				<nav class="navigation navigation--layout-0">
-					<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationMain}" />
-				</nav>
+				<div class="header--mobile-container">
+					<nav class="navigation navigation--layout-0">
+						<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationMain}" />
+					</nav>
+				</div>
 			</f:if>
 
 			<f:render partial="Page/Search" section="Icon" />
+			<f:render partial="Page/NavigationToggle" section="Main" />
 		</div>
 	</div>
 

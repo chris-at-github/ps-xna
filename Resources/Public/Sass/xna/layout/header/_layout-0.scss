@@ -51,4 +51,16 @@
 			height: 25px;
 		}
 	}
+
+	.header--mobile-container {
+		display: none;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.header--layout-0 {
+		.header--mobile-container {
+			display: block;
+		}
+	}
 }
