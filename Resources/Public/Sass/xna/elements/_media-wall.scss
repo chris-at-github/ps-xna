@@ -48,6 +48,10 @@
 			max-width: 100%;
 		}
 	}
+
+	.media-wall--content {
+		display: none;
+	}
 }
 
 @include media-breakpoint-up(md) {
