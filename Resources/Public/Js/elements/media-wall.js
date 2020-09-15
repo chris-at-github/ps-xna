@@ -8,7 +8,6 @@ import Tobii from 'tobii/src/js/tobii';
 	xna.on('documentLoaded', function() {
 		document.querySelectorAll('.media-wall--container').forEach(function(node, index) {
 			let uid = node.getAttribute('data-media-wall');
-
 			let lightbox = new Tobii({
 				selector: '[data-media-wall="' + uid + '"] .media-wall--item',
 				captionAttribute: 'title',
