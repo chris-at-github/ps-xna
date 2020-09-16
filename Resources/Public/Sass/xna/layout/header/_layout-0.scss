@@ -53,7 +53,7 @@
 		}
 	}
 
-	.header--mobile-container {
+	.sidebar {
 		display: none;
 	}
 }
@@ -64,7 +64,7 @@
 			grid-template-columns: 100px auto 60px;
 		}
 
-		.header--mobile-container {
+		.sidebar {
 			display: block;
 		}
 

@@ -2,9 +2,11 @@
 	'use strict';
 
 	xna.on('documentLoaded', function() {
-		document.querySelectorAll('.hamburger').forEach(function(node) {
-			node.addEventListener("click", function() {
-				this.classList.toggle("is-active");
+		let body = document.querySelector('body');
+
+		document.querySelectorAll('#header .hamburger').forEach(function(node) {
+			node.addEventListener('click', function() {
+				body.classList.toggle('is--sidebar-active');
 			}, false);
 		});
 	});
