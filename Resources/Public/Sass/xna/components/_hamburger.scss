@@ -1,8 +1,5 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // @see: https://github.com/jonsuh/hamburgers/blob/master/_sass/hamburgers/_base.scss
-
-// Hamburger
-// ==================================================
 .hamburger {
 	padding: $hamburger-padding-y $hamburger-padding-x;
 	display: inline-block;
@@ -85,5 +82,20 @@
 
 	&::after {
 		bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Overwrite
+.hamburger {
+	& {
+		padding: $hamburger-layer-spacing + $hamburger-padding-y 0 $hamburger-padding-y 0;
+		outline: 0;
+	}
+
+	&:hover .hamburger-inner {
+		&, &::before, &::after {
+			background: $link-color-hover;
+		}
 	}
 }
