@@ -1,0 +1,14 @@
+@mixin navigation--layout-0 {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+
+@mixin navigation--layout-1 {
+	ul, li {
+		display: block;
+	}
+}
