@@ -44,7 +44,7 @@
 	}
 
 	.sidebar {
-		display: none;
+		transform: translate(-100%, 0);
 	}
 }
 
@@ -87,7 +87,7 @@
 			}
 
 			.sidebar {
-				display: block;
+				transform: translate(0, 0);
 			}
 		}
 	}
