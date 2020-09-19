@@ -7,6 +7,9 @@
 		document.querySelectorAll('#header .hamburger').forEach(function(node) {
 			node.addEventListener('click', function() {
 				body.classList.toggle('is--sidebar-active');
+
+				// Scrollbars ausblenden
+				document.dispatchEvent(new Event('scrolllock.toggle'));
 			}, false);
 		});
 	});
