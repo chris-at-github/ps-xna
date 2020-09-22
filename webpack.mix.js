@@ -99,6 +99,9 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inl
 		]
 	});
 
+mix.babel('assets/js/xna-inline.js', 'assets/js/xna-inline.js')
+	.babel('assets/js/xna.js', 'assets/js/xna.js');
+
 mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 	.copy('./typo3conf/ext/xna/Resources/Public/Svg/Embed/*', './assets/svg')
 	.copy('./typo3conf/ext/xna/Resources/Public/Fonts/*', './assets/fonts')
