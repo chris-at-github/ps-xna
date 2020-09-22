@@ -6,7 +6,9 @@
 	}
 
 	.container-inner {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: 1fr 60px 60px;
 		grid-template-columns: auto 60px 60px;
 		grid-gap: 10px;
 		align-items: center;
@@ -17,6 +19,8 @@
 		& {
 			@extend %logo;
 			max-width: 100px;
+			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+			-ms-grid-column: 1;
 		}
 
 		&:hover svg {
@@ -30,6 +34,8 @@
 			align-items: center;
 			justify-content: center;
 			height: 100%;
+
+			-ms-grid-column: 3;
 		}
 
 		&:hover svg {
@@ -43,14 +49,15 @@
 		}
 	}
 
-	.sidebar {
-		transform: translate(-100%, 0);
+	.hamburger {
+		-ms-grid-column: 2;
 	}
 }
 
 @include media-breakpoint-down(sm) {
 	#header.header--layout-0 {
 		.sidebar {
+			transform: translate(-100%, 0);
 			position: fixed;
 			top: 83px; bottom: 0;
 			left: 0;
@@ -97,11 +104,17 @@
 @include media-breakpoint-up(md) {
 	.header--layout-0 {
 		.container-inner {
+			-ms-grid-columns: 100px 1fr 60px;
 			grid-template-columns: 100px auto 60px;
 		}
 
 		.sidebar {
 			display: block;
+			-ms-grid-column: 2;
+		}
+
+		.search {
+			-ms-grid-column: 3;
 		}
 
 		.hamburger {
@@ -116,6 +129,29 @@
 
 			ul ul {
 				display: none;
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IE10 / 11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.header--layout-0 {
+		.container-inner {
+			display: -ms-grid;
+		}
+
+		// Vertical-Align: Middle for IE 11
+		.navigation {
+			& {
+				height: 100%;
+				padding-left: 20px;
+			}
+
+			ul {
+				height: 100%;
+				align-items: center;
 			}
 		}
 	}
