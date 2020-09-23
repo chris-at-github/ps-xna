@@ -39,6 +39,6 @@ require('./components/navigation/layout-0');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements
-// require('./elements/google-map');
-// require('./elements/slider');
-// require('./elements/media-wall');
+require('./elements/google-map');
+require('./elements/slider');
+require('./elements/media-wall');
