@@ -8,4 +8,8 @@
 	.navigation {
 		@include navigation--layout-0;
 	}
+
+	.address {
+		margin: $spacing-medium 0 0 0;
+	}
 }

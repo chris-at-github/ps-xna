@@ -41,7 +41,11 @@
 					<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationFooter}" />
 				</nav>
 			</f:if>
-			</div>
+
+			<f:if condition="{providerData.0}">
+				<f:render partial="Page/Contact" section="Main" arguments="{address: providerData.0}" />
+			</f:if>
+		</div>
 	</div>
 
 	<div class="svg-sprite--container">
