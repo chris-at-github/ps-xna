@@ -13,13 +13,11 @@
 
 			if(document.body.classList.contains('is--scroll-lock') === true) {
 				document.body.classList.remove('is--scroll-lock');
-				document.dispatchEvent(new CustomEvent('scrolllock.deactivate'));
+				xna.fireEvent('scrolllock.deactivate');
 
 			} else {
 				document.body.classList.add('is--scroll-lock');
-				document.dispatchEvent(new CustomEvent('scrolllock.activate', {
-					detail: { scrollbarWidth: scrollbarWidth }
-				}));
+				xna.fireEvent('scrolllock.activate', { scrollbarWidth: scrollbarWidth });
 			}
 		});
 

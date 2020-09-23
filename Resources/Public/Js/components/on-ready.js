@@ -1,4 +1,4 @@
-var xna = window.xna || {};
+let xna = window.xna || {};
 
 // ---------------------------------------------------------------------------------------------------------------------
 // eigene On-Event Methode um Asynchrone Skripte besser steuern zu koennen -> damit koennen Callbacks auf Events bereits
@@ -48,9 +48,4 @@ if(typeof xna.fire !== 'function') {
 	};
 }
 
-// ---------------------------------------------------------------------------------------------------------------------
-// asynchrones DOMContentLoaded nutzen
-document.addEventListener('DOMContentLoaded', function(event) {
-	console.log(5);
-	xna.fire('documentLoaded');
-});
+// console.log(xna);

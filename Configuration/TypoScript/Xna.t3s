@@ -15,11 +15,8 @@ page {
 	}
 
 	jsInline {
-		10 = TEXT
-		10.value = var xna = {};
-
-		20 = FILE
-		20.file = assets/js/xna-inline.js
+		10 = FILE
+		10.file = assets/js/xna-inline.js
 	}
 
 	includeCSS {

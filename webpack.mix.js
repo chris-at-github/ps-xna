@@ -44,8 +44,7 @@ mix.options({
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.js('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
-	.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
+mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 	.webpackConfig({
 		output: {
 			publicPath: '/assets/'
@@ -99,8 +98,7 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inl
 		]
 	});
 
-mix.babel('assets/js/xna-inline.js', 'assets/js/xna-inline.js')
-	.babel('assets/js/xna.js', 'assets/js/xna.js');
+mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
 
 mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 	.copy('./typo3conf/ext/xna/Resources/Public/Svg/Embed/*', './assets/svg')

@@ -22,19 +22,23 @@
 
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Helper
-require('./helpers/foreach');
+// Helper | Polyfills
+require('./polyfills/foreach');
+require('./polyfills/object-assign');
+require('./polyfills/custom-event');
+
 require('./helpers/get-css-property');
-require('./helpers/object-assign');
+require('./helpers/fire-event');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
+require('./components/on-ready');
 require('./components/icon-text');
 require('./components/scroll-lock');
 require('./components/navigation/layout-0');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements
-require('./elements/google-map');
-require('./elements/slider');
-require('./elements/media-wall');
+// require('./elements/google-map');
+// require('./elements/slider');
+// require('./elements/media-wall');
