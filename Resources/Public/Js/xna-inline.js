@@ -51,6 +51,5 @@ if(typeof xna.fire !== 'function') {
 // ---------------------------------------------------------------------------------------------------------------------
 // asynchrones DOMContentLoaded nutzen
 document.addEventListener('DOMContentLoaded', function(event) {
-	console.log(5);
 	xna.fire('documentLoaded');
 });
