@@ -74,3 +74,13 @@
 		}
 	}
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= lg
+@include media-breakpoint-up(xl) {
+	%container-width-indent-right {
+		%container-inner {
+			padding-right: rem(280px);
+		}
+	}
+}
