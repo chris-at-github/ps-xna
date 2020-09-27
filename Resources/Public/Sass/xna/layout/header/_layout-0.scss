@@ -2,55 +2,92 @@
 	& {
 		padding-top: rem(10px);
 		padding-bottom: rem(10px);
-		border-bottom: 3px solid #eaeaea;
+		border-bottom: 3px solid $theme-color-primary;
 	}
 
 	.container-inner {
 		display: -ms-grid;
 		display: grid;
-		-ms-grid-columns: 1fr 60px 60px;
-		grid-template-columns: auto 60px 60px;
+		-ms-grid-columns: 1fr 180px 1fr;
+		grid-template-columns: 1fr 180px 1fr;
 		grid-gap: 10px;
-		align-items: center;
-		min-height: rem(60px);
+		min-height: rem(52px);
+	}
+
+	.logo--container {
+		position: relative;
 	}
 
 	.logo {
 		& {
 			@extend %logo;
-			max-width: 100px;
-			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
-			-ms-grid-column: 1;
-		}
 
-		&:hover svg {
-			fill: $link-color-hover;
-		}
-	}
-
-	.search {
-		& {
+			position: absolute;
+			top: rem(-10px);
+			width: 100%;
+			height: rem(100px);
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			height: 100%;
+			background: $theme-color-primary;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			//max-width: 100px;
+			//max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+			-ms-grid-column: 1;
+		}
 
-			-ms-grid-column: 3;
+		svg {
+			width: rem(78px);
+			fill: #fff;
 		}
 
 		&:hover svg {
 			fill: $link-color-hover;
-		}
-
-		svg {
-			display: block;
-			width: 25px;
-			height: 25px;
 		}
 	}
 
 	.hamburger {
 		-ms-grid-column: 2;
+		text-align: left;
+	}
+
+	.address {
+		& {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		.address--item {
+			& {
+				display: flex;
+				align-items: center;
+			}
+
+			& + .address--item {
+				margin: 0 0 0 rem(15px);
+			}
+		}
+
+		.address--item-icon {
+			& {
+				display: flex;
+				justify-content: center;
+				width: rem(37px);
+				height: rem(37px);
+				background: $theme-color-primary;
+				border-radius: 50%;
+			}
+
+			svg {
+				width: 20px;
+			}
+		}
+
+		.address--item-text {
+			display: none;
+		}
 	}
 }
 
@@ -104,7 +141,9 @@
 	.header--layout-0 {
 		.container-inner {
 			-ms-grid-columns: 100px 1fr 60px;
-			grid-template-columns: 100px auto 60px;
+			grid-template-columns: auto 140px auto;
+			align-items: center;
+			min-height: rem(80px);
 		}
 
 		.sidebar {

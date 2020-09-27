@@ -4,7 +4,7 @@
 
 	<div id="header" class="container-outer header--layout-0">
 		<div class="container-inner">
-			<f:render partial="Page/Logo" section="Svg" />
+			<f:render partial="Page/Hamburger" section="Main" />
 
 			<div id="sidebar" class="sidebar">
 				<f:if condition="{navigationMain}">
@@ -14,8 +14,13 @@
 				</f:if>
 			</div>
 
-			<f:render partial="Page/Search" section="Icon" />
-			<f:render partial="Page/Hamburger" section="Main" />
+			<div class="logo--container">
+				<f:render partial="Page/Logo" section="Svg" />
+			</div>
+
+			<f:if condition="{providerData.0}">
+				<f:render partial="Page/Contact" section="Main" arguments="{address: providerData.0}" />
+			</f:if>
 		</div>
 	</div>
 
