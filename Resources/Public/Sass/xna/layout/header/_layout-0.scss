@@ -81,7 +81,7 @@
 			}
 
 			svg {
-				width: 20px;
+				width: 21px;
 			}
 		}
 
@@ -141,7 +141,7 @@
 	.header--layout-0 {
 		.container-inner {
 			-ms-grid-columns: 100px 1fr 60px;
-			grid-template-columns: auto 140px auto;
+			grid-template-columns: 1fr 140px 1fr;
 			align-items: center;
 			min-height: rem(80px);
 		}
