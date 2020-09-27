@@ -24,7 +24,8 @@
 @import 'xna/components/address';
 @import 'xna/components/icon-text';
 
-@import 'xna/components/slider/layout-0';
+@import 'xna/components/slider';
+@import 'xna/components/hero';
 
 @import 'xna/components/scroll-lock';
 
@@ -42,6 +43,7 @@
 @import 'xna/elements/icon-text';
 @import 'xna/elements/google-map';
 @import 'xna/elements/media-wall';
+@import 'xna/elements/hero-slider';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Navigation

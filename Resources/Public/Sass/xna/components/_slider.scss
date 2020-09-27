@@ -1,0 +1,83 @@
+// 1: bis vollstaendigen initialisieren des Sliders nur das erste Element anzeigen
+.slider {
+	.slider--controls {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		opacity: 0; // 1
+	}
+
+	.slider--prev, .slider--next {
+		button {
+			display: block;
+			cursor: pointer;
+			border: 0;
+			outline: 0;
+			background: transparent;
+		}
+	}
+
+	.slider--navigation {
+		& {
+			opacity: 0; // 1
+		}
+
+		ul {
+			& {
+				margin: 0;
+				text-align: center;
+			}
+
+			li {
+				& {
+					width: rem(10px);
+					height: rem(10px);
+					display: inline-block;
+					padding: 0;
+					cursor: pointer;
+				}
+
+				& + li {
+					margin: 0 0 0 rem(4px);
+				}
+
+				&:before {
+					display: block;
+					top: 0;
+					width: rem(10px);
+					height: rem(10px);
+					border: 1px solid $font-color-base;
+				}
+
+				&:hover:before {
+					border-color: $link-color;
+				}
+
+				&.tns-nav-active {
+					& {
+						cursor: default;
+					}
+
+					&:before {
+						background: $font-color-base;
+					}
+
+					&:hover:before {
+						border-color: $font-color-base;
+					}
+				}
+			}
+		}
+
+		span {
+			@extend %screenreader-hidden;
+			@extend %screenreader-hidden-focusable;
+		}
+	}
+
+	&.slider--initialized {
+		.slider--controls, .slider--navigation {
+			opacity: 1;
+		}
+	}
+}
