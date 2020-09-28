@@ -100,21 +100,21 @@
 		.sidebar {
 			transform: translate(-100%, 0);
 			position: fixed;
-			top: 83px; bottom: 0;
+			top: rem(75px); bottom: 0;
 			left: 0;
 			width: 100%;
-			background: #fff;
+			background: $theme-color-primary;
 		}
 
 		.navigation {
 			& {
 				@include navigation--layout-1();
-				padding: $spacing-medium 0 0 0;
+				padding: rem(55px) 0 0 0;
 			}
 
 			li {
 				& {
-					border-top: 1px solid #eaeaea;
+					//border-top: 1px solid #eaeaea;
 				}
 
 				&:first-child {
@@ -123,7 +123,13 @@
 			}
 
 			a, .current > span {
-				padding: 3px $spacing-medium;
+				padding: rem(6px) $spacing-medium;
+				color: #fff
+			}
+
+			a:hover {
+				color: $theme-color-secondary;
+				text-decoration: none;
 			}
 		}
 
