@@ -80,8 +80,12 @@
 				border-radius: 50%;
 			}
 
+			&:hover {
+				background: $theme-color-secondary;
+			}
+
 			svg {
-				width: 21px;
+				width: rem(21px);
 			}
 		}
 

@@ -1,6 +1,7 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Colors
 $theme-color-primary: #2c808d !default;
+$theme-color-secondary: #96b53a !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Header
@@ -85,6 +86,7 @@ $hamburger-layer-spacing: 5px !default;
 $hamburger-layer-color: $theme-color-primary !default;
 $hamburger-layer-border-radius: 0 !default;
 $hamburger-hover-opacity: 1 !default;
+$hamburger-hover-color: $theme-color-secondary !default;
 $hamburger-active-layer-color: $hamburger-layer-color !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
