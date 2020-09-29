@@ -30,8 +30,8 @@
 
 			li {
 				& {
-					width: rem(10px);
-					height: rem(10px);
+					width: rem(13px);
+					height: rem(13px);
 					display: inline-block;
 					padding: 0;
 					cursor: pointer;
@@ -44,13 +44,14 @@
 				&:before {
 					display: block;
 					top: 0;
-					width: rem(10px);
-					height: rem(10px);
-					border: 1px solid $font-color-base;
+					width: rem(13px);
+					height: rem(13px);
+					border: 2px solid #fff;
+					border-radius: 50%;
 				}
 
 				&:hover:before {
-					border-color: $link-color;
+					border-color: $theme-color-primary;
 				}
 
 				&.tns-nav-active {
@@ -59,11 +60,12 @@
 					}
 
 					&:before {
-						background: $font-color-base;
+						background: #fff;
 					}
 
 					&:hover:before {
-						border-color: $font-color-base;
+						background: $theme-color-primary;
+						border-color: $theme-color-primary;
 					}
 				}
 			}
