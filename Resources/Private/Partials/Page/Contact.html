@@ -2,14 +2,14 @@
 	<f:section name="Main">
 		<div class="address">
 			<f:if condition="{address.phone}">
-				<a class="address--item address--phone link--phone" href="{xo:uri.phone(phone: address.phone)}">
+				<a class="address--item address--phone link--phone" href="{xo:uri.phone(phone: address.phone)}" title="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.phone')}">
 					<span class="address--item-icon"><xo:svg.inline source="assets/svg/icon-phone.svg" /></span>
 					<span class="address--item-text">{address.phone}</span>
 				</a>
 			</f:if>
 
 			<f:if condition="{address.email}">
-				<f:link.email class="address--item address--mail link--mail" email="{address.email}">
+				<f:link.email class="address--item address--mail link--mail" email="{address.email}" title="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.mail')}">
 					<span class="address--item-icon"><xo:svg.inline source="assets/svg/icon-mail.svg" /></span>
 					<span class="address--item-text">{address.email}</span>
 				</f:link.email>
