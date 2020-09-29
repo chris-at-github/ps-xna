@@ -53,3 +53,9 @@ body {
 		font-weight: $font-weight-bold;
 	}
 }
+
+@include media-breakpoint-up(lg) {
+	body {
+		padding-top: rem(103px);
+	}
+}

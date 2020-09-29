@@ -11,11 +11,13 @@
 		-ms-grid-columns: 1fr 140px 1fr;
 		grid-template-columns: 1fr 140px 1fr;
 		grid-gap: 10px;
+		align-items: center;
 		min-height: rem(52px);
 	}
 
 	.logo--container {
 		position: relative;
+		align-self: start;
 	}
 
 	.logo {
@@ -40,10 +42,6 @@
 		svg {
 			width: rem(68px);
 			fill: #fff;
-		}
-
-		&:hover svg {
-			fill: $link-color-hover;
 		}
 	}
 
@@ -163,10 +161,9 @@
 @include media-breakpoint-up(md) {
 	.header--layout-0 {
 		.container-inner {
-			-ms-grid-columns: 100px 1fr 60px;
-			grid-template-columns: 1fr 140px 1fr;
-			align-items: center;
-			min-height: rem(80px);
+			//-ms-grid-columns: 100px 1fr 60px;
+			//grid-template-columns: 1fr 140px 1fr;
+			//min-height: rem(80px);
 		}
 
 		.sidebar {
@@ -185,11 +182,53 @@
 		.navigation {
 			& {
 				@include navigation--layout-0;
-				padding-left: 10px;
+				font-size: rem(18px);
 			}
 
-			ul ul {
-				display: none;
+			a, .current > span {
+				color: $font-color-base;
+				padding-top: rem(13px);
+				padding-bottom: rem(13px);
+			}
+
+			a:hover {
+				color: $theme-color-primary;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.header--layout-0 {
+		.container-inner {
+			//-ms-grid-columns: 100px 1fr 60px;
+			grid-template-columns: 1fr 240px 1fr;
+			min-height: rem(80px);
+		}
+
+		.navigation {
+			& {
+				font-size: rem(24px);
+			}
+
+			ul {
+				margin-left: -15px;
+				margin-right: -15px;
+			}
+
+			a, .current > span {
+				padding: rem(20px 15px);
+			}
+		}
+
+		.logo {
+			& {
+				height: rem(142px);
+			}
+
+			svg {
+				width: rem(108px);
 			}
 		}
 	}
