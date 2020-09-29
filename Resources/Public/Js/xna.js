@@ -9,7 +9,6 @@ require('./helpers/fire-event');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
-require('./components/on-ready');
 require('./components/icon-text');
 require('./components/scroll-lock');
 require('./components/navigation/layout-0');
