@@ -12,14 +12,10 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
-@import 'xna/iconfont';
 @import 'xna/components/link';
 
 @import 'xna/components/hamburger';
 @import 'xna/components/hamburger/layout-0';
-
-@import 'xna/components/form';
-@import 'xna/components/form/layout-0';
 
 @import 'xna/components/address';
 @import 'xna/components/icon-text';
@@ -41,7 +37,7 @@
 // Elements
 @import 'xna/elements/fluid-styled-content';
 @import 'xna/elements/icon-text';
-@import 'xna/elements/google-map';
+//@import 'xna/elements/google-map';
 @import 'xna/elements/media-wall';
 @import 'xna/elements/hero-slider';
 
@@ -49,24 +45,3 @@
 // Navigation
 @import 'xna/components/navigation/skip';
 @import 'xna/components/navigation';
-
-
-//@import '../../../../xo/Resources/Public/Sass/xo/vendors/tobi';
-// ---------------------------------------------------------------------------------------------------------------------
-// Components
-// @import 'xna/components/logo';
-// ---------------------------------------------------------------------------------------------------------------------
-// Layout
-//@import 'xna/layout';
-// @import 'zn/header';
-// ---------------------------------------------------------------------------------------------------------------------
-// Elements
-//@import 'zn/elements/icon-text';
-//@import 'zn/elements/google-map';
-//
-//// ---------------------------------------------------------------------------------------------------------------------
-//// Components
-//@import 'zn/components/icon-text';
-//@import 'zn/components/address';
-//@import 'zn/components/link';
-//@import 'zn/components/list';
