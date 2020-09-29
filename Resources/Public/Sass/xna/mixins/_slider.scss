@@ -46,11 +46,19 @@
 			& {
 				width: $spacing-medium;
 				height: 100px;
+				//background: gold;
 			}
 
 			&:hover {
-				// Hover Code here
+				svg {
+					fill: #fff;
+				}
 			}
+		}
+
+		svg {
+			width: 35px;
+			fill: $theme-color-primary;
 		}
 	}
 
@@ -94,18 +102,18 @@
 
 		.slider--prev, .slider--next {
 			button {
-				width: rem(50px);
-				height: 100px;
+				width: rem(60px);
+				height: 200px;
 			}
 		}
 
 		// Padding von .container-outer wieder aufheben
 		.slider--prev {
-			left: rem(-50px);
+			left: rem(-120px);
 		}
 
 		.slider--next {
-			right: rem(-50px);
+			right: rem(-120px);
 		}
 	}
 }

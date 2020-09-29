@@ -35,6 +35,11 @@
 			border-color: #fff;
 			color: #fff;
 		}
+
+		&:hover {
+			background: #fff;
+			color: $theme-color-primary;
+		}
 	}
 
 	@include media-breakpoint-up(sm) {
