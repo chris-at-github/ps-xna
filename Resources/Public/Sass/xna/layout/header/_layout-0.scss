@@ -8,8 +8,8 @@
 	.container-inner {
 		display: -ms-grid;
 		display: grid;
-		-ms-grid-columns: 1fr 180px 1fr;
-		grid-template-columns: 1fr 180px 1fr;
+		-ms-grid-columns: 1fr 140px 1fr;
+		grid-template-columns: 1fr 140px 1fr;
 		grid-gap: 10px;
 		min-height: rem(52px);
 	}
@@ -38,7 +38,7 @@
 		}
 
 		svg {
-			width: rem(78px);
+			width: rem(68px);
 			fill: #fff;
 		}
 
@@ -81,7 +81,7 @@
 			}
 
 			&:hover {
-				background: $theme-color-secondary;
+				background: $theme-color-primary-active;
 			}
 
 			svg {
@@ -114,7 +114,7 @@
 
 			li {
 				& {
-					//border-top: 1px solid #eaeaea;
+					border-top: 1px solid #97c8cf;
 				}
 
 				&:first-child {
@@ -123,7 +123,7 @@
 			}
 
 			a, .current > span {
-				padding: rem(6px) $spacing-medium;
+				padding: rem(12px) $spacing-medium;
 				color: #fff
 			}
 
