@@ -95,6 +95,19 @@
 	}
 }
 
+@include media-breakpoint-up(sm) {
+	.header--layout-0 {
+		.container-inner {
+			-ms-grid-columns: 1fr 180px 1fr;
+			grid-template-columns: 1fr 180px 1fr;
+		}
+
+		.logo svg {
+			width: rem(78px);
+		}
+	}
+}
+
 @include media-breakpoint-down(sm) {
 	#header.header--layout-0 {
 		.sidebar {
