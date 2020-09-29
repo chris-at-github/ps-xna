@@ -18,6 +18,7 @@
 	.logo--container {
 		position: relative;
 		align-self: start;
+		-ms-grid-column: 2;
 	}
 
 	.logo {
@@ -36,7 +37,6 @@
 			border-bottom-right-radius: 5px;
 			//max-width: 100px;
 			//max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
-			-ms-grid-column: 1;
 		}
 
 		svg {
@@ -46,7 +46,7 @@
 	}
 
 	.hamburger {
-		-ms-grid-column: 2;
+		-ms-grid-column: 1;
 		text-align: left;
 	}
 
@@ -55,6 +55,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
+			-ms-grid-column: 3;
 		}
 
 		.address--item {
@@ -162,11 +163,7 @@
 	.header--layout-0 {
 		.sidebar {
 			display: block;
-			-ms-grid-column: 2;
-		}
-
-		.search {
-			-ms-grid-column: 3;
+			-ms-grid-column: 1;
 		}
 
 		.hamburger {
@@ -196,9 +193,9 @@
 @include media-breakpoint-up(lg) {
 	.header--layout-0 {
 		.container-inner {
-			//-ms-grid-columns: 100px 1fr 60px;
+			-ms-grid-columns: 1fr 240px 1fr;
 			grid-template-columns: 1fr 240px 1fr;
-			min-height: rem(80px);
+			min-height: rem(83px);
 		}
 
 		.navigation {
@@ -268,6 +265,8 @@
 	.header--layout-0 {
 		.container-inner {
 			display: -ms-grid;
+			height: rem(83px);
+			min-height: 0;
 		}
 
 		// Vertical-Align: Middle for IE 11
