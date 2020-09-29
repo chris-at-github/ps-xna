@@ -8,6 +8,10 @@
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/Extensions/" extensions="t3s">
 
+lib.contentElement {
+	partialRootPaths.110 = {$plugin.tx_xna.view.partialRootPath}
+}
+
 page {
 	cssInline {
 		10 = FILE
