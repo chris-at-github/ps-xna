@@ -98,7 +98,8 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 		]
 	});
 
-mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
+mix.babel('assets/js/xna.js', 'assets/js/xna.js');
+mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js');
 
 mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 	.copy('./typo3conf/ext/xna/Resources/Public/Svg/Embed/*', './assets/svg')
