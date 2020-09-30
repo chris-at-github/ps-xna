@@ -80,7 +80,7 @@
 			}
 
 			&:hover {
-				background: $theme-color-primary-active;
+				background: $theme-color-hover;
 			}
 
 			svg {
@@ -140,7 +140,7 @@
 			}
 
 			a:hover {
-				color: $theme-color-secondary;
+				color: $theme-color-hover;
 				text-decoration: none;
 			}
 		}
@@ -183,7 +183,7 @@
 			}
 
 			a:hover {
-				color: $theme-color-primary;
+				color: $theme-color-hover;
 				text-decoration: none;
 			}
 		}

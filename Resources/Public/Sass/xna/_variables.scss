@@ -3,6 +3,7 @@
 $theme-color-primary: #2c808d !default;
 $theme-color-primary-active: #185862 !default;
 $theme-color-secondary: #96b53a !default;
+$theme-color-hover: #eb6a18 !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Header
@@ -87,7 +88,7 @@ $hamburger-layer-spacing: 5px !default;
 $hamburger-layer-color: $theme-color-primary !default;
 $hamburger-layer-border-radius: 0 !default;
 $hamburger-hover-opacity: 1 !default;
-$hamburger-hover-color: $theme-color-primary-active !default;
+$hamburger-hover-color: $theme-color-hover !default;
 $hamburger-active-layer-color: $hamburger-layer-color !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
