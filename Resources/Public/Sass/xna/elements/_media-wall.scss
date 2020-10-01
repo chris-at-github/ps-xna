@@ -37,6 +37,7 @@
 
 		picture {
 			position: absolute;
+			z-index: 5;
 			top: 0; left: 0;
 			width: 100%;
 			height: 100%;
@@ -47,6 +48,31 @@
 			width: 100%;
 			height: auto;
 			max-width: 100%;
+		}
+	}
+
+	.media-wall--item-image {
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 10;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+			background: #444;
+			opacity: 0.35;
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 15;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+			background: svg-load('arrow-left.svg') no-repeat 0 0;
 		}
 	}
 
