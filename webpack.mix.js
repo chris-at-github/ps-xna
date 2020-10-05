@@ -106,27 +106,6 @@ mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 	.copy('./typo3conf/ext/xna/Resources/Public/Fonts/*', './assets/fonts')
 	.copy('./typo3conf/ext/xna/Resources/Public/Icons/*', './assets/icons');
 
-mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/xna-inline.css')
-	.options({
-		postCss: [
-			require('postcss-cachebuster'),
-			require('postcss-combine-duplicated-selectors')({
-				removeDuplicatedProperties: true
-			})
-		]
-	}
-);
-
-mix.postCss('assets/css/xna-inline.css', 'assets/css', [
-	require('postcss-urlrewrite')({
-		imports: true,
-		properties: true,
-		rules: [
-			{ from: '../fonts', to: 'assets/fonts'}
-		]
-	})
-]);
-
 mix.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'assets/css/xna.css')
 	.options({
@@ -139,11 +118,29 @@ mix.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/edit
 	}
 );
 
-mix.postCss('assets/css/xna.css', 'assets/css', [
-	require('postcss-inline-svg')({
-		paths: ['./assets/svg']
-	})
-]);
+// mix.postCss('assets/css/xna.css', 'assets/css', [
+// 	require('postcss-inline-svg')({
+// 		paths: ['./assets/svg']
+// 	})
+// ]);
+
+mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/xna-inline.css')
+	.options({
+			postCss: [
+				require('postcss-cachebuster'),
+				require('postcss-combine-duplicated-selectors')({
+					removeDuplicatedProperties: true
+				}),
+				require('postcss-urlrewrite')({
+					imports: true,
+					properties: true,
+					rules: [
+						{ from: '../fonts', to: 'assets/fonts'}
+					]
+				})
+			]
+		}
+	);
 
 if(mix.inProduction() === true) {
 	mix.babel('assets/js/xna.js', 'assets/js/xna.js');
