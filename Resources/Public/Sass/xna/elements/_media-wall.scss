@@ -55,6 +55,27 @@
 		}
 	}
 
+	.media-wall--item-image, .media-wall--item-video {
+		img:before, source:before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 10;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+			background: #444;
+			opacity: 0;
+			transition: opacity 0.25s;
+		}
+
+		&:hover {
+			img:before, source:before {
+				opacity: 0.35;
+			}
+		}
+	}
+
 	.media-wall--item-image {
 		picture:before, picture:after {
 			content: '';
@@ -70,6 +91,7 @@
 			background-size: 27px 27px;
 			opacity: 0;
 			transform: translate(0, 0);
+			transition: all 0.25s;
 		}
 
 		picture:before {
@@ -78,18 +100,6 @@
 
 		picture:after {
 			background-image: url('/assets/svg/zoom-down.svg');
-		}
-
-		img:before, source:before {
-			content: '';
-			display: block;
-			position: absolute;
-			z-index: 10;
-			top: 0; left: 0;
-			width: 100%;
-			height: 100%;
-			background: #444;
-			opacity: 0;
 		}
 
 		&:hover {
@@ -102,15 +112,52 @@
 				opacity: 1;
 				transform: translate(-2%, 2%);
 			}
+		}
+	}
 
-			img:before, source:before {
-				opacity: 0.35;
+	.media-wall--item-video {
+		& {
+			overflow: hidden;
+		}
+
+		picture:before {
+			content: '';
+			display: block;
+			position: absolute;
+			z-index: 15;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('/assets/svg/play.svg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 46px 29px;
+			transform: translate(0, 0);
+			transition: all 0.25s;
+		}
+
+		&:hover {
+			picture:before {
+				transform: scale(1.25);
 			}
 		}
 	}
 
 	.media-wall--content {
 		display: none;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.ce-media-wall {
+		.media-wall--item-video {
+			&:nth-child(1), &:nth-child(6), &:nth-child(10) {
+				picture:before {
+					background-size: 75px 48px;
+				}
+			}
+		}
 	}
 }
 
@@ -138,6 +185,21 @@
 				grid-area: 2 / 8 / span 2 / span 2;
 			}
 		}
+
+		.media-wall--item-video {
+			&, &:nth-child(1), &:nth-child(6) {
+				picture:before {
+					background-size: 56px 36px;
+				}
+			}
+
+			&:nth-child(5), &:nth-child(10), &:nth-child(14) {
+				picture:before {
+					background-image: url('/assets/svg/play-large.svg');
+					background-size: 93px 59px;
+				}
+			}
+		}
 	}
 }
 
@@ -146,6 +208,14 @@
 		.media-wall--item-image {
 			picture:before, picture:after {
 				background-size: 49px 49px;
+			}
+		}
+
+		.media-wall--item-video {
+			&:nth-child(5), &:nth-child(10), &:nth-child(14) {
+				picture:before {
+					background-size: 124px 79px;
+				}
 			}
 		}
 	}
