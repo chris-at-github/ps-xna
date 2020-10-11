@@ -22,8 +22,8 @@ $line-height-base: 1.5 !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Links
-$link-color: #0067b8 !default;
-$link-color-hover: #005da6 !default;
+$link-color: $theme-color-primary !default;
+$link-color-hover: $theme-color-hover !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Grid columns

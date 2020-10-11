@@ -1,15 +1,46 @@
 .footer--layout-0 {
 	& {
-		padding-top: rem(20px);
-		padding-bottom: rem(20px);
-		background: #eaeaea;
+		padding-top: rem(40px);
+		padding-bottom: rem(30px);
+		background: $theme-color-primary;
+		color: #fff;
 	}
 
 	.navigation {
-		@include navigation--layout-0;
+		& {
+			@include navigation--layout-0;
+			margin: rem(15px 0 0 0);
+		}
+
+		a, .current > span {
+			color: #fff;
+		}
+
+		a:hover, a:focus {
+			color: $theme-color-hover;
+			text-decoration: none;
+		}
 	}
 
-	.address {
-		margin: $spacing-medium 0 0 0;
+	.copyright {
+		padding: 3px 0;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.footer--layout-0 {
+		& {
+			padding-bottom: rem(60px);
+		}
+
+		.navigation {
+			& {
+				margin: 0;
+			}
+
+			ul {
+				justify-content: flex-end;
+			}
+		}
 	}
 }
