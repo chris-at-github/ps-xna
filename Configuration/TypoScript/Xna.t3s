@@ -12,6 +12,22 @@ lib.contentElement {
 	partialRootPaths.110 = {$plugin.tx_xna.view.partialRootPath}
 }
 
+plugin.tx_xo {
+	view {
+		layoutRootPaths {
+			20 = {$plugin.tx_xna.view.layoutRootPath}
+		}
+
+		templateRootPaths {
+			20 = {$plugin.tx_xna.view.templateRootPath}
+		}
+
+		partialRootPaths {
+			20 = {$plugin.tx_xna.view.partialRootPath}
+		}
+	}
+}
+
 page {
 	cssInline {
 		10 = FILE
