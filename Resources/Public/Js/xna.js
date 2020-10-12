@@ -6,6 +6,7 @@ require('./polyfills/custom-event');
 
 require('./helpers/get-css-property');
 require('./helpers/fire-event');
+require('./helpers/scroll-to');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components

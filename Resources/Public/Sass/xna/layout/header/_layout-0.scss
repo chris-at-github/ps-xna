@@ -116,7 +116,10 @@
 			left: 0;
 			width: 100%;
 			background: $theme-color-primary;
-			transition: transform ease-out 1.25s;
+			opacity: 1;
+			transition-property: opacity, transform;
+			transition-timing-function: ease-out;
+			transition-duration: 0.25s;
 		}
 
 		.navigation {
@@ -155,6 +158,12 @@
 
 			.sidebar {
 				transform: translate(0, 0);
+			}
+		}
+
+		.is--sidebar-closing & {
+			.sidebar {
+				opacity: 0;
 			}
 		}
 	}
