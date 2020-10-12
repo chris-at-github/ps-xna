@@ -12,8 +12,6 @@ lib.contentElement {
 	partialRootPaths.110 = {$plugin.tx_xna.view.partialRootPath}
 }
 
-
-
 page {
 	cssInline {
 		10 = FILE
@@ -32,6 +30,11 @@ page {
 	includeJSFooter {
 		application = /assets/js/xna.js
 		application.async = 1
+	}
+
+	headerData {
+		1567860045.wrap = <link rel="mask-icon" href="|icons/safari-pinned-tab.svg" color="#5bbad5">
+		1567860047.value = <meta name="msapplication-TileColor" content="#2c808d">
 	}
 
 	10 {
