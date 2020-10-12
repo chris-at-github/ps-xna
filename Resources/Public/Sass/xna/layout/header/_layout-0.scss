@@ -116,6 +116,7 @@
 			left: 0;
 			width: 100%;
 			background: $theme-color-primary;
+			transition: transform ease-out 1.25s;
 		}
 
 		.navigation {
@@ -156,6 +157,10 @@
 				transform: translate(0, 0);
 			}
 		}
+	}
+
+	.is--sidebar-closing {
+		position: static;
 	}
 }
 
