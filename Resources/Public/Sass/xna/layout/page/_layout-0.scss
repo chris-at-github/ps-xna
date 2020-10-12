@@ -27,7 +27,7 @@ body {
 }
 
 #content--main {
-	flex: 1;
+	flex: 1 auto; // IE 11 Fallback: auto
 }
 
 #content--header, #content--main {
