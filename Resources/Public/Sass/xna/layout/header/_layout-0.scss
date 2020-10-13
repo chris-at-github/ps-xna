@@ -37,6 +37,11 @@
 			border-bottom-right-radius: 5px;
 			//max-width: 100px;
 			//max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+			transition: background 0.35s;
+		}
+
+		&:hover {
+			background: $theme-color-primary-active;
 		}
 
 		svg {
@@ -77,6 +82,8 @@
 				height: rem(37px);
 				background: $theme-color-primary;
 				border-radius: 50%;
+
+				transition: background 0.25s;
 			}
 
 			&:hover {
@@ -90,6 +97,7 @@
 
 		.address--item-text {
 			display: none;
+			transition: color 0.25s;
 		}
 	}
 }
