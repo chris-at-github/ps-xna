@@ -73,6 +73,14 @@
 			padding-right: percentage(3 / 12);
 		}
 	}
+
+	%container-space-before-medium > %container-inner {
+		margin-top: rem(40px);
+	}
+
+	%container-space-after-medium > %container-inner {
+		margin-bottom: rem(40px);
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

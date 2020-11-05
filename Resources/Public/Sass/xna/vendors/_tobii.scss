@@ -5,5 +5,77 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Overwrite
 .tobii {
-	font-size: $font-size-base;
+	& {
+		font-size: $font-size-base;
+		background: rgba(#0e2b2f, 0.9);
+	}
+
+	& > button {
+		& {
+			color: inherit;
+			outline: 0;
+			opacity: inherit;
+		}
+
+		&:hover, &:focus {
+			& {
+				transform: none;
+			}
+
+			svg {
+				fill: $theme-color-hover;
+			}
+		}
+
+		svg {
+			fill: #fff;
+			stroke: none;
+			color: inherit;
+			transition: fill 0.25s;
+		}
+
+		&.tobii__prev, &.tobii__next {
+			&, &:hover, &:focus {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			svg {
+				width: rem(110px);
+				height: rem(110px);
+			}
+		}
+
+		&.tobii__close {
+			& {
+				top: rem(20px);
+				right: rem(20px);
+			}
+
+			svg {
+				width: rem(43px);
+				height: rem(43px);
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.tobii {
+		& > button {
+			&.tobii__prev, &.tobii__next {
+				svg {
+					width: rem(140px);
+					height: rem(140px);
+				}
+			}
+
+			&.tobii__close {
+				svg {
+					width: rem(53px);
+					height: rem(53px);
+				}
+			}
+		}
+	}
 }

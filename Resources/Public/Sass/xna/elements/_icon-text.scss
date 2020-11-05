@@ -18,6 +18,10 @@
 	}
 }
 
+.ce-icon-text.ce-frame--variant-1 {
+	@include icon-text--variant-1;
+}
+
 @include media-breakpoint-up(sm) {
 	.ce-icon-text {
 		.icon-text + .icon-text {

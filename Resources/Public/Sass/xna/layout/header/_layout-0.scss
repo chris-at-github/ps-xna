@@ -59,10 +59,14 @@
 		.sidebar {
 			transform: translate(-100%, 0);
 			position: fixed;
-			top: 83px; bottom: 0;
+			top: rem(83px); bottom: 0;
 			left: 0;
 			width: 100%;
 			background: #fff;
+			opacity: 1;
+			transition-property: opacity, transform;
+			transition-timing-function: ease-out;
+			transition-duration: 0.25s;
 		}
 
 		.navigation {
@@ -84,6 +88,10 @@
 			a, .current > span {
 				padding: 3px $spacing-medium;
 			}
+
+			a:hover {
+				text-decoration: none;
+			}
 		}
 
 		.is--sidebar-active & {
@@ -97,6 +105,16 @@
 				transform: translate(0, 0);
 			}
 		}
+
+		.is--sidebar-closing & {
+			.sidebar {
+				opacity: 0;
+			}
+		}
+	}
+
+	.is--sidebar-closing {
+		position: static;
 	}
 }
 
