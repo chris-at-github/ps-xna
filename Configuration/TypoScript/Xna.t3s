@@ -9,6 +9,16 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/Extensions/" extensions="t3s">
 
 page {
+	cssInline {
+		10 = FILE
+		10.file = assets/css/xna-inline.css
+	}
+
+	jsInline {
+		10 = FILE
+		10.file = assets/js/xna-inline.js
+	}
+
 	includeCSS {
 		application = /assets/css/xna.css
 	}
