@@ -20,6 +20,7 @@
 
 	.icon-text--title {
 		&, a, h1, h2, h3, h4, h5, h6 {
+			margin: rem(3px 0 0 0);
 			line-height: 1.4;
 			font-size: rem(20px);
 			font-weight: $font-weight-bold;
@@ -33,7 +34,7 @@
 
 	.icon-text--body {
 		& {
-			margin: rem(20px 0 0 0);
+			margin: rem(5px 0 0 0);
 		}
 
 		p, ul {

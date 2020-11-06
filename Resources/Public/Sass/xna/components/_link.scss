@@ -13,8 +13,10 @@
 }
 
 .link--phone {
-	color: $font-color-base;
-	text-decoration: none;
+	&, &:hover, &:focus {
+		color: $font-color-base;
+		text-decoration: none;
+	}
 }
 
 .link--cta {

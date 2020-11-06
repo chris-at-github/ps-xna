@@ -49,8 +49,16 @@
 			}
 
 			&:hover {
-				// Hover Code here
+				svg {
+					fill: $link-color-hover;
+				}
 			}
+		}
+
+		svg {
+			width: 35px;
+			fill: $theme-color-primary;
+			transition: fill 0.35s;
 		}
 	}
 
@@ -69,7 +77,7 @@
 		width: 100%;
 	}
 
-	&.slider--initialized {
+	.slider--initialized {
 		.slider--item + .slider--item {
 			visibility: visible;
 		}

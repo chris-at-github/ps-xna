@@ -10,7 +10,6 @@
 		& {
 			position: relative;
 			background: #ccc;
-			float: left;
 			cursor: pointer;
 		}
 
@@ -78,6 +77,23 @@
 			&:nth-child(14) {
 				grid-area: 2 / 8 / span 2 / span 2;
 			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IE10 / 11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.ce-media-wall {
+		.media-wall--container {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -1px;
+		}
+
+		.media-wall--item {
+			width: calc(14.28571% - 2px);
+			margin: 0 1px 2px 1px;
 		}
 	}
 }

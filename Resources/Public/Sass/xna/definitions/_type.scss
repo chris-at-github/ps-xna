@@ -1,5 +1,5 @@
 %hx {
-	margin-top: 2rem;
+	margin-top: rem(40px);
 	margin-bottom: 0;
 	font-weight: $headings-font-weight;
 	line-height: $headings-line-height;
@@ -22,6 +22,7 @@
 		font-weight: $font-weight-bold;
 		color: $link-color;
 		text-decoration: none;
+		transition: color 0.35s;
 	}
 
 	&:hover, &:focus {

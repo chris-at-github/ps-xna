@@ -99,7 +99,7 @@
 
 	&:hover .hamburger-inner {
 		&, &::before, &::after {
-			background: $link-color-hover;
+			background: $hamburger-hover-color;
 		}
 	}
 }

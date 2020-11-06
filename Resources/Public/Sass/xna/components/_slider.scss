@@ -47,6 +47,7 @@
 					width: rem(10px);
 					height: rem(10px);
 					border: 1px solid $font-color-base;
+					transition: all 0.25s;
 				}
 
 				&:hover:before {
@@ -63,6 +64,7 @@
 					}
 
 					&:hover:before {
+						background: $font-color-base;
 						border-color: $font-color-base;
 					}
 				}
