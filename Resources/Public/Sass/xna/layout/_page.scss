@@ -1,0 +1,32 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Hauptbereiche
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#header {
+	position: absolute;
+	top: 0;	left: 0;
+	z-index: 10;
+	width: 100%;
+}
+
+#content--main {
+	flex: 1 auto; // IE 11 Fallback: auto
+}
+
+#content--header, #content--main {
+	& > .ce-frame--space-after-auto:last-child {
+		@extend %container-space-after-medium;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layouts
+.page--layout-01 {
+	#header > #content--header, #header > #content--main {
+		padding: rem(83px 0 0 0); // Hoehe des Headers
+	}
+}
