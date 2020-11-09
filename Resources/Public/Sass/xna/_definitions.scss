@@ -1,5 +1,12 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Typography
+%hx {
+	margin-top: rem(40px);
+	margin-bottom: 0;
+	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
+}
+
 %link--default {
 	&:hover, &:focus {
 		text-decoration: underline;

@@ -2,9 +2,11 @@
 // Bootstrap & Xo
 @import 'functions';
 @import 'variables';
+@import 'mixins';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Definitions
+@import 'xna/definitions';
 @import 'xna/definitions/type';
 @import 'xna/definitions/table';
 
