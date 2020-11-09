@@ -1,27 +1,22 @@
-///* saira-condensed-regular - latin */
-//@font-face {
-//	font-family: 'Saira Condensed';
-//	font-style: normal;
-//	font-weight: 400;
-//	src: url('../fonts/saira-condensed-v6-latin-regular.eot'); /* IE9 Compat Modes */
-//	src: local('Saira Condensed Regular'), local('SairaCondensed-Regular'),
-//	url('../fonts/saira-condensed-v6-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//	url('../fonts/saira-condensed-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-//	url('../fonts/saira-condensed-v6-latin-regular.woff') format('woff'), /* Modern Browsers */
-//	url('../fonts/saira-condensed-v6-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-//	url('../fonts/saira-condensed-v6-latin-regular.svg#SairaCondensed') format('svg'); /* Legacy iOS */
-//}
-//
-///* saira-condensed-500 - latin */
-//@font-face {
-//	font-family: 'Saira Condensed';
-//	font-style: normal;
-//	font-weight: 500;
-//	src: url('../fonts/saira-condensed-v6-latin-500.eot'); /* IE9 Compat Modes */
-//	src: local('Saira Condensed Medium'), local('SairaCondensed-Medium'),
-//	url('../fonts/saira-condensed-v6-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//	url('../fonts/saira-condensed-v6-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-//	url('../fonts/saira-condensed-v6-latin-500.woff') format('woff'), /* Modern Browsers */
-//	url('../fonts/saira-condensed-v6-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-//	url('../fonts/saira-condensed-v6-latin-500.svg#SairaCondensed') format('svg'); /* Legacy iOS */
-//}
+// ---------------------------------------------------------------------------------------------------------------------
+// Fonts
+// @see: https://google-webfonts-helper.herokuapp.com/fonts/nunito?subsets=latin
+
+// Nunito Regular
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Nunito Regular'), local('Nunito-Regular'),
+	url('../fonts/nunito-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/nunito-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+// Nunito 600
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Nunito SemiBold'), local('Nunito-SemiBold'),
+	url('../fonts/nunito-v14-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('../fonts/nunito-v14-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
