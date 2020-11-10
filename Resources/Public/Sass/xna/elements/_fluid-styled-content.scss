@@ -1,27 +1,35 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Standard-Elemente
 .ce-header--layout-1 {
-	@extend %ce-header-1;
+	h2, h3 {
+		@include header-1;
+	}
 }
 
-.ce-bodytext  {
-	@extend %ce-bodytext;
+.ce-header--layout-2 {
+	h1, h3 {
+		@include header-2;
+	}
 }
 
-.ce-container {
-	@extend %ce-container;
+.ce-header--layout-3 {
+	h1, h2 {
+		@include header-3;
+	}
 }
 
-p, ul, ol, table, dl {
-	@extend %ce-header-sibling;
+.ce-header--layout-2, .ce-header--layout-3 {
+	& + p, & + ul, & + ol, & + table {
+		margin-top: $spacing-small;
+	}
 }
 
+.ce-bodytext, .ce-container {
+}
 
 // ---------------------------------------------------------------------------------------------------------------------
 // TYPO3 Bildelement
 .ce-textpic {
-	@extend %ce-container;
-
 	.ce-gallery {
 		margin-top: 0;
 	}

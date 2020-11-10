@@ -19,7 +19,6 @@
 	@include header-3;
 }
 
-
 %link--default {
 	& {
 		font-weight: $font-weight-bold;
@@ -31,20 +30,6 @@
 	&:hover, &:focus {
 		color: $link-color-hover;
 		text-decoration: underline;
-	}
-}
-
-%ce-header-1 {
-	& + %ce-bodytext, & + %ce-container, & + %ce-header-sibling {
-		margin-top: rem(30px);
-	}
-}
-
-@include media-breakpoint-up(md) {
-	%ce-header-1 {
-		& + %ce-bodytext, & + %ce-container, & + %ce-header-sibling {
-			margin-top: $spacing-medium;
-		}
 	}
 }
 
