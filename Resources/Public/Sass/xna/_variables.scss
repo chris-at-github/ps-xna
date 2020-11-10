@@ -6,7 +6,7 @@ $theme-color-hover: #eb6a18 !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Header
-$headings-font-weight: 300 !default;
+$headings-font-weight: 400 !default;
 $headings-line-height: 1.15 !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -14,9 +14,9 @@ $headings-line-height: 1.15 !default;
 $font-family-base: 'Nunito', Arial, sans-serif !default;
 $font-color-base: #444 !default;
 $font-size-base-px: 16px !default;
-$font-size-base: 1rem !default;
+$font-size-base: 1.15rem !default;
 $font-weight-base: 400;
-$font-weight-bold: 500;
+$font-weight-bold: 600;
 $line-height-base: 1.5 !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -70,7 +70,7 @@ $fsc-row-spacing: rem(20px) !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Spacing
-$spacing-default: rem(18px) !default;
+$spacing-default: rem(20px) !default;
 $spacing-tiny: rem(4px) !default;
 $spacing-small: rem(12px) !default;
 $spacing-medium: rem(24px) !default;

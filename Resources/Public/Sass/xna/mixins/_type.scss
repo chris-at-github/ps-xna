@@ -1,0 +1,27 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Header
+@mixin header-1 {
+	font-size: rem(40px);
+
+	@include media-breakpoint-up(md) {
+		margin-top: rem(80px);
+		font-size: rem(52px);
+	}
+}
+
+@mixin header-2 {
+	font-size: rem(26px);
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(32px);
+	}
+}
+
+@mixin header-3 {
+	font-size: rem(22px);
+	font-weight: $font-weight-bold;
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(24px);
+	}
+}

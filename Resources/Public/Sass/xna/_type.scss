@@ -1,25 +1,24 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // HTML
-h1, .h1, h2, .h2, h3 .h3 {
-	@extend %hx;
+h1, .h1, h2, .h2, h3, .h3 {
+	@extend %header-x;
 }
 
 h1, .h1 {
-	@extend %h1;
-	margin-top: rem(80px);
+	@extend %header-1;
 }
 
 h2, .h2 {
-	@extend %h2;
+	@extend %header-2;
 }
 
 h3, .h3 {
-	@extend %h3;
+	@extend %header-3;
 }
 
-h4, h5, h6,
-.h4, .h5, .h6 {
+h4, .h4, h5, .h5, h6, .h6 {
 	font-size: $font-size-base;
+	font-weight: $font-weight-bold;
 }
 
 p, ul, ol, table {
