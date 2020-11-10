@@ -26,6 +26,7 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------
 // Layouts
 .page--layout-01 {
+	// @todo: hier auf das erste Content Element gehen und dann per Margin
 	#header > #content--header, #header > #content--main {
 		padding: rem(83px 0 0 0); // Hoehe des Headers
 	}
