@@ -4,17 +4,39 @@
 @mixin list-unstyled {
 	& {
 		margin: 0;
+		padding: 0;
 		list-style: none;
 	}
 
 	li {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@mixin list-default {
+	& {
+		padding: 0;
+	}
+
+	li {
 		& {
-			position: static;
-			padding: 0;
+			position: relative;
+			list-style: none;
+			padding: rem(0 0 0 15px);
 		}
 
 		&:before {
-			display: none;
+			content: '';
+			position: absolute;
+			top: 12px; left: 0;
+			border: 2px solid $font-color-base;
+			border-radius: 50%;
 		}
+	}
+
+	ul {
+		margin-top: 0;
+		padding: 0;
 	}
 }

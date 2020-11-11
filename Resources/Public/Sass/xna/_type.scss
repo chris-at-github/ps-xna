@@ -40,38 +40,17 @@ a {
 	@extend %link--default;
 }
 
-ul {
-	& {
-		padding: 0;
-	}
-
-	li {
-		& {
-			position: relative;
-			list-style: none;
-			padding: 0 0 0 1rem;
-		}
-
-		&:before {
-			content: '';
-			position: absolute;
-			top: 10px; left: 0;
-			border: 2px solid $font-color-base;
-		}
-	}
-
-	ul {
-		margin-top: 0;
-	}
+ul.list--default {
+	@include list-default;
 }
 
-ol {
+ol.list--default {
 	& {
-		padding: 0 0 0 1rem;
+		padding: rem(0 0 0 20px);
 	}
 
 	li {
-		padding: 0 0 0 0.15rem;
+		padding: rem(0 0 0 3px);
 	}
 }
 
