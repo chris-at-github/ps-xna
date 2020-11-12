@@ -12,6 +12,20 @@
 	}
 }
 
+.link--download {
+	& {
+		@include iconfont(download);
+		position: relative;
+		padding: rem(0 0 0 24px);
+	}
+
+	&:before {
+		position: absolute;
+		top: rem(0px); left: rem(1px);
+		font-size: rem(16px);
+	}
+}
+
 .link--phone {
 	&, &:hover, &:focus {
 		color: $font-color-base;
