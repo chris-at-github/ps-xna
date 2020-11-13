@@ -1,0 +1,3 @@
+imports:
+  - { resource: 'EXT:xo/Configuration/Sites/Default.yaml' }
+websiteTitle: 'XNA'
