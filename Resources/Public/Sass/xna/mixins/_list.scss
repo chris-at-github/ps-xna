@@ -14,7 +14,7 @@
 	}
 }
 
-@mixin list-default {
+@mixin list-default-ul {
 	& {
 		padding: 0;
 	}
@@ -38,5 +38,28 @@
 	ul {
 		margin-top: 0;
 		padding: 0;
+	}
+}
+
+@mixin list-default-ol {
+	& {
+		padding: rem(0 0 0 20px);
+	}
+
+	li {
+		padding: rem(0 0 0 3px);
+	}
+}
+
+@mixin list--check {
+	li {
+		@include iconfont(check);
+		padding: rem(0 0 0 20px);
+	}
+
+	li:before {
+		border: 0;
+		top: 6px;
+		font-size: rem(9px);
 	}
 }

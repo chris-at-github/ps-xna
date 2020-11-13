@@ -40,20 +40,6 @@ a {
 	@extend %link--default;
 }
 
-ul.list--default {
-	@include list-default;
-}
-
-ol.list--default {
-	& {
-		padding: rem(0 0 0 20px);
-	}
-
-	li {
-		padding: rem(0 0 0 3px);
-	}
-}
-
 table {
 	@extend %table--default;
 }

@@ -31,6 +31,14 @@ body {
 	}
 }
 
+ul {
+	@include list-default-ul;
+}
+
+ol {
+	@include list-default-ol;
+}
+
 .cke_editable {
 	font-size: $font-size-base;
 	line-height: $line-height-base;
