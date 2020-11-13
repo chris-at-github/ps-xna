@@ -1,0 +1,26 @@
+@mixin table--default {
+	th, td {
+		text-align: left;
+		vertical-align: top;
+
+		p, ul, ol {
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+
+@mixin table--layout-0 {
+	& {
+		width: 100%;
+		border-spacing: 0;
+		border-collapse: collapse;
+	}
+
+	th, td {
+		padding: rem(3px 10px 3px 2px);
+		border-bottom: 1px solid #ccc;
+	}
+}

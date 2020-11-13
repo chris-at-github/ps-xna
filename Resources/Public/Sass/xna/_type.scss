@@ -41,10 +41,5 @@ a {
 }
 
 table {
-	@extend %table--default;
-}
-
-th, td {
-	@extend %th-default;
-	@extend %td-default;
+	@include table--default;
 }
