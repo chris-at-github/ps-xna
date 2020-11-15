@@ -25,9 +25,29 @@ body {
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layouts
-.page--layout-01 {
+.page--layout-0 {
 	// @todo: hier auf das erste Content Element gehen und dann per Margin
-	#header > #content--header, #header > #content--main {
-		padding: rem(83px 0 0 0); // Hoehe des Headers
+	#header + .ce-content .container-inner {
+		padding-top: rem(80px); // Hoehe des Headers
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Seiten Elemente
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Flash
+#flash {
+	& {
+		@extend %container-class-1;
+		@extend %container-space-before-small;
+		@extend %container-space-after-small;
+
+		position: relative;
+		z-index: 5;
+	}
+
+	.ce-header {
+		font-weight: $font-weight-bold;
 	}
 }

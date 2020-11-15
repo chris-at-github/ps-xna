@@ -2,7 +2,6 @@
 	& {
 		padding-top: rem(10px);
 		padding-bottom: rem(10px);
-		border-bottom: 3px solid #eaeaea;
 	}
 
 	.container-inner {
@@ -59,7 +58,7 @@
 		.sidebar {
 			transform: translate(-100%, 0);
 			position: fixed;
-			top: rem(83px); bottom: 0;
+			top: rem(80px); bottom: 0;
 			left: 0;
 			width: 100%;
 			background: #fff;

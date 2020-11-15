@@ -24,12 +24,12 @@
 	<f:render partial="Page/Flash" section="Main" arguments="{_all}" />
 
 	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentHeader')}">
-		<div id="content--header" role="main">
+		<div id="content--header" role="main" class="ce-content">
 			<f:render section="Header" />
 		</div>
 	</f:if>
 
-	<div id="content--main" role="main">
+	<div id="content--main" role="main" class="ce-content">
 		<f:render section="Main" />
 	</div>
 
