@@ -26,9 +26,10 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------
 // Layouts
 .page--layout-0 {
-	// @todo: hier auf das erste Content Element gehen und dann per Margin
-	#header + .ce-content .container-inner {
-		padding-top: rem(80px); // Hoehe des Headers
+	#header + .ce-content {
+		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
+			padding-top: rem(80px); // Hoehe des Headers
+		}
 	}
 }
 
