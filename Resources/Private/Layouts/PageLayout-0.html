@@ -6,7 +6,7 @@
 
 	<div id="header" class="container-outer header--layout-0">
 		<div class="container-inner">
-			<f:render partial="Page/Logo" section="Svg" />
+			<f:render partial="Page/Logo" section="Svg" arguments="{_all}" />
 
 			<div id="sidebar" class="sidebar">
 				<f:if condition="{navigationMain}">
@@ -35,7 +35,7 @@
 
 	<div id="footer" class="container-outer footer--layout-0">
 		<div class="container-inner">
-			<f:render partial="Page/Copyright" section="Main" />
+			<f:render partial="Page/Copyright" section="Main" arguments="{_all}" />
 
 			<f:if condition="{navigationFooter}">
 				<nav class="navigation">

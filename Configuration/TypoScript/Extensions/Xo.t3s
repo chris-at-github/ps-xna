@@ -12,21 +12,4 @@ plugin.tx_xo {
 			20 = {$plugin.tx_xna.view.partialRootPath}
 		}
 	}
-
-	settings {
-		environment {
-			sitename = XNA
-		}
-	}
-}
-
-tt_content {
-	xo_teaser.dataProcessing {
-		35 {
-			settings.teaser.media {
-				width = 370
-				height = 370
-			}
-		}
-	}
 }

@@ -13,3 +13,16 @@ lib.contentElement {
   	110 = {$plugin.tx_xna.view.partialRootPath}
   }
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Ueberschreiben von Inhaltselementen
+tt_content {
+	xo_teaser.dataProcessing {
+		35 {
+			settings.teaser.media {
+				width = 370
+				height = 370
+			}
+		}
+	}
+}
