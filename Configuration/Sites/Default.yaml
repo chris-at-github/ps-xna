@@ -5,3 +5,8 @@ baseVariants:
   -
     base: 'http://xna.local/'
     condition: 'applicationContext == "Development"'
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://xxx.local/sitemap.xml"
