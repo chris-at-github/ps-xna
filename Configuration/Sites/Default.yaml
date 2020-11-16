@@ -1,0 +1,7 @@
+imports:
+  - { resource: 'EXT:xo/Configuration/Sites/Default.yaml' }
+websiteTitle: 'Landschaftspflege Oberland'
+baseVariants:
+  -
+    base: 'http://landschaftspflege-oberland.local/'
+    condition: 'applicationContext == "Development"'

@@ -44,7 +44,6 @@ mix.options({
  | file for the application as well as bundling up all the JS files.
  |
  */
-
 mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 	.webpackConfig({
 		output: {

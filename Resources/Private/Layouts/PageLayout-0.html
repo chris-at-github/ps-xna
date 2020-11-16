@@ -1,4 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<xo:css.inlineFile file="assets/css/xna-inline.css" />
+	<xo:js.inlineFile file="assets/js/xna-inline.js" />
 
 	<f:render partial="Page/SkipNavigation" section="Main" />
 
@@ -15,7 +17,7 @@
 			</div>
 
 			<div class="logo--container">
-				<f:render partial="Page/Logo" section="Svg" />
+				<f:render partial="Page/Logo" section="Svg" arguments="{_all}" />
 			</div>
 
 			<f:if condition="{providerData.0}">
@@ -27,12 +29,12 @@
 	<f:render partial="Page/Flash" section="Main" arguments="{_all}" />
 
 	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentHeader')}">
-		<div id="content--header" role="main">
+		<div id="content--header" role="main" class="ce-content">
 			<f:render section="Header" />
 		</div>
 	</f:if>
 
-	<div id="content--main" role="main">
+	<div id="content--main" role="main" class="ce-content">
 		<f:render section="Main" />
 	</div>
 
@@ -40,7 +42,7 @@
 		<div class="container-inner">
 			<div class="row">
 				<div class="col-12 col-sm-6">
-					<f:render partial="Page/Copyright" section="Main" />
+					<f:render partial="Page/Copyright" section="Main" arguments="{_all}" />
 				</div>
 
 				<div class="col-12 col-sm-6">
