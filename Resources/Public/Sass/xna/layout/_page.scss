@@ -26,7 +26,13 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------
 // Layouts
 .page--layout-0 {
-	#header + .ce-content {
+	#breadcrumb {
+		position: absolute;
+		top: rem(80px);
+		left: 0; right: 0;
+	}
+
+	#header + .ce-content, #header + #breadcrumb + .ce-content {
 		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
 			padding-top: rem(80px); // Hoehe des Headers
 		}
