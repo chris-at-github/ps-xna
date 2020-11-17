@@ -23,7 +23,7 @@
 
 	<f:render partial="Page/Flash" section="Main" arguments="{_all}" />
 
-	<f:if condition="{breadcrumb}">
+	<f:if condition="{breadcrumb} && {data.tx_xo_no_breadcrumb} == 0">
 		<div id="breadcrumb" class="container-outer breadcrumb">
 			<div class="container-inner">
 				<f:render partial="Navigation/Breadcrumb" section="Main" arguments="{navigation: breadcrumb}" />
