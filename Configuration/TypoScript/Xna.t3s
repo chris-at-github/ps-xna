@@ -3,6 +3,7 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/Block/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/Plugin/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/ContentElement/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/Extensions/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/Page/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/DataProcessing/" extensions="t3s">
 
@@ -42,6 +43,7 @@ page {
 			// Navigationen
 			10 < navigation.main
 			20 < navigation.footer
+			30 < navigation.breadcrumb
 
 			// Page DataProcessing
 			100 < dataProcessing.settings
