@@ -23,6 +23,14 @@
 
 	<f:render partial="Page/Flash" section="Main" arguments="{_all}" />
 
+	<f:if condition="{breadcrumb}">
+		<div id="breadcrumb" class="container-outer breadcrumb">
+			<div class="container-inner">
+				<f:render partial="Navigation/Breadcrumb" section="Main" arguments="{navigation: breadcrumb}" />
+			</div>
+		</div>
+	</f:if>
+
 	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentHeader')}">
 		<div id="content--header" role="main" class="ce-content">
 			<f:render section="Header" />

@@ -44,6 +44,7 @@ page {
 			// Navigationen
 			10 < navigation.main
 			20 < navigation.footer
+			30 < navigation.breadcrumb
 
 			// Page DataProcessing
 			100 < dataProcessing.settings
