@@ -70,7 +70,7 @@
 
 		.navigation {
 			& {
-				@include navigation--layout-1();
+				@include navigation--layout-4();
 				padding: $spacing-medium 0 0 0;
 			}
 

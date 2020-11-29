@@ -90,3 +90,13 @@
 	//	display: block;
 	//}
 }
+
+@mixin navigation--layout-4 {
+	ul, li {
+		display: block;
+	}
+
+	ul ul {
+		display: none;
+	}
+}
