@@ -10,6 +10,10 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/System/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/Extensions/" extensions="t3s">
 
+navigation.main {
+	expandAll = 1
+}
+
 page {
 	includeCSS {
 		application = /assets/css/xna.css

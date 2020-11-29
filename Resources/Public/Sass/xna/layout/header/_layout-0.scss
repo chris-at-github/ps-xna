@@ -139,12 +139,8 @@
 
 		.navigation {
 			& {
-				@include navigation--layout-0;
+				@include navigation--layout-2;
 				padding-left: 10px;
-			}
-
-			ul ul {
-				display: none;
 			}
 		}
 	}
