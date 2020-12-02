@@ -1,12 +1,34 @@
-imports:
-  - { resource: 'EXT:xo/Configuration/Sites/Default.yaml' }
 websiteTitle: 'XNA'
+rootPageId: 1
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: '0'
+    base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ''
+    flag: de
 baseVariants:
   -
     base: 'http://xna.local/'
     condition: 'applicationContext == "Development"'
+errorHandling:
+  -
+    errorCode: '404'
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=47'
+routeEnhancers: { }
 routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://xxx.local/sitemap.xml"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://xna.local/sitemap.xml"
+  -
+    route: sitemap.xml
+    type: uri
+    source: 't3://page?type=1533906435'
