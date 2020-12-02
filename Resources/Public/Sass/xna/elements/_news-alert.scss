@@ -1,0 +1,66 @@
+.ce-news-alert {
+	@include icon-text--variant-1;
+
+	.icon-text--icon-container {
+		margin: rem(0 20px 0 0);
+	}
+
+	.icon-text--icon-background {
+		transform: rotate(30deg);
+	}
+
+	.icon-text--icon {
+		width: rem(50px);
+		height: rem(50px);
+	}
+
+	.icon-text--alert {
+		.icon-text--icon {
+			padding: rem(23px 0 0 0);
+		}
+	}
+
+	.icon-text--bike {
+		.icon-text--icon {
+			width: rem(60px);
+			height: rem(60px);
+			padding: rem(20px 0 0 0);
+		}
+	}
+
+	.icon-text--star {
+		.icon-text--icon {
+			position: relative;
+			left: -1px;
+			padding: rem(28px 0 0 0);
+		}
+	}
+
+	.icon-text--red {
+		.icon-text--icon-background {
+			fill: #ff4c43;
+		}
+	}
+
+	.icon-text--green {
+		.icon-text--icon-background {
+			fill: #76b82a;
+		}
+	}
+
+	.icon-text--grey {
+		.icon-text--icon-background {
+			fill: #e9e9e9;
+		}
+
+		.icon-text--icon svg {
+			fill: #666;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		.icon-text--icon-container {
+			margin: rem(0 40px 0 0);
+		}
+	}
+}

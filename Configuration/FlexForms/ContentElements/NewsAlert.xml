@@ -50,8 +50,8 @@
 										<numIndex index="1">alert</numIndex>
 									</numIndex>
 									<numIndex index="1">
-										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.icon.bell</numIndex>
-										<numIndex index="1">bell</numIndex>
+										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.icon.star</numIndex>
+										<numIndex index="1">star</numIndex>
 									</numIndex>
 									<numIndex index="2">
 										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.icon.bike</numIndex>

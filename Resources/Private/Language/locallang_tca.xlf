@@ -30,8 +30,8 @@
 			<trans-unit id="tx_xna_news_alert.icon.alert">
 				<source>Alert</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_news_alert.icon.bell">
-				<source>Bell</source>
+			<trans-unit id="tx_xna_news_alert.icon.star">
+				<source>Star</source>
 			</trans-unit>
 			<trans-unit id="tx_xna_news_alert.icon.bike">
 				<source>Bike</source>

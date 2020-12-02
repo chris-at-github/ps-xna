@@ -1,8 +1,36 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-<f:layout name="Default" />
-<f:section name="Main">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+	<f:section name="Header" />
 
-	<f:debug>{_all}</f:debug>
+	<f:section name="Main">
+		<div class="icon-text icon-text--{flexform.settings.icon} icon-text--{flexform.settings.color}">
+			<f:render section="Icon" arguments="{_all}" />
 
-</f:section>
+			<div class="icon-text--content">
+				<f:if condition="{data.header}">
+					<header class="icon-text--title">
+						<f:render partial="Header/Header" arguments="{header: data.header, layout: data.header_layout}" />
+					</header>
+				</f:if>
+
+				<f:if condition="{data.bodytext}">
+					<div class="icon-text--body">
+						<f:format.html>{data.bodytext}</f:format.html>
+					</div>
+				</f:if>
+			</div>
+		</div>
+	</f:section>
+
+	<f:section name="Icon">
+		<div class="icon-text--icon-container">
+			<svg class="icon-text--icon-background" viewBox="0 0 447 431">
+				<use xlink:href="#svg--polygon" />
+			</svg>
+
+			<div class="icon-text--icon">
+				<xo:svg.inline source="assets/svg/{flexform.settings.icon}.svg" />
+			</div>
+		</div>
+	</f:section>
 </html>
