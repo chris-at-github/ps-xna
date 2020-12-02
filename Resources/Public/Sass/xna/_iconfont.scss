@@ -1,24 +1,24 @@
 @import 'icons';
 
 // creates the font face tag if the variable is set to true (default)
-@if $create-font-face == false {
+@if $iconfont-create-font-face == true {
 	@font-face {
 	 	font-family: 'icons';
-		font-display: optional;
-		src: url('#{$icon-public-path}icons.woff') format('woff'), /* Pretty Modern Browsers */
-			url('#{$icon-public-path}icons.ttf')  format('truetype'), /* Safari, Android, iOS */
-			url('#{$icon-public-path}icons.svg') format('svg'); /* Legacy iOS */
+		font-display: swap;
+		src: url('#{$icon-public-path}icons.woff') format('woff'),
+			url('#{$icon-public-path}icons.ttf')  format('truetype'),
+			url('#{$icon-public-path}icons.svg') format('svg');
 
 	}
 }
 
 // creates icon classes for each individual loaded svg (default)
-@if $create-icon-classes == false {
-	.#{$icon-common-class}{
+@if $iconfont-create-icon-class == true {
+	.#{$icon-common-class} {
 		font-family: 'icons';
 		font-style: normal;
 		font-weight: 400;
-		
+
 		@each $family, $map in $__iconfont__data {
 			@each $icon, $content in $map {
 				&.#{$icon-prefix}#{$icon}{

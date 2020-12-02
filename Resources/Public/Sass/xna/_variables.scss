@@ -1,4 +1,10 @@
 // ---------------------------------------------------------------------------------------------------------------------
+// Colors
+$theme-color-primary: #2c808d !default;
+$theme-color-secondary: #96b53a !default;
+$theme-color-hover: #eb6a18 !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Header
 $headings-font-weight: 400 !default;
 $headings-line-height: 1.15 !default;
@@ -22,6 +28,8 @@ $link-color-hover: #009ee0 !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Grid columns
 $grid-gutter-width: 30px !default;
+$grid-order-enabled: false !default;
+$grid-offset-enabled: false !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
@@ -29,7 +37,64 @@ $page-max-width: 1000px !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Icon Font
+// 1: Variablen aus dem node Package (siehe _icons.scss)
 $create-font-face: false !default;
-$create-icon-classes: true !default;
+$create-icon-classes: false !default;
 $icon-prefix: 'icon-' !default;
-$icon-public-path: '../Font/' !default;
+$icon-public-path: '/assets/fonts/' !default;
+
+// 2: Eigene Variablen zur Steuerung
+$iconfont-create-font-face: true !default;
+$iconfont-create-icon-class: true !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Tobi
+$tobi-zoom-icon-background: rgba(26, 42, 58, 0.94) !default;
+$tobi-zoom-icon-color: #fff !default;
+$tobi-lightbox-background: rgba(80, 80, 80, 0.95) !default;
+$tobi-caption-background: rgba(255, 255, 255, 0.9) !default;
+$tobi-caption-color: $font-color-base !default;
+$tobi-counter-background: transparent !default;
+$tobi-counter-color: #fff !default;
+$tobi-button-background: transparent !default;
+$tobi-button-color: #fff !default;
+$tobi-loader-color: #fff !default;
+$tobi-slide-max-height: 85vh !default;
+$tobi-slide-max-width: 85vw !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Fluid Styled Content
+$fsc-textmedia-border-width: 1px !default;
+$fsc-textmedia-border-color: $font-color-base !default;
+$fsc-textmedia-margin: rem(20px) !default;
+$fsc-row-spacing: rem(20px) !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Spacing
+$spacing-default: rem(20px) !default;
+$spacing-tiny: rem(4px) !default;
+$spacing-small: rem(15px) !default;
+$spacing-medium: rem(24px) !default;
+$spacing-large: rem(48px) !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Hamburger
+// @see: https://github.com/jonsuh/hamburgers/blob/master/_sass/hamburgers/hamburgers.scss
+$hamburger-padding-x: 13px !default;
+$hamburger-padding-y: 15px !default;
+$hamburger-layer-width: 36px !default;
+$hamburger-layer-height: 3px !default;
+$hamburger-layer-spacing: 5px !default;
+$hamburger-layer-color: $font-color-base !default;
+$hamburger-layer-border-radius: 0 !default;
+$hamburger-hover-opacity: 1 !default;
+$hamburger-hover-color: $theme-color-hover !default;
+$hamburger-active-layer-color: $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter: opacity(50%) !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;
