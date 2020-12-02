@@ -1,4 +1,6 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/" extensions="t3c">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/Extensions/" extensions="t3c">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/Extensions/" extensions="t3c">
 
 plugin.tx_xna {
 	view {

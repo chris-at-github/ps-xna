@@ -6,6 +6,9 @@
 			<trans-unit id="tx_xna_rte.link.download">
 				<source>Download Link</source>
 			</trans-unit>
+			<trans-unit id="tx_xna_rte.link.cta">
+				<source>Call-to-Action Link</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

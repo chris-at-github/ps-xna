@@ -1,9 +1,15 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Bootstrap
 @import 'bootstrap/mixins/breakpoints';
-@import 'bootstrap/mixins/grid-framework';
 @import 'bootstrap/mixins/grid';
 
 // ---------------------------------------------------------------------------------------------------------------------
-// xo
+// XNA
+@import 'xna/mixins/type';
 @import 'xna/mixins/list';
+@import 'xna/mixins/table';
+@import 'xna/mixins/grid-column';
+@import 'xna/mixins/navigation';
+@import 'xna/mixins/hero';
+@import 'xna/mixins/slider';
+@import 'xna/mixins/icon-text';

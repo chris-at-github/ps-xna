@@ -1,0 +1,15 @@
+plugin.tx_xo {
+	view {
+		layoutRootPaths {
+			20 = {$plugin.tx_xna.view.layoutRootPath}
+		}
+
+		templateRootPaths {
+			20 = {$plugin.tx_xna.view.templateRootPath}
+		}
+
+		partialRootPaths {
+			20 = {$plugin.tx_xna.view.partialRootPath}
+		}
+	}
+}

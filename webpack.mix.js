@@ -1,18 +1,24 @@
 var mix = require('laravel-mix');
-		mix.setPublicPath('.');
+
+// Stopping at 95% emitting
+// @see: https://github.com/JeffreyWay/laravel-mix/issues/1126
+mix.setPublicPath('.');
+
+// No Noise
+// @see: https://laravel.com/docs/5.6/mix#notifications
+mix.disableSuccessNotifications();
 
 var spritemap = require('svg-spritemap-webpack-plugin');
 var iconfont = require('iconfont-plugin-webpack');
 
 var ImageminPlugin = require('imagemin-webpack-plugin').default;
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 var imageminMozjpeg = require('imagemin-mozjpeg');
 
-// Autoload jQuery
-// @see: https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md
-mix.autoload({
-	jquery: ['$', 'window.jQuery']
-});
+// // Autoload jQuery
+// // @see: https://github.com/JeffreyWay/laravel-mix/blob/master/docs/autoloading.md
+// mix.autoload({
+// 	jquery: ['$', 'window.jQuery']
+// });
 
 // Disable Process CSS Urls
 // @see: https://laravel.com/docs/5.7/mix#working-with-stylesheets
@@ -38,22 +44,20 @@ mix.options({
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'fileadmin/Resources/Public/Js/xna.js')
- 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'fileadmin/Resources/Public/Css/xna.css')
-	.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'fileadmin/Resources/Public/Css/editor.css')
+mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 	.webpackConfig({
 		output: {
-			publicPath: '/fileadmin/Resources/Public/'
+			publicPath: '/assets/'
 		},
 
 		plugins: [
 			new spritemap('typo3conf/ext/xna/Resources/Public/Svg/Sprite/*.svg', {
 				output: {
-					filename: 'fileadmin/Resources/Public/Svg/sprite.svg',
-					svgo: false
-					// svg: {
-					// 	sizes: false
-					// }
+					filename: 'assets/svg/sprite.svg',
+					svgo: true,
+					svg: {
+						sizes: false
+					}
 				},
 				sprite: {
 					generate: {
@@ -74,7 +78,7 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'fileadmin/Resources/Publ
 				src: './typo3conf/ext/xna/Resources/Public/Svg/Font', // required - directory where your .svg files are located
 				family: 'icons', // optional - the `font-family` name. if multiple iconfonts are generated, the dir names will be used.
 				dest: {
-					font: './fileadmin/Resources/Public/Font/[family].[type]', // required - paths of generated font files
+					font: './assets/fonts/[family].[type]', // required - paths of generated font files
 					css: './typo3conf/ext/xna/Resources/Public/Sass/xna/_icons.scss' // required - paths of generated css files
 				},
 				watch: {
@@ -83,18 +87,60 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'fileadmin/Resources/Publ
 				},
 			}),
 
-			new CopyWebpackPlugin([{
-				from: './typo3conf/ext/xna/Resources/Public/Images',
-				to: './fileadmin/Resources/Public/Images', // Laravel mix will place this in 'public/img'
-			}]),
-
 			new ImageminPlugin({
-				test: /\.(jpe?g|png|gif|svg)$/i,
+				test: /\.(jpe?g|png|gif)$/i,
 				plugins: [
 					imageminMozjpeg({
-						quality: 80,
+						quality: 90,
 					})
 				]
 			})
 		]
 	});
+
+mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js');
+
+mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
+	.copy('./typo3conf/ext/xna/Resources/Public/Svg/Embed/*', './assets/svg')
+	.copy('./typo3conf/ext/xna/Resources/Public/Fonts/*', './assets/fonts')
+	.copy('./typo3conf/ext/xna/Resources/Public/Icons/*', './assets/icons');
+
+mix.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
+	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'assets/css/xna.css')
+	.options({
+		postCss: [
+			require('postcss-cachebuster'),
+			require('postcss-combine-duplicated-selectors')({
+				removeDuplicatedProperties: true
+			})
+		]
+	}
+);
+
+// mix.postCss('assets/css/xna.css', 'assets/css', [
+// 	require('postcss-inline-svg')({
+// 		paths: ['./assets/svg']
+// 	})
+// ]);
+
+mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/xna-inline.css')
+	.options({
+			postCss: [
+				require('postcss-cachebuster'),
+				require('postcss-combine-duplicated-selectors')({
+					removeDuplicatedProperties: true
+				}),
+				require('postcss-urlrewrite')({
+					imports: true,
+					properties: true,
+					rules: [
+						{ from: '../fonts', to: 'assets/fonts'}
+					]
+				})
+			]
+		}
+	);
+
+if(mix.inProduction() === true) {
+	mix.babel('assets/js/xna.js', 'assets/js/xna.js');
+}

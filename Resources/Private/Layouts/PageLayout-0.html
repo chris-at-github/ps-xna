@@ -1,0 +1,65 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+<xo:css.inlineFile file="assets/css/xna-inline.css" />
+<xo:js.inlineFile file="assets/js/xna-inline.js" />
+
+<f:render partial="Page/SkipNavigation" section="Main" />
+
+<div id="header" class="container-outer header--layout-0">
+	<div class="container-inner">
+		<f:render partial="Page/Logo" section="Svg" arguments="{_all}" />
+
+		<div id="sidebar" class="sidebar">
+			<f:if condition="{navigationMain}">
+				<nav class="navigation">
+					<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationMain}" />
+				</nav>
+			</f:if>
+		</div>
+
+		<f:render partial="Page/Search" section="Icon" />
+		<f:render partial="Page/Hamburger" section="Main" />
+	</div>
+</div>
+
+<f:render partial="Page/Flash" section="Main" arguments="{_all}" />
+
+<f:if condition="{breadcrumb} && {data.tx_xo_no_breadcrumb} == 0">
+	<div id="breadcrumb" class="container-outer breadcrumb">
+		<div class="container-inner">
+			<f:render partial="Navigation/Breadcrumb" section="Main" arguments="{navigation: breadcrumb}" />
+		</div>
+	</div>
+</f:if>
+
+<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentHeader')}">
+	<div id="content--header" role="main" class="ce-content">
+		<f:render section="Header" />
+	</div>
+</f:if>
+
+<div id="content--main" role="main" class="ce-content">
+	<f:render section="Main" />
+</div>
+
+<div id="footer" class="container-outer footer--layout-0">
+	<div class="container-inner">
+		<f:render partial="Page/Copyright" section="Main" arguments="{_all}" />
+
+		<f:if condition="{navigationFooter}">
+			<nav class="navigation">
+				<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationFooter}" />
+			</nav>
+		</f:if>
+
+		<f:if condition="{providerData.0}">
+			<f:render partial="Page/Contact" section="Main" arguments="{address: providerData.0}" />
+		</f:if>
+	</div>
+</div>
+
+<div class="svg-sprite--container">
+	<xo:svg.inline source="assets/svg/sprite.svg" />
+</div>
+
+<f:render partial="Page/FooterScript" section="Main" />
+</html>

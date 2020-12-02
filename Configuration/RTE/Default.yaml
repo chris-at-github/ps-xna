@@ -7,5 +7,10 @@ imports:
 
 editor:
   config:
+    contentsCss:
+      - 'EXT:rte_ckeditor/Resources/Public/Css/contents.css'
+      - '/assets/css/editor.css'
+      -
     stylesSet:
       - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.download', element: 'a', attributes: { class: 'link--download' } }
+      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.cta', element: 'a', attributes: { class: 'link--cta' } }
