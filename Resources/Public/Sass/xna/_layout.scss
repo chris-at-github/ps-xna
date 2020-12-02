@@ -1,12 +1,12 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Grundelemente
-.container-outer {
+.container-outer, .ce-frame {
 	& {
 		padding-left: rem(20px);
 		padding-right: rem(20px);
 	}
 
-	& > .container-inner {
+	& > .container-inner, & > .ce-frame--inner {
 		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
@@ -15,18 +15,21 @@
 
 // Laufweite
 .container-outer--width-normal > .container-inner,
-.container-outer--width-indent-left > .container-inner {
+.container-outer--width-indent-left > .container-inner,
+.ce-frame--layout-0 > .ce-frame--inner,
+.ce-frame--layout-1 > .ce-frame--inner {
 	width: $page-max-width;
 }
 
-.container-outer--width-full {
+.container-outer--width-full,
+.ce-frame--layout-2 {
 	padding-left: 0;
 	padding-right: 0;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Seitenbereiche
-#content-main {
+#content--main {
 	margin: rem(60px 0 0 0);
 }
 
@@ -41,7 +44,7 @@
 		padding-right: 0;
 	}
 
-	#content-main {
+	#content--main {
 		margin-top: rem(100px);
 	}
 }

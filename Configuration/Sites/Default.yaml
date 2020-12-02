@@ -15,7 +15,7 @@ languages:
     flag: de
 baseVariants:
   -
-    base: 'http://xna.local/'
+    base: 'http://radlfluesterer.local/'
     condition: 'applicationContext == "Development"'
 errorHandling:
   -
@@ -27,7 +27,7 @@ routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://xna.local/sitemap.xml"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://radlfluesterer.local/sitemap.xml"
   -
     route: sitemap.xml
     type: uri

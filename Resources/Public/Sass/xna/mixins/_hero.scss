@@ -1,0 +1,31 @@
+@mixin hero($height) {
+	& {
+		min-height: $height;
+		padding-top: 0.1px;
+		padding-bottom: 0.1px;
+		background-color: #eaeaea;
+		background-position: center center;
+		background-size: cover;
+		position: relative;
+		z-index: 5;
+	}
+
+	.container-inner {
+		margin-top: rem(35px);
+	}
+
+	.hero--title {
+		& {
+			margin: rem(35px) 0 0 0;
+		}
+
+		&, h1, h2, h3, h4, h5, h6 {
+			font-size: rem(34px);
+			font-weight: $headings-font-weight;
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0;
+		}
+	}
+}

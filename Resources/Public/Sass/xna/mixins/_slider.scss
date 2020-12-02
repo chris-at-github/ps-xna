@@ -1,0 +1,119 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Hero Slider
+//
+// Hoehe muss mit der Componente Hero (xna/components/hero) abgeglichen werden
+//
+// benoetigt die Componenten:
+//	- xna/components/slider
+//	- xna/components/hero
+//
+// Code:
+//	1: bis vollstaendigen initialisieren des Sliders nur das erste Element anzeigen
+@mixin slider--variant-0() {
+	& {
+		position: relative;
+		height: rem(400px);
+		overflow: hidden; // 1
+	}
+
+	.slider--item + .slider--item {
+		visibility: hidden; // 1
+	}
+
+	.slider--controls {
+		& {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			display: none; // erst auf hoehren Breakpoints anzeigen -> dann steht rechts / links mehr Platz zur Verfuegung
+		}
+
+		.container-inner {
+			position: relative;
+		}
+	}
+
+	.slider--prev, .slider--next {
+		& {
+			position: absolute;
+			z-index: 10;
+			display: flex;
+			align-items: center;
+			min-height: rem(400px);
+		}
+
+		button {
+			& {
+				width: $spacing-medium;
+				height: 100px;
+			}
+
+			&:hover {
+				svg {
+					fill: $link-color-hover;
+				}
+			}
+		}
+
+		svg {
+			width: 35px;
+			fill: $theme-color-primary;
+			transition: fill 0.35s;
+		}
+	}
+
+	// Padding von .container-outer wieder aufheben
+	.slider--prev {
+		left: -$spacing-medium;
+	}
+
+	.slider--next {
+		right: -$spacing-medium;
+	}
+
+	.slider--navigation {
+		position: absolute;
+		bottom: rem(35px);
+		width: 100%;
+	}
+
+	.slider--initialized {
+		.slider--item + .slider--item {
+			visibility: visible;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		&, .slider--prev, .slider--next, .hero {
+			height: rem(500px);
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		&, .slider--prev, .slider--next, .hero {
+			height: rem(600px);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		.slider--controls {
+			display: block;
+		}
+
+		.slider--prev, .slider--next {
+			button {
+				width: rem(50px);
+				height: 100px;
+			}
+		}
+
+		// Padding von .container-outer wieder aufheben
+		.slider--prev {
+			left: rem(-50px);
+		}
+
+		.slider--next {
+			right: rem(-50px);
+		}
+	}
+}

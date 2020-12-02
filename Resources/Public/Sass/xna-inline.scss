@@ -3,6 +3,7 @@
 @import 'functions';
 @import 'variables';
 @import 'mixins';
+@import 'definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Basics | Utitity
@@ -15,6 +16,7 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
+@import 'xna/components/navigation/skip';
 @import 'xna/components/logo';
 @import 'xna/components/icon-text';
 

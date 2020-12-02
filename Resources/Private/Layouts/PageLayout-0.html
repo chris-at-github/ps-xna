@@ -4,6 +4,35 @@
 
 <f:render partial="Page/SkipNavigation" section="Main" />
 
+
+<div id="header" class="container-outer container-outer--width-normal">
+	<div class="container-inner">
+		<div class="logo--container">
+			<svg class="logo--background" viewBox="0 0 447 431">
+				<use xlink:href="#svg--polygon" />
+			</svg>
+			<f:render partial="Page/Logo" section="Svg" arguments="{_all}" />
+
+			<h1>Wenn`s um dein Radl geht</h1>
+		</div>
+
+		<div class="notification--container">
+			<svg class="notification--background" viewBox="0 0 447 431">
+				<use xlink:href="#svg--polygon" />
+			</svg>
+
+			<header class="notification--header">Neueröffnung</header>
+			<div class="notification--body">
+				Sie finden uns ab sofort gegenüber von Roche<br>
+				im Nonnenwald 11 in<br>
+				82377 Penzberg
+			</div>
+		</div>
+	</div>
+</div>
+
+<f:comment>
+<!--
 <div id="header" class="container-outer header--layout-0">
 	<div class="container-inner">
 		<f:render partial="Page/Logo" section="Svg" arguments="{_all}" />
@@ -30,6 +59,8 @@
 		</div>
 	</div>
 </f:if>
+-->
+</f:comment>
 
 <f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentHeader')}">
 	<div id="content--header" role="main" class="ce-content">
@@ -41,6 +72,24 @@
 	<f:render section="Main" />
 </div>
 
+<div id="footer" class="container-outer container-outer--width-normal">
+	<div class="container-inner">
+		<f:render partial="Page/Copyright" section="Main" arguments="{_all}" />
+
+		<nav class="navigation navigation-horizontal">
+			<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationFooter}" />
+		</nav>
+
+		<div class="footer--background-container">
+			<svg class="footer--background" viewBox="0 0 447 431">
+				<use xlink:href="#svg--polygon" />
+			</svg>
+		</div>
+	</div>
+</div>
+
+<f:comment>
+<!--
 <div id="footer" class="container-outer footer--layout-0">
 	<div class="container-inner">
 		<f:render partial="Page/Copyright" section="Main" arguments="{_all}" />
@@ -56,9 +105,11 @@
 		</f:if>
 	</div>
 </div>
+-->
+</f:comment>
 
 <div class="svg-sprite--container">
-	<xo:svg.inline source="assets/svg/sprite.svg" />
+	<xo:svg.inline source="assets/svg/polygon.svg" />
 </div>
 
 <f:render partial="Page/FooterScript" section="Main" />

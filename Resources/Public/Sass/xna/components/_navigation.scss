@@ -1,0 +1,16 @@
+.navigation {
+	ul {
+		@include list-unstyled();
+	}
+
+	li {
+		display: block;
+	}
+
+	a, .current > span {
+		display: block;
+		padding: 3px 10px;
+		text-decoration: none;
+		font-weight: $font-weight-bold;
+	}
+}
