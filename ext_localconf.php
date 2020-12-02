@@ -16,3 +16,9 @@ $iconRegistry->registerIcon(
 	\TYPO3\CMS\Core\Imaging\IconProvider\FontawesomeIconProvider::class,
 	['name' => 'bell']
 );
+
+$iconRegistry->registerIcon(
+	'xna-content-newsalert',
+	\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+	['source' => 'EXT:xna/Resources/Public/Icons/Backend/xna-content-newsalert.svg']
+);
