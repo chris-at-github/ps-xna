@@ -1,11 +1,4 @@
 .ce-address {
-	& {
-		position: relative;
-		z-index: 10;
-		min-height: 80px;
-		color: #fff;
-	}
-
 	.ce-address--inner {
 		position: absolute;
 		top: 85px;
@@ -30,12 +23,21 @@
 	}
 
 	.address {
+		padding: rem(10px 0 0 0);
+	}
+
+	&.ce-address--flash {
 		& {
-			padding: rem(10px 0 0 0);
+			position: relative;
+			z-index: 10;
+			min-height: 80px;
+			color: #fff;
 		}
 
-		.link--phone, .link--mail {
-			color: #fff;
+		.address {
+			.link--phone, .link--mail {
+				color: #fff;
+			}
 		}
 	}
 }
