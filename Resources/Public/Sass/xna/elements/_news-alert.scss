@@ -2,10 +2,13 @@
 	@include icon-text--variant-1;
 
 	.icon-text--icon-container {
+		width: rem(110px);
+		min-width: rem(110px);
 		margin: rem(0 20px 0 0);
 	}
 
 	.icon-text--icon-background {
+		left: 3px;
 		transform: rotate(30deg);
 	}
 
@@ -30,8 +33,6 @@
 
 	.icon-text--star {
 		.icon-text--icon {
-			position: relative;
-			left: -1px;
 			padding: rem(28px 0 0 0);
 		}
 	}
