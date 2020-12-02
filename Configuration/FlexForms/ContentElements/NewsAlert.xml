@@ -1,0 +1,69 @@
+<T3DataStructure>
+	<meta>
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<main>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>-</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.color type="array">
+						<TCEforms>
+							<label>LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.color</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.color.blue</numIndex>
+										<numIndex index="1">blue</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.color.red</numIndex>
+										<numIndex index="1">red</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.color.green</numIndex>
+										<numIndex index="1">green</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.color.grey</numIndex>
+										<numIndex index="1">grey</numIndex>
+									</numIndex>
+								</items>
+								<default>red</default>
+							</config>
+						</TCEforms>
+					</settings.color>
+					<settings.icon type="array">
+						<TCEforms>
+							<label>LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.icon</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items>
+									<numIndex index="0">
+										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.icon.alert</numIndex>
+										<numIndex index="1">alert</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.icon.bell</numIndex>
+										<numIndex index="1">bell</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.icon.bike</numIndex>
+										<numIndex index="1">bike</numIndex>
+									</numIndex>
+								</items>
+								<default>alert</default>
+							</config>
+						</TCEforms>
+					</settings.icon>
+				</el>
+			</ROOT>
+		</main>
+	</sheets>
+</T3DataStructure>

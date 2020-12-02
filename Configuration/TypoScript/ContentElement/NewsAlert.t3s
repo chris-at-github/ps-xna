@@ -1,0 +1,13 @@
+tt_content {
+	xna_news_alert =< lib.contentElement
+	xna_news_alert {
+		templateName = NewsAlert.html
+		dataProcessing {
+			30 = Ps\Xo\DataProcessing\FlexFormProcessor
+			30 {
+				fieldName = pi_flexform
+				as = flexform
+			}
+		}
+	}
+}

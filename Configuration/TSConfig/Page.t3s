@@ -1,2 +1,19 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:xo/Configuration/TSConfig/Page.t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TSConfig/Elements/" extensions="t3s">
+
+mod.wizards.newContentElement.wizardItems {
+	common {
+		elements {
+			xna_news_alert {
+				iconIdentifier = xna-content-newsalert
+				title = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.title
+				description = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.description
+				tt_content_defValues {
+					CType = xna_news_alert
+				}
+			}
+		}
+
+		show := addToList(xna_news_alert)
+	}
+}

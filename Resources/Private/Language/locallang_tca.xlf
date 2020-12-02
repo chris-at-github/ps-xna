@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-27T06:25:54Z" product-name="xna">
+		<header/>
+		<body>
+			<trans-unit id="tx_xna_news_alert.title">
+				<source>News Alert</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.description">
+				<source>A short news alert in combination with an icon</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color">
+				<source>Color</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color.blue">
+				<source>Blue</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color.red">
+				<source>Red</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color.green">
+				<source>Green</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color.grey">
+				<source>Grey</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.icon">
+				<source>Icon</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.icon.alert">
+				<source>Alert</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.icon.bell">
+				<source>Bell</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.icon.bike">
+				<source>Bike</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

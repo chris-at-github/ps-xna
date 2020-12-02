@@ -100,3 +100,40 @@ $GLOBALS['TCA']['tt_content']['types']['xo_media_wall']['columnsOverrides']['tx_
 		'selectedRatio' => '1_1',
 	],
 ];
+
+// ---------------------------------------------------------------------------------------------------------------------
+// News Alert Element
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPlugin(
+	array(
+		'LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_news_alert.title',
+		'xna_news_alert',
+		'xna-content-newsalert'
+	),
+	'CType',
+	'xna_news_alert'
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+	'*',
+	'FILE:EXT:xna/Configuration/FlexForms/ContentElements/NewsAlert.xml',
+	'xna_news_alert'
+);
+
+$GLOBALS['TCA']['tt_content']['types']['xna_news_alert'] = [
+	'showitem' => '
+			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
+			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.header;header, bodytext, pi_flexform,
+		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.appearance,
+			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.frames;frames,
+		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.access,
+			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.visibility;visibility,
+			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.access;access,
+		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.extended
+	',
+	'columnsOverrides' => []
+];
+
+$GLOBALS['TCA']['tt_content']['types']['xna_news_alert']['columnsOverrides']['bodytext']['config'] = [
+	'enableRichtext' => true,
+	'richtextConfiguration' => 'default',
+];
