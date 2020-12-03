@@ -1,6 +1,22 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:xo/Configuration/TSConfig/Page.t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TSConfig/Elements/" extensions="t3s">
 
+TCEFORM {
+	tt_content {
+		space_before_class {
+			addItems {
+				large = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.large
+			}
+		}
+
+		space_after_class {
+			addItems {
+				large = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.large
+			}
+		}
+	}
+}
+
 mod.wizards.newContentElement.wizardItems {
 	common {
 		elements {
