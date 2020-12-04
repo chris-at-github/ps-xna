@@ -16,14 +16,21 @@
 		}
 
 		a, span {
-			display: block;
-			margin: 0 auto;
-			width: 210px;
-			height: rem(95px);
-			max-width: 100%;
-			padding: rem(20px);
-			line-height: rem(55px);
-			text-align: center;
+			& {
+				display: block;
+				margin: 0 auto;
+				width: 210px;
+				height: rem(95px);
+				max-width: 100%;
+				padding: rem(20px);
+				line-height: rem(55px);
+				text-align: center;
+			}
+
+			&:hover img {
+				filter: grayscale(0);
+				opacity: 1;
+			}
 		}
 
 		img {
@@ -31,6 +38,9 @@
 			max-height: 100%;
 			width: auto;
 			height: auto;
+			filter: grayscale(100%);
+			opacity: 0.5;
+			transition: all 0.25s;
 		}
 	}
 }
