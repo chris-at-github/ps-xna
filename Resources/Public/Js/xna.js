@@ -4,15 +4,15 @@
 // require('./polyfills/object-assign');
 // require('./polyfills/custom-event');
 //
-// require('./helpers/get-css-property');
-// require('./helpers/fire-event');
-// require('./helpers/scroll-to');
+require('./helpers/get-css-property');
+require('./helpers/fire-event');
+require('./helpers/scroll-to');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
 // require('./components/icon-text');
-// require('./components/scroll-lock');
-// require('./components/navigation/layout-0');
+require('./components/scroll-lock');
+require('./components/navigation/layout-0');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements

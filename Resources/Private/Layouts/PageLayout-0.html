@@ -16,17 +16,14 @@
 			<h1>Wenn`s um dein Radl geht</h1>
 		</div>
 
-		<div class="notification--container">
-			<svg class="notification--background" viewBox="0 0 447 431">
-				<use xlink:href="#svg--polygon" />
-			</svg>
+		<f:render partial="Page/Hamburger" section="Main" />
 
-			<header class="notification--header">Neueröffnung</header>
-			<div class="notification--body">
-				Sie finden uns ab sofort gegenüber von Roche<br>
-				im Nonnenwald 11 in<br>
-				82377 Penzberg
-			</div>
+		<div id="sidebar" class="sidebar">
+			<f:if condition="{navigationMain}">
+				<nav class="navigation">
+					<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationMain}" />
+				</nav>
+			</f:if>
 		</div>
 	</div>
 </div>
