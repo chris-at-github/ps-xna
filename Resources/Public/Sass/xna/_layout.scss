@@ -34,7 +34,9 @@
 }
 
 @include media-breakpoint-up(sm) {
-	.container-outer {
+	.container-outer,
+	.ce-frame--layout-0,
+	.ce-frame--layout-1 {
 		padding-left: rem(40px);
 		padding-right: rem(40px);
 	}
@@ -45,6 +47,6 @@
 	}
 
 	#content--main {
-		margin-top: rem(100px);
+		//margin-top: rem(100px);
 	}
 }
