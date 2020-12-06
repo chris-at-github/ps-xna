@@ -15,6 +15,7 @@
 .logo--container {
 	& {
 		position: relative;
+		z-index: 20;
 		padding: rem(30px 0 0 0);
 	}
 
@@ -55,6 +56,7 @@
 .hamburger {
 	position: absolute;
 	top: rem(15px); right: 0;
+	z-index: 30;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -66,8 +68,9 @@
 			position: fixed;
 			top: rem(75px); bottom: 0;
 			left: 0;
+			z-index: 10;
 			width: 100%;
-			background: $theme-color-primary;
+			background: #fff;
 			opacity: 1;
 			transition-property: opacity, transform;
 			transition-timing-function: ease-out;
@@ -77,35 +80,24 @@
 		.navigation {
 			& {
 				@include navigation--layout-1();
-				padding: rem(55px) 0 0 0;
-			}
-
-			li {
-				& {
-					border-top: 1px solid #97c8cf;
-				}
-
-				&:first-child {
-					border: 0;
-				}
+				padding: rem(135px 0 0 0);
 			}
 
 			a, .current > span {
-				padding: rem(12px) $spacing-medium;
-				color: #fff
+				padding: rem(12px 20px);
+				color: $font-color-base
 			}
 
 			a:hover {
-				color: $theme-color-hover;
+				color: $link-color;
 				text-decoration: none;
 			}
 		}
 
 		.is--sidebar-active & {
 			& {
-				position: fixed;
+				position: relative;
 				z-index: 25;
-				background: #fff;
 			}
 
 			.sidebar {
@@ -127,10 +119,21 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 768
+@include media-breakpoint-up(sm) {
+	#header .navigation {
+		a, .current > span {
+			padding-left: rem(40px);
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768
 @include media-breakpoint-up(md) {
 	.logo--container {
 		& {
 			padding: rem(60px 0 0 0);
+			z-index: 0;
 		}
 
 		h1 {
@@ -164,7 +167,7 @@
 			margin: rem(0 0 0 15px);
 		}
 
-		a {
+		a, .current > span {
 			padding: rem(0 10px);
 			line-height: rem(60px);
 		}
