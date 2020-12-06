@@ -125,18 +125,6 @@
 	}
 }
 
-//// ---------------------------------------------------------------------------------------------------------------------
-//// >= 576
-//@include media-breakpoint-up(sm) {
-//	#header {
-//		min-height: 255px;
-//	}
-//
-//	.notification--container {
-//		display: block;
-//	}
-//}
-
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 768
 @include media-breakpoint-up(md) {
@@ -159,6 +147,27 @@
 	#logo {
 		width: 320px;
 		height: 140px;
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.navigation {
+		& {
+			position: absolute;
+			top: rem(15px); right: 0;
+			@include navigation--layout-0;
+		}
+
+		li {
+			margin: rem(0 0 0 15px);
+		}
+
+		a {
+			padding: rem(0 10px);
+			line-height: rem(60px);
+		}
 	}
 }
 
