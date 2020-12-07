@@ -4,6 +4,7 @@
 	.icon-text--icon-container {
 		width: rem(110px);
 		min-width: rem(110px);
+		height: rem(110px);
 		margin: rem(0 20px 0 0);
 	}
 
@@ -71,5 +72,28 @@
 		.icon-text--icon-container {
 			margin: rem(0 50px 0 0);
 		}
+	}
+
+	// ---------------------------------------------------------------------------------------------------------------------
+	// IE10 / 11
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		.icon-text--icon-container {
+			width: rem(101px);
+			min-width: rem(101px);
+			height: rem(101px);
+		}
+
+		.icon-text {
+			.icon-text--icon svg {
+				width: rem(60px);
+				height: rem(60px);
+			}
+		}
+
+		//.icon-text--bike {
+		//	.icon-text--icon {
+		//		padding: rem(25px 0 0 0);
+		//	}
+		//}
 	}
 }
