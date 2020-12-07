@@ -15,7 +15,7 @@ const GoogleMaps = require('../modules/googleMaps');
 		});
 
 		map.addMarkerType('default', map.MARKER_TYPE_SIMPLE, {
-			url: 'https://www.radlfluesterer.de/svg/marker.svg',
+			url: 'https://www.radlfluesterer.de/assets/svg/marker.svg',
 			scaledSize: [48, 51],
 			optimized: false
 		});
