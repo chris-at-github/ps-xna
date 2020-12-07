@@ -29,7 +29,14 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Seitenbereiche
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 #content--main {
+	flex: 1 auto; // IE 11 Fallback: auto
 	margin: rem(60px 0 0 0);
 }
 
@@ -44,9 +51,5 @@
 	.container-outer--width-full {
 		padding-left: 0;
 		padding-right: 0;
-	}
-
-	#content--main {
-		//margin-top: rem(100px);
 	}
 }

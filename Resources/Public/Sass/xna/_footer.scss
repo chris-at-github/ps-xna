@@ -60,7 +60,7 @@
 @include media-breakpoint-up(md) {
 	#footer {
 		& {
-			overflow: inherit;
+			//overflow: inherit;
 			padding-top: rem(220px);
 			padding-bottom: rem(100px);
 		}
