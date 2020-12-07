@@ -17,6 +17,8 @@ baseVariants:
   -
     base: 'http://radlfluesterer.local/'
     condition: 'applicationContext == "Development"'
+  - base: 'https://www.radlfluesterer.de/'
+    condition: 'applicationContext == "Production"'
 errorHandling:
   -
     errorCode: '404'
@@ -27,7 +29,7 @@ routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://radlfluesterer.local/sitemap.xml"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: https://www.radlfluesterer.de/sitemap.xml"
   -
     route: sitemap.xml
     type: uri
