@@ -1,0 +1,21 @@
+.product--section + .product--section {
+	margin: rem(80px 0 0 0);
+}
+
+.product--short-description,
+.product--long-description {
+	margin: rem(30px 0);
+}
+
+.product--hero {
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.product--table {
+	max-width: 100%;
+	overflow: hidden;
+	overflow-x: auto;
+}
