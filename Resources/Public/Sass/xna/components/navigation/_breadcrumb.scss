@@ -1,7 +1,12 @@
 .breadcrumb {
+	& {
+		display: none;
+	}
+
 	ul {
 		@include list-unstyled;
 		display: flex;
+		flex-wrap: wrap;
 	}
 
 	li + li {
@@ -19,5 +24,11 @@
 			width: rem(6px); height: rem(12px);
 			background: url(/assets/svg/chevron-right.svg) no-repeat 0 0;
 		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.breadcrumb {
+		display: block;
 	}
 }
