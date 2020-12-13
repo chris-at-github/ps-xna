@@ -1,6 +1,6 @@
 imports:
   - { resource: 'EXT:xo/Configuration/Sites/Default.yaml' }
-websiteTitle: 'XNA'
+websiteTitle: 'Kist Escherich'
 baseVariants:
   - base: 'http://kist-escherich.local'
     condition: 'applicationContext == "Development"'
