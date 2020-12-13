@@ -14,7 +14,7 @@
 			padding: rem(15px 15px);
 		}
 
-		&:hover {
+		&:hover, &:active {
 			text-decoration: none;
 		}
 	}
