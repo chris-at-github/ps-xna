@@ -17,9 +17,13 @@
 	.logo {
 		& {
 			@extend %logo;
-			max-width: 100px;
+			max-width: 140px;
 			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
 			-ms-grid-column: 1;
+		}
+
+		svg {
+			fill: $font-color-base;
 		}
 
 		&:hover svg {
@@ -120,8 +124,9 @@
 @include media-breakpoint-up(md) {
 	.header--layout-0 {
 		.container-inner {
-			-ms-grid-columns: 100px 1fr 60px;
-			grid-template-columns: 100px auto 60px;
+			-ms-grid-columns: 140px 1fr 60px;
+			grid-template-columns: 140px auto 60px;
+			grid-gap: 30px;
 		}
 
 		.sidebar {
