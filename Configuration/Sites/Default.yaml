@@ -1,16 +1,46 @@
-imports:
-  - { resource: 'EXT:xo/Configuration/Sites/Default.yaml' }
 websiteTitle: 'Kist Escherich'
+rootPageId: 1
 baseVariants:
   - base: 'http://kist-escherich.local'
     condition: 'applicationContext == "Development"'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /de/
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de
+    direction: ''
+    flag: de
+  -
+    title: English
+    enabled: true
+    languageId: 1
+    fallbackType: strict
+    base: /en/
+    typo3Language: default
+    locale: en-GB.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en
+    direction: ''
+    flag: gb
 errorHandling:
   -
     errorCode: '404'
     errorHandler: Page
     errorContentSource: 't3://page?uid=47'
 routes:
+  - route: sitemap.xml
+    type: uri
+    source: 't3://page?type=1533906435'
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://xna.local/sitemap.xml"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://kist-escherich.local/sitemap.xml"
+
+
