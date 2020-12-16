@@ -31,7 +31,7 @@
 
 	.navigation--container-outer {
 		position: absolute;
-		top: 57px;
+		top: 100px;
 		left: 0; right: 0;
 		display: none;
 		padding-left: $spacing-medium;
@@ -40,7 +40,7 @@
 
 	.navigation--container-background {
 		position: absolute;
-		top: 25px; bottom: 0;
+		top: 20px; bottom: 0;
 		left: 0; right: 0;
 		background: #f7f7f7;
 		z-index: -1;
@@ -88,6 +88,7 @@
 
 	//& > ul > li:first-child > .navigation--container-outer {
 	//	display: block;
+	//	//background: red;
 	//}
 }
 

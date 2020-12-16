@@ -8,16 +8,32 @@
 		<div class="container-inner">
 			<f:render partial="Page/Logo" section="Svg" arguments="{_all}" />
 
-			<div id="sidebar" class="sidebar">
+			<div id="sidebar" class="sidebar off-canvas">
+				<f:render partial="Page/Search" section="Icon" />
+				<div class="language-navigation">DE EN</div>
+
 				<f:if condition="{navigationMain}">
-					<nav class="navigation">
+					<nav class="main-navigation navigation">
 						<f:render partial="Navigation/MegaDropdown" section="Main" arguments="{navigation: navigationMain}" />
 					</nav>
 				</f:if>
+
+				<div class="meta-navigation">Meta Navigation</div>
 			</div>
 
-			<f:render partial="Page/Search" section="Icon" />
 			<f:render partial="Page/Hamburger" section="Main" />
+
+			<f:comment>
+				<!--
+				<div id="sidebar" class="sidebar off-canvas">
+					<f:if condition="{navigationMain}">
+						<nav class="main-navigation navigation">
+							<f:render partial="Navigation/MegaDropdown" section="Main" arguments="{navigation: navigationMain}" />
+						</nav>
+					</f:if>
+				</div>
+				-->
+			</f:comment>
 		</div>
 	</div>
 
