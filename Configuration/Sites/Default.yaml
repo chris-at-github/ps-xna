@@ -2,7 +2,7 @@ imports:
   - { resource: 'EXT:xo/Configuration/Sites/Default.yaml' }
 websiteTitle: 'XNA'
 baseVariants:
-  - base: 'http://kist-escherich.local'
+  - base: 'http://xna.local'
     condition: 'applicationContext == "Development"'
 errorHandling:
   -
