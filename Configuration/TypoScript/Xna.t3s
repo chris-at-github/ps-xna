@@ -49,6 +49,7 @@ page {
 			10 < navigation.main
 			20 < navigation.footer
 			30 < navigation.breadcrumb
+			40 < navigation.language
 
 			// Page DataProcessing
 			100 < dataProcessing.settings
