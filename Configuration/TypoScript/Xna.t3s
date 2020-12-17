@@ -50,6 +50,7 @@ page {
 			20 < navigation.footer
 			30 < navigation.breadcrumb
 			40 < navigation.language
+			50 < navigation.meta
 
 			// Page DataProcessing
 			100 < dataProcessing.settings
