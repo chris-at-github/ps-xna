@@ -1,13 +1,29 @@
 .breadcrumb {
+	& {
+		display: none;
+	}
+
 	ul {
-		@include list-unstyled;
-		display: flex;
+		& {
+			@include list-unstyled;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		li {
+			& {
+				margin: rem(0 12px 0 0);
+			}
+
+			&:last-child {
+				margin: 0;
+			}
+		}
 	}
 
 	li + li {
 		& {
 			position: relative;
-			margin: rem(0 0 0 12px);
 			padding: rem(0 0 0 18px);
 		}
 
@@ -19,5 +35,11 @@
 			width: rem(6px); height: rem(12px);
 			background: url(/assets/svg/chevron-right.svg) no-repeat 0 0;
 		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.breadcrumb {
+		display: block;
 	}
 }
