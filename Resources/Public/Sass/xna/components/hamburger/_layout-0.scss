@@ -21,7 +21,7 @@
 	}
 
 	// Copy of &.is-active
-	.is--sidebar-active & {
+	.is--off-canvas-active & {
 		.hamburger-inner {
 			transform: translate3d(0, ($hamburger-layer-spacing + $hamburger-layer-height) * -1, 0) rotate(-45deg);
 			transition-delay: 0.22s;

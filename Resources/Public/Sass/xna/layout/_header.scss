@@ -1,0 +1,263 @@
+.header--layout-0 {
+	& {
+		padding-top: rem(10px);
+		padding-bottom: rem(10px);
+	}
+
+	.container-inner {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 1fr 60px;
+		grid-template-columns: auto 60px;
+		grid-gap: 10px;
+		align-items: center;
+		min-height: rem(60px);
+	}
+
+	.logo {
+		& {
+			@extend %logo;
+			max-width: 120px;
+			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+		}
+
+		svg {
+			fill: $font-color-base;
+		}
+
+		&:hover svg {
+			fill: $link-color-hover;
+		}
+	}
+
+	.search {
+		& {
+			display: none;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&:hover svg {
+			fill: $link-color-hover;
+		}
+
+		svg {
+			display: block;
+			width: 25px;
+			height: 25px;
+		}
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	#header.header--layout-0 {
+		.off-canvas {
+			transform: translate(-100%, 0);
+			position: fixed;
+			top: rem(80px); bottom: 0;
+			left: 0;
+			width: 100%;
+			background: #fff;
+			opacity: 1;
+			transition-property: opacity, transform;
+			transition-timing-function: ease-out;
+			transition-duration: 0.25s;
+		}
+
+		.navigation {
+			& {
+				@include navigation--layout-4();
+				padding: $spacing-medium 0 0 0;
+			}
+
+			li {
+				& {
+					border-top: 1px solid #eaeaea;
+				}
+
+				&:first-child {
+					border: 0;
+				}
+			}
+
+			a, .current > span {
+				padding: 3px $spacing-medium;
+			}
+
+			a:hover {
+				text-decoration: none;
+			}
+		}
+
+		.language-navigation {
+			padding: rem(20px) 0 0 $spacing-default;
+		}
+
+		.is--off-canvas-active & {
+			& {
+				position: fixed;
+				z-index: 25;
+				background: #fff;
+			}
+
+			.off-canvas {
+				transform: translate(0, 0);
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.header--layout-0 {
+		.container-inner {
+			//-ms-grid-columns: 140px 1fr 60px;
+			//grid-template-columns: 140px auto 60px;
+			//grid-gap: 30px;
+
+			display: grid;
+			grid-template-columns: 140px 1fr;
+			grid-template-rows: 35px 60px;
+			gap: 5px 30px;
+			grid-template-areas:
+				'. off-canvas off-canvas'
+				'logo off-canvas off-canvas';
+		}
+
+		.off-canvas {
+			grid-area: off-canvas;
+
+			display: grid;
+			grid-template-columns: 1fr 20px 60px;
+			grid-template-rows: 35px 60px;
+			gap: 5px 20px;
+			grid-template-areas:
+				'meta-navigation language-navigation language-navigation'
+				'main-navigation main-navigation search';
+		}
+
+		.logo {
+			grid-area: logo;
+			align-self: end;
+			padding: 0 0 9px 0;
+		}
+
+		.search {
+			grid-area: search;
+			display: flex;
+			height: 100%;
+			justify-content: flex-end;
+		}
+
+		.language-navigation {
+			& {
+				grid-area: language-navigation;
+			}
+
+			ul {
+				justify-content: flex-end;
+			}
+		}
+
+		.main-navigation {
+			grid-area: main-navigation;
+			align-self: end;
+		}
+
+		.meta-navigation {
+			& {
+				grid-area: meta-navigation;
+				@include navigation--layout-0;
+			}
+
+			ul {
+				justify-content: flex-end;
+			}
+		}
+
+		.hamburger {
+			display: none;
+		}
+
+		.main-navigation {
+			& {
+				@include navigation--layout-2;
+				padding-left: 10px;
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// IE10 / 11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.header--layout-0 {
+		.container-inner {
+			display: -ms-grid;
+			-ms-grid-columns: 300px 1fr 300px;
+			-ms-grid-rows: 100px 100px;
+			gap: 5px 30px;
+		}
+
+		.logo {
+			-ms-grid-row: 2;
+			-ms-grid-row-span: 1;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 0;
+		}
+
+		.off-canvas {
+			-ms-grid-row: 1;
+			-ms-grid-row-span: 2;
+			-ms-grid-column: 2;
+			-ms-grid-column-span: 3;
+		}
+
+		.off-canvas {
+			display: -ms-grid;
+			-ms-grid-columns: 1fr 300px 300px;
+			-ms-grid-rows: 300px 300px;
+			gap: 5px 30px;
+		}
+
+		.language-navigation {
+			-ms-grid-row: 1;
+			-ms-grid-row-span: 1;
+			-ms-grid-column: 2;
+			-ms-grid-column-span: 3;
+		}
+
+		.main-navigation {
+			-ms-grid-row: 2;
+			-ms-grid-row-span: 1;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 1;
+		}
+
+		.search {
+			-ms-grid-row: 2;
+			-ms-grid-row-span: 1;
+			-ms-grid-column: 3;
+			-ms-grid-column-span: 2;
+		}
+
+		.meta-navigation {
+			-ms-grid-row: 1;
+			-ms-grid-row-span: 1;
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 1;
+		}
+
+		// Vertical-Align: Middle for IE 11
+		.navigation {
+			& {
+				height: 100%;
+				padding-left: 20px;
+			}
+
+			ul {
+				height: 100%;
+				align-items: center;
+			}
+		}
+	}
+}

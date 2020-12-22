@@ -28,7 +28,7 @@ body {
 .page--layout-0 {
 	#breadcrumb {
 		position: absolute;
-		top: rem(80px);
+		top: rem(130px);
 		left: 0; right: 0;
 	}
 
@@ -38,9 +38,6 @@ body {
 		}
 	}
 }
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Seiten Elemente
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Flash
@@ -56,5 +53,15 @@ body {
 
 	.ce-header {
 		font-weight: $font-weight-bold;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.page--layout-0 {
+		#header + .ce-content, #header + #breadcrumb + .ce-content {
+			.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
+				padding-top: rem(130px); // Hoehe des Headers
+			}
+		}
 	}
 }

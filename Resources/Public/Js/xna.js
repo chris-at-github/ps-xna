@@ -10,7 +10,7 @@ require('./helpers/scroll-to');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
-require('./components/icon-text');
+require('./components/data-uri-target');
 require('./components/scroll-lock');
 require('./components/navigation/layout-0');
 

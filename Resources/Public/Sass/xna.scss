@@ -23,6 +23,7 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/components/list';
 @import 'xna/components/table';
 @import 'xna/components/navigation/breadcrumb';
+@import 'xna/components/navigation/language';
 @import 'xna/components/hamburger';
 @import 'xna/components/hamburger/layout-0';
 @import 'xna/components/form';
@@ -37,7 +38,7 @@ $iconfont-create-icon-class: false !default;
 // Layout
 @import 'xna/layout/page';
 @import 'xna/layout/container';
-@import 'xna/layout/header/layout-0';
+@import 'xna/layout/header';
 @import 'xna/layout/footer/layout-0';
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -47,6 +48,7 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/elements/google-map';
 @import 'xna/elements/media-wall';
 @import 'xna/elements/hero-slider';
+@import 'xna/elements/page-teaser';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Navigation
