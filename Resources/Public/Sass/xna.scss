@@ -16,6 +16,10 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/footer';
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Vendors
+@import 'xna/vendors/tiny-slider';
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Components
 @import 'xna/components/link';
 @import 'xna/components/address';

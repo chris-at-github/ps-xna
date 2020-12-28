@@ -17,5 +17,6 @@ require('./components/navigation/layout-0');
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements
 require('./elements/google-map');
+require('./elements/bicycle-market');
 // require('./elements/slider');
 // require('./elements/media-wall');
