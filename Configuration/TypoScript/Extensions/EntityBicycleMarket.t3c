@@ -1,0 +1,5 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:entity_bicycle_market/Configuration/TypoScript/constants.typoscript">
+
+plugin.tx_entitybicyclemarket {
+	persistence.storagePid = 53
+}
