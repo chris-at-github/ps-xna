@@ -5,6 +5,43 @@
 	}
 }
 
-.bicycle-market--single {
+.bicycle-market--modal-backdrop {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: rgba(#fff, 0.8);
+}
 
+.bicycle-market--modal {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.bicycle-market--modal-close {
+	width: 100px;
+	height: 100px;
+	background: gold;
+
+	position: absolute;
+	top: 0; right: 0;
+}
+
+.bicycle-market--modal-container {
+	max-height: 100vh;
+	padding: 100px 0 0 0;
+	align-self: center;
+	background: #f3f3f3;
+}
+
+.bicycle-market--modal-content {
+	max-height: 100%;
+	overflow: auto;
 }
