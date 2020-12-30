@@ -3,4 +3,5 @@
 plugin.tx_entitybicyclemarket {
 	persistence.storagePid = 53
 	settings.showPageUid = 54
+	settings.fetchRequestTypeNum = 1548191072
 }

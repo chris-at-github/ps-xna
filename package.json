@@ -12,7 +12,8 @@
 	"dependencies": {
 		"micromodal": "^0.4.6",
 		"tiny-slider": "^2.9.3",
-		"tobii": "^2.0.0-alpha"
+		"tobii": "^2.0.0-alpha",
+		"whatwg-fetch": "^3.5.0"
 	},
 	"devDependencies": {
 		"cross-env": "^5.1",
