@@ -10,18 +10,19 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-	font-size: 3rem;
-}
-
-h2, .h2 {
 	font-size: rem(30px);
 	color: #00beee;
 }
 
-h3, .h3 {
+h2, .h2 {
 	font-size: rem(24px);
 	font-weight: $font-weight-bold;
 	color: $font-color-base;
+}
+
+h3, .h3 {
+	font-size: rem(18px);
+	font-weight: $font-weight-bold;
 }
 
 p, ul, ol, table {
@@ -76,11 +77,11 @@ ol {
 }
 
 @include media-breakpoint-up(md) {
-	h2, .h2 {
+	h1, .h1  {
 		font-size: rem(40px);
 	}
 
-	h3, .h3 {
-		font-size: rem(24px);
+	h2, .h2 {
+		font-size: rem(20px);
 	}
 }

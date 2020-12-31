@@ -66,6 +66,15 @@
 
 // Inhalte
 // ---------------------------------------------------------------------------------------------------------------------
+.ce-header--layout-1 {
+	h2, h3 {
+		font-size: rem(30px);
+		font-weight: $headings-font-weight;
+		color: #00beee;
+	}
+}
+
+.ce-header--layout-1 + .ce-bodytext,
 .ce-header--layout-2 + .ce-bodytext {
 	margin-top: rem(20px);
 }
@@ -81,6 +90,13 @@
 		}
 	}
 
+	.ce-header--layout-1 {
+		h2, h3 {
+			font-size: rem(40px);
+		}
+	}
+
+	.ce-header--layout-1 + .ce-bodytext,
 	.ce-header--layout-2 + .ce-bodytext {
 		margin-top: rem(30px);
 	}
