@@ -67,7 +67,7 @@ import 'whatwg-fetch';
 	});
 
 	xna.on('documentLoaded', function() {
-		document.querySelectorAll('.bicycle-listing--item').forEach(function(node, index) {
+		document.querySelectorAll('.bicycle-item').forEach(function(node, index) {
 			node.addEventListener('click', function(event) {
 				xna.fireEvent('bicycleOpen', {node: node});
 				event.preventDefault();

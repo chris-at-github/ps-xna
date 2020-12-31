@@ -1,53 +1,54 @@
-.ce-entitybicyclemarket-frontend {
+.bicycle-item {
 	img {
 		max-width: 100%;
 		height: auto;
+		transition: transform 0.25s;
+	}
+
+	.bicycle-item--image {
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	.bicycle-item--title {
+		margin: rem(15px 0 0 0);
+		padding: 0 8px;
+		font-size: rem(20px);
+		font-weight: $font-weight-bold;
+		color: #00beee;
+		transition: color 0.25s;
+	}
+
+	.bicycle-item--brand {
+		margin: rem(1px 0 0 0);
+		padding: 0 8px;
+	}
+
+	&:hover {
+		& {
+			cursor: pointer;
+		}
+
+		img {
+			transform: scale(1.05);
+		}
+
+		.bicycle-item--title {
+			color: $link-color-hover;
+		}
 	}
 }
 
-//.bicycle-market--modal {
-//	position: fixed;
-//	top: 0; left: 0;
-//	width: 100%;
-//	height: 100vh;
-//	z-index: 100;
-//	//display: flex;
-//	//flex-direction: column;
-//	//display: none;
-//
-//}
-//
-//.bicycle-market--modal-close {
-//	width: 100px;
-//	height: 100px;
-//	background: gold;
-//
-//	position: absolute;
-//	top: 0; right: 0;
-//}
-//
-//.bicycle-market--modal-container {
-//	//max-height: calc(100% - 150px);
-//	////padding: 100px 0 0 0;
-//	//margin-top: 150px;
-//	//align-self: center;
-//	//background: #f3f3f3;
-//	//border: 2px solid red;
-//	//height: 100%;
-//
-//}
-//
-//.bicycle-market--modal-content {
-//	//max-height: 100%;
-//	//overflow: auto;
-//	//border: 2px solid green;
-//	//opacity: 0;
-//}
-//
-//.modal--container {
-//	display: none;
-//}
-//
-//.modal--container.is--open {
-//	display: block;
-//}
+.bicycle-listing {
+	.bicycle-item {
+		margin: rem(45px 0 0 0);
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.bicycle-listing {
+		.bicycle-item {
+			margin: rem(60px 0 0 0);
+		}
+	}
+}
