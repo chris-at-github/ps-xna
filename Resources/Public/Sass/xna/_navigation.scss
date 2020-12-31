@@ -5,10 +5,11 @@
 		@include list-unstyled();
 	}
 
-	a {
+	a, .current > span {
 		& {
 			display: block;
 			text-decoration: none;
+			font-weight: $font-weight-bold;
 		}
 	}
 }
