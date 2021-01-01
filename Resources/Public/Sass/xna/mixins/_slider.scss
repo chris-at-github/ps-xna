@@ -12,7 +12,6 @@
 @mixin slider--variant-0() {
 	& {
 		position: relative;
-		height: rem(400px);
 		overflow: hidden; // 1
 	}
 
@@ -20,60 +19,61 @@
 		visibility: hidden; // 1
 	}
 
-	.slider--controls {
-		& {
-			position: absolute;
-			top: 0;
-			width: 100%;
-			display: none; // erst auf hoehren Breakpoints anzeigen -> dann steht rechts / links mehr Platz zur Verfuegung
-		}
-
-		.container-inner {
-			position: relative;
-		}
-	}
+	//.slider--controls {
+	//	& {
+	//		position: absolute;
+	//		top: 0;
+	//		width: 100%;
+	//		// display: none; // erst auf hoehren Breakpoints anzeigen -> dann steht rechts / links mehr Platz zur Verfuegung
+	//	}
+	//
+	//	.slider--controls-inner {
+	//		position: relative;
+	//	}
+	//}
 
 	.slider--prev, .slider--next {
 		& {
 			position: absolute;
+			top: 0; bottom: 0;
 			z-index: 10;
 			display: flex;
 			align-items: center;
-			min-height: rem(400px);
+			height: 100%;
 		}
 
 		button {
 			& {
-				width: $spacing-medium;
-				height: 100px;
+				width: 40px;
+				height: 72px;
 			}
 
 			&:hover {
 				svg {
-					fill: $link-color-hover;
+					fill: $link-color;
 				}
 			}
 		}
 
 		svg {
-			width: 35px;
-			fill: $theme-color-primary;
+			width: 18px;
+			fill: #fff;
 			transition: fill 0.35s;
 		}
 	}
 
 	// Padding von .container-outer wieder aufheben
 	.slider--prev {
-		left: -$spacing-medium;
+		left: 0;
 	}
 
 	.slider--next {
-		right: -$spacing-medium;
+		right: 0;
 	}
 
 	.slider--navigation {
 		position: absolute;
-		bottom: rem(35px);
+		bottom: rem(10px);
 		width: 100%;
 	}
 
@@ -84,36 +84,42 @@
 	}
 
 	@include media-breakpoint-up(md) {
-		&, .slider--prev, .slider--next, .hero {
-			height: rem(500px);
-		}
-	}
-
-	@include media-breakpoint-up(lg) {
-		&, .slider--prev, .slider--next, .hero {
-			height: rem(600px);
-		}
-	}
-
-	@include media-breakpoint-up(xl) {
-		.slider--controls {
-			display: block;
-		}
-
-		.slider--prev, .slider--next {
+	.slider--prev, .slider--next {
 			button {
-				width: rem(50px);
-				height: 100px;
+				width: 45px;
+				height: 120px;
+			}
+
+			svg {
+				width: 30px;
 			}
 		}
 
-		// Padding von .container-outer wieder aufheben
-		.slider--prev {
-			left: rem(-50px);
+		.slider--prev button {
+			padding: 0 0 0 rem(15px);
 		}
 
-		.slider--next {
-			right: rem(-50px);
+		.slider--next button {
+			padding: 0 rem(15px) 0 0;
 		}
 	}
+
+	//@include media-breakpoint-up(lg) {
+	//	&, .slider--prev, .slider--next, .hero {
+	//		//height: rem(600px);
+	//	}
+	//}
+	//
+	//@include media-breakpoint-up(xl) {
+	//	.slider--controls {
+	//		display: block;
+	//	}
+	//
+	//	.slider--prev, .slider--next {
+	//		button {
+	//			width: rem(50px);
+	//			height: 100px;
+	//		}
+	//	}
+	//}
 }

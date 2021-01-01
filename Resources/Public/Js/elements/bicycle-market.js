@@ -7,15 +7,21 @@ import 'whatwg-fetch';
 (function () {
 	'use strict';
 
-	xna.on('bicycleOpen', function() {
-		modal.show('modal-1', {
-			onShow: modal => console.info(`${modal.id} is shown`), // [1]
-			onClose: modal => console.info(`${modal.id} is hidden`), // [2]
-			openClass: 'is--modal-open' // [5]
-		});
+	document.addEventListener('bicycleClosing', function() {
+
 	});
 
+	document.addEventListener('bicycleClosed', function() {
+
+		// Scrollbars einblenden
+		xna.fireEvent('scrolllock.toggle');
+	});
+
+
 	document.addEventListener('bicycleLoaded', function() {
+
+		// Scrollbars ausblenden
+		xna.fireEvent('scrolllock.toggle');
 
 		// Modal oeffnen
 		modal.show('bicycle-modal', {
@@ -24,25 +30,27 @@ import 'whatwg-fetch';
 				// bei langen Modals immer ganz nach oben scrollen
 				modal.scrollTop = 0;
 			},
-			onClose: modal => console.info(`${modal.id} is hidden`),
+			onClose: function() {
+				xna.fireEvent('bicycleClosed');
+			},
 			openClass: 'is--modal-open' // [5]
 		});
 
-		var container = document.querySelector('#bicycle-modal .bicycle-record');
+		var container = document.querySelector('#bicycle-modal .modal');
 
-		container.querySelectorAll('.slider').forEach(function(node, index) {
+		container.querySelectorAll('.bicycle-modal--image').forEach(function(node, index) {
 			let slider = tns({
 				container: node.querySelector('.slider--container'),
 				items: 1,
 				autoplay: false,
 				controls: true,
 				controlsContainer: node.querySelector('.slider--controls .slider--controls-inner'),
-				nav: false,
-				// navContainer: node.querySelector('.slider--navigation .container-inner ul'),
+				nav: true,
+				navContainer: node.querySelector('.slider--navigation .slider--navigation-inner ul'),
 				onInit: function() {
 
 					// CSS Lazyload durch setzen der Klasse slider--initialized
-					node.classList.add('slider--initialized');
+					node.querySelector('.slider').classList.add('slider--initialized');
 				}
 			});
 		});
@@ -59,7 +67,7 @@ import 'whatwg-fetch';
 			.then(function(body) {
 
 				// Modal fuellen
-				document.querySelector('#bicycle-modal .bicycle-record').innerHTML = body;
+				document.querySelector('#bicycle-modal .modal').innerHTML = body;
 
 				// HTML im Modal verarbeiten
 				xna.fireEvent('bicycleLoaded');
@@ -74,5 +82,9 @@ import 'whatwg-fetch';
 			});
 			// let uid = node.getAttribute('data-media-wall');
 		});
+	});
+
+	xna.on('modalTest', function() {
+		xna.fireEvent('bicycleLoaded');
 	});
 })();

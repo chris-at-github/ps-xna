@@ -1,9 +1,9 @@
 // 1: bis vollstaendigen initialisieren des Sliders nur das erste Element anzeigen
 .slider {
 	.slider--controls {
-		position: absolute;
-		top: 0;
-		width: 100%;
+		//position: absolute;
+		//top: 0;
+		//width: 100%;
 		opacity: 0; // 1
 	}
 
@@ -30,8 +30,8 @@
 
 			li {
 				& {
-					width: rem(10px);
-					height: rem(10px);
+					width: 11px;
+					height: 11px;
 					display: inline-block;
 					padding: 0;
 					cursor: pointer;
@@ -44,9 +44,10 @@
 				&:before {
 					display: block;
 					top: 0;
-					width: rem(10px);
-					height: rem(10px);
-					border: 1px solid $font-color-base;
+					width: 11px;
+					height: 11px;
+					border: 2px solid #fff;
+					border-radius: 50%;
 					transition: all 0.25s;
 				}
 
@@ -60,12 +61,12 @@
 					}
 
 					&:before {
-						background: $font-color-base;
+						background: #fff;
 					}
 
 					&:hover:before {
-						background: $font-color-base;
-						border-color: $font-color-base;
+						background: #fff;
+						border-color: #fff;
 					}
 				}
 			}

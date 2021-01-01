@@ -8,6 +8,7 @@ $iconfont-create-icon-class: false !default;
 @import 'functions';
 @import 'variables';
 @import 'mixins';
+@import 'definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Utitity | Modules
@@ -26,6 +27,7 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/components/list';
 @import 'xna/components/scroll-lock';
 @import 'xna/components/modal';
+@import 'xna/components/slider';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements
