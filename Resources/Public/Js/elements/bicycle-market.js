@@ -16,7 +16,6 @@ import 'whatwg-fetch';
 		setTimeout(function() {
 			xna.fireEvent('bicycleClosed');
 		}, 750);
-
 	});
 
 	document.addEventListener('bicycleClosed', function() {
@@ -26,8 +25,10 @@ import 'whatwg-fetch';
 
 		// Scrollbars einblenden
 		xna.fireEvent('scrolllock.toggle');
-	});
 
+		// Modal leeren
+		document.querySelector('#bicycle-modal .modal').innerHTML = '';
+	});
 
 	document.addEventListener('bicycleLoaded', function() {
 
