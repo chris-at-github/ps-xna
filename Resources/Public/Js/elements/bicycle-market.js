@@ -9,12 +9,20 @@ import 'whatwg-fetch';
 
 	document.addEventListener('bicycleClosing', function() {
 
+		// Dokumenten-Klasse
+		document.body.classList.add('is--modal-closing');
+		document.body.classList.remove('is--modal-open');
+
+		setTimeout(function() {
+			xna.fireEvent('bicycleClosed');
+		}, 750);
+
 	});
 
 	document.addEventListener('bicycleClosed', function() {
 
 		// Dokumenten-Klasse
-		document.body.classList.remove('is--modal-open');
+		document.body.classList.remove('is--modal-closing');
 
 		// Scrollbars einblenden
 		xna.fireEvent('scrolllock.toggle');
@@ -37,7 +45,7 @@ import 'whatwg-fetch';
 				modal.scrollTop = 0;
 			},
 			onClose: function() {
-				xna.fireEvent('bicycleClosed');
+				xna.fireEvent('bicycleClosing');
 			}
 		});
 
