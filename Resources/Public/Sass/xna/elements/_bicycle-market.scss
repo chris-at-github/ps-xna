@@ -177,6 +177,83 @@
 	}
 }
 
+.bicycle-request {
+	.bicycle-request--section {
+		margin: rem(60px 0 0 0);
+	}
+
+	.bicycle-request--section-header {
+		font-size: rem(20px);
+	}
+
+	.bicycle-request--title {
+		margin: rem(20px 0 0 0);
+		font-size: rem(24px);
+		color: $theme-color-primary;
+	}
+
+	.bicycle-request--properties {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.bicycle-request--property {
+		margin: rem(15px 45px 0 0);
+	}
+
+	.bicycle-request--property-title {
+		font-size: rem(16px);
+	}
+
+	.ce-frame {
+		& {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		& > .ce-frame--inner {
+			margin-top: 0;
+		}
+	}
+
+	form {
+		& {
+			margin: rem(20px 0 0 0);
+		}
+
+		h2 {
+			display: none;
+		}
+
+		.form-group {
+			margin: rem(20px 0 0 0);
+		}
+
+		.control-label {
+			font-size: rem(16px);
+			font-weight: $font-weight-normal;
+		}
+
+		.form-control {
+			& {
+				width: 100%;
+				max-width: rem(520px);
+				margin: rem(3px 0 0 0);
+				padding: rem(10px 8px);
+				border: 0;
+				border-radius: 4px;
+				background: #e9e9e9;
+			}
+
+			&:focus {
+				outline: 0;
+				background: #d9d9d9;
+				color: #000;
+			}
+		}
+	}
+}
+
 @include media-breakpoint-up(sm) {
 	.bicycle-modal {
 		.modal--backdrop {
