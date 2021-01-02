@@ -11,12 +11,13 @@
 	z-index: 110;
 	width: 100px;
 	height: 100px;
+	cursor: pointer;
 }
 
 .modal {
 	position: relative;
 	z-index: 105;
-	width: $page-max-width;
+	width: ($page-max-width + 40px);
 	max-width: 100%;
 	margin: 150px auto 50px auto;
 }
