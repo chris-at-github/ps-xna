@@ -13,6 +13,9 @@ import 'whatwg-fetch';
 
 	document.addEventListener('bicycleClosed', function() {
 
+		// Dokumenten-Klasse
+		document.body.classList.remove('is--modal-open');
+
 		// Scrollbars einblenden
 		xna.fireEvent('scrolllock.toggle');
 	});
@@ -23,6 +26,9 @@ import 'whatwg-fetch';
 		// Scrollbars ausblenden
 		xna.fireEvent('scrolllock.toggle');
 
+		// Dokumenten-Klasse
+		document.body.classList.add('is--modal-open');
+
 		// Modal oeffnen
 		modal.show('bicycle-modal', {
 			onShow: function(modal) {
@@ -32,8 +38,7 @@ import 'whatwg-fetch';
 			},
 			onClose: function() {
 				xna.fireEvent('bicycleClosed');
-			},
-			openClass: 'is--modal-open' // [5]
+			}
 		});
 
 		var container = document.querySelector('#bicycle-modal .modal');
