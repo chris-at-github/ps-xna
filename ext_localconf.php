@@ -5,7 +5,8 @@ if(!defined('TYPO3_MODE')) {
 }
 
 // Konfiguration fuer den (CKE) Editor im Backend
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['xo'] = 'EXT:xna/Configuration/RTE/Default.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['xoDefault'] = 'EXT:xna/Configuration/RTE/Default.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['xoMinimal'] = 'EXT:xna/Configuration/RTE/Minimal.yaml';
 
 // Registrierung Icons
 // @see: https://www.typo3lexikon.de/typo3-tutorials/core/systemextensions/core/imaging.html
