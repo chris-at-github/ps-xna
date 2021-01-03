@@ -135,5 +135,5 @@ $GLOBALS['TCA']['tt_content']['types']['xna_news_alert'] = [
 
 $GLOBALS['TCA']['tt_content']['types']['xna_news_alert']['columnsOverrides']['bodytext']['config'] = [
 	'enableRichtext' => true,
-	'richtextConfiguration' => 'default',
+	'richtextConfiguration' => 'xoDefault',
 ];
