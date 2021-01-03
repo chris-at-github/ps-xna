@@ -84,9 +84,10 @@
 }
 
 @include media-breakpoint-up(md) {
-	.container-outer--width-indent-left > .container-inner {
-		& > .ce-header, & > .ce-bodytext {
-			width: percentage(2 / 3);
+	.container-outer--width-indent-left > .container-inner,
+	.ce-frame--layout-1 > .ce-frame--inner {
+		& > .ce-header, & > .ce-bodytext, & > p, & > ul, & > ol, & > table {
+			width: percentage(9 / 12);
 		}
 	}
 
