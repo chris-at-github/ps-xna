@@ -251,6 +251,44 @@
 				color: #000;
 			}
 		}
+
+		.btn-primary {
+			& {
+				display: inline-block;
+				margin: rem(20px 0 0 0);
+				padding: rem(14px 43px);
+				border: 0;
+				border-radius: 4px;
+				background: $link-color;
+				font-weight: $font-weight-bold;
+				color: #fff;
+				transition: background 0.25s;
+			}
+
+			&:hover {
+				background: #09acd5;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.bicycle-request--contact-phone {
+		margin-top: rem(45px);
+	}
+
+	.bicycle-request--contact-phone-number {
+		& {
+			margin: rem(10px 0 0 0);
+			font-size: rem(24px);
+		}
+
+		a {
+			font-weight: $font-weight-normal;
+		}
+	}
+
+	.bicycle-request--contact-phone-description {
+		margin: rem(5px 0 0 0);
 	}
 }
 
@@ -298,6 +336,12 @@
 
 		.bicycle-modal--property-value {
 			margin-top: rem(15px);
+		}
+	}
+
+	.bicycle-request {
+		.bicycle-request--contact-phone {
+			margin-top: rem(18px);
 		}
 	}
 }

@@ -5,4 +5,5 @@ plugin.tx_entitybicyclemarket {
 	settings.showPageUid = 54
 	settings.requestPageUid = 55
 	settings.fetchRequestTypeNum = 1548191072
+	settings.contactAddressUid = 14
 }
