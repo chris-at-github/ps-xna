@@ -13,7 +13,10 @@
 			</svg>
 			<f:render partial="Page/Logo" section="Svg" arguments="{_all}" />
 
-			<h1>Wenn`s um dein Radl geht</h1>
+			<f:if condition="{data.tx_xna_main_header_slogan} == 1">
+				<f:then><h1 class="logo--slogan">Wenn`s um dein Radl geht</h1></f:then>
+				<f:else><div class="logo--slogan">Wenn`s um dein Radl geht</div></f:else>
+			</f:if>
 		</div>
 
 		<f:render partial="Page/Hamburger" section="Main" />
