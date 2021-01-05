@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-27T06:25:54Z" product-name="xna" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="tx_xna_news_alert.title">
+				<target>News Alert</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.description">
+				<target>Zeigt eine einzelne kurze Mitteilung mit Icon an.</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color">
+				<target>Icon Farbe</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color.blue">
+				<target>Blau</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color.red">
+				<target>Rot</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color.green">
+				<target>Grün</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.color.grey">
+				<target>Grau</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.icon">
+				<target>Icon</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.icon.alert">
+				<target>Achtung</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.icon.star">
+				<target>Stern</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_news_alert.icon.bike">
+				<target>Radel</target>
+			</trans-unit>
+
+			<trans-unit id="tx_xo_tt_content.space.large">
+				<target>Groß</target>
+			</trans-unit>
+
+			<trans-unit id="tx_xna_pages.tx_xna_main_header_slogan">
+				<target>Verwende Slogan als Hauptüberschrift</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
