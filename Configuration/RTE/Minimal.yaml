@@ -1,0 +1,12 @@
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+  - { resource: "EXT:xo/Configuration/RTE/XoMinimal.yaml" }
+
+editor:
+  config:
+    contentsCss:
+      - 'EXT:rte_ckeditor/Resources/Public/Css/contents.css'
+      - '/assets/css/editor.css'
