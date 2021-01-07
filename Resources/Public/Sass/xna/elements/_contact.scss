@@ -1,0 +1,11 @@
+.contact-item {
+	& {
+		margin: $spacing-default 0 0 0;
+		padding: rem(10px 15px);
+		background: #fff;
+	}
+
+	.address--name + .address--item {
+		margin: $spacing-default 0 0 0;
+	}
+}
