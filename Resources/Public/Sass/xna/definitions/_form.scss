@@ -5,8 +5,16 @@
 }
 
 %form-field {
-	outline: 0;
-  padding: rem(3px);
+  & {
+    outline: 0;
+    padding: rem(3px);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  &:focus {
+    border-color: #999;
+  }
 }
 
 select%form-field {
@@ -22,6 +30,7 @@ select%form-field {
 		outline: 0;
     background: #ccc;
     cursor: pointer;
+    border-radius: 3px;
   }
 
   &:hover, &:focus {
@@ -32,10 +41,8 @@ select%form-field {
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout 0 (Default)
 %form--layout-0 {
-  %form-item {
-    & + %form-item, & + %form-action {
-      margin: $spacing-small 0 0 0;
-    }
+  %form-item, %form-action {
+    margin: $spacing-small 0 0 0;
   }
 
   %form-label {
