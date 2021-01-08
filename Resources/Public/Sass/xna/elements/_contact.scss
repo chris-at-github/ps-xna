@@ -8,4 +8,21 @@
 	.address--name + .address--item {
 		margin: $spacing-default 0 0 0;
 	}
+
+	.contact-item--vcard {
+		& {
+			margin: rem(10px 0 0 0);
+		}
+
+		&:hover {
+			.badge {
+				background: #aaa;
+			}
+		}
+
+		.badge {
+			margin-right: rem(8px);
+			transition: background 0.25s;
+		}
+	}
 }
