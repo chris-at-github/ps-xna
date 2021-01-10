@@ -2,4 +2,6 @@
 
 plugin.tx_contact {
 	persistence.storagePid = 115
+	settings.searchRequestPageUid = 118
+	settings.searchRequestPageType = 1548191072
 }

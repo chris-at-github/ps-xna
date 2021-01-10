@@ -19,7 +19,4 @@ require('./components/navigation/layout-0');
 require('./elements/google-map');
 require('./elements/slider');
 require('./elements/media-wall');
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Applications
-require('./applications/product');
+require('./elements/contact');
