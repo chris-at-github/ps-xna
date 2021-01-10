@@ -26,3 +26,19 @@
 		}
 	}
 }
+
+.contact-search--result {
+	& {
+		overflow: hidden;
+		max-height: 0;
+		opacity: 1;
+		transition-property: max-height, opacity;
+		transition-duration: 0.25s;
+	}
+}
+
+.is-contact-loading {
+	.contact-search--result {
+		opacity: 0;
+	}
+}
