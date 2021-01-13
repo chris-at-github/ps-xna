@@ -38,6 +38,16 @@ select%form-field {
   }
 }
 
+%button--disabled {
+  & {
+    cursor: default;
+  }
+
+  &:hover {
+    background: #ccc;
+  }
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout 0 (Default)
 %form--layout-0 {
