@@ -35,6 +35,12 @@
 		transition-property: max-height, opacity;
 		transition-duration: 0.25s;
 	}
+
+	.contact-search--result-error {
+		padding: rem(20px 0 0 0);
+		font-weight: $font-weight-bold;
+		color: $theme-color-error;
+	}
 }
 
 .is-contact-loading {
