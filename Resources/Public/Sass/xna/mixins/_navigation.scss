@@ -92,12 +92,28 @@
 	//}
 }
 
+// Mobile Navigation mit Sub-Navigation
 @mixin navigation--layout-4 {
 	ul, li {
 		display: block;
 	}
 
-	ul ul {
-		display: none;
+	ul li {
+		ul {
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%;
+			min-height: 100%;
+			transform: translate(-100%, 0);
+			background: gold;
+		}
+
+		&[aria-expanded="true"] .navigation--container-inner > ul, &[aria-expanded="true"] > ul {
+			transform: translate(0, 0);
+		}
+	}
+
+	.navigation-item--expandable {
+		background: red;
 	}
 }
