@@ -3,7 +3,7 @@ imports:
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
-  - { resource: "EXT:xo/Configuration/RTE/Xo.yaml" }
+  - { resource: "EXT:xo/Configuration/RTE/XoDefault.yaml" }
 
 editor:
   config:
@@ -14,3 +14,4 @@ editor:
     stylesSet:
       - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.download', element: 'a', attributes: { class: 'link--download' } }
       - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.cta', element: 'a', attributes: { class: 'link--cta' } }
+      - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.text.small', element: 'span', attributes: { class: 'text--small' } }
