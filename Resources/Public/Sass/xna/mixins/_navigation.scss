@@ -108,6 +108,7 @@
 			transform: translate(-100%, 0);
 			padding: rem(14px 0 0 0);
 			background: #fff;
+			transition: transform 0.25s ease-out;
 		}
 
 		&[aria-expanded="true"] .navigation--container-inner > ul, &[aria-expanded="true"] > ul {
@@ -124,7 +125,7 @@
 
 		&:before {
 			position: absolute;
-			top: rem(11px); right: rem(22px);
+			top: rem(11px); right: rem(40px);
 		}
 	}
 
@@ -132,7 +133,7 @@
 		& {
 			@include iconfont(navigation-backlink);
 			position: relative;
-			padding-left: rem(50px);
+			padding-left: rem(60px);
 			background: #eaeaea;
 			cursor: pointer;
 		}
@@ -154,7 +155,7 @@
 
 		&:before {
 			position: absolute;
-			top: rem(11px); right: rem(22px);
+			top: rem(11px); right: rem(40px);
 		}
 	}
 }
