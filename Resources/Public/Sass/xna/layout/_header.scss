@@ -47,6 +47,11 @@
 			height: 25px;
 		}
 	}
+
+	.hamburger {
+		position: relative;
+		left: 12px;
+	}
 }
 
 @include media-breakpoint-down(sm) {
@@ -104,6 +109,12 @@
 				transform: translate(0, 0);
 			}
 		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.header--layout-0 .hamburger {
+		left: 0;
 	}
 }
 

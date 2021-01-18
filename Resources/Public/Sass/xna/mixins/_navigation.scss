@@ -125,7 +125,7 @@
 
 		&:before {
 			position: absolute;
-			top: rem(11px); right: rem(40px);
+			top: rem(11px); right: rem(28px);
 		}
 	}
 
@@ -155,7 +155,15 @@
 
 		&:before {
 			position: absolute;
-			top: rem(11px); right: rem(40px);
+			top: rem(11px); right: rem(28px);
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		.navigation-item--expandable > a, .navigation-item--expandable > span, .navigation-item--parentlink {
+			&:before {
+				right: rem(40px);
+			}
 		}
 	}
 }
