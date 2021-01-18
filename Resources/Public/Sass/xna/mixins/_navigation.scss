@@ -102,10 +102,12 @@
 		ul {
 			position: absolute;
 			top: 0; left: 0;
+			z-index: 5;
 			width: 100%;
 			min-height: 100%;
 			transform: translate(-100%, 0);
-			background: gold;
+			padding: rem(14px 0 0 0);
+			background: #fff;
 		}
 
 		&[aria-expanded="true"] .navigation--container-inner > ul, &[aria-expanded="true"] > ul {
@@ -113,7 +115,46 @@
 		}
 	}
 
-	.navigation-item--expandable {
-		background: red;
+	.navigation-item--expandable > a, .navigation-item--expandable > span {
+		& {
+			@include iconfont(navigation-expandable);
+			position: relative;
+			padding-right: rem(50px);
+		}
+
+		&:before {
+			position: absolute;
+			top: rem(11px); right: rem(22px);
+		}
+	}
+
+	.navigation-item--backlink > span {
+		& {
+			@include iconfont(navigation-backlink);
+			position: relative;
+			padding-left: rem(50px);
+			background: #eaeaea;
+			cursor: pointer;
+		}
+
+		&:before {
+			position: absolute;
+			top: rem(11px); left: rem(22px);
+		}
+	}
+
+	.navigation-item--parentlink {
+		& {
+			@include iconfont(navigation-parentlink);
+			position: relative;
+			margin: rem(30px 0 0 0);
+			padding-right: rem(50px);
+			border: 0;
+		}
+
+		&:before {
+			position: absolute;
+			top: rem(11px); right: rem(22px);
+		}
 	}
 }

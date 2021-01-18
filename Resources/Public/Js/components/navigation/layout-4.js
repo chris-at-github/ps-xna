@@ -33,21 +33,42 @@
 
 			itemBeforeExpand: function(item, parent) {
 
-				// Erstellung Zurueck-Link
-				if(parent.querySelector('.navigation-item--backlink') === null) {
-					let back = document.createElement('li');
-
-					back.classList.add('navigation-item--backlink');
-					back.addEventListener('click', function() {
-						navigation.itemReduce(back, parent);
-					});
-
-					let text = document.createElement('span');
-					text.innerText = 'Zurück';
-
-					back.append(text);
-					parent.querySelector('ul').insertAdjacentElement('afterbegin', back);
+				// Erstellung Parent Link
+				// als erstes -> Zurueck-Link wird ebenfalls an erster Stelle eingefuegt und verdraengt den Link
+				if(parent.querySelector('.navigation-item--parentlink') === null) {
+					parent.querySelector('ul').insertAdjacentElement('afterbegin', navigation.createParentLink(item, parent));
 				}
+
+				// Erstellung Zurueck Link
+				if(parent.querySelector('.navigation-item--backlink') === null) {
+					parent.querySelector('ul').insertAdjacentElement('afterbegin', navigation.createBackLink(item, parent));
+				}
+			},
+
+			createBackLink: function(item, parent) {
+				let backlink = document.createElement('li');
+
+				backlink.classList.add('navigation-item--backlink');
+				backlink.addEventListener('click', function() {
+					navigation.itemReduce(backlink, parent);
+				});
+
+				let text = document.createElement('span');
+				text.innerText = 'Zurück';
+
+				backlink.append(text);
+
+				return backlink;
+			},
+
+			createParentLink: function(item, parent) {
+				let parentlink = document.createElement('li');
+				parentlink.classList.add('navigation-item--parentlink');
+
+				let link = item.cloneNode(true);
+				parentlink.append(link);
+
+				return parentlink;
 			}
 		};
 

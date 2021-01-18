@@ -80,8 +80,8 @@
 				}
 			}
 
-			a, .current > span {
-				padding: 3px $spacing-medium;
+			a, li > span {
+				padding: rem(10px) $spacing-medium;
 			}
 
 			a:hover {
