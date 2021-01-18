@@ -54,7 +54,7 @@
 				});
 
 				let text = document.createElement('span');
-				text.innerText = 'Zurück';
+				text.innerText = xna.l10n.navigation.prev;
 
 				backlink.append(text);
 
