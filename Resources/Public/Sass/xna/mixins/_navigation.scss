@@ -118,7 +118,7 @@
 
 	.navigation-item--expandable > a, .navigation-item--expandable > span {
 		& {
-			@include iconfont(navigation-expandable);
+			@include iconfont(chevron-right);
 			position: relative;
 			padding-right: rem(50px);
 		}
@@ -131,7 +131,7 @@
 
 	.navigation-item--backlink > span {
 		& {
-			@include iconfont(navigation-backlink);
+			@include iconfont(chevron-left);
 			position: relative;
 			padding-left: rem(60px);
 			background: #eaeaea;
