@@ -19,7 +19,6 @@
 
 						// Backlink und Direktlink einbinden
 						navigation.itemBeforeExpand(item, parent);
-
 						parent.setAttribute('aria-expanded', 'true');
 					}
 
@@ -70,7 +69,9 @@
 
 				parentlink.classList.add('navigation-item--parentlink');
 
+				link.removeChild(link.querySelector('svg'));
 				link.appendChild(svg);
+
 				parentlink.appendChild(link);
 
 				return parentlink;
@@ -93,7 +94,15 @@
 			});
 
 			node.querySelectorAll('li > a, li > span').forEach(function(item) {
+				let parent = item.parentElement;
+
+
 				item.addEventListener('click', navigation.itemExpand);
+
+				if(parent.hasAttribute('aria-expanded') === true) {
+					let svg = xna.createSvgUseElement('#sprite-chevron-right', {'viewBox': '0 0 6 12'});
+					item.appendChild(svg);
+				}
 			});
 		});
 	});

@@ -118,14 +118,16 @@
 
 	.navigation-item--expandable > a, .navigation-item--expandable > span {
 		& {
-			@include iconfont(chevron-right);
 			position: relative;
 			padding-right: rem(50px);
 		}
 
-		&:before {
+		svg {
 			position: absolute;
-			top: rem(11px); right: rem(28px);
+			top: rem(15px); right: rem(24px);
+			width: 17px;
+			height: 19px;
+			fill: $font-color-base;
 		}
 	}
 
@@ -164,9 +166,15 @@
 	}
 
 	@include media-breakpoint-up(sm) {
-		.navigation-item--expandable > a, .navigation-item--expandable > span, .navigation-item--parentlink {
-			&:before {
+		.navigation-item--expandable > a, .navigation-item--expandable > span {
+			svg {
 				right: rem(40px);
+			}
+		}
+
+		.navigation-item--parentlink > a {
+			svg {
+				right: rem(42px);
 			}
 		}
 	}

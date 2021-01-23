@@ -194,6 +194,10 @@
 				@include navigation--layout-2;
 				padding-left: 10px;
 			}
+
+			.navigation-item--expandable svg {
+				display: none;
+			}
 		}
 	}
 }
