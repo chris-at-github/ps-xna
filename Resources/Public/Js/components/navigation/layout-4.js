@@ -56,35 +56,20 @@
 				let text = document.createElement('span');
 				text.innerText = xna.l10n.navigation.prev;
 
-				backlink.append(text);
+				backlink.appendChild(text);
 
 				return backlink;
 			},
 
 			createParentLink: function(item, parent) {
-				let parentlink = document.createElement('li');
+				let parentlink = document.createElement('li'),
+					link = item.cloneNode(true),
+					svg = xna.createSvgUseElement('#sprite-overview', {'viewBox': '0 0 11 12'});
+
 				parentlink.classList.add('navigation-item--parentlink');
 
-				let link = item.cloneNode(true);
-
-
-				let svg = document.createElement('svg');
-				svg.setAttribute('viewBox', '0 0 11 12');
-
-				let use = document.createElement('use');
-				use.setAttribute('xlink:href', '#sprite-navigation-parentlink');
-
-				// @see: https://florianbrinkmann.com/svg-use-element-javascript-5315/
-				var svgElem = document.createElementNS('http://www.w3.org/2000/svg', 'svg'),
-					useElem = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-
-				useElem.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#sprite-navigation-parentlink');
-				svgElem.appendChild(useElem);
-				svgElem.setAttribute('viewBox', '0 0 11 12');
-
-				//svg.appendChild(use);
-				link.appendChild(svgElem);
-				parentlink.append(link);
+				link.appendChild(svg);
+				parentlink.appendChild(link);
 
 				return parentlink;
 			}

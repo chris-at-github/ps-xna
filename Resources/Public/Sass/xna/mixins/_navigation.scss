@@ -144,18 +144,20 @@
 		}
 	}
 
-	.navigation-item--parentlink {
+	.navigation-item--parentlink > a {
 		& {
-			@include iconfont(navigation-parentlink);
 			position: relative;
 			margin: rem(30px 0 0 0);
 			padding-right: rem(50px);
 			border: 0;
 		}
 
-		&:before {
+		svg {
 			position: absolute;
-			top: rem(11px); right: rem(28px);
+			top: rem(15px); right: rem(28px);
+			width: 17px;
+			height: 19px;
+			fill: $font-color-base;
 		}
 	}
 

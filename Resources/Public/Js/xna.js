@@ -2,11 +2,13 @@
 // Helper | Polyfills
 require('./polyfills/foreach');
 require('./polyfills/object-assign');
+require('./polyfills/object-entries');
 require('./polyfills/custom-event');
 
 require('./helpers/get-css-property');
 require('./helpers/fire-event');
 require('./helpers/scroll-to');
+require('./helpers/create-svg-use-element');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
