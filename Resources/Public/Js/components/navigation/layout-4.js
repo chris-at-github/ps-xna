@@ -46,15 +46,17 @@
 			},
 
 			createBackLink: function(item, parent) {
-				let backlink = document.createElement('li');
+				let backlink = document.createElement('li'),
+					text = document.createElement('span'),
+					svg = xna.createSvgUseElement('#sprite-chevron-left', {'viewBox': '0 0 6 12'});
 
 				backlink.classList.add('navigation-item--backlink');
 				backlink.addEventListener('click', function() {
 					navigation.itemReduce(backlink, parent);
 				});
 
-				let text = document.createElement('span');
 				text.innerText = xna.l10n.navigation.prev;
+				text.appendChild(svg);
 
 				backlink.appendChild(text);
 
