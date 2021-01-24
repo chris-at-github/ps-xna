@@ -10,12 +10,18 @@
 		document.addEventListener('searchWidgetActivate', function() {
 			document.body.classList.add(bodyClass);
 
+			// Trigger als geoeffnet markieren
+			trigger.setAttribute('aria-expanded', 'true');
+
 			// Focus auf Inputfeld setzen
 			field.focus();
 		});
 
 		document.addEventListener('searchWidgetDeactivate', function() {
 			document.body.classList.remove(bodyClass);
+
+			// Trigger als geschlossen markieren
+			trigger.setAttribute('aria-expanded', 'false');
 		});
 
 		trigger.addEventListener('click', function(event) {
