@@ -9,6 +9,10 @@
 			<trans-unit id="tx_xna_rte.link.cta">
 				<source>Call-to-Action Link</source>
 			</trans-unit>
+
+			<trans-unit id="tx_xna_rte.text.small">
+				<source>Small Text</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

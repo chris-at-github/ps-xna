@@ -10,6 +10,7 @@
 
 			<div id="off-canvas" class="off-canvas">
 				<f:render partial="Page/Search" section="Icon" />
+				<f:render partial="Page/Search" section="Field" />
 
 				<f:if condition="{navigationLanguage}">
 					<nav class="language-navigation">
@@ -20,6 +21,11 @@
 				<f:if condition="{navigationMain}">
 					<nav class="navigation main-navigation">
 						<f:render partial="Navigation/MegaDropdown" section="Main" arguments="{navigation: navigationMain}" />
+						<script>
+							xna.l10n.navigation = {
+								prev: '<f:translate key="LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.prev" />'
+							};
+						</script>
 					</nav>
 				</f:if>
 
@@ -31,18 +37,6 @@
 			</div>
 
 			<f:render partial="Page/Hamburger" section="Main" />
-
-			<f:comment>
-				<!--
-				<div id="sidebar" class="sidebar off-canvas">
-					<f:if condition="{navigationMain}">
-						<nav class="main-navigation navigation">
-							<f:render partial="Navigation/MegaDropdown" section="Main" arguments="{navigation: navigationMain}" />
-						</nav>
-					</f:if>
-				</div>
-				-->
-			</f:comment>
 		</div>
 	</div>
 

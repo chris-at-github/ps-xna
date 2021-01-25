@@ -35,6 +35,7 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/components/scroll-lock';
 @import 'xna/components/card';
 @import 'xna/components/badge';
+@import 'xna/components/modal';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
@@ -53,6 +54,7 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/elements/product';
 @import 'xna/elements/page-teaser';
 @import 'xna/elements/contact';
+@import 'xna/elements/logos';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Navigation

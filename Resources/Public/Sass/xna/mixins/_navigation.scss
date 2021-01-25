@@ -92,12 +92,90 @@
 	//}
 }
 
+// Mobile Navigation mit Sub-Navigation
 @mixin navigation--layout-4 {
 	ul, li {
 		display: block;
 	}
 
-	ul ul {
-		display: none;
+	ul li {
+		ul {
+			position: absolute;
+			top: 0; left: 0;
+			z-index: 5;
+			width: 100%;
+			min-height: 100%;
+			transform: translate(-100%, 0);
+			padding: rem(14px 0 0 0);
+			background: #fff;
+			transition: transform 0.25s ease-out;
+		}
+
+		&[aria-expanded="true"] .navigation--container-inner > ul, &[aria-expanded="true"] > ul {
+			transform: translate(0, 0);
+		}
+	}
+
+	.navigation-item--expandable > a, .navigation-item--expandable > span {
+		& {
+			position: relative;
+			padding-right: rem(50px);
+		}
+
+		svg {
+			position: absolute;
+			top: rem(15px); right: rem(24px);
+			width: 17px;
+			height: 19px;
+			fill: $font-color-base;
+		}
+	}
+
+	.navigation-item--backlink > span {
+		& {
+			position: relative;
+			padding-left: rem(60px);
+			background: #eaeaea;
+			cursor: pointer;
+		}
+
+		svg {
+			position: absolute;
+			top: rem(15px); left: rem(21px);
+			width: 17px;
+			height: 19px;
+			fill: $font-color-base;
+		}
+	}
+
+	.navigation-item--parentlink > a {
+		& {
+			position: relative;
+			margin: rem(30px 0 0 0);
+			padding-right: rem(50px);
+			border: 0;
+		}
+
+		svg {
+			position: absolute;
+			top: rem(15px); right: rem(28px);
+			width: 17px;
+			height: 19px;
+			fill: $font-color-base;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		.navigation-item--expandable > a, .navigation-item--expandable > span {
+			svg {
+				right: rem(40px);
+			}
+		}
+
+		.navigation-item--parentlink > a {
+			svg {
+				right: rem(42px);
+			}
+		}
 	}
 }
