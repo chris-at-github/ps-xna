@@ -1,14 +1,14 @@
 rootPageId: 1
 websiteTitle: 'XNA'
 baseVariants:
-  - base: 'http://xna.local'
+  - base: 'http://kingdom.local'
     condition: 'applicationContext == "Development"'
 languages:
   -
     title: Deutsch
     enabled: true
     languageId: 0
-    base: /de/
+    base: /
     typo3Language: de
     locale: de_DE.UTF-8
     iso-639-1: de
@@ -16,19 +16,19 @@ languages:
     hreflang: de
     direction: ''
     flag: de
-  -
-    title: English
-    enabled: true
-    languageId: 1
-    fallbackType: strict
-    base: /en/
-    typo3Language: default
-    locale: en-GB.UTF-8
-    iso-639-1: en
-    navigationTitle: English
-    hreflang: en
-    direction: ''
-    flag: gb
+#  -
+#    title: English
+#    enabled: true
+#    languageId: 1
+#    fallbackType: strict
+#    base: /en/
+#    typo3Language: default
+#    locale: en-GB.UTF-8
+#    iso-639-1: en
+#    navigationTitle: English
+#    hreflang: en
+#    direction: ''
+#    flag: gb
 errorHandling:
   -
     errorCode: '404'
@@ -41,4 +41,4 @@ routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://xna.local/sitemap.xml"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://kingdom.local/sitemap.xml"
