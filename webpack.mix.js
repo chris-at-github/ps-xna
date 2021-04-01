@@ -143,4 +143,5 @@ mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/
 
 if(mix.inProduction() === true) {
 	mix.babel('assets/js/xna.js', 'assets/js/xna.js');
+	mix.minify(['assets/js/xna.js', 'assets/js/xna-inline.js']);
 }
