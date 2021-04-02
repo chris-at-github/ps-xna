@@ -58,3 +58,16 @@ if(typeof xna.fire !== 'function') {
 document.addEventListener('DOMContentLoaded', function(event) {
 	xna.fire('documentLoaded');
 });
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Klassen Touch und Js setzen
+document.addEventListener('DOMContentLoaded', function(event) {
+
+	document.body.classList.remove('no-js');
+	document.body.classList.add('js');
+
+	if(('ontouchstart' in window) || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
+		document.body.classList.remove('no-touch');
+		document.body.classList.add('touch');
+	}
+});
