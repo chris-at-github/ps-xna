@@ -63,7 +63,6 @@
 			}
 
 			&:focus {
-				outline: 0;
 				background: #e7e7e7;
 			}
 		}
@@ -84,10 +83,6 @@
 			}
 
 			&:hover, &:focus {
-				& {
-					outline: 0;
-				}
-
 				svg {
 					fill: $link-color-hover;
 				}

@@ -1,5 +1,9 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Allgemeine HTML- und Inhaltsdefinitionen
+a, input, select, textarea, button {
+	outline: 0;
+}
+
 .focusable, .no-js {
 	a, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]) {
 		@extend %accessibility-focus;
