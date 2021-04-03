@@ -19,6 +19,7 @@ $iconfont-create-icon-class: false !default;
 // Components
 @import 'xna/grid';
 @import 'xna/iconfont';
+@import 'xna/components/accessibility';
 @import 'xna/components/link';
 @import 'xna/components/list';
 @import 'xna/components/table';
@@ -34,6 +35,10 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/components/hero';
 @import 'xna/components/scroll-lock';
 @import 'xna/components/modal';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
+@import 'xna/general';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout

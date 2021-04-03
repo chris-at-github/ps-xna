@@ -1,0 +1,22 @@
+@import '../../bootstrap/mixins/screen-reader';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Screenreader
+%accessibility-hidden,
+.accessibility-hidden {
+	@include sr-only();
+}
+
+%accessibility-hidden-focusable,
+.accessibility-hidden-focusable {
+	@include sr-only-focusable();
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Focusable
+%accessibility-focus {
+	&:focus {
+		outline: 2px dashed rgba($font-color-base, 0.75);
+		transition: outline $transition-duration;
+	}
+}

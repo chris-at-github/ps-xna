@@ -1,0 +1,7 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Allgemeine HTML- und Inhaltsdefinitionen
+.focusable, .no-js {
+	a, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]) {
+		@extend %accessibility-focus;
+	}
+}

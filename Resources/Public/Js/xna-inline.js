@@ -71,3 +71,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		document.body.classList.add('touch');
 	}
 });
+
+// Focus-Klasse setzen
+window.addEventListener('keydown', function (event) {
+	if(event.key === 'Tab') {
+		document.body.classList.add('focusable');
+	}
+}, true);
