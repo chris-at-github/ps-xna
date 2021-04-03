@@ -38,10 +38,7 @@ $iconfont-create-icon-class: false !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
-@import 'xna/general';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Layout
+@import 'xna/layout';
 @import 'xna/layout/page';
 @import 'xna/layout/container';
 @import 'xna/layout/header';
@@ -59,5 +56,4 @@ $iconfont-create-icon-class: false !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Navigation
-@import 'xna/components/navigation/skip';
 @import 'xna/components/navigation';
