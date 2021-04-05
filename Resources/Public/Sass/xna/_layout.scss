@@ -9,3 +9,11 @@ a, input, select, textarea, button {
 		@extend %accessibility-focus;
 	}
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Scroll-Lock
+.is--scroll-lock {
+	max-width: 100%;
+	position: fixed;
+	overflow-y: hidden;
+}
