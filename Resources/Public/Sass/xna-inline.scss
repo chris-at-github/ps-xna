@@ -13,10 +13,18 @@ $purpose: 'inline' !default;
 // XNA
 @import 'xna/reboot';
 @import 'xna/type';
-@import 'xna/type';
 @import 'xna/font';
 @import 'xna/iconfont';
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Components
+@import 'xna/components/accessibility';
+@import 'xna/components/navigation/breadcrumb';
+@import 'xna/components/layout/flash';
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Layout
 @import 'xna/layout-inline';
+@import 'xna/layout/container';
+@import 'xna/layout/header';
+@import 'xna/layout/footer';

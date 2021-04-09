@@ -3,3 +3,56 @@
 .svg-sprite--container {
 	display: none;
 }
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Hauptbereiche
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+#header {
+	position: absolute;
+	top: 0;	left: 0;
+	z-index: 10;
+	width: 100%;
+}
+
+#content--main {
+	flex: 1 auto; // IE 11 Fallback: auto
+}
+
+#content--header, #content--main {
+	& > .ce-frame--space-after-auto:last-child {
+		@extend %container-space-after-medium;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Page Layout Default
+.page--layout-0 {
+	#breadcrumb {
+		position: absolute;
+		top: rem(130px);
+		left: 0; right: 0;
+	}
+
+	#header + .ce-content, #header + #breadcrumb + .ce-content {
+		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
+			padding-top: rem(80px); // Hoehe des Headers
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+	.page--layout-0 {
+		#header + .ce-content, #header + #breadcrumb + .ce-content {
+			.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
+				padding-top: rem(130px); // Hoehe des Headers
+			}
+		}
+	}
+}

@@ -1,21 +1,23 @@
-.footer--layout-0 {
-	& {
-		padding-top: rem(20px);
-		padding-bottom: rem(20px);
-		background: #f7f7f7;
-	}
-
-	.navigation {
+@include purpose($purpose-import) {
+	.footer--layout-0 {
 		& {
-			@include navigation--layout-0;
+			padding-top: rem(20px);
+			padding-bottom: rem(20px);
+			background: #f7f7f7;
 		}
 
-		a:hover, a:focus {
-			text-decoration: none;
-		}
-	}
+		.navigation {
+			& {
+				@include navigation--layout-0;
+			}
 
-	.address {
-		margin: $spacing-medium 0 0 0;
+			a:hover, a:focus {
+				text-decoration: none;
+			}
+		}
+
+		.address {
+			margin: $spacing-medium 0 0 0;
+		}
 	}
 }
