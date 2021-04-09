@@ -118,6 +118,13 @@ a, input, select, textarea, button {
 			}
 		}
 	}
+
+	// hoeheren CSS Selektor verwenden um Inline-CSS zu ueberschreiben
+	body .page-header {
+		.off-canvas {
+			display: block;
+		}
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -156,18 +163,27 @@ a, input, select, textarea, button {
 				z-index: 10;
 			}
 		}
-	}
 
-	.main-navigation {
-		& {
+		.main-navigation {
 			@include navigation--layout-2(true);
 		}
+	}
 
-		.navigation--container-outer {
+	// hoeheren CSS Selektor verwenden um Inline-CSS zu ueberschreiben
+	body .page-header {
+		.search-widget--field {
 			display: block;
+		}
+
+		.main-navigation {
+			& > ul > li:hover .navigation--container-outer {
+				display: block;
+			}
 		}
 	}
 }
+
+
 
 // ---------------------------------------------------------------------------------------------------------------------
 // IE10 / 11

@@ -60,12 +60,14 @@ document.addEventListener('DOMContentLoaded', function(event) {
 });
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Klassen Touch und Js setzen
+// Klassen auf Body-Tag setzen
 document.addEventListener('DOMContentLoaded', function(event) {
 
+	// JS-Klassen setzen
 	document.body.classList.remove('no-js');
 	document.body.classList.add('js');
 
+	// Touch Klassen setzen
 	if(('ontouchstart' in window) || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
 		document.body.classList.remove('no-touch');
 		document.body.classList.add('touch');
