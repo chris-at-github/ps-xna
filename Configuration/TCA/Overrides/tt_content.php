@@ -1,6 +1,47 @@
 <?php
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Text Image (Textpic)
+$GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']  = [
+	'desktop' => [
+		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.desktop',
+		'allowedAspectRatios' => [
+			'16_9' => [
+				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
+				'value' => 16 / 9
+			],
+			'4_3' => [
+				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3',
+				'value' => 4 / 3
+			],
+			'1_1' => [
+				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',
+				'value' => 1
+			],
+		],
+		'selectedRatio' => '4_3',
+	],
+	'mobile' => [
+		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.mobile',
+		'allowedAspectRatios' => [
+			'16_9' => [
+				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
+				'value' => 16 / 9
+			],
+			'4_3' => [
+				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3',
+				'value' => 4 / 3
+			],
+			'1_1' => [
+				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',
+				'value' => 1
+			],
+		],
+		'selectedRatio' => '4_3',
+	],
+];
+
+// ---------------------------------------------------------------------------------------------------------------------
 // XO Gallery
 // @see: https://www.clickstorm.de/blog/crop-funktion-fuer-bilder-in-typo3-8-7/
 $GLOBALS['TCA']['tt_content']['types']['xo_gallery']['columnsOverrides']['tx_xo_file']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
