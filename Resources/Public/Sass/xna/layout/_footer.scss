@@ -1,4 +1,4 @@
-@include purpose($purpose-import) {
+@include stylesheet-context($stylesheet-context-import) {
 	.footer--layout-0 {
 		& {
 			padding-top: rem(20px);

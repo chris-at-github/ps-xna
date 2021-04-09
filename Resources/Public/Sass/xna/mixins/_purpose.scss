@@ -1,5 +1,0 @@
-@mixin purpose($identifier) {
-	@if $identifier == $purpose {
-		@content;
-	}
-}
