@@ -19,10 +19,13 @@ $stylesheet-context: 'embed' !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
 @import 'xna/components/accessibility';
+@import 'xna/components/navigation';
 @import 'xna/components/navigation/breadcrumb';
+@import 'xna/components/navigation/language';
+@import 'xna/components/layout/hamburger';
+@import 'xna/components/layout/search-widget';
 @import 'xna/components/layout/flash';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
 @import 'xna/layout-inline';
-@import 'xna/layout/header';

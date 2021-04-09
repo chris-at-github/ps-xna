@@ -29,11 +29,6 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/components/address';
 @import 'xna/components/modal';
 
-@import 'xna/components/navigation/breadcrumb';
-@import 'xna/components/navigation/language';
-@import 'xna/components/layout/hamburger';
-@import 'xna/components/layout/search-widget';
-
 @import 'xna/components/modules/icon-text';
 @import 'xna/components/modules/slider';
 @import 'xna/components/modules/hero';
@@ -42,7 +37,6 @@ $iconfont-create-icon-class: false !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
 @import 'xna/layout';
-@import 'xna/layout/header';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements
@@ -53,7 +47,3 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/elements/hero-slider';
 @import 'xna/elements/page-teaser';
 @import 'xna/elements/logos';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Navigation
-@import 'xna/components/navigation';
