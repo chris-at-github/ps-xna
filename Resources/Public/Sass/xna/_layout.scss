@@ -17,3 +17,25 @@ a, input, select, textarea, button {
 	position: fixed;
 	overflow-y: hidden;
 }
+
+.page-footer {
+	& {
+		padding-top: rem(20px);
+		padding-bottom: rem(20px);
+		background: #f7f7f7;
+	}
+
+	.navigation {
+		& {
+			@include navigation--layout-0;
+		}
+
+		a:hover, a:focus {
+			text-decoration: none;
+		}
+	}
+
+	.address {
+		margin: $spacing-medium 0 0 0;
+	}
+}
