@@ -16,7 +16,7 @@
 		display: block;
 	}
 
-	img {
+	img, svg {
 		@extend %image-responsive;
 	}
 }
