@@ -107,7 +107,7 @@ mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 
 mix.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'assets/css/xna.css')
-	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna/modules/text-media.scss', 'assets/css/modules/text-image.css')
+	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna/modules/text-media.scss', 'assets/css/modules/text-media.css')
 	.options({
 		postCss: [
 			require('postcss-cachebuster'),
@@ -145,4 +145,5 @@ mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/
 if(mix.inProduction() === true) {
 	mix.babel('assets/js/xna.js', 'assets/js/xna.js');
 	mix.minify(['assets/js/xna.js', 'assets/js/xna-inline.js']);
+	mix.minify(['assets/css/xna.css', 'assets/css/xna-inline.css', 'assets/css/modules/text-media.css']);
 }
