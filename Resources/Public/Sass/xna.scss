@@ -29,7 +29,6 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/components/address';
 @import 'xna/components/modal';
 
-@import 'xna/components/modules/icon-text';
 @import 'xna/components/modules/slider';
 @import 'xna/components/modules/hero';
 
@@ -40,7 +39,6 @@ $iconfont-create-icon-class: false !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements
-@import 'xna/elements/icon-text';
 @import 'xna/elements/google-map';
 @import 'xna/elements/media-wall';
 @import 'xna/elements/hero-slider';
