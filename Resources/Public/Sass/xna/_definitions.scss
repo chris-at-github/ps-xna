@@ -19,6 +19,10 @@
 	@include header-3;
 }
 
+p, ul, ol, table {
+	@extend %header-sibling;
+}
+
 %link--default {
 	& {
 		font-weight: $font-weight-bold;
