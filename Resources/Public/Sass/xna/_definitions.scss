@@ -20,7 +20,7 @@
 }
 
 p, ul, ol, table {
-	@extend %header-sibling;
+	@extend %header-sibling !optional;
 }
 
 %link--default {
