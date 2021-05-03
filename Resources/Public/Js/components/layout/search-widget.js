@@ -8,6 +8,11 @@
 			field = document.querySelector('.search-widget--keyword'),
 			close = document.querySelector('.search-widget--close');
 
+		// Absicherung wenn im Template der Header ausgeblendet ist
+		if(container === null || trigger === null || field === null || close === null) {
+			return;
+		}
+
 		document.addEventListener('searchWidgetActivate', function() {
 			document.body.classList.add(bodyClass);
 
