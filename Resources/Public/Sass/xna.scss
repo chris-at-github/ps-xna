@@ -29,9 +29,8 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/components/modal';
 @import 'xna/components/flash';
 
-@import 'xna/components/modules/slider';
-@import 'xna/components/modules/hero';
-
+// @todo: Umstellung auf Definitions
+// @import 'xna/components/modules/slider';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
@@ -41,6 +40,5 @@ $iconfont-create-icon-class: false !default;
 // Elements
 @import 'xna/elements/google-map';
 @import 'xna/elements/media-wall';
-@import 'xna/elements/hero-slider';
 @import 'xna/elements/page-teaser';
 @import 'xna/elements/logos';
