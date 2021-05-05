@@ -121,6 +121,68 @@ p, ul, ol, table {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Address
+%address {
+	& {
+		font-style: normal;
+	}
+
+	.address--name, .address--header {
+		font-weight: $font-weight-bold;
+	}
+
+	.address--item-group {
+		&, & + .address--item {
+			margin: rem(10px 0 0 0);
+		}
+	}
+
+	.address--zip + .address--city {
+		margin-left: 5px;
+	}
+
+	.address--opening-hours {
+		& {
+			margin: rem(10px 0 0 0);
+		}
+
+		dl {
+			margin-top: 0;
+		}
+
+		dt {
+			display: block;
+		}
+
+		dd {
+			display: block;
+			margin: 0;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 576px
+@include media-breakpoint-up(sm) {
+	%address {
+		.address--opening-hours {
+			dl {
+				display: grid;
+				grid-template-columns: rem(200px) auto;
+			}
+
+			dt {
+				grid-column: 1;
+			}
+
+			dd {
+				grid-column: 2;
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // >= MD
 @include media-breakpoint-up(md) {
 	%container-width-indent-right {
