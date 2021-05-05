@@ -19,6 +19,8 @@ $EM_CONF[$_EXTKEY] = [
 		'depends' => [
 			'typo3' => '10.4.0-10.4.99',
 			'xo' => '1.0.0-1.99.99',
+			'ce_icon_text' => '1.0.0-1.99.99',
+			'ce_hero' => '1.0.0-1.99.99',
 		],
 		'conflicts' => [],
 		'suggests' => [],
