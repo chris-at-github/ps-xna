@@ -92,7 +92,8 @@ mix.webpackConfig({
 mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js');
 
 mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
-	.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', 'assets/js/tobii.js');
+	.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', 'assets/js/tobii.js')
+	.copy('./node_modules/tiny-slider/dist/tiny-slider.js', 'assets/js/tiny-slider.js');
 
 mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 	.copy('./typo3conf/ext/xna/Resources/Public/Svg/Embed/*', './assets/svg')
@@ -143,7 +144,8 @@ if(mix.inProduction() === true) {
 	mix.minify([
 		'assets/js/xna.js',
 		'assets/js/xna-inline.js',
-		'assets/js/tobii.js'
+		'assets/js/tobii.js',
+		'assets/js/tiny-slider.js'
 	]);
 
 	mix.minify([
