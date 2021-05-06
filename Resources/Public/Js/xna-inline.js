@@ -4,6 +4,7 @@ var xna = window.xna || {};
 // Datenstruktur fuer eventuelle Skripte
 xna.data = xna.data || {};
 xna.l10n = xna.l10n || {};
+xna.settings = xna.settings || {};
 
 // ---------------------------------------------------------------------------------------------------------------------
 // eigene On-Event Methode um Asynchrone Skripte besser steuern zu koennen -> damit koennen Callbacks auf Events bereits
