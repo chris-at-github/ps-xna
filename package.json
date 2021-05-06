@@ -10,9 +10,9 @@
 		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
 	},
 	"dependencies": {
+		"@midzer/tobii": "^2.1.0",
 		"micromodal": "^0.4.6",
 		"tiny-slider": "^2.9.3",
-		"tobii": "^2.0.0-alpha",
 		"whatwg-fetch": "^3.5.0"
 	},
 	"devDependencies": {
@@ -27,7 +27,7 @@
 		"postcss-urlrewrite": "^0.2.2",
 		"sass": "^1.15.2",
 		"sass-loader": "^7.1.0",
-		"svg-spritemap-webpack-plugin": "^3.2.2",
+		"svg-spritemap-webpack-plugin": "^3.9.1",
 		"vue-template-compiler": "^2.6.10"
 	}
 }

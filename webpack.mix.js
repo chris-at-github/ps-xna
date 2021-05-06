@@ -26,14 +26,6 @@ mix.options({
 	processCssUrls: false
 });
 
-// Shot
-// @see: https://github.com/JeffreyWay/laravel-mix/issues/1086
-// var argv = require('yargs').argv;
-// var shot = null
-// if(argv.env.shot !== undefined) {
-// 	shot = argv.env.shot;
-// }
-
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -44,8 +36,7 @@ mix.options({
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
-	.webpackConfig({
+mix.webpackConfig({
 		output: {
 			publicPath: '/assets/'
 		},
@@ -98,7 +89,10 @@ mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
 		]
 	});
 
-mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js');
+mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js');
+
+mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
+	.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', 'assets/js/tobii.js');
 
 mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 	.copy('./typo3conf/ext/xna/Resources/Public/Svg/Embed/*', './assets/svg')
@@ -145,6 +139,17 @@ mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/
 
 if(mix.inProduction() === true) {
 	mix.babel('assets/js/xna.js', 'assets/js/xna.js');
-	mix.minify(['assets/js/xna.js', 'assets/js/xna-inline.js']);
-	mix.minify(['assets/css/xna.css', 'assets/css/xna-inline.css', 'assets/css/modules/text-media.css', 'assets/css/modules/address.css']);
+
+	mix.minify([
+		'assets/js/xna.js',
+		'assets/js/xna-inline.js',
+		'assets/js/tobii.js'
+	]);
+
+	mix.minify([
+		'assets/css/xna.css',
+		'assets/css/xna-inline.css',
+		'assets/css/modules/text-media.css',
+		'assets/css/modules/address.css'
+	]);
 }
