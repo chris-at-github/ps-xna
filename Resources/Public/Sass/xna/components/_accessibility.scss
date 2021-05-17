@@ -2,17 +2,14 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Screenreader
-%accessibility-hidden,
 .accessibility-hidden {
-	@include sr-only();
+	@extend %accessibility-hidden;
 }
 
-%accessibility-hidden-focusable,
 .accessibility-hidden-focusable {
-	@include sr-only-focusable();
+	@extend %accessibility-hidden-focusable;
 }
 
-%accessibility-shortcut,
 .accessibility-shortcut {
 	@extend %accessibility-hidden-focusable;
 
@@ -22,14 +19,5 @@
 		left: 5px; right: 5px;
 		z-index: 100;
 		background: #fff;
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Focusable
-%accessibility-focus {
-	&:focus {
-		outline: 2px dashed rgba($font-color-base, 0.75);
-		transition: outline $transition-duration;
 	}
 }
