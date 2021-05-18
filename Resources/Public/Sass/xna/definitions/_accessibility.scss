@@ -30,3 +30,29 @@
 		transition: outline $transition-duration;
 	}
 }
+
+%accessibility-focus-overflow {
+	&:focus {
+		& {
+			display: block;
+			position: relative;
+			outline: 0;
+		}
+
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			top: 0; bottom: 0;
+			left: 0; right: 0;
+			transition: border $transition-duration;
+		}
+
+		&:before {
+			border: 2px solid #fff;
+		}
+
+		&:after {
+			border: 2px dashed rgba($font-color-base, 0.75);
+		}
+	}
+}
