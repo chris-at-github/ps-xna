@@ -23,6 +23,7 @@ $EM_CONF[$_EXTKEY] = [
 			'ce_hero' => '1.0.0-1.99.99',
 			'ce_facts' => '1.0.0-1.99.99',
 			'ce_gallery' => '1.0.0-1.99.99',
+			'employee' => '1.0.0-1.99.99',
 		],
 		'conflicts' => [],
 		'suggests' => [],
