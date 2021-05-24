@@ -31,4 +31,13 @@
 			fill: $font-color-base;
 		}
 	}
+
+	.sticky--off-canvas {
+		position: absolute;
+		top: 0; right: 0;
+		background: #fff;
+		background: gold;
+		width: 300px;
+		transform: translate(300px, 0);
+	}
 }
