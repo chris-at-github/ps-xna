@@ -41,3 +41,13 @@
 		transform: translate(300px, 0);
 	}
 }
+
+@include stylesheet-context($stylesheet-context-import) {
+	.sticky--element {
+		&.is--active {
+			.sticky--off-canvas {
+				transform: translate(-80px, 0);
+			}
+		}
+	}
+}
