@@ -5,7 +5,8 @@
 
 		document.querySelectorAll('.sticky--element').forEach(function(node, index) {
 			let trigger = node.querySelector('.sticky--icon'),
-				offCanvas = node.querySelector('.sticky--off-canvas');
+				offCanvas = node.querySelector('.sticky--off-canvas'),
+				close = document.querySelector('.sticky--close');
 
 			// Focus auf Elemente im ausgeblendeten Zustand verhindern
 			offCanvas.querySelectorAll('button, input, a').forEach(function(node) {
@@ -50,7 +51,11 @@
 				event.preventDefault();
 			});
 
-
+			// Schliessen Button
+			close.addEventListener('click', function(event) {
+				xna.fireEvent('stickyElementDeactivate', null, node);
+				event.preventDefault();
+			});
 		});
 
 		// bei ESC schliessen

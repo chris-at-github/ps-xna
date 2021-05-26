@@ -8,46 +8,70 @@
 		position: relative;
 	}
 
-	.sticky--icon {
+	.sticky--icon, .sticky--close {
 		& {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 80px;
-			height: 80px;
+			width: rem(80px);
+			height: rem(80px);
 			padding: 0;
 			border: 0;
 			background: #f7f7f7;
 			cursor: pointer;
 		}
 
-		&:hover {
-			background: #bbb;
+		&:hover, &:focus {
+			background: #e7e7e7;
 		}
 
 		svg {
+			fill: $font-color-base;
+		}
+	}
+
+	.sticky--icon {
+		svg {
 			width: 43px;
 			height: 43px;
-			fill: $font-color-base;
 		}
 	}
 
 	.sticky--off-canvas {
 		position: absolute;
 		top: 0; right: 0;
+		width: rem(360px);
+		padding: rem(10px 20px);
+		border: 2px solid #f7f7f7;
 		background: #fff;
-		background: gold;
-		width: 300px;
-		transform: translate(300px, 0);
+		transform: translate(rem(440px), 0);
 	}
 }
 
 @include stylesheet-context($stylesheet-context-import) {
+	.sticky--close {
+		& {
+			position: absolute;
+			top: -2px; left: rem(-80px);;
+		}
+
+		svg {
+			width: 27px;
+			height: 27px;
+		}
+	}
+
 	.sticky--element {
 		&.is--active {
 			.sticky--off-canvas {
-				transform: translate(-80px, 0);
+				transform: translate(2px, 0);
 			}
+		}
+	}
+
+	.sticky--element-contact {
+		.address {
+			@extend %address;
 		}
 	}
 }
