@@ -59,7 +59,9 @@
 		<f:render section="Main" />
 	</div>
 
-	<f:render partial="Page/Sticky" section="Container" arguments="{_all}" />
+	<f:if condition="{data.tx_xo_no_sticky} == 0">
+		<f:render partial="Page/Sticky" section="Container" arguments="{_all}" />
+	</f:if>
 
 	<div id="footer" class="container-outer page-footer">
 		<div class="container-inner">
