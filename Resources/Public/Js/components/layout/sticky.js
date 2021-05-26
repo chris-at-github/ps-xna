@@ -62,6 +62,17 @@
 			}
 		});
 
+		// Focus nicht mehr im aktiven Sticky Element
+		document.addEventListener('keyup', function(event) {
+			if(event.code === 'Tab') {
+				document.querySelectorAll('.sticky--element.is--active').forEach(function(node) {
+					if(node.contains(event.target) === false) {
+						xna.fireEvent('stickyElementDeactivate', null, node);
+					}
+				});
+			}
+		});
+
 		// let bodyClass = 'is--search-widget',
 		// 	container = document.querySelector('.search-widget--field'),
 		// 	trigger = document.querySelector('.search-widget--link'),

@@ -59,6 +59,8 @@
 		<f:render section="Main" />
 	</div>
 
+	<f:render partial="Page/Sticky" section="Container" arguments="{_all}" />
+
 	<div id="footer" class="container-outer page-footer">
 		<div class="container-inner">
 			<f:render partial="Page/Copyright" section="Main" arguments="{_all}" />
@@ -74,8 +76,6 @@
 			</f:if>
 		</div>
 	</div>
-
-	<f:render partial="Page/Sticky" section="Container" arguments="{_all}" />
 
 	<div class="svg-sprite--container">
 		<xo:svg.inline source="assets/svg/sprite.svg" />
