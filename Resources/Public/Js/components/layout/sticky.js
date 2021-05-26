@@ -49,6 +49,17 @@
 
 				event.preventDefault();
 			});
+
+
+		});
+
+		// bei ESC schliessen
+		document.addEventListener('keydown', function(event) {
+			if(event.code === 'Escape') {
+				document.querySelectorAll('.sticky--element.is--active').forEach(function(node) {
+					xna.fireEvent('stickyElementDeactivate', null, node);
+				});
+			}
 		});
 
 		// let bodyClass = 'is--search-widget',
