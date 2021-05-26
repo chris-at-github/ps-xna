@@ -45,6 +45,7 @@
 		border: 2px solid #f7f7f7;
 		background: #fff;
 		transform: translate(rem(440px), 0);
+		transition: transform $transition-duration;
 	}
 }
 
