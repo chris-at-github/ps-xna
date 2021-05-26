@@ -7,6 +7,11 @@
 			let trigger = node.querySelector('.sticky--icon'),
 				offCanvas = node.querySelector('.sticky--off-canvas');
 
+			// Focus auf Elemente im ausgeblendeten Zustand verhindern
+			offCanvas.querySelectorAll('button, input, a').forEach(function(node) {
+				node.setAttribute('tabindex', '-1');
+			});
+
 			// Off-Canvas einblenden
 			node.addEventListener('stickyElementActivate', function() {
 				node.classList.add('is--active');
