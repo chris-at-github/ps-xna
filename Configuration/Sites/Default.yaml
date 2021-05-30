@@ -1,14 +1,14 @@
 rootPageId: 1
-websiteTitle: 'XNA'
+websiteTitle: 'Physiozeit Penzberg'
 baseVariants:
-  - base: 'http://xna.local'
+  - base: 'http://physiozeit-penzberg.local'
     condition: 'applicationContext == "Development"'
 languages:
   -
     title: Deutsch
     enabled: true
     languageId: 0
-    base: /de/
+    base: /
     typo3Language: de
     locale: de_DE.UTF-8
     iso-639-1: de
@@ -16,19 +16,6 @@ languages:
     hreflang: de
     direction: ''
     flag: de
-  -
-    title: English
-    enabled: true
-    languageId: 1
-    fallbackType: strict
-    base: /en/
-    typo3Language: default
-    locale: en-GB.UTF-8
-    iso-639-1: en
-    navigationTitle: English
-    hreflang: en
-    direction: ''
-    flag: gb
 errorHandling:
   -
     errorCode: '404'
