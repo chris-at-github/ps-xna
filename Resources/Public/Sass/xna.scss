@@ -26,21 +26,9 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/components/list';
 @import 'xna/components/table';
 @import 'xna/components/form';
-@import 'xna/components/modal';
 @import 'xna/components/flash';
-
-@import 'xna/components/layout/sticky';
-
-// @todo: Umstellung auf Definitions
-// @import 'xna/components/modules/slider';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
 @import 'xna/layout';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Elements
-//@import 'xna/elements/google-map';
-//@import 'xna/elements/media-wall';
-//@import 'xna/elements/page-teaser';
-//@import 'xna/elements/logos';
+@import 'xna/components/layout/sticky';
