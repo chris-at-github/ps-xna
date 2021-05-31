@@ -48,37 +48,33 @@ body {
 	}
 
 	.logo {
-		& {
-			@extend %logo;
-			max-width: 120px;
-			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
-		}
-
-		svg {
-			fill: $font-color-base;
-		}
-
-		&:hover svg {
-			fill: $link-color-hover;
-		}
+		@extend %logo;
+		max-width: rem(192px);
+		max-height: rem(66px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
 	}
 
 	.hamburger {
 		position: relative;
 		left: 12px;
 	}
+
+	.main-navigation {
+		a:hover {
+			color: $theme-color-primary;
+		}
+	}
+}
+
+.focusable  {
+	.page-header .main-navigation a:focus {
+		color: $theme-color-primary;
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Page Layout Default
 .page--layout-0 {
-	#breadcrumb {
-		position: absolute;
-		top: rem(130px);
-		left: 0; right: 0;
-	}
-
-	#header + .ce-content, #header + #breadcrumb + .ce-content {
+	#header + .ce-content {
 		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
 			padding-top: rem(80px); // Hoehe des Headers
 		}
@@ -194,74 +190,28 @@ body {
 // >= 768px
 @include media-breakpoint-up(md) {
 	.page-header {
-		.container-inner {
-			//-ms-grid-columns: 140px 1fr 60px;
-			//grid-template-columns: 140px auto 60px;
-			//grid-gap: 30px;
+		& {
+			padding-top: rem(20px);
+			padding-bottom: rem(20px);
+		}
 
+		.container-inner {
 			position: relative;
 			display: grid;
-			grid-template-columns: 140px 1fr;
-			grid-template-rows: 35px 60px;
-			gap: 5px 30px;
+			grid-template-columns: 192px 1fr;
+			grid-template-rows: 66px;
+			gap: 5px 0;
 			grid-template-areas:
-				'. off-canvas off-canvas'
-				'logo off-canvas off-canvas';
+				'logo off-canvas';
 		}
 
 		.off-canvas {
 			grid-area: off-canvas;
-
-			display: grid;
-			grid-template-columns: 1fr 20px 60px;
-			grid-template-rows: 35px 60px;
-			gap: 5px 20px;
-			grid-template-areas:
-				'meta-navigation language-navigation language-navigation'
-				'main-navigation main-navigation search';
 		}
 
 		.logo {
 			grid-area: logo;
 			align-self: end;
-			margin: 0 0 9px 0;
-		}
-
-		.search-widget--link {
-			grid-area: search;
-			display: flex;
-			height: 100%;
-			justify-content: flex-end;
-		}
-
-		.search-widget--field {
-			display: none;
-		}
-
-		.language-navigation {
-			& {
-				grid-area: language-navigation;
-			}
-
-			ul {
-				justify-content: flex-end;
-			}
-		}
-
-		.main-navigation {
-			grid-area: main-navigation;
-			align-self: end;
-		}
-
-		.meta-navigation {
-			& {
-				grid-area: meta-navigation;
-				@include navigation--layout-0;
-			}
-
-			ul {
-				justify-content: flex-end;
-			}
 		}
 
 		.hamburger {
@@ -271,7 +221,11 @@ body {
 		.main-navigation {
 			& {
 				@include navigation--layout-2(false);
-				padding-left: 10px;
+				padding-left: 120px;
+			}
+
+			& > ul {
+				justify-content: flex-end;
 			}
 
 			.navigation-item--expandable svg {
@@ -285,9 +239,25 @@ body {
 	}
 
 	.page--layout-0 {
-		#header + .ce-content, #header + #breadcrumb + .ce-content {
+		#header + .ce-content {
 			.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
-				padding-top: rem(130px); // Hoehe des Headers
+				padding-top: rem(70px); // Hoehe des Headers
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 992px
+@include media-breakpoint-up(lg) {
+	.page-header {
+		.main-navigation {
+			& {
+				font-size: rem(20px);
+			}
+
+			& > ul {
+				justify-content: flex-start;
 			}
 		}
 	}
