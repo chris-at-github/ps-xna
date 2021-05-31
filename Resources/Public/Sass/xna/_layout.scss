@@ -22,9 +22,13 @@ a, input, select, textarea, button {
 // Page Footer
 .page-footer {
 	& {
-		padding-top: rem(20px);
-		padding-bottom: rem(20px);
-		background: #f7f7f7;
+		border-top: 2px solid #e5e5e5;
+		padding-top: rem(30px);
+		padding-bottom: rem(80px);
+	}
+
+	.copyright {
+		font-weight: $font-weight-bold;
 	}
 
 	.navigation {
@@ -34,11 +38,8 @@ a, input, select, textarea, button {
 
 		a:hover, a:focus {
 			text-decoration: none;
+			color: $theme-color-primary;
 		}
-	}
-
-	.address {
-		margin: $spacing-medium 0 0 0;
 	}
 }
 
@@ -102,6 +103,29 @@ a, input, select, textarea, button {
 	body .page-header {
 		.off-canvas {
 			display: block;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+	.page-footer {
+		& {
+			padding-top: rem(40px);
+			padding-bottom: rem(105px);
+		}
+
+		.container-inner {
+			display: flex;
+		}
+
+		.copyright {
+			padding: 3px 0;
+		}
+
+		.navigation {
+			margin-left: auto;
 		}
 	}
 }
