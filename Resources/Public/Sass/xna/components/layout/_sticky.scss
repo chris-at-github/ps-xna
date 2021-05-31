@@ -1,15 +1,63 @@
 @include stylesheet-context($stylesheet-context-embed) {
 	.sticky--container {
 		position: fixed;
-		top: 200px; right: 0;
+		top: 171px; right: 0;
+		display: none;
 	}
 
 	.sticky--element {
 		position: relative;
 	}
 
-	.sticky--icon, .sticky--close {
+	.sticky--icon {
 		& {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: rem(60px);
+			height: rem(208px);
+			padding: 0;
+			border: 0;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			background: $theme-color-primary;
+			cursor: pointer;
+		}
+
+		&:hover, &:focus {
+			background: #e7e7e7;
+		}
+
+		svg {
+			width: 15px;
+			height: 117px;
+		}
+	}
+
+	.sticky--off-canvas {
+		position: absolute;
+		top: 0; right: 0;
+		width: rem(360px);
+		padding: rem(10px 20px);
+		background: #f7f7f7;
+		transform: translate(rem(440px), 0);
+		transition: transform $transition-duration;
+	}
+
+	// ---------------------------------------------------------------------------------------------------------------------
+	// >= 768px
+	@include media-breakpoint-up(md) {
+		.sticky--container {
+			display: block;
+		}
+	}
+}
+
+@include stylesheet-context($stylesheet-context-import) {
+	.sticky--close {
+		& {
+			position: absolute;
+			top: 0; left: rem(-80px);
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -26,38 +74,9 @@
 		}
 
 		svg {
-			fill: $font-color-base;
-		}
-	}
-
-	.sticky--icon {
-		svg {
-			width: 43px;
-			height: 43px;
-		}
-	}
-
-	.sticky--off-canvas {
-		position: absolute;
-		top: 0; right: 0;
-		width: rem(360px);
-		padding: rem(10px 20px);
-		background: #f7f7f7;
-		transform: translate(rem(440px), 0);
-		transition: transform $transition-duration;
-	}
-}
-
-@include stylesheet-context($stylesheet-context-import) {
-	.sticky--close {
-		& {
-			position: absolute;
-			top: 0; left: rem(-80px);;
-		}
-
-		svg {
 			width: 27px;
 			height: 27px;
+			fill: $font-color-base;
 		}
 	}
 

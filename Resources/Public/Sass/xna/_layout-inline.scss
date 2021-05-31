@@ -189,6 +189,12 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 768px
 @include media-breakpoint-up(md) {
+	.ce-content {
+		.ce-frame--outer {
+			padding-right: rem(80px); // Ausgleich vom Sticky Container
+		}
+	}
+
 	.page-header {
 		& {
 			padding-top: rem(20px);
@@ -259,6 +265,16 @@ body {
 			& > ul {
 				justify-content: flex-start;
 			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	.ce-content {
+		.ce-frame--outer {
+			padding-right: $spacing-default; // Ausgleich vom Sticky Container
 		}
 	}
 }
