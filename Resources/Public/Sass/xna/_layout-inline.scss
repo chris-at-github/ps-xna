@@ -48,9 +48,19 @@ body {
 	}
 
 	.logo {
-		@extend %logo;
-		max-width: rem(192px);
-		max-height: rem(66px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+		& {
+			@extend %logo;
+			max-width: rem(192px);
+			max-height: rem(66px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+		}
+
+		.logo--title {
+			fill: #464646;
+		}
+
+		.logo--color-primary {
+			fill: #38afb1;
+		}
 	}
 
 	.hamburger {
@@ -65,6 +75,14 @@ body {
 	#header + .ce-content {
 		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
 			padding-top: rem(80px); // Hoehe des Headers
+		}
+	}
+}
+
+.page--layout-4 {
+	.logo {
+		.logo--title, .logo--color-primary {
+			fill: #fff;
 		}
 	}
 }
