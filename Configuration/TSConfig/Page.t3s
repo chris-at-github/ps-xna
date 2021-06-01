@@ -19,3 +19,11 @@ TCEFORM {
 		}
 	}
 }
+
+[field('CType') === 'ce_hero']
+	TCEFORM.tt_content {
+		tx_xo_variant {
+			addItems.2 = Page Hero
+		}
+	}
+[END]
