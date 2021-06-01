@@ -1,2 +1,13 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:xo/Configuration/TSConfig/Page.t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TSConfig/Elements/" extensions="t3s">
+
+TCEFORM {
+	tt_content {
+		frame_class {
+			addItems {
+				2 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.class.2
+				3 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.class.3
+			}
+		}
+	}
+}

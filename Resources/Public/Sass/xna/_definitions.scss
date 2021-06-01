@@ -120,6 +120,20 @@ p, ul, ol, table {
 	background: #f7f7f7;
 }
 
+%container-class-2 {
+	background: #30afb1;
+}
+
+%container-class-3 {
+	background: #1ba5a7;
+}
+
+%container-class-2, %container-class-3 {
+	&, %header-x, a {
+		color: #fff;
+	}
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Address
 %address {
