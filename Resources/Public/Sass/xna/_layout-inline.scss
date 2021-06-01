@@ -57,23 +57,11 @@ body {
 		position: relative;
 		left: 12px;
 	}
-
-	.main-navigation {
-		a:hover {
-			color: $theme-color-primary;
-		}
-	}
-}
-
-.focusable  {
-	.page-header .main-navigation a:focus {
-		color: $theme-color-primary;
-	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Page Layout Default
-.page--layout-0 {
+.page--layout-0, .page--layout-4 {
 	#header + .ce-content {
 		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
 			padding-top: rem(80px); // Hoehe des Headers
@@ -242,6 +230,28 @@ body {
 				justify-content: flex-end;
 			}
 
+			a {
+				span {
+					position: relative;
+					display: inline-block;
+				}
+
+				&:hover, .focusable &:focus {
+					& {
+						color: $link-color;
+					}
+
+					span:before {
+						content: '';
+						position: absolute;
+						bottom: 0; left: 0;
+						width: 100%;
+						height: 2px;
+						background: $theme-color-primary;
+					}
+				}
+			}
+
 			.navigation-item--expandable svg {
 				display: none;
 			}
@@ -252,10 +262,26 @@ body {
 		}
 	}
 
-	.page--layout-0 {
+	.page--layout-0, .page--layout-4 {
 		#header + .ce-content {
 			.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
 				padding-top: rem(70px); // Hoehe des Headers
+			}
+		}
+	}
+
+	.page--layout-4 {
+		.main-navigation a {
+			color: #fff;
+		}
+
+		.main-navigation a:hover, &.focusable .main-navigation a:focus {
+			& {
+				color: #fff;
+			}
+
+			span:before {
+				background: #fff;
 			}
 		}
 	}

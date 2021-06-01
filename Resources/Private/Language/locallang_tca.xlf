@@ -3,6 +3,10 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2021-06-01T21:00:00Z" product-name="xna">
 		<header/>
 		<body>
+			<trans-unit id="tx_xna_pages.layout.4">
+				<source>Petrol</source>
+			</trans-unit>
+
 			<trans-unit id="tx_xna_tt_content.class.2">
 				<source>Petrol</source>
 			</trans-unit>

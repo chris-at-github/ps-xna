@@ -2,6 +2,14 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TSConfig/Elements/" extensions="t3s">
 
 TCEFORM {
+	pages {
+		layout {
+			addItems {
+				4 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_pages.layout.4
+			}
+		}
+	}
+
 	tt_content {
 		frame_class {
 			addItems {
