@@ -30,8 +30,10 @@
 		.ce-flash {
 			& {
 				margin-top: rem(50px);
-				padding: rem(10px 30px 45px 30px);
-				background: #1b9c9e;
+				margin-left: rem(-15px);
+				margin-right: rem(-15px);
+				padding: rem(10px 20px 45px 20px);
+				background: #1ba5a7;
 				border-radius: 10px;
 			}
 
@@ -86,6 +88,8 @@
 					float: none;
 					margin-top: rem(75px);
 					margin-left: auto;
+					margin-right: 0;
+					padding: rem(10px 30px 45px 30px);
 				}
 
 				& > *:first-child {
