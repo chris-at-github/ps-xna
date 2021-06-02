@@ -1,0 +1,15 @@
+.icon-text {
+	.icon-text--icon {
+		& {
+			width: 100%;
+		}
+
+		svg {
+			max-height: 100%;
+		}
+	}
+
+	.icon-text--icon-container {
+		width: auto;
+	}
+}
