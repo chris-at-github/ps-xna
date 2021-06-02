@@ -1,15 +1,63 @@
-.icon-text {
-	.icon-text--icon {
+@if($ce-icon-text--layout-inline) {
+	.ce-icon-text--inline {
 		& {
-			width: 100%;
+			overflow: hidden;
 		}
 
-		svg {
-			max-height: 100%;
+		.icon-text--container {
+			margin-top: rem(-20px);
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+
+		.icon-text {
+			margin-top: rem(40px);
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+
+		.icon-text--icon {
+			& {
+				width: 100%;
+			}
+
+			svg {
+				max-height: 100%;
+			}
+		}
+
+		.icon-text--icon-container {
+			width: auto;
+		}
+
+		.icon-text:hover {
+			.icon-text--title a {
+				color: $theme-color-primary;
+			}
+		}
+
+		.icon-text--title a {
+			&:hover {
+				text-decoration: none;
+			}
+
+			&:hover, .focusable &:focus {
+				color: $theme-color-primary;
+			}
 		}
 	}
 
-	.icon-text--icon-container {
-		width: auto;
+	// -------------------------------------------------------------------------------------------------------------------
+	// >= 768px
+	@include media-breakpoint-up(md) {
+		.ce-icon-text--inline {
+			.icon-text--container {
+				margin-top: rem(-20px);
+			}
+
+			.icon-text {
+				margin-top: rem(40px);
+			}
+		}
 	}
 }
