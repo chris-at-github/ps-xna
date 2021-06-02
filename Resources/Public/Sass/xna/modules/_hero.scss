@@ -26,14 +26,43 @@
 		p {
 			margin-top: rem(30px);
 		}
+
+		.ce-flash {
+			& {
+				margin-top: rem(50px);
+				padding: rem(10px 30px 45px 30px);
+				background: #1b9c9e;
+				border-radius: 10px;
+			}
+
+			.ce-header {
+				font-size: rem(22px);
+				font-weight: $font-weight-base;
+			}
+
+			& > *:first-child {
+				margin-top: rem(30px);
+			}
+
+			p {
+				margin-top: rem(10px);
+			}
+		}
 	}
 }
 
+// >= 768px
 @include media-breakpoint-up(md) {
 	.ce-hero {
 		&.ce-frame--variant-2 {
+			& {
+				padding-right: 1.5rem;
+			}
+
 			.ce-frame--inner {
 				min-height: 60vh;
+				display: flex;
+				align-items: flex-start;
 			}
 
 			%hero--title {
@@ -43,6 +72,24 @@
 
 				&, h1, h2, h3, h4, h5, h6 {
 					font-size: rem(54px);
+				}
+			}
+
+			.hero--inner {
+				width: 50%;
+			}
+
+			.ce-flash {
+				& {
+					width: 50%;
+					max-width: rem(380px);
+					float: none;
+					margin-top: rem(75px);
+					margin-left: auto;
+				}
+
+				& > *:first-child {
+					margin-top: rem(40px);
 				}
 			}
 		}

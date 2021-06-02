@@ -66,6 +66,18 @@ $GLOBALS['TCA']['tt_content']['types']['ce_hero']['columnsOverrides']['image']['
 	],
 ];
 
+$GLOBALS['TCA']['tt_content']['types']['ce_hero']['showitem'] = '
+		--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
+		--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.header;header, bodytext, image, tx_xo_flash,
+	--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.appearance,
+		--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.frames;frames,
+	--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.access,
+		--palette--;;hidden,
+		--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.visibility;visibility,
+		--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.access;access,
+	--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.extended
+';
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Gallery
 $GLOBALS['TCA']['tt_content']['types']['ce_gallery']['columnsOverrides']['tx_xo_file']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
