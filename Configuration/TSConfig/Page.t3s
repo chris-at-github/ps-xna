@@ -17,6 +17,20 @@ TCEFORM {
 				3 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.class.3
 			}
 		}
+
+		space_before_class {
+			addItems {
+				large = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.space.large
+				extra-large = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.space.extralarge
+			}
+		}
+
+		space_after_class {
+			addItems {
+				large = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.space.large
+				extra-large = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.space.extralarge
+			}
+		}
 	}
 }
 

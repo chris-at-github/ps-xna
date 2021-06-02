@@ -86,12 +86,16 @@ p, ul, ol, table {
 // ---------------------------------------------------------------------------------------------------------------------
 // Container / Abstaende
 %container-space-before-small,
-%container-space-before-medium {
+%container-space-before-medium,
+%container-space-before-large,
+%container-space-before-extra-large {
 	padding-top: 0.1px;
 }
 
 %container-space-after-small,
-%container-space-after-medium {
+%container-space-after-medium,
+%container-space-after-large,
+%container-space-after-extra-large {
 	padding-bottom: 0.1px;
 }
 
@@ -103,12 +107,28 @@ p, ul, ol, table {
 	margin-top: $spacing-medium;
 }
 
+%container-space-before-large > %container-inner {
+	margin-top: rem(40px);
+}
+
+%container-space-before-extra-large > %container-inner {
+	margin-top: rem(70px);
+}
+
 %container-space-after-small > %container-inner {
 	margin-bottom: $spacing-default;
 }
 
 %container-space-after-medium > %container-inner {
 	margin-bottom: $spacing-medium;
+}
+
+%container-space-after-large > %container-inner {
+	margin-bottom: rem(40px);
+}
+
+%container-space-after-extra-large > %container-inner {
+	margin-bottom: rem(70px);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -215,8 +235,24 @@ p, ul, ol, table {
 		margin-top: rem(40px);
 	}
 
+	%container-space-before-large > %container-inner {
+		margin-top: rem(80px);
+	}
+
+	%container-space-before-extra-large > %container-inner {
+		margin-top: rem(120px);
+	}
+
 	%container-space-after-medium > %container-inner {
 		margin-bottom: rem(40px);
+	}
+
+	%container-space-after-large > %container-inner {
+		margin-bottom: rem(80px);
+	}
+
+	%container-space-after-extra-large > %container-inner {
+		margin-bottom: rem(120px);
 	}
 }
 

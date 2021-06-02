@@ -7,6 +7,13 @@
 				<source>Petrol</source>
 			</trans-unit>
 
+
+			<trans-unit id="tx_xna_tt_content.space.large">
+				<source>Large</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.space.extralarge">
+				<source>Extra Large</source>
+			</trans-unit>
 			<trans-unit id="tx_xna_tt_content.class.2">
 				<source>Petrol</source>
 			</trans-unit>
