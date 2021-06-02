@@ -85,6 +85,50 @@ body {
 			fill: #fff;
 		}
 	}
+
+	.hamburger {
+		.hamburger-inner {
+			&, &:before, &:after {
+				background: #b5f5f6;
+			}
+		}
+
+		&:hover {
+			.hamburger-inner {
+				&, &:before, &:after {
+					background: #fff;
+				}
+			}
+		}
+	}
+
+	&.is--off-canvas-active {
+		.logo {
+			.logo--title {
+				fill: #464646;
+			}
+
+			.logo--color-primary {
+				fill: #38afb1;
+			}
+		}
+
+		.hamburger {
+			.hamburger-inner {
+				&, &:before, &:after {
+					background: $hamburger-layer-color;
+				}
+			}
+
+			&:hover {
+				.hamburger-inner {
+					&, &:before, &:after {
+						background: $hamburger-active-layer-color;
+					}
+				}
+			}
+		}
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
