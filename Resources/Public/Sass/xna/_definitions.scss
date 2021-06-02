@@ -149,7 +149,7 @@ p, ul, ol, table {
 }
 
 %container-class-2, %container-class-3 {
-	&, %header-x, a {
+	&, %header-x, a, .link--phone, .link--phone:hover, .link--phone:focus {
 		color: #fff;
 	}
 
