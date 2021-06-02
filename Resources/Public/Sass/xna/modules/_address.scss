@@ -11,4 +11,73 @@
 	.address {
 		@extend %address;
 	}
+
+	&.ce-frame--variant-2 {
+		.address {
+			@include make-row();
+		}
+
+		.address--item-container {
+			@include make-col-ready();
+		}
+
+		.address--item-group {
+			position: relative;
+			padding: rem(0 0 0 50px);
+		}
+
+		.address--opening-hours-days {
+			& {
+				margin: 0;
+			}
+
+			dt, dd {
+				display: block;
+				margin: 0;
+			}
+		}
+
+		.address--item-icon {
+			position: absolute;
+			top: 0; left: rem(1px);
+		}
+
+		.address--item-icon-location {
+			top: rem(1px);
+			width: rem(23px);
+			height: rem(28px);
+		}
+
+		.address--item-icon-phone {
+			top: rem(2px);
+			width: rem(22px);
+			height: rem(22px);
+		}
+
+		.address--item-icon-mail {
+			top: rem(4px);
+			width: rem(24px);
+			height: rem(18px);
+		}
+
+		.address--item-icon-opening-hours {
+			width: rem(28px);
+			height: rem(28px);
+		}
+	}
+}
+
+// >= 768px
+@include media-breakpoint-up(md) {
+	.ce-address {
+		&.ce-frame--variant-2 {
+			.address--item-container {
+				@include make-col(6);
+			}
+
+			.address--item-group {
+				margin-top: rem(20px);
+			}
+		}
+	}
 }

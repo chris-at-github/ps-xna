@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:section name="Main">
+	<f:render section="Variant-{record.tx_xo_variant}" optional="1" arguments="{_all}">
+		<f:render partial="Components/Address" section="LocalBusiness" arguments="{address: address}" />
+	</f:render>
+</f:section>
+
+<f:section name="Variant-2">
+	<address class="address">
+		<div class="address--item-container">
+			<div class="address--item-group">
+				<xo:svg.inline source="assets/svg/icon-location.svg" attributes="{class: 'address--item-icon address--item-icon-location'}" />
+				<f:render partial="Components/Address" section="Location" arguments="{_all}" />
+			</div>
+
+			<div class="address--item-group">
+				<xo:svg.inline source="assets/svg/icon-phone.svg" attributes="{class: 'address--item-icon address--item-icon-phone'}" />
+				<f:render partial="Components/Address" section="Phone" arguments="{_all}" />
+			</div>
+
+			<div class="address--item-group">
+				<xo:svg.inline source="assets/svg/icon-mail.svg" attributes="{class: 'address--item-icon address--item-icon-mail'}" />
+				<f:render partial="Components/Address" section="Mail" arguments="{_all}" />
+			</div>
+		</div>
+
+		<div class="address--item-container">
+			<div class="address--item-group">
+				<xo:svg.inline source="assets/svg/icon-opening-hours.svg" attributes="{class: 'address--item-icon address--item-icon-opening-hours'}" />
+				<f:render partial="Components/Address" section="OpeningHoursDays" arguments="{_all}" />
+				<f:render partial="Components/Address" section="OpeningHoursDescription" arguments="{_all}" />
+			</div>
+		</div>
+
+		<f:if condition="{settings.structuredDataType} == 'localBusiness'">
+			<xo:jsonLd.localBusiness address="{address}" />
+		</f:if>
+	</address>
+</f:section>
+</html>

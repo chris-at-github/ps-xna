@@ -37,7 +37,15 @@ TCEFORM {
 [field('CType') === 'ce_hero']
 	TCEFORM.tt_content {
 		tx_xo_variant {
-			addItems.2 = Page Hero
+			addItems.2 = Frontpage
+		}
+	}
+[END]
+
+[field('list_type') === 'xo_addressrecord']
+	TCEFORM.tt_content {
+		tx_xo_variant {
+			addItems.2 = Frontpage
 		}
 	}
 [END]
