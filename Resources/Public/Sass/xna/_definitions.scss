@@ -132,6 +132,16 @@ p, ul, ol, table {
 	&, %header-x, a {
 		color: #fff;
 	}
+
+	.link--cta {
+		&:before {
+			color: $theme-color-primary;
+		}
+
+		&:after {
+			background: #fff;
+		}
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

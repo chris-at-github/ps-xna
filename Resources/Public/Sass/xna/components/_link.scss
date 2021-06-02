@@ -35,14 +35,40 @@
 
 .link--cta {
 	& {
+		@include iconfont(arrow-right);
+		position: relative;
 		display: inline-block;
-		padding: rem(10px 20px);
-		border: 2px solid $font-color-base;
-		color: $font-color-base;
+		padding: rem(5px 0 5px 55px);
+	}
+
+	&:before {
+		position: absolute;
+		top: rem(9px); left: rem(9px);
+		z-index: 10;
+		font-size: rem(13px);
+		font-weight: $font-weight-base;
+		color: #fff;
+		transition: transform $transition-duration;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: rem(0); left: rem(0);
+		z-index: 5;
+		width: rem(37px);
+		height: rem(37px);
+		background: $theme-color-primary;
+		border-radius: 3px;
 	}
 
 	&:hover {
-		border-color: $link-color-hover;
-		text-decoration: none;
+		& {
+			text-decoration: none;
+		}
+
+		&:before {
+			transform: translate(3px, 0);
+		}
 	}
 }

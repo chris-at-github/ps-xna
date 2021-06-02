@@ -15,3 +15,14 @@ editor:
       - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.download', element: 'a', attributes: { class: 'link--download' } }
       - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.link.cta', element: 'a', attributes: { class: 'link--cta' } }
       - { name: 'LLL:EXT:xna/Resources/Private/Language/locallang_rte.xlf:tx_xna_rte.text.small', element: 'span', attributes: { class: 'text--small' } }
+
+buttons:
+  link:
+    properties:
+      class:
+        allowedClasses: 'link--download, link--external, link--mail, link--phone, link--cta'
+
+classesAnchor:
+  linkCtaInternal:
+    class: 'link--cta'
+    type: 'page'
