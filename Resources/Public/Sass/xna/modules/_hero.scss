@@ -17,7 +17,8 @@
 
 		.hero--background {
 			position: absolute;
-			top: 0; left: -40px;
+			left: -40px;
+			bottom: -2px;
 			z-index: -1;
 			height: 100%;
 			opacity: 0.75;
