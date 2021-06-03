@@ -101,6 +101,14 @@
 	}
 }
 
+@include media-breakpoint-up(lg) {
+	.ce-hero {
+		&.ce-frame--variant-0 {
+			min-height: rem(680px);
+		}
+	}
+}
+
 @include media-breakpoint-up(xl) {
 	.ce-hero {
 		&.ce-frame--variant-2 {
