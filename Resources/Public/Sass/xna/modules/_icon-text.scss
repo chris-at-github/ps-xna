@@ -1,3 +1,23 @@
+.icon-text {
+	.icon-text--icon-container {
+		& + .icon-text--title {
+			margin: rem(15px 0 0 0);
+		}
+	}
+
+	.icon-text--title {
+		&, a, h1, h2, h3, h4, h5, h6 {
+			font-size: $font-size-base;
+		}
+	}
+
+	&[data-uri-target]:hover {
+		&, a, h1, h2, h3, h4, h5, h6 {
+			color: $theme-color-primary;
+		}
+	}
+}
+
 @if($ce-icon-text--layout-inline) {
 	.ce-icon-text--inline {
 		& {
@@ -6,19 +26,17 @@
 
 		.icon-text--container {
 			margin-top: rem(-20px);
-			margin-left: -20px;
-			margin-right: -20px;
 		}
 
 		.icon-text {
+			width: 50%;
 			margin-top: rem(40px);
-			padding-left: 20px;
-			padding-right: 20px;
 		}
 
 		.icon-text--icon {
 			& {
 				width: 100%;
+				height: rem(48px);
 			}
 
 			svg {
@@ -28,35 +46,55 @@
 
 		.icon-text--icon-container {
 			width: auto;
+			height: rem(48px);
 		}
+	}
+}
 
-		.icon-text:hover {
-			.icon-text--title a {
-				color: $theme-color-primary;
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 576px
+@include media-breakpoint-up(sm) {
+	@if($ce-icon-text--layout-inline) {
+		.ce-icon-text--inline {
+			.icon-text {
+				width: auto;
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+	.icon-text {
+		.icon-text--icon-container {
+			& + .icon-text--title {
+				margin: rem(20px 0 0 0);
 			}
 		}
 
-		.icon-text--title a {
-			&:hover {
-				text-decoration: none;
-			}
-
-			&:hover, .focusable &:focus {
-				color: $theme-color-primary;
+		.icon-text--title {
+			&, a, h1, h2, h3, h4, h5, h6 {
+				font-size: rem(20px);
 			}
 		}
 	}
 
-	// -------------------------------------------------------------------------------------------------------------------
-	// >= 768px
-	@include media-breakpoint-up(md) {
+	@if($ce-icon-text--layout-inline) {
 		.ce-icon-text--inline {
 			.icon-text--container {
-				margin-top: rem(-20px);
+				margin-left: -20px;
+				margin-right: -20px;
 			}
 
 			.icon-text {
 				margin-top: rem(40px);
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			.icon-text--icon-container, .icon-text--icon {
+				height: rem(64px);
 			}
 		}
 	}
