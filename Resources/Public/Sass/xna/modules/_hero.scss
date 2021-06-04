@@ -101,6 +101,18 @@
 	}
 }
 
+@include media-breakpoint-up(md) {
+	.ce-hero {
+		&.ce-frame--variant-0 {
+			%hero--title {
+				&, h1, h2, h3, h4, h5, h6 {
+					font-size: rem(40px);
+				}
+			}
+		}
+	}
+}
+
 @include media-breakpoint-up(lg) {
 	.ce-hero {
 		&.ce-frame--variant-0 {
