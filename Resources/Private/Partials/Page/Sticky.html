@@ -1,0 +1,37 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Container">
+		<div class="sticky--container">
+			<f:render section="Contact" arguments="{_all}" />
+		</div>
+	</f:section>
+
+	<f:section name="Contact">
+		<f:if condition="{providerData.0}">
+			<div class="sticky--element sticky--element-contact">
+				<button class="sticky--icon" aria-controls="sticky--off-canvas-contact" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_sticky.contact')}">
+					<xo:svg.inline source="assets/svg/contact.svg" />
+				</button>
+
+				<div class="sticky--off-canvas" id="sticky--off-canvas-contact" aria-hidden="true">
+					<button class="sticky--close" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.action.close')}">
+						<xo:svg.inline source="assets/svg/close.svg" />
+					</button>
+
+					<div class="address">
+						<div class="address--item-group">
+							<f:render partial="Components/Address" section="Location" arguments="{address: providerData.0}" />
+						</div>
+
+						<f:render partial="Components/Address" section="Phone" arguments="{address: providerData.0}" />
+						<f:render partial="Components/Address" section="Mail" arguments="{address: providerData.0}" />
+
+						<div class="address--item-group address--opening-hours">
+							<header><f:translate key="LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_address.openinghours" /></header>
+							<f:render partial="Components/Address" section="OpeningHoursDays" arguments="{address: providerData.0}" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</f:if>
+	</f:section>
+</html>
