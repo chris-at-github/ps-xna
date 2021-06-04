@@ -8,6 +8,9 @@
 
 	.sticky--element {
 		position: relative;
+		transform: translate(0, 0);
+		transition: transform 0.35s;
+		transition-delay: 0.085s;
 	}
 
 	.sticky--icon {
@@ -25,8 +28,8 @@
 			cursor: pointer;
 		}
 
-		&:hover, &:focus {
-			background: #e7e7e7;
+		&:hover, .focusable &:focus {
+			background: $theme-color-third;
 		}
 
 		svg {
@@ -36,13 +39,20 @@
 	}
 
 	.sticky--off-canvas {
-		position: absolute;
-		top: 0; right: 0;
-		width: rem(360px);
-		padding: rem(10px 20px);
-		background: #f7f7f7;
-		transform: translate(rem(440px), 0);
-		transition: transform $transition-duration;
+		& {
+			position: absolute;
+			top: -55px; right: 0;
+			width: rem(360px);
+			min-height: rem(263px);
+			padding: rem(10px 20px);
+			background: $theme-color-primary;
+			transform: translate(rem(440px), 0);
+			transition: transform 0.085s;
+		}
+
+		&, a, a:hover, .focusable & a:focus, .focusable & .link--phone:focus {
+			color: #fff;
+		}
 	}
 
 	// ---------------------------------------------------------------------------------------------------------------------
@@ -58,33 +68,51 @@
 	.sticky--close {
 		& {
 			position: absolute;
-			top: 0; left: rem(-80px);
+			top: 0; left: rem(-60px);
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: rem(80px);
-			height: rem(80px);
+			width: rem(60px);
+			height: rem(60px);
 			padding: 0;
 			border: 0;
-			background: #f7f7f7;
+			border-top-left-radius: 5px;
+			background: $theme-color-third;
 			cursor: pointer;
 		}
 
-		&:hover, &:focus {
-			background: #e7e7e7;
+		&:hover, .focusable &:focus {
+			background: $theme-color-third;
 		}
 
 		svg {
 			width: 27px;
 			height: 27px;
-			fill: $font-color-base;
+			fill: #fff;
 		}
 	}
 
 	.sticky--element {
 		&.is--active {
+			& {
+				transform: translate(-360px, 0);
+			}
+
 			.sticky--off-canvas {
+				transform: translate(360px, 0);
+			}
+		}
+
+		&.is--closing {
+			& {
 				transform: translate(0, 0);
+				transition-delay: 0s;
+			}
+
+			.sticky--off-canvas {
+				transform: translate(440px, 0);
+				transition-duration: 0.2s;
+				transition-delay: 0.25s;
 			}
 		}
 	}
