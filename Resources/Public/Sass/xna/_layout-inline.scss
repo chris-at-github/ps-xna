@@ -265,7 +265,13 @@ body {
 @include media-breakpoint-up(md) {
 	.ce-content {
 		.ce-frame--outer {
-			padding-right: rem(80px); // Ausgleich vom Sticky Container
+			& {
+				padding-right: rem(80px); // Ausgleich vom Sticky Container
+			}
+
+			&.ce-frame--layout-2 {
+				padding-right: 0;
+			}
 		}
 	}
 

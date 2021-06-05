@@ -1,0 +1,27 @@
+@if($ce-gallery--layout-slider) {
+	.ce-gallery--slider {
+
+		.gallery--container {
+			height: 200px;
+		}
+
+		.gallery--image {
+			picture, img {
+				width: auto;
+				max-height: 200px;
+			}
+		}
+
+		.slider {
+			.slider--interface-container {
+				@extend %container-width-normal;
+				@extend %container-align-center;
+				@extend %container-outer;
+			}
+
+			.slider--interface {
+				@extend %container-inner;
+			}
+		}
+	}
+}
