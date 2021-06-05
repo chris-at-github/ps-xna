@@ -23,15 +23,16 @@
 		& {
 			position: relative;
 			list-style: none;
-			padding: rem(0 0 0 15px);
+			margin: rem(5px 0 0 0);
+			padding: rem(0 0 0 20px);
 		}
 
 		&:before {
 			content: '';
 			position: absolute;
-			top: 12px; left: 0;
-			border: 2px solid $font-color-base;
-			border-radius: 50%;
+			top: 10px; left: 1px;
+			border: 3px solid $theme-color-primary;
+			border-radius: 1px;
 		}
 	}
 
