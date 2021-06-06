@@ -1,14 +1,16 @@
 @if($ce-gallery--layout-slider) {
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// CSS Variablen
+	:root {
+		--gallery--slider-height: 200px;
+	}
+
 	.ce-gallery--slider {
-
-		.gallery--container {
-			height: 200px;
-		}
-
 		.gallery--image {
 			picture, img {
 				width: auto;
-				max-height: 200px;
+				max-height: var(--gallery--slider-height);
 			}
 		}
 
@@ -22,6 +24,20 @@
 			.slider--interface {
 				@extend %container-inner;
 			}
+		}
+	}
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(sm) {
+
+	@if($ce-gallery--layout-slider) {
+
+		// -------------------------------------------------------------------------------------------------------------------
+		// CSS Variablen
+		:root {
+			--gallery--slider-height: 400px;
 		}
 	}
 }
