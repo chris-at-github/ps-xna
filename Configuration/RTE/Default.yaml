@@ -27,3 +27,7 @@ classesAnchor:
   linkCtaInternal:
     class: 'link--cta'
     type: 'page'
+
+  linkCtaMail:
+    class: 'link--cta'
+    type: 'mail'
