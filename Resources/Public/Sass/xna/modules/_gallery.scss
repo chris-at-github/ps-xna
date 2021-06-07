@@ -55,7 +55,11 @@
 		--gallery--slider-height: 200px;
 	}
 
-	.ce-gallery--slider {
+	.ce-gallery--slider  {
+		.slider--container > .slider--item {
+			padding-right: $spacing-medium;
+		}
+
 		.gallery--image {
 			picture, img {
 				width: auto;
