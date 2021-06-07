@@ -1,1 +1,14 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ce_gallery/Configuration/TypoScript/setup.typoscript">
+
+tt_content {
+	ce_gallery {
+		dataProcessing {
+			130 {
+				importJs {
+					5 = /assets/js/gallery.xna.js
+				}
+			}
+
+		}
+	}
+}
