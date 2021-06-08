@@ -1,0 +1,32 @@
+// -------------------------------------------------------------------------------------------------------------------
+// Component
+.employee {
+	.employee--name {
+		margin: rem(15px 0 0 0);
+		font-weight: $font-weight-bold;
+	}
+
+	.employee--position {
+		margin: rem(5px 0 0 0);
+		font-size: rem(16px);
+	}
+}
+
+// -------------------------------------------------------------------------------------------------------------------
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	.employee--container {
+		& > li {
+			margin-top: rem(50px);
+			@include make-col(3);
+		}
+	}
+
+	.employee--name {
+		font-size: rem(20px);
+	}
+
+	.employee--position {
+		font-size: $font-size-base;
+	}
+}
