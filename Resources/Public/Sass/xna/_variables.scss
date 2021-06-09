@@ -114,3 +114,32 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 $hamburger-hover-use-filter: false !default;
 $hamburger-hover-filter: opacity(50%) !default;
 $hamburger-active-hover-filter: $hamburger-hover-filter !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Facts
+$ce-facts--use-css: true !default;
+$ce-facts--layout-inline: true !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Gallery
+$ce-gallery--use-css: true !default;
+$ce-gallery--layout-default: false !default;
+$ce-gallery--layout-slider: true !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Hero
+$ce-hero--use-css: true !default;
+$ce-hero--layout-default: true !default;
+$ce-hero--layout-slider: false !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Icon Text
+$ce-icon-text--use-css: true !default;
+$ce-icon-text--layout-vertical: false !default;
+$ce-icon-text--layout-horizontal: false !default;
+$ce-icon-text--layout-inline: true !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Employee
+$tx-employee--use-css: true !default;
+$tx-employee---layout-default: true !default;
