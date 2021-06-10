@@ -4,6 +4,7 @@ imports:
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
   - { resource: "EXT:xo/Configuration/RTE/XoMinimal.yaml" }
+  - { resource: "EXT:xna/Configuration/RTE/Global.yaml" }
 
 editor:
   config:

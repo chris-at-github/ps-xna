@@ -28,7 +28,7 @@
 
 			// Off-Canvas ausblenden
 			node.addEventListener('stickyElementDeactivate', function() {
-				node.classList.remove('is--active');
+				node.classList.add('is--closing');
 
 				// Off-Canvas als geoeffnet markieren
 				offCanvas.setAttribute('aria-hidden', 'true');
@@ -37,6 +37,11 @@
 				offCanvas.querySelectorAll('button, input, a').forEach(function(node) {
 					node.setAttribute('tabindex', '-1');
 				});
+
+				setTimeout(function() {
+					node.classList.remove('is--active');
+					node.classList.remove('is--closing');
+				}, 350);
 			});
 
 			// Switch zum Ein- und Ausblenden (Klick auf den Trigger)
