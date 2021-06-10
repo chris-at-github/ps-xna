@@ -51,8 +51,10 @@ select%form-field {
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout 0 (Default)
 %form--layout-0 {
-  %form-item, %form-action {
-    margin: $spacing-small 0 0 0;
+  %form-item {
+    & + %form-item, & + %form-action {
+      margin: $spacing-small 0 0 0;
+    }
   }
 
   %form-label {

@@ -2,14 +2,17 @@ plugin.tx_xo {
 	view {
 		layoutRootPaths {
 			20 = {$plugin.tx_xna.view.layoutRootPath}
+			30 = EXT:xna/Resources/Private/Extensions/Xo/Layouts/
 		}
 
 		templateRootPaths {
 			20 = {$plugin.tx_xna.view.templateRootPath}
+			30 = EXT:xna/Resources/Private/Extensions/Xo/Templates/
 		}
 
 		partialRootPaths {
 			20 = {$plugin.tx_xna.view.partialRootPath}
+			30 = EXT:xna/Resources/Private/Extensions/Xo/Partials/
 		}
 	}
 }

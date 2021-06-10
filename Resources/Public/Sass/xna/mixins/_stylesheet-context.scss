@@ -1,0 +1,5 @@
+@mixin stylesheet-context($identifier) {
+	@if $identifier == $stylesheet-context {
+		@content;
+	}
+}

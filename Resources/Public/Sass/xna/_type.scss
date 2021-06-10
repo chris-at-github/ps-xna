@@ -27,7 +27,7 @@ h4, .h4, h5, .h5, h6, .h6 {
 	font-weight: $font-weight-bold;
 }
 
-p, ul, ol, table {
+p, ul, ol, table, dl {
 	@extend %header-sibling;
 	margin: $spacing-default 0 0 0;
 }
@@ -48,4 +48,8 @@ table {
 // Text-Klassen
 .text--small {
 	font-size: 85%;
+}
+
+.text--large {
+	font-size: 120%;
 }

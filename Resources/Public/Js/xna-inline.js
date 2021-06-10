@@ -4,6 +4,7 @@ var xna = window.xna || {};
 // Datenstruktur fuer eventuelle Skripte
 xna.data = xna.data || {};
 xna.l10n = xna.l10n || {};
+xna.settings = xna.settings || {};
 
 // ---------------------------------------------------------------------------------------------------------------------
 // eigene On-Event Methode um Asynchrone Skripte besser steuern zu koennen -> damit koennen Callbacks auf Events bereits
@@ -58,3 +59,25 @@ if(typeof xna.fire !== 'function') {
 document.addEventListener('DOMContentLoaded', function(event) {
 	xna.fire('documentLoaded');
 });
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Klassen auf Body-Tag setzen
+document.addEventListener('DOMContentLoaded', function(event) {
+
+	// JS-Klassen setzen
+	document.body.classList.remove('no-js');
+	document.body.classList.add('js');
+
+	// Touch Klassen setzen
+	if(('ontouchstart' in window) || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
+		document.body.classList.remove('no-touch');
+		document.body.classList.add('touch');
+	}
+});
+
+// Focus-Klasse setzen
+window.addEventListener('keydown', function (event) {
+	if(event.key === 'Tab') {
+		document.body.classList.add('focusable');
+	}
+}, true);

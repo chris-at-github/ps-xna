@@ -1,121 +1,53 @@
-.header--layout-0 {
-	& {
-		padding-top: rem(10px);
-		padding-bottom: rem(10px);
-	}
+// ---------------------------------------------------------------------------------------------------------------------
+// Allgemeine HTML- und Inhaltsdefinitionen
+a, input, select, textarea, button {
+	outline: 0;
+}
 
-	.container-inner {
-		display: -ms-grid;
-		display: grid;
-		-ms-grid-columns: 1fr 60px;
-		grid-template-columns: auto 60px;
-		grid-gap: 10px;
-		align-items: center;
-		min-height: rem(60px);
-	}
-
-	.logo {
-		& {
-			@extend %logo;
-			max-width: 140px;
-			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
-		}
-
-		svg {
-			fill: $font-color-base;
-		}
-
-		&:hover svg {
-			fill: $link-color-hover;
-		}
-	}
-
-	.search-widget--link {
-		& {
-			display: none;
-			align-items: center;
-			justify-content: center;
-		}
-
-		&:hover svg {
-			fill: $link-color-hover;
-		}
-
-		svg {
-			display: block;
-			width: 22px;
-			height: 22px;
-		}
-	}
-
-	.search-widget--field {
-		.search-widget--keyword {
-			& {
-				display: block;
-				position: relative;
-				z-index: 5;
-				width: 100%;
-
-				padding: rem(8px 10px);
-				border: 0;
-				border-radius: $border-radius-small;
-				background: #f7f7f7;
-			}
-
-			&:focus {
-				outline: 0;
-				background: #e7e7e7;
-			}
-		}
-
-		.search-widget--submit, .search-widget--close {
-			& {
-				position: absolute;
-				z-index: 10;
-				width: rem(50px);
-				height: rem(43px);
-				border: 0;
-				background: transparent;
-				cursor: pointer;
-			}
-
-			svg {
-				fill: #666;
-			}
-
-			&:hover, &:focus {
-				& {
-					outline: 0;
-				}
-
-				svg {
-					fill: $link-color-hover;
-				}
-			}
-		}
-
-		.search-widget--submit {
-			& {
-				top: 0;
-			}
-
-			svg {
-				width: 22px;
-				height: 22px;
-				margin: 7px 0 0 0;
-			}
-		}
-	}
-
-	.hamburger {
-		position: relative;
-		left: 12px;
+.focusable, .no-js {
+	a, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]) {
+		@extend %accessibility-focus;
 	}
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// Scroll-Lock
+.is--scroll-lock {
+	max-width: 100%;
+	position: fixed;
+	overflow-y: hidden;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Page Footer
+.page-footer {
+	& {
+		padding-top: rem(20px);
+		padding-bottom: rem(20px);
+		background: #f7f7f7;
+	}
+
+	.navigation {
+		& {
+			@include navigation--layout-0;
+		}
+
+		a:hover, a:focus {
+			text-decoration: none;
+		}
+	}
+
+	.address {
+		margin: $spacing-medium 0 0 0;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// < 576px
 @include media-breakpoint-down(sm) {
-	#header.header--layout-0 {
+	.page-header {
 		.off-canvas {
+			display: block;
 			transform: translate(-100%, 0);
 			position: fixed;
 			top: rem(80px); bottom: 0;
@@ -186,61 +118,24 @@
 			}
 		}
 	}
-}
 
-@include media-breakpoint-up(sm) {
-	.header--layout-0 .hamburger {
-		left: 0;
+	// hoeheren CSS Selektor verwenden um Inline-CSS zu ueberschreiben
+	body .page-header {
+		.off-canvas {
+			display: block;
+		}
 	}
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
 @include media-breakpoint-up(md) {
-	.header--layout-0 {
-		.container-inner {
-			//-ms-grid-columns: 140px 1fr 60px;
-			//grid-template-columns: 140px auto 60px;
-			//grid-gap: 30px;
-
-			position: relative;
-			display: grid;
-			grid-template-columns: 140px 1fr;
-			grid-template-rows: 35px 60px;
-			gap: 5px 30px;
-			grid-template-areas:
-				'. off-canvas off-canvas'
-				'logo off-canvas off-canvas';
-		}
-
-		.off-canvas {
-			grid-area: off-canvas;
-
-			display: grid;
-			grid-template-columns: 1fr 20px 60px;
-			grid-template-rows: 35px 60px;
-			gap: 5px 20px;
-			grid-template-areas:
-				'meta-navigation language-navigation language-navigation'
-				'main-navigation main-navigation search';
-		}
-
-		.logo {
-			grid-area: logo;
-			align-self: end;
-			padding: 0 0 9px 0;
-		}
-
-		.search-widget--link {
-			grid-area: search;
-			display: flex;
-			height: 100%;
-			justify-content: flex-end;
-		}
-
+	.page-header {
 		.search-widget--field {
 			& {
 				position: absolute;
 				bottom: 0; right: 0;
-				left: 170px; // Logo + Grid-Gap
+				left: 150px; // Logo + Grid-Gap
 				z-index: -1;
 				padding: rem(10px 40px 8px 0);
 				background: #fff;
@@ -269,53 +164,31 @@
 			}
 		}
 
-		.language-navigation {
-			& {
-				grid-area: language-navigation;
-			}
+		.main-navigation {
+			@include navigation--layout-2(true);
+		}
+	}
 
-			ul {
-				justify-content: flex-end;
-			}
+	// hoeheren CSS Selektor verwenden um Inline-CSS zu ueberschreiben
+	body .page-header {
+		.search-widget--field {
+			display: block;
 		}
 
 		.main-navigation {
-			grid-area: main-navigation;
-			align-self: end;
-		}
-
-		.meta-navigation {
-			& {
-				grid-area: meta-navigation;
-				@include navigation--layout-0;
-			}
-
-			ul {
-				justify-content: flex-end;
-			}
-		}
-
-		.hamburger {
-			display: none;
-		}
-
-		.main-navigation {
-			& {
-				@include navigation--layout-2;
-				padding-left: 10px;
-			}
-
-			.navigation-item--expandable svg {
-				display: none;
+			& > ul > li:hover .navigation--container-outer {
+				display: block;
 			}
 		}
 	}
 }
 
+
+
 // ---------------------------------------------------------------------------------------------------------------------
 // IE10 / 11
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	.header--layout-0 {
+	.page-header {
 		.container-inner {
 			display: -ms-grid;
 			-ms-grid-columns: 300px 1fr 300px;

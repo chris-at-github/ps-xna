@@ -1,4 +1,8 @@
 // ---------------------------------------------------------------------------------------------------------------------
+// Define Variables
+$stylesheet-context: 'embed' !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Bootstrap & Xo
 @import 'functions';
 @import 'variables';
@@ -9,7 +13,20 @@
 // XNA
 @import 'xna/reboot';
 @import 'xna/type';
-@import 'xna/svg';
-@import 'xna/type';
 @import 'xna/font';
 @import 'xna/iconfont';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Components
+@import 'xna/components/accessibility';
+@import 'xna/components/navigation';
+@import 'xna/components/navigation/breadcrumb';
+@import 'xna/components/navigation/language';
+@import 'xna/components/layout/hamburger';
+@import 'xna/components/layout/search-widget';
+@import 'xna/components/layout/flash';
+@import 'xna/components/layout/sticky';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
+@import 'xna/layout-inline';

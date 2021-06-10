@@ -1,10 +1,12 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Define Variables
+$stylesheet-context: 'import' !default;
+
 $iconfont-create-font-face: false !default;
 $iconfont-create-icon-class: false !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Bootstrap & Xo
+// Bootstrap & XNA
 @import 'functions';
 @import 'variables';
 @import 'mixins';
@@ -19,44 +21,22 @@ $iconfont-create-icon-class: false !default;
 // Components
 @import 'xna/grid';
 @import 'xna/iconfont';
+@import 'xna/components/accessibility';
 @import 'xna/components/link';
 @import 'xna/components/list';
 @import 'xna/components/table';
-@import 'xna/components/navigation/breadcrumb';
-@import 'xna/components/navigation/language';
-@import 'xna/components/hamburger';
-@import 'xna/components/hamburger/layout-0';
 @import 'xna/components/form';
-@import 'xna/components/form/layout-0';
-@import 'xna/components/address';
-@import 'xna/components/icon-text';
-@import 'xna/components/slider';
-@import 'xna/components/hero';
-@import 'xna/components/scroll-lock';
 @import 'xna/components/card';
 @import 'xna/components/badge';
 @import 'xna/components/modal';
+@import 'xna/components/flash';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
-@import 'xna/layout/page';
-@import 'xna/layout/container';
-@import 'xna/layout/header';
-@import 'xna/layout/footer/layout-0';
+@import 'xna/layout';
+@import 'xna/components/layout/sticky';
 
-// ---------------------------------------------------------------------------------------------------------------------
-// Elements
-@import 'xna/elements/fluid-styled-content';
-@import 'xna/elements/icon-text';
-@import 'xna/elements/google-map';
-@import 'xna/elements/media-wall';
-@import 'xna/elements/hero-slider';
+// TODO
 @import 'xna/elements/product';
 @import 'xna/elements/page-teaser';
 @import 'xna/elements/contact';
-@import 'xna/elements/logos';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Navigation
-@import 'xna/components/navigation/skip';
-@import 'xna/components/navigation';

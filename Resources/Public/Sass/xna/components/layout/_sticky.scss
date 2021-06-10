@@ -1,0 +1,83 @@
+@include stylesheet-context($stylesheet-context-embed) {
+	.sticky--container {
+		position: fixed;
+		top: 200px; right: 0;
+	}
+
+	.sticky--element {
+		position: relative;
+	}
+
+	.sticky--icon, .sticky--close {
+		& {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: rem(80px);
+			height: rem(80px);
+			padding: 0;
+			border: 0;
+			background: #f7f7f7;
+			cursor: pointer;
+		}
+
+		&:hover, .focusable &:focus {
+			background: #e7e7e7;
+		}
+
+		svg {
+			fill: $font-color-base;
+		}
+	}
+
+	.sticky--icon {
+		svg {
+			width: 43px;
+			height: 43px;
+		}
+	}
+
+	.sticky--off-canvas {
+		position: absolute;
+		top: 0; right: 0;
+		width: rem(360px);
+		padding: rem(10px 20px);
+		background: #f7f7f7;
+		transform: translate(rem(440px), 0);
+		transition: transform $transition-duration;
+	}
+}
+
+@include stylesheet-context($stylesheet-context-import) {
+	.sticky--close {
+		& {
+			position: absolute;
+			top: 0; left: rem(-80px);;
+		}
+
+		svg {
+			width: 27px;
+			height: 27px;
+		}
+	}
+
+	.sticky--element {
+		&.is--active {
+			.sticky--off-canvas {
+				transform: translate(0, 0);
+			}
+		}
+
+		&.is--closing {
+			.sticky--off-canvas {
+				transform: translate(rem(440px), 0);
+			}
+		}
+	}
+
+	.sticky--element-contact {
+		.address {
+			@extend %address;
+		}
+	}
+}

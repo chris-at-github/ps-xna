@@ -17,10 +17,8 @@ require('./components/scroll-lock');
 require('./components/navigation/layout-0');
 require('./components/navigation/layout-4');
 require('./components/layout/search-widget');
+require('./components/layout/sticky');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Elements
-require('./elements/google-map');
-require('./elements/slider');
-require('./elements/media-wall');
 require('./elements/contact');
