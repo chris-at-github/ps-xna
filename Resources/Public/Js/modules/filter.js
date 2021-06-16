@@ -1,18 +1,200 @@
-const filter = function(element, index, options) {
+const filter = function(element, options) {
 	let _ = this;
 
+	_.element = element;
+	_.form = null;
+	_.resetContainer = null;
+	_.options = {};
+	_.defaults = {
+		paginatorSelector: '.f3-widget-paginator',
+		ajax: false,
+		ajaxSelectData: null,
+		beforeSubmitProcess: null,
+		afterSubmitProcess: null,
+		afterProcessItem: null,
+		submitSelector: '.filter--submit',
+		autoSubmitSelector: '.filter-item--auto-submit',
+		formSelector: 'form',
+		filterItemSelector: '.filter-item',
+		containerSelector: null,
+		resetAllSelector: '.filter-reset--all',
+		animationDuration: 250
+	}
+
+	_.initialize(options);
+
 	return {
-		a: function() {
-			console.log('a');
-		}
 	}
 }
 
 filter.prototype.initialize = function(options) {
 	let _ = this;
 
-	console.log(_);
+	_.options = Object.assign(_.defaults, options);
+	_.form = _.element.querySelector(_.options.formSelector);
+
+	// // Read Hash
+	// this.readHash();
+
+
+
+	// hier nur weitermachen wenn die Suche ueberhaupt per Ajax abgeschickt werden soll
+	if(_.options.ajax === true) {
+		// $(this.options.submitSelector, this.element).on('click', function(e) {
+		// 	_.submitItem($(this).closest(_.options.filterItemSelector), null);
+		// 	e.preventDefault();
+		// });
+		//
+		_.form.addEventListener('submit', function(event) {
+			// $('input', this.form).each(function() {
+			// 	var input = $(this);
+			//
+			// 	if(input.closest('.filter-item--resettable').length !== 0) {
+			// 		_.processResetItem(input);
+			// 	}
+			// });
+
+			_.submit();
+			event.preventDefault();
+		});
+
+	} else {
+
+		// // This is for 'Standorte'. Not Ajax. Everytime the request is sent, it goes through initialize again. I'm adding parameters to this whole path
+		// _.writeHash();
+	}
+
+	// // Auto-Submit Formularelemente verarbeiten
+	// $(this.options.autoSubmitSelector, this.element).each(function() {
+	// 	$('label', $(this)).on('touchstart', function(e) {
+	// 		$(this).closest(_.options.filterItemSelector).addClass('filter-item--touch');
+	// 	});
+	//
+	// 	$(':input', $(this)).on('change', function(e) {
+	// 		_.submitItem($(this).closest(_.options.filterItemSelector), $(this));
+	// 		_.submit();
+	// 	});
+	// });
+
+	// // Reset All Button verarbeiten
+	// var resetAll = $(this.options.resetAllSelector, this.element);
+	// resetAll.on('click', $.proxy(this.resetAll, this));
+	//
+	// // Reset Button Container erzeugen
+	// this.resetContainer = $('<div class="filter-reset--container"></div>');
+	//
+	// // Wenn es einen Reset All Button gibt, fuege die Einzel Reset Buttons davor ein, ansonsten am Ende vom Formular
+	// if(resetAll.length !== 0) {
+	// 	this.resetContainer.insertBefore(resetAll);
+	// 	resetAll.appendTo(this.resetContainer);
+	//
+	// } else {
+	// 	this.form.append(this.resetContainer);
+	// }
+
+	// Callbacks aus den Options uebernehmen
+	if(typeof(_.options.beforeSubmitProcess) === 'function') {
+		_.beforeSubmitProcess = _.options.beforeSubmitProcess;
+	}
+
+	if(typeof(_.options.afterSubmitProcess) === 'function') {
+		_.afterSubmitProcess = _.options.afterSubmitProcess;
+	}
+
+	if(typeof(_.options.afterProcessItem) === 'function') {
+		_.afterProcessItem = _.options.afterProcessItem;
+	}
+
+	// // Reset Buttons erzeugen
+	// $('input', this.form).each(function() {
+	// 	var input = $(this);
+	//
+	// 	if(input.closest('.filter-item--resettable').length !== 0) {
+	// 		_.processResetItem(input);
+	// 	}
+	// });
+	// this.processResetAllButton();
 }
+
+filter.prototype.submit = function(event) {
+	var _ = this;
+
+	_.beforeSubmitProcess();
+	// _.processResetAllButton();
+	// _.writeHash();
+
+	// Filter automatisch ueber Ajax verarbeiten
+	if(_.options.ajax === true) {
+
+		let data = new FormData(_.form);
+		let uri = _.form.getAttribute('action');
+
+		uri += '?type=1548191072';
+
+		// data.append('type', '1548191072');
+		//
+		// for (var value of data.values()) {
+		// 	console.log(value);
+		// }
+		//
+		// for (var keys of data.keys()) {
+		// 	console.log(keys);
+		// }
+
+		// // Dokumenten-Klasse
+		// document.body.classList.add('is-contact-loading');
+		//
+		fetch(uri, {
+			body: data,
+			method: 'post',
+		}).then(function(response) {
+			return response.text();
+
+		}).then(function(body) {
+
+			// xna.fireEvent('contactSearchLoaded', {
+			// 	responseBody: body,
+			// 	resultContainer: resultContainer
+			// });
+		});
+
+		// $.ajax({
+		// 	cache: false,
+		// 	url: _.form.attr('action'),
+		// 	data: _.form.serializeArray()
+		// }).done(function(html) {
+		// 	html = _.selectAjaxData(html);
+		// 	_.processPaginator(html);
+		//
+		// 	if(_.options.masonry !== null) {
+		// 		_.processMasonaryItems(html, false);
+		//
+		// 	} else {
+		// 		_.processAjaxData(html, false);
+		// 	}
+		//
+		// 	_.afterSubmitProcess();
+		// });
+
+		// lokale Verarbeitung der Filter
+	} else if(_.options.local === true) {
+		_.afterSubmitProcess();
+
+		// Formular absenden
+	} else {
+		this.form.submit();
+	}
+
+	if(typeof(event) !== 'undefined') {
+		event.preventDefault();
+	}
+};
+
+filter.prototype.beforeSubmitProcess = function() {
+};
+
+filter.prototype.afterSubmitProcess = function() {
+};
 
 export default filter;
 

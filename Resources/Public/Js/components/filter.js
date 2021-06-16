@@ -4,9 +4,10 @@ import Filter from '../modules/filter';
 	'use strict';
 
 	xna.on('documentLoaded', function() {
-		let filter = new Filter(1, 2, 3);
-
-		filter.a();
+		let filter = new Filter(document.querySelector('.product--listing'), {
+			ajax: true,
+			containerSelector: '.card--container'
+		});
 
 		// let body = document.querySelector('body');
 		//
