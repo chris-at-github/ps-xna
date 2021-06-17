@@ -9,6 +9,7 @@ require('./helpers/get-css-property');
 require('./helpers/fire-event');
 require('./helpers/scroll-to');
 require('./helpers/create-svg-use-element');
+require('./helpers/add-query-string');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Components

@@ -6,6 +6,7 @@ import Filter from '../modules/filter';
 	xna.on('documentLoaded', function() {
 		let filter = new Filter(document.querySelector('.product--listing'), {
 			ajax: true,
+			pageType: 1548191072,
 			containerSelector: '.card--container'
 		});
 

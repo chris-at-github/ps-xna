@@ -18,7 +18,8 @@ const filter = function(element, options) {
 		filterItemSelector: '.filter-item',
 		containerSelector: null,
 		resetAllSelector: '.filter-reset--all',
-		animationDuration: 250
+		animationDuration: 250,
+		pageType: 0
 	}
 
 	_.initialize(options);
@@ -129,17 +130,9 @@ filter.prototype.submit = function(event) {
 		let data = new FormData(_.form);
 		let uri = _.form.getAttribute('action');
 
-		uri += '?type=1548191072';
-
-		// data.append('type', '1548191072');
-		//
-		// for (var value of data.values()) {
-		// 	console.log(value);
-		// }
-		//
-		// for (var keys of data.keys()) {
-		// 	console.log(keys);
-		// }
+		if(_.options.pageType !== 0) {
+			uri = xna.addQueryString(uri, 'type', _.options.pageType);
+		}
 
 		// // Dokumenten-Klasse
 		// document.body.classList.add('is-contact-loading');
