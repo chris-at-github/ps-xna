@@ -7,7 +7,8 @@ import Filter from '../modules/filter';
 		let filter = new Filter(document.querySelector('.product--listing'), {
 			ajax: true,
 			pageType: 1548191072,
-			containerSelector: '.card--container'
+			containerSelector: '.card--container',
+			itemsSelector: '.card'
 		});
 
 		// let body = document.querySelector('body');
