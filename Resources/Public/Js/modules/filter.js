@@ -39,15 +39,8 @@ filter.prototype.initialize = function(options) {
 	// // Read Hash
 	// this.readHash();
 
-
-
 	// hier nur weitermachen wenn die Suche ueberhaupt per Ajax abgeschickt werden soll
 	if(_.options.ajax === true) {
-		// $(this.options.submitSelector, this.element).on('click', function(e) {
-		// 	_.submitItem($(this).closest(_.options.filterItemSelector), null);
-		// 	e.preventDefault();
-		// });
-		//
 		_.form.addEventListener('submit', function(event) {
 			// $('input', this.form).each(function() {
 			// 	var input = $(this);
@@ -60,29 +53,25 @@ filter.prototype.initialize = function(options) {
 			_.submit();
 			event.preventDefault();
 		});
-
-	} else {
-
-		// // This is for 'Standorte'. Not Ajax. Everytime the request is sent, it goes through initialize again. I'm adding parameters to this whole path
-		// _.writeHash();
 	}
 
-	// // Auto-Submit Formularelemente verarbeiten
-	// $(this.options.autoSubmitSelector, this.element).each(function() {
-	// 	$('label', $(this)).on('touchstart', function(e) {
-	// 		$(this).closest(_.options.filterItemSelector).addClass('filter-item--touch');
-	// 	});
-	//
-	// 	$(':input', $(this)).on('change', function(e) {
-	// 		_.submitItem($(this).closest(_.options.filterItemSelector), $(this));
-	// 		_.submit();
-	// 	});
-	// });
+	// Auto-Submit Formularelemente verarbeiten
+	_.element.querySelectorAll(_.options.autoSubmitSelector).forEach(function(item) {
+		item.querySelectorAll('input, select').forEach(function(input) {
+			input.addEventListener('change', function() {
+				_.submit();
+			});
+		});
+	});
 
-	// // Reset All Button verarbeiten
-	// var resetAll = $(this.options.resetAllSelector, this.element);
-	// resetAll.on('click', $.proxy(this.resetAll, this));
-	//
+	// Reset All Button verarbeiten
+	if(_.element.querySelector(_.options.resetAllSelector) !== null) {
+		_.processResetAllButton();
+		_.element.querySelector(_.options.resetAllSelector).addEventListener('click', function() {
+			_.resetAll();
+		});
+	}
+
 	// // Reset Button Container erzeugen
 	// this.resetContainer = $('<div class="filter-reset--container"></div>');
 	//
@@ -153,7 +142,25 @@ filter.prototype.submit = function(event) {
 	}
 };
 
+filter.prototype.resetAll = function() {
+	let _ = this;
+
+	// Text zuruecksetzen
+	_.element.querySelectorAll('input[type=text]').forEach(function(node) {
+		node.value = '';
+	});
+
+	// Radio | Checkbox
+	_.element.querySelectorAll('input[type=radio], input[type=checkbox]').forEach(function(node) {
+		node.checked = false;
+	});
+
+	_.submit();
+};
+
 filter.prototype.beforeSubmit = function() {
+	this.processResetAllButton();
+
 	if(typeof(this.options.beforeSubmit) === 'function') {
 		this.options.beforeSubmit();
 	}
@@ -185,6 +192,32 @@ filter.prototype.beforeProcessItem = function(item) {
 filter.prototype.afterProcessItem = function(item) {
 	if(typeof(this.options.afterProcessItem) === 'function') {
 		this.options.afterProcessItem(item);
+	}
+};
+
+filter.prototype.processResetAllButton = function() {
+	let _ = this;
+	let resetAllButton = _.element.querySelector(_.options.resetAllSelector);
+	let disable = true;
+
+	// Reset All Button anpassen (ein- / ausblenden)
+	if(resetAllButton !== null) {
+
+		// Text auswerten
+		_.element.querySelectorAll('input[type=text]').forEach(function(node) {
+			if(node.value !== '') {
+				disable = false;
+			}
+		});
+
+		// Radio | Checkbox
+		_.element.querySelectorAll('input[type=radio], input[type=checkbox]').forEach(function(node) {
+			if(node.checked === true) {
+				disable = false;
+			}
+		});
+
+		resetAllButton.disabled = disable;
 	}
 };
 
