@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-27T06:25:54Z" product-name="xo">
+		<header/>
+		<body>
+			<trans-unit id="tx_xna_backend_layout.product.title">
+				<source>Product</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.product.main">
+				<source>Main</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.product.product">
+				<source>Product</source>
+			</trans-unit>
+
+			<trans-unit id="tx_xna_pages.layout.4">
+				<source>Product</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

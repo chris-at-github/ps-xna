@@ -1,2 +1,44 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:xo/Configuration/TSConfig/Page.t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TSConfig/Elements/" extensions="t3s">
+
+TCEFORM {
+	pages {
+		layout {
+			addItems {
+				4 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_pages.layout.4
+			}
+		}
+	}
+}
+
+mod.web_layout.BackendLayouts {
+	product {
+		title = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_backend_layout.product.title
+		#		icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
+		config {
+			backend_layout {
+				colCount = 1
+				rowCount = 2
+				rows {
+					1 {
+						columns {
+							1 {
+								name = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_backend_layout.product.main
+								colPos = 0
+							}
+						}
+					}
+
+					2 {
+						columns {
+							1 {
+								name = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_backend_layout.product.product
+								colPos = 20
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

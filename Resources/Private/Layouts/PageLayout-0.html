@@ -59,6 +59,12 @@
 		<f:render section="Main" />
 	</div>
 
+	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentFooter')}">
+		<div id="content--footer" class="ce-content">
+			<f:render section="Footer" />
+		</div>
+	</f:if>
+
 	<f:if condition="{data.tx_xo_no_sticky} == 0">
 		<f:render partial="Page/Sticky" section="Container" arguments="{_all}" />
 	</f:if>
