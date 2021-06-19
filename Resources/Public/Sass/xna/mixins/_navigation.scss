@@ -74,8 +74,26 @@
 				}
 
 				& > li {
-					width: percentage(6 / 12);
-					margin: rem(20px 0 0 0);
+					& {
+						width: percentage(6 / 12);
+						margin: rem(20px 0 0 0);
+					}
+
+					& > a, & > span {
+						font-size: rem(20px);
+					}
+				}
+			}
+
+			& > ul > li > ul {
+				& > li {
+					& > ul {
+						margin-bottom: rem(20px);
+					}
+
+					&:last-child > ul {
+						margin: 0;
+					}
 				}
 			}
 

@@ -12,6 +12,7 @@
 
 navigation.main {
 	expandAll = 1
+	levels = 4
 }
 
 page {
