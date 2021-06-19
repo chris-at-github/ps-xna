@@ -21,6 +21,28 @@ select%form-field {
   min-height: rem(32px);
 }
 
+%form-field--checkbox, %form-field--radio {
+  & {
+    position: relative;
+    padding: rem(0 0 0 23px);
+  }
+
+  .focusable & {
+    @extend %accessibility-focus-within;
+  }
+
+  input {
+    & {
+      position: absolute;
+      top: rem(7px); left: rem(1px);
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Buttons
 %button {

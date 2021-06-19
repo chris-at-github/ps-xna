@@ -1,0 +1,39 @@
+%filter {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.filter-actions {
+		& {
+			margin-top: rem(20px);
+		}
+
+		.button {
+			margin-right: rem(5px);
+		}
+	}
+}
+
+%filter--tree-checkbox {
+	.filter-item--option-group-title {
+		font-weight: $font-weight-bold;
+	}
+
+	.filter-item--option {
+		& {
+			@extend %form-field--checkbox;
+			padding-top: rem(2px);
+			padding-bottom: rem(2px);
+		}
+
+		input {
+			top: rem(9px); left: rem(2px);
+		}
+	}
+
+	.filter-item--option-group + .filter-item--option-group {
+		margin-top: rem(20px);
+	}
+}
