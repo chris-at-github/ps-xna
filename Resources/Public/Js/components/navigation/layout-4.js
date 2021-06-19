@@ -70,7 +70,11 @@
 				parentlink.classList.add('navigation-item--parentlink');
 
 				link.removeChild(link.querySelector('svg'));
-				link.appendChild(svg);
+
+				// nur wenn das Elternelemet ein Link ist
+				if(link.tagName.toLocaleLowerCase() === 'a') {
+					link.appendChild(svg);
+				}
 
 				parentlink.appendChild(link);
 
