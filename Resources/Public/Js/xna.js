@@ -22,5 +22,6 @@ require('./components/layout/search-widget');
 require('./components/layout/sticky');
 
 
-// TODO
+// TODO korrekt auslagern
 require('./components/filter');
+require('./components/chart');
