@@ -16,14 +16,13 @@
 	}
 }
 
-%filter--tree-checkbox {
+%filter--tree {
 	.filter-item--option-group-title {
 		font-weight: $font-weight-bold;
 	}
 
 	.filter-item--option {
 		& {
-			@extend %form-field--checkbox;
 			padding-top: rem(2px);
 			padding-bottom: rem(2px);
 		}
@@ -35,5 +34,17 @@
 
 	.filter-item--option-group + .filter-item--option-group {
 		margin-top: rem(20px);
+	}
+}
+
+%filter--tree-radio {
+	.filter-item--option {
+		@extend %form-field--radio;
+	}
+}
+
+%filter--tree-checkbox {
+	.filter-item--option {
+		@extend %form-field--checkbox;
 	}
 }
