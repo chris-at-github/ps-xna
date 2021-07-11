@@ -1,0 +1,5 @@
+dataProcessing.pageLayout {
+	mapping {
+		4 = PageLayout-4
+	}
+}
