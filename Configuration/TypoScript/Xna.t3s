@@ -53,6 +53,7 @@ page {
 			30 < navigation.breadcrumb
 			40 < navigation.language
 			50 < navigation.meta
+			60 < navigation.sibling
 
 			// Page DataProcessing
 			100 < dataProcessing.settings

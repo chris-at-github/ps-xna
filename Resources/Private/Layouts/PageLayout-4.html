@@ -13,6 +13,14 @@
 
 	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentFooter')}">
 		<div id="content--footer" class="ce-content">
+			<f:if condition="{navigationSibling}">
+				<nav class="navigation sibling-navigation container-outer">
+					<div class="container-inner">
+						<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationSibling}" />
+					</div>
+				</nav>
+			</f:if>
+
 			<f:render section="Footer" />
 		</div>
 	</f:if>
