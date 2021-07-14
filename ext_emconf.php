@@ -25,6 +25,7 @@ $EM_CONF[$_EXTKEY] = [
 			'ce_gallery' => '1.0.0-1.99.99',
 			'entity_product' => '1.0.0-1.99.99',
 			'contact' => '1.0.0-1.99.99',
+			'chart' => '1.0.0-1.99.99',
 		],
 		'conflicts' => [],
 		'suggests' => [],
