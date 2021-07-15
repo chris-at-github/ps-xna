@@ -6,6 +6,44 @@ import Filter from "../modules/filter";
 	'use strict';
 
 	xna.on('documentLoaded', function() {
+
+		document.querySelectorAll('.chart--line-chart').forEach(function(node) {
+			const identifier = node.getAttribute('data-identifier');
+			const settings = xna.settings.charts[identifier];
+
+			const chart = new Chart(node.querySelector('.chart--canvas'), {
+				type: 'line',
+				data: {
+					labels: settings.labels,
+					datasets: settings.datasets
+				},
+				options: {
+					maintainAspectRatio: false,
+					plugins : {
+						legend: false
+					},
+					scales: {
+						x: {
+							display: true,
+							title: {
+								display: true,
+								text: settings.axis.x.label
+							}
+						},
+						y: {
+							beginAtZero: true,
+							display: true,
+							title: {
+								display: true,
+								text: settings.axis.y.label
+							}
+						}
+					}
+				}
+			});
+		});
+
+		/**
 		if(document.querySelector('.product--chart') !== null) {
 			const labels = ['100', '200', '300', '400', '500', '600', '700', '800', '900', '1000', '1100', '1200', '1300', '1400', '1500', '1600', '1700', '1800', '1900', '2000']
 			const data = {
@@ -74,6 +112,7 @@ import Filter from "../modules/filter";
 				}
 			});
 		}
+		 **/
 	});
 })();
 
