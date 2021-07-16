@@ -24,4 +24,3 @@ require('./components/layout/sticky');
 
 // TODO korrekt auslagern
 require('./components/filter');
-require('./components/chart');
