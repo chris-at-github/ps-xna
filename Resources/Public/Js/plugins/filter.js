@@ -266,5 +266,3 @@ filter.prototype.processResponse = function(html, append) {
 		}
 	}
 };
-
-export default filter;
