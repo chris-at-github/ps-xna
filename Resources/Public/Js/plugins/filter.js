@@ -19,6 +19,7 @@ const filter = function(element, options) {
 		filterItemSelector: '.filter-item',
 		containerSelector: null,
 		itemsSelector: null,
+		resetableSelector: '.filter-item--resetable',
 		resetAllSelector: '.filter-reset--all',
 		animationDuration: 250,
 		pageType: 0
@@ -42,14 +43,6 @@ filter.prototype.initialize = function(options) {
 	// hier nur weitermachen wenn die Suche ueberhaupt per Ajax abgeschickt werden soll
 	if(_.options.ajax === true) {
 		_.form.addEventListener('submit', function(event) {
-			// $('input', this.form).each(function() {
-			// 	var input = $(this);
-			//
-			// 	if(input.closest('.filter-item--resettable').length !== 0) {
-			// 		_.processResetItem(input);
-			// 	}
-			// });
-
 			_.submit();
 			event.preventDefault();
 		});
@@ -62,6 +55,11 @@ filter.prototype.initialize = function(options) {
 				_.submit();
 			});
 		});
+	});
+
+	// Resetable Formularelemente verarbeiten
+	_.element.querySelectorAll(_.options.resetableSelector).forEach(function(item) {
+		_.processResetableItem(item);
 	});
 
 	// Reset All Button verarbeiten
@@ -193,6 +191,33 @@ filter.prototype.afterProcessItem = function(item) {
 	if(typeof(this.options.afterProcessItem) === 'function') {
 		this.options.afterProcessItem(item);
 	}
+};
+
+filter.prototype.processResetableItem = function(item) {
+	let _ = this;
+	let prev = null;
+	let autoSubmit = false;
+
+	if(item.closest(_.options.autoSubmitSelector) !== null) {
+		autoSubmit = true;
+	}
+
+	// Radio / Checkbox zuruecksetzen
+	item.querySelectorAll('input[type=radio]').forEach(function(node) {
+		node.addEventListener('click', function(event) {
+			if(prev !== null && prev === node.value) {
+				node.checked = false;
+				prev = null;
+
+				if(autoSubmit === true) {
+					_.submit();
+				}
+
+			} else {
+				prev = node.value;
+			}
+		});
+	});
 };
 
 filter.prototype.processResetAllButton = function() {
