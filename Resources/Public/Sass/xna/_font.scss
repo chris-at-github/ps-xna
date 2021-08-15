@@ -1,24 +1,26 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Fonts
 // @see: https://google-webfonts-helper.herokuapp.com/fonts/nunito?subsets=latin
+// @see: https://www.cdnfonts.com/carlito.font
 
-// Nunito Regular
+// Carlito Regular
 @font-face {
-	font-family: 'Nunito';
+	font-family: 'Carlito';
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: local('Nunito Regular'), local('Nunito-Regular'),
-		url('/assets/fonts/nunito-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('/assets/fonts/nunito-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	src: local('Carlito'),
+		url('/assets/fonts/carlito-regular.woff2') format('woff2'),
+		url('/assets/fonts/carlito-regular.woff') format('woff');
 }
-// Nunito 600
+
+// Carlito Bold
 @font-face {
-	font-family: 'Nunito';
+	font-family: 'Carlito';
 	font-style: normal;
-	font-weight: 600;
+	font-weight: 700;
 	font-display: swap;
-	src: local('Nunito SemiBold'), local('Nunito-SemiBold'),
-		url('/assets/fonts/nunito-v14-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-		url('/assets/fonts/nunito-v14-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	src: local('Carlito '), local('Nunito-SemiBold'),
+		url('/assets/fonts/carlito-bold.woff2') format('woff2'),
+		url('/assets/fonts/carlito-bold.woff') format('woff');
 }

@@ -6,7 +6,8 @@ $stylesheet-context-import: 'import' !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Colors
-$theme-color-primary: #f7f7f7 !default;
+$theme-color-primary: #003865 !default;
+$theme-color-primary-dark: #002d52 !default;
 $theme-color-secondary: #ccc !default;
 $theme-color-hover: #000 !default;
 $theme-color-error: #de0a0a !default;
@@ -18,19 +19,19 @@ $headings-line-height: 1.15 !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Font
-$font-family-base: 'Nunito', Arial, sans-serif !default;
-$font-color-base: #444 !default;
+$font-family-base: 'Carlito', 'Calibri', sans-serif !default;
+$font-color-base: #3e3e3e !default;
 $font-size-base-px: 16px !default;
 $font-size-base: 1.15rem !default;
 $font-weight-light: 300;
 $font-weight-base: 400;
-$font-weight-bold: 600;
+$font-weight-bold: 700;
 $line-height-base: 1.5 !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Links
-$link-color: #000 !default;
-$link-color-hover: #000 !default;
+$link-color: $theme-color-primary !default;
+$link-color-hover: $theme-color-primary-dark !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Grid columns
