@@ -32,6 +32,18 @@ a, input, select, textarea, button {
 		@extend %container-inner;
 	}
 
+	.ce-frame {
+		& {
+			margin-top: rem(35px);
+			padding: 0;
+		}
+
+		.ce-header {
+			font-size: rem(20px);
+			font-weight: $font-weight-bold;
+		}
+	}
+
 	a {
 		& {
 			color: #fff;
@@ -130,16 +142,51 @@ a, input, select, textarea, button {
 			}
 		}
 	}
+
+	.navigation {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		a {
+			& {
+				display: inline-block;
+				padding: rem(3px 0);
+				font-weight: $font-weight-normal;
+			}
+
+			&:hover, .focusable &:focus {
+				text-decoration: underline;
+			}
+		}
+	}
 }
 
 .page-footer--navigation {
+	& {
+		padding-top: rem(20px);
+		padding-bottom: rem(20px);
+		background: #2f2f2f;
+		color: #fff;
+	}
+
+	.container-inner {
+		@extend %container-inner;
+	}
+
 	.navigation {
 		& {
-			@include navigation--layout-0;
+			//@include navigation--layout-0;
 		}
 
-		a:hover, a:focus {
-			text-decoration: none;
+		a {
+			color: #fff;
+		}
+
+		a:hover, .focusable a:focus {
+			text-decoration: underline;
 		}
 	}
 }
@@ -289,6 +336,12 @@ a, input, select, textarea, button {
 			}
 		}
 	}
+
+	.page-footer--navigation {
+		.navigation {
+			@include navigation--layout-0;
+		}
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -307,6 +360,24 @@ a, input, select, textarea, button {
 	.page-header {
 		.search-widget--field {
 			left: 238px; // Logo + Grid-Gap
+		}
+	}
+
+	.page-footer--content {
+		.ce-menu-subpages .navigation {
+			ul {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				margin-left: -15px;
+				margin-right: -15px;
+			}
+
+			li {
+				width: 50%;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
 		}
 	}
 }

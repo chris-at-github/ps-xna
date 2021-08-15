@@ -11,7 +11,7 @@
 					<f:render partial="Page/Logo" section="Svg" arguments="{_all}" />
 
 					<div class="row">
-						<div class="col-12">
+						<div class="col-12 col-lg-4">
 							<f:if condition="{providerData.0}">
 								<address class="address">
 									<f:render partial="Components/Address" section="Name" arguments="{address: providerData.0}" />
@@ -46,12 +46,12 @@
 							</f:if>
 						</div>
 
-						<div class="col-12">
-
+						<div class="col-12 col-sm-6 col-lg-4">
+							<f:cObject typoscriptObjectPath="block.contentFooterMiddle" />
 						</div>
 
-						<div class="col-12">
-
+						<div class="col-12 col-sm-6 col-lg-4">
+							<f:cObject typoscriptObjectPath="block.contentFooterRight" />
 						</div>
 					</div>
 				</div>

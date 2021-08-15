@@ -13,6 +13,16 @@
 				<source>Product</source>
 			</trans-unit>
 
+			<trans-unit id="tx_xna_backend_layout.footer.title">
+				<source>Footer</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.footer.middle">
+				<source>Middle</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.footer.right">
+				<source>Right</source>
+			</trans-unit>
+
 			<trans-unit id="tx_xna_pages.layout.4">
 				<source>Product</source>
 			</trans-unit>

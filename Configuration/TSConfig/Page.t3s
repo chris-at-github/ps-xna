@@ -61,3 +61,37 @@ mod.web_layout.BackendLayouts {
 		}
 	}
 }
+
+["{$pages.footerContent}" in tree.rootLineIds]
+	mod.web_layout.BackendLayouts {
+		footer {
+			title = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_backend_layout.footer.title
+			#		icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
+			config {
+				backend_layout {
+					colCount = 2
+					rowCount = 1
+					rows {
+						1 {
+							columns {
+								1 {
+									name = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_backend_layout.footer.middle
+									colPos = 0
+								}
+								2 {
+									name = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_backend_layout.footer.right
+									colPos = 2
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	TCAdefaults.tt_content {
+		header_layout = container
+		tx_xo_no_frame = 1
+	}
+[END]
