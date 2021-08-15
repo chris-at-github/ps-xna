@@ -50,8 +50,8 @@ body {
 	.logo {
 		& {
 			@extend %logo;
-			max-width: 120px;
-			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+			max-width: rem(135px);
+			max-height: rem(37px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
 		}
 
 		svg {
@@ -225,36 +225,32 @@ body {
 @include media-breakpoint-up(md) {
 	.page-header {
 		.container-inner {
-			//-ms-grid-columns: 140px 1fr 60px;
-			//grid-template-columns: 140px auto 60px;
-			//grid-gap: 30px;
-
 			position: relative;
 			display: grid;
 			grid-template-columns: 140px 1fr;
 			grid-template-rows: 35px 60px;
 			gap: 5px 30px;
 			grid-template-areas:
-				'. off-canvas off-canvas'
-				'logo off-canvas off-canvas';
+				'. off-canvas'
+				'logo off-canvas';
 		}
 
 		.off-canvas {
 			grid-area: off-canvas;
 
 			display: grid;
-			grid-template-columns: 1fr 20px 60px;
+			grid-template-columns: 1fr 90px 80px;
 			grid-template-rows: 35px 60px;
 			gap: 5px 20px;
 			grid-template-areas:
-				'meta-navigation language-navigation language-navigation'
-				'main-navigation main-navigation search';
+				'search meta-navigation language-navigation'
+				'main-navigation main-navigation main-navigation';
 		}
 
 		.logo {
 			grid-area: logo;
 			align-self: end;
-			margin: 0 0 9px 0;
+			margin: 0 0 10px 0;
 		}
 
 		.search-widget--link {
@@ -271,16 +267,12 @@ body {
 		.language-navigation {
 			& {
 				grid-area: language-navigation;
+				margin-right: -5px; // margin-right: -5px auf ul werden ignoriert
 			}
 
 			ul {
 				justify-content: flex-end;
 			}
-		}
-
-		.main-navigation {
-			grid-area: main-navigation;
-			align-self: end;
 		}
 
 		.meta-navigation {
@@ -300,8 +292,14 @@ body {
 
 		.main-navigation {
 			& {
+				grid-area: main-navigation;
+				align-self: end;
 				@include navigation--layout-2(false);
 				padding-left: 10px;
+			}
+
+			& > ul {
+				justify-content: flex-end;
 			}
 
 			.navigation-item--expandable svg {
@@ -319,6 +317,49 @@ body {
 			.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
 				padding-top: rem(130px); // Hoehe des Headers
 			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 992px
+@include media-breakpoint-up(lg) {
+	.page-header {
+		.container-inner {
+			grid-template-columns: 180px 1fr;
+		}
+
+		.logo {
+			max-width: rem(170px);
+			max-height: rem(46px);
+		}
+
+		.off-canvas {
+			grid-template-columns: 1fr 20px 60px;
+			grid-template-areas:
+				'meta-navigation language-navigation language-navigation'
+				'main-navigation main-navigation search';
+		}
+
+		.main-navigation {
+			& > ul {
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	.page-header {
+		.container-inner {
+			grid-template-columns: 240px 1fr;
+		}
+
+		.logo {
+			max-width: rem(208px);
+			max-height: rem(56px);
 		}
 	}
 }

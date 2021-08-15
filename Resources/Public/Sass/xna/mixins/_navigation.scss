@@ -15,6 +15,10 @@
 
 @mixin navigation--layout-2($render-children: false) {
 	@include stylesheet-context($stylesheet-context-embed) {
+		a {
+			color: $font-color-base;
+		}
+
 		& > ul {
 			& {
 				display: flex;
@@ -29,6 +33,36 @@
 						display: block;
 					}
 				}
+			}
+		}
+
+		// -----------------------------------------------------------------------------------------------------------------
+		// >= 992px
+		@include media-breakpoint-up(lg) {
+			& > ul {
+				& {
+					margin-left: -20px;
+					margin-right: -20px;
+				}
+
+				& > li {
+					& {
+						margin-left: 10px;
+						margin-right: 10px;
+					}
+
+					& > a {
+						font-size: rem(20px);
+					}
+				}
+			}
+		}
+
+		// -----------------------------------------------------------------------------------------------------------------
+		// >= 1200px
+		@include media-breakpoint-up(xl) {
+			& > ul > li > a {
+				font-size: rem(22px);
 			}
 		}
 	}

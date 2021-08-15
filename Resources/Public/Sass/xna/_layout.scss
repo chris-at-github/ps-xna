@@ -131,6 +131,12 @@ a, input, select, textarea, button {
 // >= 768px
 @include media-breakpoint-up(md) {
 	.page-header {
+		.search-widget--link {
+			.is--search-widget & {
+				opacity: 0;
+			}
+		}
+
 		.search-widget--field {
 			& {
 				position: absolute;
@@ -183,7 +189,25 @@ a, input, select, textarea, button {
 	}
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 992px
+@include media-breakpoint-up(lg) {
+	.page-header {
+		.search-widget--field {
+			left: 200px; // Logo + Grid-Gap
+		}
+	}
+}
 
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	.page-header {
+		.search-widget--field {
+			left: 238px; // Logo + Grid-Gap
+		}
+	}
+}
 
 // ---------------------------------------------------------------------------------------------------------------------
 // IE10 / 11
