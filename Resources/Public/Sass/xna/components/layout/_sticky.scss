@@ -10,6 +10,7 @@
 	.sticky--container {
 		position: fixed;
 		bottom: 60px; right: rem(15px);
+		z-index: 50;
 	}
 
 	.sticky--element {
@@ -99,7 +100,7 @@
 
 	// ---------------------------------------------------------------------------------------------------------------------
 	// >= 1200px
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(xl) {
 		:root {
 			--sticky-icon-size: #{rem(65px)};
 		}
