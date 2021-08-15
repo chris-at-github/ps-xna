@@ -86,12 +86,14 @@ p, ul, ol, table {
 // ---------------------------------------------------------------------------------------------------------------------
 // Container / Abstaende
 %container-space-before-small,
-%container-space-before-medium {
+%container-space-before-medium,
+%container-space-before-large {
 	padding-top: 0.1px;
 }
 
 %container-space-after-small,
-%container-space-after-medium {
+%container-space-after-medium,
+%container-space-after-large {
 	padding-bottom: 0.1px;
 }
 
@@ -198,14 +200,6 @@ p, ul, ol, table {
 		%container-inner {
 			padding-right: percentage(3 / 12);
 		}
-	}
-
-	%container-space-before-medium > %container-inner {
-		margin-top: rem(40px);
-	}
-
-	%container-space-after-medium > %container-inner {
-		margin-bottom: rem(40px);
 	}
 }
 
