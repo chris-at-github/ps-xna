@@ -151,12 +151,20 @@ body {
 	@extend %container-space-before-medium;
 }
 
+.ce-frame--space-before-large {
+	@extend %container-space-before-large;
+}
+
 .ce-frame--space-after-small {
 	@extend %container-space-after-small;
 }
 
 .ce-frame--space-after-medium {
 	@extend %container-space-after-medium;
+}
+
+.ce-frame--space-after-large {
+	@extend %container-space-after-large;
 }
 
 // Container / Fluid Styled Content / Farbschema

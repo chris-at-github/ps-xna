@@ -9,6 +9,25 @@ TCEFORM {
 			}
 		}
 	}
+
+	tt_content {
+		space_before_class {
+			addItems {
+				large = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.large
+			}
+		}
+
+		space_after_class {
+			addItems {
+				large = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.large
+			}
+		}
+	}
+}
+
+TCAdefaults.tt_content {
+	space_before_class = medium
+	space_after_class = large
 }
 
 mod.web_layout.BackendLayouts {

@@ -47,8 +47,8 @@ p, ul, ol, table {
 // ---------------------------------------------------------------------------------------------------------------------
 // Container
 %container-outer {
-	padding-left: $spacing-medium;
-	padding-right: $spacing-medium;
+	padding-left: rem(15px);
+	padding-right: rem(15px);
 }
 
 %container-inner {
@@ -96,19 +96,27 @@ p, ul, ol, table {
 }
 
 %container-space-before-small > %container-inner {
-	margin-top: $spacing-default;
+	margin-top: rem(35px);
 }
 
 %container-space-before-medium > %container-inner {
-	margin-top: $spacing-medium;
+	margin-top: rem(55px);
+}
+
+%container-space-before-large > %container-inner {
+	margin-top: rem(75px);
 }
 
 %container-space-after-small > %container-inner {
-	margin-bottom: $spacing-default;
+	margin-bottom: rem(35px);
 }
 
 %container-space-after-medium > %container-inner {
-	margin-bottom: $spacing-medium;
+	margin-top: rem(55px);
+}
+
+%container-space-after-large > %container-inner {
+	margin-top: rem(75px);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -179,8 +187,13 @@ p, ul, ol, table {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
-// >= MD
+// >= 768px
 @include media-breakpoint-up(md) {
+	%container-outer {
+		padding-left: rem(30px);
+		padding-right: rem(30px);
+	}
+
 	%container-width-indent-right {
 		%container-inner {
 			padding-right: percentage(3 / 12);
