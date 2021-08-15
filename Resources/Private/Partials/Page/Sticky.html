@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:section name="Container">
+	<div class="sticky--container">
+		<f:render section="PrintPdf" arguments="{_all}" />
+		<f:render section="Contact" arguments="{_all}" />
+		<f:render section="ToTop" arguments="{_all}" />
+	</div>
+</f:section>
+
+<f:section name="PrintPdf">
+	<div class="sticky--element sticky--element-print-pdf">
+		<button class="sticky--icon" aria-label="{f:translate(key: 'LLL:EXT:xna/Resources/Private/Language/locallang_frontend.xlf:tx_xna_sticky.printPdf')}">
+			<xo:svg.inline source="assets/svg/print-pdf.svg" />
+		</button>
+	</div>
+</f:section>
+
+<f:section name="Contact">
+	<div class="sticky--element sticky--element-contact">
+		<button class="sticky--icon" aria-label="{f:translate(key: 'LLL:EXT:xna/Resources/Private/Language/locallang_frontend.xlf:tx_xo_sticky.contact')}">
+			<xo:svg.inline source="assets/svg/contact.svg" />
+		</button>
+	</div>
+</f:section>
+
+<f:section name="ToTop">
+	<div class="sticky--element sticky--element-totop">
+		<button class="sticky--icon" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_sticky.toTop')}">
+			<xo:svg.inline source="assets/svg/arrow-top.svg" />
+		</button>
+	</div>
+</f:section>
+</html>
