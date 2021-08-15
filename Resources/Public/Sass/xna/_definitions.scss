@@ -112,11 +112,11 @@ p, ul, ol, table {
 }
 
 %container-space-after-medium > %container-inner {
-	margin-top: rem(55px);
+	margin-bottom: rem(55px);
 }
 
 %container-space-after-large > %container-inner {
-	margin-top: rem(75px);
+	margin-bottom: rem(75px);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

@@ -15,6 +15,10 @@
 				margin: rem(0 12px 0 0);
 			}
 
+			&:first-child a {
+				font-weight: $font-weight-bold;
+			}
+
 			&:last-child {
 				margin: 0;
 			}
@@ -36,10 +40,27 @@
 			background: url(/assets/svg/chevron-right.svg) no-repeat 0 0;
 		}
 	}
+
+	a {
+		& {
+			font-weight: $font-weight-normal;
+			color: $color-grey-darken;
+		}
+
+		&:hover, .focusable & {
+			color: $theme-color-primary;
+		}
+	}
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
 @include media-breakpoint-up(md) {
 	.breadcrumb {
-		display: block;
+		& {
+			display: block;
+		}
+
+
 	}
 }

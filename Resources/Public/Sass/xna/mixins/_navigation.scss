@@ -27,6 +27,10 @@
 				margin-right: -10px;
 			}
 
+			& > li > a {
+				font-size: rem(20px);
+			}
+
 			@if $render-children {
 				& > li:hover {
 					.navigation--container-outer {
@@ -46,14 +50,8 @@
 				}
 
 				& > li {
-					& {
-						margin-left: 10px;
-						margin-right: 10px;
-					}
-
-					& > a {
-						font-size: rem(20px);
-					}
+					margin-left: 10px;
+					margin-right: 10px;
 				}
 			}
 		}
