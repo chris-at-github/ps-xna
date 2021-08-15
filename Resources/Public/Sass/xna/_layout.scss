@@ -20,13 +20,119 @@ a, input, select, textarea, button {
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Page Footer
-.page-footer {
+.page-footer--content {
 	& {
-		padding-top: rem(20px);
-		padding-bottom: rem(20px);
-		background: #f7f7f7;
+		@extend %container-space-before-medium;
+		@extend %container-space-after-large;
+		background: $color-grey-dark;
+		color: #fff;
 	}
 
+	.container-inner {
+		@extend %container-inner;
+	}
+
+	a {
+		& {
+			color: #fff;
+		}
+
+		&:hover, .focusable &:focus {
+			color: #fff;
+		}
+
+		.focusable &:focus {
+			outline-color: #fff;
+		}
+	}
+
+	.logo {
+		& {
+			max-width: rem(145px);
+			display: flex; // Hacky -> damit das Logo nicht auf 100% Breite laueft
+		}
+
+		svg {
+			fill: #fff;
+		}
+	}
+
+	.address {
+		& {
+			@extend %address;
+			margin-top: rem(35px);
+		}
+
+		.address--name {
+			font-size: rem(20px);
+		}
+
+		.address--social {
+			& {
+				margin-top: rem(35px);
+			}
+
+			ul {
+				margin: 10px -8px 0 -8px;
+				padding: 0;
+				list-style: none;
+				display: flex;
+				align-items: center;
+			}
+
+			li {
+				& {
+					padding: 0 8px;
+				}
+
+				a {
+					display: block;
+					line-height: 1;
+				}
+			}
+
+			svg {
+				fill: $color-grey-light;
+				display: block;
+			}
+		}
+
+		.address--facebook {
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+
+			a:hover svg, .focusable a:focus svg {
+				fill: #1877f2;
+			}
+		}
+
+		.address--instagram {
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+
+			a:hover svg, .focusable a:focus svg {
+				fill: #ba00b4;
+			}
+		}
+
+		.address--youtube {
+			svg {
+				width: 36px;
+				height: 26px;
+			}
+
+			a:hover svg, .focusable a:focus svg {
+				fill: #f00;
+			}
+		}
+	}
+}
+
+.page-footer--navigation {
 	.navigation {
 		& {
 			@include navigation--layout-0;
@@ -35,10 +141,6 @@ a, input, select, textarea, button {
 		a:hover, a:focus {
 			text-decoration: none;
 		}
-	}
-
-	.address {
-		margin: $spacing-medium 0 0 0;
 	}
 }
 
