@@ -30,8 +30,10 @@
 			content: '';
 			position: absolute;
 			top: 12px; left: 0;
-			border: 2px solid $font-color-base;
-			border-radius: 50%;
+			width: 5px; height: 5px;
+			border: 2px solid $theme-color-primary;
+			border-radius: 2px;
+			background: $theme-color-primary;
 		}
 	}
 

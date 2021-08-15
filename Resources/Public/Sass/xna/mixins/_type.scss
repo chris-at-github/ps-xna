@@ -12,16 +12,16 @@
 @mixin header-2 {
 	font-size: rem(26px);
 
-	@include media-breakpoint-up(md) {
-		font-size: rem(32px);
-	}
+	//@include media-breakpoint-up(md) {
+	//	font-size: rem(32px);
+	//}
 }
 
 @mixin header-3 {
-	font-size: rem(22px);
+	font-size: rem(20px);
 	font-weight: $font-weight-bold;
 
-	@include media-breakpoint-up(md) {
-		font-size: rem(24px);
-	}
+	//@include media-breakpoint-up(md) {
+	//	font-size: rem(24px);
+	//}
 }
