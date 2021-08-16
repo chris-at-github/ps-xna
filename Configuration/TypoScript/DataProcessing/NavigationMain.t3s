@@ -1,0 +1,7 @@
+navigation.main.dataProcessing {
+	105 = Ps\Xo\DataProcessing\NavigationContentProcessor
+	105 {
+		table = tt_content
+		as = content
+	}
+}

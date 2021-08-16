@@ -29,6 +29,10 @@ folders {
 }
 
 pages {
+
 	# cat=pages; type=int+; label=PID for footer content
 	footerContent = 161
+
+	# cat=pages; type=int+; label=PID for navigation content
+	navigationContent = 173
 }

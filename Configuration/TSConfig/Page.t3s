@@ -8,6 +8,12 @@ TCEFORM {
 				4 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_pages.layout.4
 			}
 		}
+
+		tx_xo_navigation_layout {
+			addItems {
+				product = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_pages.tx_xo_navigation_layout.product
+			}
+		}
 	}
 
 	tt_content {

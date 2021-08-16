@@ -1,0 +1,35 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<f:spaceless>
+			<ul>
+				<f:for each="{navigation}" as="item">
+					<f:variable name="class">
+						<f:if condition="{item.current}">
+							<f:then>current</f:then>
+							<f:else if="{item.active}">active</f:else>
+						</f:if>
+					</f:variable>
+
+					<li>
+						<f:render partial="Navigation/Link" section="Main" arguments="{item: item}" />
+
+						<f:if condition="{item.children}">
+							<div class="navigation--container-outer navigation--container-layout-{f:if(condition: item.data.tx_xo_navigation_layout, then: item.data.tx_xo_navigation_layout, else: 'default')}">
+								<div class="navigation--container-background"></div>
+								<div class="navigation--container-inner">
+									<f:render section="{item.data.tx_xo_navigation_layout -> xo:format.ucFirst()}" optional="1">
+										<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: item.children}" />
+									</f:render>
+
+									<f:if condition="{item.content}">
+										<div class="navigation-item--content"><f:format.raw>{item.content}</f:format.raw></div>
+									</f:if>
+								</div>
+							</div>
+						</f:if>
+					</li>
+				</f:for>
+			</ul>
+		</f:spaceless>
+	</f:section>
+</div>

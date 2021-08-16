@@ -26,6 +26,9 @@
 			<trans-unit id="tx_xna_pages.layout.4">
 				<target>produkt</target>
 			</trans-unit>
+			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.product">
+				<target>Product</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
