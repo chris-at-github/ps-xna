@@ -280,6 +280,13 @@ a, input, select, textarea, button {
 // >= 768px
 @include media-breakpoint-up(md) {
 	.page-header {
+
+		.off-canvas {
+			.is--search-widget & {
+				position: relative;
+			}
+		}
+
 		.search-widget--link {
 			.is--search-widget & {
 				opacity: 0;
@@ -289,8 +296,8 @@ a, input, select, textarea, button {
 		.search-widget--field {
 			& {
 				position: absolute;
-				bottom: 0; right: 0;
-				left: 150px; // Logo + Grid-Gap
+				bottom: 0;
+				left: 0; right: 0;
 				z-index: -1;
 				padding: rem(10px 40px 8px 0);
 				background: #fff;
@@ -345,24 +352,8 @@ a, input, select, textarea, button {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
-// >= 992px
-@include media-breakpoint-up(lg) {
-	.page-header {
-		.search-widget--field {
-			left: 200px; // Logo + Grid-Gap
-		}
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
 // >= 1200px
 @include media-breakpoint-up(xl) {
-	.page-header {
-		.search-widget--field {
-			left: 238px; // Logo + Grid-Gap
-		}
-	}
-
 	.page-footer--content {
 		.ce-menu-subpages .navigation {
 			ul {
