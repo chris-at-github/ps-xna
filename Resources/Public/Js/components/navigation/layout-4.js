@@ -47,7 +47,7 @@
 			createBackLink: function(item, parent) {
 				let backlink = document.createElement('li'),
 					text = document.createElement('span'),
-					svg = xna.createSvgUseElement('#sprite-chevron-left', {'viewBox': '0 0 6 12'});
+					svg = xna.createSvgUseElement('#sprite-arrow-left', {'viewBox': '0 0 14 11'});
 
 				backlink.classList.add('navigation-item--backlink');
 				backlink.addEventListener('click', function() {

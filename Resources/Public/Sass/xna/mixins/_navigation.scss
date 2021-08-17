@@ -524,8 +524,9 @@
 		& {
 			position: relative;
 			padding-left: rem(60px);
-			background: #eaeaea;
+			background: $theme-color-primary;
 			cursor: pointer;
+			color: #fff;
 		}
 
 		svg {
@@ -533,7 +534,7 @@
 			top: rem(15px); left: rem(21px);
 			width: 17px;
 			height: 19px;
-			fill: $font-color-base;
+			fill: #fff;
 		}
 	}
 
@@ -554,9 +555,19 @@
 		}
 	}
 
-	// Elemente aus der Desktop-Navigation ausblenden
+	// Elemente aus der Desktop-Navigation ausblenden / reseten
 	.navigation-item--content, .card--media {
 		display: none;
+	}
+
+	.card--title {
+		& > span {
+			font-size: inherit;
+		}
+
+		.svg-sprite--arrow-right {
+			display: none;
+		}
 	}
 
 	@include media-breakpoint-up(sm) {
