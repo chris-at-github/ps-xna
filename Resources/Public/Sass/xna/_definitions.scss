@@ -38,29 +38,6 @@ p, ul, ol, table {
 }
 
 %link--animation {
-	.hover-underline-animation {
-		display: inline-block;
-		position: relative;
-		color: #0087ca;
-	}
-
-	.hover-underline-animation:after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		transform: scaleX(0);
-		height: 2px;
-		bottom: 0;
-		left: 0;
-		background-color: #0087ca;
-		transform-origin: bottom right;
-		transition: transform 0.25s ease-out;
-	}
-
-	.hover-underline-animation:hover:after {
-		transform: scaleX(1);
-		transform-origin: bottom left;
-	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -225,6 +202,45 @@ p, ul, ol, table {
 	%container-width-indent-right {
 		%container-inner {
 			padding-right: percentage(3 / 12);
+		}
+	}
+
+	//%link--animation {
+	//	& {
+	//		display: inline-block;
+	//		position: relative;
+	//	}
+	//
+	//	&:after {
+	//		content: '';
+	//		position: absolute;
+	//		width: 100%;
+	//		transform: scaleX(0);
+	//		//height: 2px;
+	//		bottom: 0; left: 0;
+	//		//background-color: $theme-color-primary;
+	//		border-bottom: 2px solid $theme-color-primary;
+	//		transform-origin: bottom right;
+	//		transition: transform 0.25s ease-out;
+	//	}
+	//
+	//	&:hover, &:focus {
+	//		&:after {
+	//			transform: scaleX(1);
+	//			transform-origin: bottom left;
+	//		}
+	//	}
+	//}
+
+	%link--animation {
+		& {
+			background: linear-gradient(#{$theme-color-primary}, #{$theme-color-primary}) no-repeat 0 100%;
+			background-size: 0 2px;
+			transition: background-size 0.25s ease-out;
+		}
+
+		&:hover, &:focus {
+			background-size: 100% 2px;
 		}
 	}
 }

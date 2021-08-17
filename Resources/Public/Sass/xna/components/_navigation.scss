@@ -13,4 +13,23 @@
 		text-decoration: none;
 		font-weight: $font-weight-normal;
 	}
+
+	a {
+		& > span {
+			@extend %link--animation;
+			display: inline;
+		}
+
+		&:hover, &:focus {
+			& {
+				text-decoration: none;
+			}
+
+			& > span {
+				//transform: scaleX(1);
+				//transform-origin: bottom left;
+				background-size: 100% 2px;
+			}
+		}
+	}
 }

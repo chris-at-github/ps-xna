@@ -22,7 +22,6 @@
 
 			&:hover, .focusable &:focus {
 				color: $theme-color-primary;
-				text-decoration: underline;
 			}
 		}
 
@@ -35,8 +34,10 @@
 			}
 
 			& > li {
-				&:hover a:before, .focusable &:focus-within a:before {
-					opacity: 1;
+				&:hover, .focusable &:focus-within {
+					& > a > span {
+						background-size: 100% 2px;
+					}
 				}
 
 				& > a {
@@ -49,14 +50,18 @@
 						text-decoration: none;
 					}
 
-					&:before {
-						content: '';
-						position: absolute;
-						bottom: 3px;
-						left: 8px; right: 8px;
-						border-bottom: 2px solid $theme-color-primary;
-						opacity: 0;
+					& > span {
+						padding-bottom: rem(4px);
 					}
+
+					//&:before {
+					//	content: '';
+					//	position: absolute;
+					//	bottom: 3px;
+					//	left: 8px; right: 8px;
+					//	border-bottom: 2px solid $theme-color-primary;
+					//	opacity: 0;
+					//}
 				}
 			}
 		}
@@ -305,22 +310,13 @@
 						@include card--title-link;
 					}
 
+					& > span {
+						background: none; // Link-Animation deaktivieren
+					}
+
 					.svg-sprite--arrow-right {
 						display: block;
 					}
-				}
-			}
-
-			.navigation-item--card-media {
-
-			}
-
-			.navigation-item--card-title {
-				& {
-				}
-
-				.svg-sprite--arrow-right {
-					display: block;
 				}
 			}
 		}
@@ -365,7 +361,7 @@
 		}
 	}
 
-	//& > ul > li:nth-child(4) > .navigation--container-outer {
+	//& > ul > li:nth-child(3) > .navigation--container-outer {
 	//	display: block;
 	//	//background: blue;
 	//}

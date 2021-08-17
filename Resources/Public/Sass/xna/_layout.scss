@@ -51,6 +51,7 @@ a, input, select, textarea, button {
 
 		&:hover, .focusable &:focus {
 			color: #fff;
+			text-decoration: none;
 		}
 
 		.focusable &:focus {
@@ -73,6 +74,17 @@ a, input, select, textarea, button {
 		& {
 			@extend %address;
 			margin-top: rem(35px);
+		}
+
+		a {
+			& {
+				@extend %link--animation;
+				background-image: linear-gradient(#fff, #fff);
+			}
+
+			&:hover, &:focus {
+				text-decoration: none;
+			}
 		}
 
 		.address--name {
@@ -100,6 +112,7 @@ a, input, select, textarea, button {
 				a {
 					display: block;
 					line-height: 1;
+					background: none;
 				}
 			}
 
@@ -157,8 +170,8 @@ a, input, select, textarea, button {
 				font-weight: $font-weight-normal;
 			}
 
-			&:hover, .focusable &:focus {
-				text-decoration: underline;
+			& > span {
+				background-image: linear-gradient(#fff, #fff);
 			}
 		}
 	}
@@ -185,8 +198,8 @@ a, input, select, textarea, button {
 			color: #fff;
 		}
 
-		a:hover, .focusable a:focus {
-			text-decoration: underline;
+		a > span {
+			background-image: linear-gradient(#fff, #fff);
 		}
 	}
 }

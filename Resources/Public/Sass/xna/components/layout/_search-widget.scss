@@ -5,6 +5,10 @@
 		justify-content: center;
 	}
 
+	&:after {
+		display: none;
+	}
+
 	&:hover svg {
 		fill: $link-color-hover;
 	}
