@@ -1,0 +1,31 @@
+.ce-menu-pages {
+	&.ce-frame--variant-1 {
+		ul li + li {
+			margin-top: rem(5px);
+		}
+
+		a {
+			&:hover, .focusable &:focus {
+				span:before {
+					transform: translate(5px, 0);
+				}
+			}
+		}
+
+		span {
+			& {
+				@include iconfont(arrow-right);
+				position: relative;
+				padding: rem(0 22px 0 0);
+				background: none !important; // Aufheben der Underline-Animation
+			}
+
+			&:before {
+				position: absolute;
+				bottom: rem(3px); right: 0;
+				font-size: rem(12px);
+				transition: transform $transition-duration;
+			}
+		}
+	}
+}

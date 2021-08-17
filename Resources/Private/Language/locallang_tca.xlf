@@ -32,6 +32,10 @@
 			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.card">
 				<source>Card</source>
 			</trans-unit>
+
+			<trans-unit id="tx_xna_tt_content.tx_xo_variant.menu.1">
+				<source>Links with Arrows</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

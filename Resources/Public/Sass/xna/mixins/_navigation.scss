@@ -194,6 +194,23 @@
 						width: 100%;
 					}
 				}
+
+				.ce-menu-subpages, .ce-menu-pages {
+					.ce-header {
+						font-size: rem(20px);
+					}
+
+					ul {
+						margin: rem(15px -10px 0 -10px);
+						padding: 0;
+					}
+				}
+
+				.ce-menu-pages.ce-frame--variant-1 {
+					a {
+						color: $theme-color-primary;
+					}
+				}
 			}
 		}
 
@@ -263,19 +280,6 @@
 
 					& > ul {
 						margin: 0;
-					}
-				}
-			}
-
-			.navigation-item--content {
-				.ce-header {
-					font-size: rem(20px);
-				}
-
-				.ce-menu-subpages {
-					ul {
-						margin: rem(15px -10px 0 -10px);
-						padding: 0;
 					}
 				}
 			}
@@ -349,12 +353,12 @@
 						font-size: rem(22px);
 					}
 				}
-			}
 
-			.navigation--container-layout-product .navigation--container-inner {
 				.navigation-item--content {
-					.ce-header {
-						font-size: rem(22px);
+					.ce-menu-subpages, .ce-menu-pages {
+						.ce-header {
+							font-size: rem(22px);
+						}
 					}
 				}
 			}
@@ -365,116 +369,6 @@
 	//	display: block;
 	//	//background: blue;
 	//}
-/*
-	.navigation--container-inner {
-		& {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			grid-template-areas: "item-navigation item-content"
-		}
-
-		& > ul {
-			grid-area: item-navigation;
-		}
-
-		.navigation-item--content {
-			grid-area: item-content;
-		}
-
-		& > ul > .navigation-item--expandable:nth-last-child(3) {
-			grid-area: item-el;
-			background: blue;
-		}
-
-		& > ul > .navigation-item--expandable:nth-last-child(2) {
-			grid-area: item-re;
-			background: orange;
-		}
-
-		& > ul > .navigation-item--expandable:nth-last-child(1) {
-			grid-area: item-td;
-			background: green;
-		}
-	}
-
-	.demo-row {
-		margin: 0 -15px;
-		display: flex;
-	}
-
-	.demo-navigation {
-		width: 66.66%;
-		padding: 0 15px 0 5px; // 5px -> Navigationspunkte selbst haben nochmal 10px
-		background: gold;
-
-		.navigation {
-			& > ul {
-				display: grid;
-				gap: 30px 20px;
-				grid-template-columns: 1fr 1fr;
-				grid-template-rows: 1fr 1fr;
-				grid-template-areas:
-					"item-el item-re"
-					"item-td item-re";
-			}
-
-			& > ul > li:nth-child(1) {
-				grid-area: item-el;
-				background: blue;
-			}
-
-			& > ul > li:nth-child(2) {
-				grid-area: item-re;
-				background: orange;
-			}
-
-			& > ul > li:nth-child(3) {
-				grid-area: item-td;
-				background: green;
-			}
-
-			& > ul > li {
-				& > a {
-					font-size: 20px;
-				}
-
-				& > ul {
-
-
-					& > li  {
-						margin: 20px 0 0 0;
-					}
-				}
-			}
-		}
-	}
-
-	.navigation-item--content {
-		//width: 33.33%;
-		//padding: 0 15px;
-
-	}
-
-	@include media-breakpoint-up(lg) {
-		.demo-navigation {
-			width: 75%;
-
-			.navigation {
-				& > ul {
-					display: grid;
-					grid-template-columns: 1fr 1fr 1fr;
-					grid-template-rows: 1fr;
-					grid-template-areas: "item-el item-re item-td"
-				}
-			}
-		}
-
-		.demo-content {
-			width: 25%;
-		}
-	}
-
- */
 }
 
 // Mobile Navigation mit Sub-Navigation

@@ -99,6 +99,27 @@ mod.web_layout.BackendLayouts {
 
 	TCAdefaults.tt_content {
 		header_layout = container
-		tx_xo_no_frame = 1
+		tx_xo_no_frame = 0
+		space_before_class = auto
+		space_after_class = auto
+	}
+[END]
+
+["{$pages.navigationContent}" in tree.rootLineIds]
+	TCAdefaults.tt_content {
+		header_layout = container
+		tx_xo_no_frame = 0
+		space_before_class = auto
+		space_after_class = auto
+	}
+[END]
+
+[field('CType') === 'menu_pages']
+	TCEFORM.tt_content {
+		tx_xo_variant {
+			addItems {
+				1 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.tx_xo_variant.menu.1
+			}
+		}
 	}
 [END]

@@ -24,13 +24,17 @@
 			</trans-unit>
 
 			<trans-unit id="tx_xna_pages.layout.4">
-				<target>produkt</target>
+				<target>Produkt</target>
 			</trans-unit>
 			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.product">
-				<target>Product</target>
+				<target>Produkt</target>
 			</trans-unit>
 			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.card">
 				<target>Card</target>
+			</trans-unit>
+
+			<trans-unit id="tx_xna_tt_content.tx_xo_variant.menu.1">
+				<target>Links mit Pfeilchen</target>
 			</trans-unit>
 		</body>
 	</file>
