@@ -29,6 +29,9 @@
 			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.product">
 				<source>Product</source>
 			</trans-unit>
+			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.card">
+				<source>Card</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

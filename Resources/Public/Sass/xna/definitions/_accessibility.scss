@@ -39,7 +39,7 @@
 }
 
 %accessibility-focus-overflow {
-	&:focus {
+	&:focus, &:focus-within {
 		& {
 			display: block;
 			position: relative;

@@ -12,6 +12,7 @@ TCEFORM {
 		tx_xo_navigation_layout {
 			addItems {
 				product = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_pages.tx_xo_navigation_layout.product
+				card = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_pages.tx_xo_navigation_layout.card
 			}
 		}
 	}

@@ -17,7 +17,7 @@
 							<div class="navigation--container-outer navigation--container-layout-{f:if(condition: item.data.tx_xo_navigation_layout, then: item.data.tx_xo_navigation_layout, else: 'default')}">
 								<div class="navigation--container-background"></div>
 								<div class="navigation--container-inner">
-									<f:render section="{item.data.tx_xo_navigation_layout -> xo:format.ucFirst()}" optional="1">
+									<f:render section="{item.data.tx_xo_navigation_layout -> xo:format.ucFirst()}" optional="1" arguments="{_all}">
 										<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: item.children}" />
 									</f:render>
 
@@ -31,5 +31,22 @@
 				</f:for>
 			</ul>
 		</f:spaceless>
+	</f:section>
+
+	<f:section name="Card">
+		<ul>
+			<f:for each="{item.children}" as="card">
+				<li class="card" data-uri-target="{card.link}">
+					<f:render partial="Components/Card" section="Media" />
+					<f:render partial="Components/Card" section="Title" arguments="{title: card.title, link: card.link}" />
+
+					<f:comment>
+						<a href="{card.link}" class="card--title">
+							<span>{card.title}</span><xo:svg.use name="arrow-right" viewBox="0 0 14 11" />
+						</a>
+					</f:comment>
+				</li>
+			</f:for>
+		</ul>
 	</f:section>
 </div>
