@@ -48,7 +48,18 @@
 		}
 
 		&:hover, .focusable & {
-			color: $theme-color-primary;
+			& {
+				color: $theme-color-primary;
+				text-decoration: none;
+			}
+
+			span {
+				background-size: 100% 2px;
+			}
+		}
+
+		span {
+			@extend %link--animation;
 		}
 	}
 }
