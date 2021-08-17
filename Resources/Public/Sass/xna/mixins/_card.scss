@@ -1,0 +1,38 @@
+@mixin card--media {
+	& {
+		position: relative;
+		background: $color-grey-lighten;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 56.25%;
+	}
+}
+
+@mixin card--title {
+	& {
+		display: flex;
+		padding: rem(3px 10px);
+	}
+
+	& > span {
+		font-size: rem(20px);
+	}
+}
+
+@mixin card--title-link {
+	& {
+		color: $theme-color-primary;
+	}
+
+	svg {
+		width: 14px;
+		height: 11px;
+		margin: rem(10px 0 0 12px);
+		flex-shrink: 0;
+		fill: $theme-color-primary;
+		transition: transform $transition-duration;
+	}
+}

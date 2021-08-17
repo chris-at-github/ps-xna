@@ -1,23 +1,47 @@
+.card--title {
+	@include card--title();
+}
+
+a.card--title {
+	@include card--title-link();
+}
+
+.card--media {
+	@include card--media();
+}
+
 .card {
-	& {
-		background: #f7f7f7;
+	.card--media + .card--title {
+		margin-top: rem(5px);
 	}
 
-	&:hover {
-		cursor: pointer;
-		background: #ccc;
-	}
-
-	.card--title {
+	&[data-uri-target]:hover, .focusable &[data-uri-target]:focus-within {
 		& {
-			display: block;
-			padding: rem(15px 15px);
+			cursor: pointer;
 		}
 
-		&:hover, &:active {
-			text-decoration: none;
+		.card--title {
+			svg {
+				transform: translate(5px, 0);
+			}
 		}
 	}
+
+	.focusable &[data-uri-target]:focus-within {
+		& {
+			@extend %accessibility-focus-overflow;
+		}
+
+		&:before, &:after {
+			top: -15px;
+			bottom: -15px;
+		}
+
+		a, a:focus, .focusable & a {
+			outline: 0;
+		}
+	}
+
 }
 
 .card--container {
