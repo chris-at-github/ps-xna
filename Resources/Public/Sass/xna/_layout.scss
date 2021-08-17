@@ -19,6 +19,18 @@ a, input, select, textarea, button {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Allgemeine Inhalts-Definitionen
+.ce-content {
+	a {
+		@extend %link--animation;
+	}
+
+	a:hover, a:focus {
+		text-decoration: none;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Page Footer
 .page-footer--content {
 	& {
