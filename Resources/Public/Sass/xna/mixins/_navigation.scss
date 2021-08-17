@@ -110,6 +110,88 @@
 			display: none;
 		}
 
+		// Standard-Styles fuer alle Layouts
+		.navigation--container-inner {
+			& {
+				display: grid;
+				gap: 30px;
+				grid-template-columns: 2fr 1fr;
+				grid-template-areas: "item-navigation item-content";
+
+				width: $page-max-width;
+				max-width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				padding: rem(20px 0 40px 0);
+			}
+
+			& > ul {
+				& {
+					grid-area: item-navigation;
+				}
+
+				& > li {
+					& {
+						margin: rem(20px 0 0 0);
+					}
+
+					& > a, & > span {
+						font-size: rem(20px);
+					}
+				}
+			}
+
+			& > ul > li > ul {
+				& > li {
+					& > ul {
+						margin-bottom: rem(20px);
+					}
+
+					&:last-child > ul {
+						margin: 0;
+					}
+				}
+			}
+
+			& > ul > li > ul > li {
+				a {
+					font-weight: $font-weight-normal;
+				}
+			}
+
+			.navigation-item--content {
+				& {
+					grid-area: item-content;
+					position: relative;
+					margin: rem(20px 0 0 0);
+					padding: rem(0 0 0 30px);
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0; bottom: 0;
+					left: 0;
+					border-left: 1px solid $color-grey-lighten;
+				}
+
+				.ce-frame {
+					& {
+						padding-left: 0;
+						padding-right: 0;
+					}
+
+					& + .ce-frame {
+						margin-top: rem(45px);
+					}
+
+					.ce-frame--inner {
+						width: 100%;
+					}
+				}
+			}
+		}
+
 		// Default-Layout
 		.navigation--container-layout-default .navigation--container-inner {
 			& > ul {
@@ -130,15 +212,7 @@
 
 		// Product-Layout
 		.navigation--container-layout-product .navigation--container-inner {
-			& {
-				display: grid;
-				gap: 30px;
-				grid-template-columns: 2fr 1fr;
-				grid-template-areas: "item-navigation item-content";
-			}
-
 			& > ul {
-				grid-area: item-navigation;
 				margin-left: -10px; // Ausgleich Padding der Navigationspunkte
 
 				display: grid;
@@ -179,7 +253,7 @@
 						padding: 1px 10px;
 						font-size: rem(17px);
 						font-weight: $font-weight-bold;
-						color: $color-grey;
+						color: $theme-color-primary;
 					}
 
 					& > ul {
@@ -189,32 +263,6 @@
 			}
 
 			.navigation-item--content {
-				& {
-					grid-area: item-content;
-					position: relative;
-					margin: rem(20px 0 0 0);
-					padding: rem(0 0 0 30px);
-				}
-
-				&:before {
-					content: '';
-					position: absolute;
-					top: 0; bottom: 0;
-					left: 0;
-					border-left: 1px solid $color-grey-lighten;
-				}
-
-				.ce-frame {
-					& {
-						padding-left: 0;
-						padding-right: 0;
-					}
-
-					.ce-frame--inner {
-						width: 100%;
-					}
-				}
-
 				.ce-header {
 					font-size: rem(20px);
 				}
@@ -228,59 +276,68 @@
 			}
 		}
 
-		// Standard-Styles fuer alle Layouts
-		.navigation--container-inner {
-			& {
-				width: $page-max-width;
-				max-width: 100%;
-				margin-left: auto;
-				margin-right: auto;
-				padding: rem(20px 0 40px 0);
-			}
-
+		// Card-Layout
+		.navigation--container-layout-card .navigation--container-inner {
 			& > ul {
+				& {
+					display: flex;
+					flex-wrap: wrap;
+					align-content: flex-start;
+					width: calc(100% + 30px);
+					margin-top: rem(-15px);
+					margin-left: -15px;
+					margin-right: -15px;
+					padding: rem(0 0 20px 0);
+				}
+
 				& > li {
+					width: percentage(6 / 12);
+					margin-top: rem(35px);
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+			}
+
+			.card {
+				.card--title {
 					& {
-						margin: rem(20px 0 0 0);
+						@include card--title;
+						@include card--title-link;
 					}
 
-					& > a, & > span {
-						font-size: rem(20px);
-					}
-				}
-			}
-
-			& > ul > li > ul {
-				& > li {
-					& > ul {
-						margin-bottom: rem(20px);
-					}
-
-					&:last-child > ul {
-						margin: 0;
+					.svg-sprite--arrow-right {
+						display: block;
 					}
 				}
 			}
 
-			& > ul > li > ul > li {
-				a {
-					font-weight: $font-weight-normal;
+			.navigation-item--card-media {
+
+			}
+
+			.navigation-item--card-title {
+				& {
+				}
+
+				.svg-sprite--arrow-right {
+					display: block;
 				}
 			}
 		}
 
 		@include media-breakpoint-up(lg) {
-			.navigation--container-layout-default .navigation--container-inner {
+			.navigation--container-inner {
+				grid-template-columns: 3fr 1fr;
+			}
+
+			.navigation--container-layout-default .navigation--container-inner,
+			.navigation--container-layout-card .navigation--container-inner {
 				& > ul > li {
 					width: percentage(4 / 12);
 				}
 			}
 
 			.navigation--container-layout-product .navigation--container-inner {
-				& {
-					grid-template-columns: 3fr 1fr;
-				}
-
 				& > ul {
 					grid-template-columns: 1fr 1fr 1fr;
 					grid-template-rows: 1fr;
@@ -308,7 +365,7 @@
 		}
 	}
 
-	//& > ul > li:first-child > .navigation--container-outer {
+	//& > ul > li:nth-child(4) > .navigation--container-outer {
 	//	display: block;
 	//	//background: blue;
 	//}
@@ -497,8 +554,8 @@
 		}
 	}
 
-	// werden nur in Desktop-Navigation angezeigt
-	.navigation-item--content {
+	// Elemente aus der Desktop-Navigation ausblenden
+	.navigation-item--content, .card--media {
 		display: none;
 	}
 
