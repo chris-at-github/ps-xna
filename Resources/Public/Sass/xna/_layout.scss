@@ -91,7 +91,6 @@ a, input, select, textarea, button {
 		a {
 			& {
 				@extend %link--animation;
-				background-image: linear-gradient(#fff, #fff);
 			}
 
 			&:hover, &:focus {
@@ -176,15 +175,9 @@ a, input, select, textarea, button {
 		}
 
 		a {
-			& {
-				display: inline-block;
-				padding: rem(3px 0);
-				font-weight: $font-weight-normal;
-			}
-
-			& > span {
-				background-image: linear-gradient(#fff, #fff);
-			}
+			display: inline-block;
+			padding: rem(3px 0);
+			font-weight: $font-weight-normal;
 		}
 	}
 }
@@ -208,10 +201,6 @@ a, input, select, textarea, button {
 
 		a {
 			color: #fff;
-		}
-
-		a > span {
-			background-image: linear-gradient(#fff, #fff);
 		}
 	}
 }
@@ -369,9 +358,25 @@ a, input, select, textarea, button {
 		}
 	}
 
+	.page-footer--content {
+		.address a {
+			background-image: linear-gradient(#fff, #fff);
+		}
+
+		.navigation a > span {
+			background-image: linear-gradient(#fff, #fff);
+		}
+	}
+
 	.page-footer--navigation {
 		.navigation {
-			@include navigation--layout-0;
+			& {
+				@include navigation--layout-0;
+			}
+
+			a > span {
+				background-image: linear-gradient(#fff, #fff);
+			}
 		}
 	}
 }
