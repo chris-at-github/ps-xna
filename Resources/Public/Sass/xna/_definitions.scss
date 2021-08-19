@@ -19,6 +19,14 @@
 	@include header-3;
 }
 
+%subheader {
+	font-size: rem(21px);
+}
+
+h1 + %subheader, h2 + %subheader, h3 + %subheader, h4 + %subheader {
+	margin-top: rem(10px);
+}
+
 p, ul, ol, table {
 	@extend %header-sibling !optional;
 }
@@ -203,6 +211,10 @@ p, ul, ol, table {
 		%container-inner {
 			padding-right: percentage(3 / 12);
 		}
+	}
+
+	%subheader {
+		font-size: rem(24px);
 	}
 
 	//%link--animation {

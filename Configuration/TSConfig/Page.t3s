@@ -69,7 +69,8 @@ mod.web_layout.BackendLayouts {
 	}
 }
 
-["{$pages.footerContent}" in tree.rootLineIds]
+#[{$pages.footerContent} in tree.rootLineIds]
+[161 in tree.rootLineIds]
 	mod.web_layout.BackendLayouts {
 		footer {
 			title = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_backend_layout.footer.title
@@ -105,7 +106,8 @@ mod.web_layout.BackendLayouts {
 	}
 [END]
 
-["{$pages.navigationContent}" in tree.rootLineIds]
+#["{$pages.navigationContent}" in tree.rootLineIds]
+[173 in tree.rootLineIds]
 	TCAdefaults.tt_content {
 		header_layout = container
 		tx_xo_no_frame = 0
