@@ -39,13 +39,23 @@ p, ul, ol, table {
 		transition: color 0.35s;
 	}
 
-	&:hover, &:focus {
+	&:hover, .focusable &:focus {
 		color: $link-color-hover;
 		text-decoration: underline;
 	}
 }
 
 %link--animation {
+	& {
+		background: linear-gradient(#{$theme-color-primary}, #{$theme-color-primary}) no-repeat 0 100%;
+		background-size: 0 2px;
+		transition: background-size 0.25s ease-out;
+	}
+
+	&:hover, .focusable &:focus {
+		background-size: 100% 2px;
+		text-decoration: none;
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -243,18 +253,6 @@ p, ul, ol, table {
 	//		}
 	//	}
 	//}
-
-	%link--animation {
-		& {
-			background: linear-gradient(#{$theme-color-primary}, #{$theme-color-primary}) no-repeat 0 100%;
-			background-size: 0 2px;
-			transition: background-size 0.25s ease-out;
-		}
-
-		&:hover, &:focus {
-			background-size: 100% 2px;
-		}
-	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

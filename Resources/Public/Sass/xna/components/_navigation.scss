@@ -15,12 +15,16 @@
 	}
 
 	a {
+		& {
+			background: none;
+		}
+
 		& > span {
 			@extend %link--animation;
 			display: inline;
 		}
 
-		&:hover, &:focus {
+		&:hover, .focusable &:focus {
 			& {
 				text-decoration: none;
 			}

@@ -47,7 +47,11 @@
 			color: $color-grey-darken;
 		}
 
-		&:hover, .focusable & {
+		& > span {
+			@extend %link--animation;
+		}
+
+		&:hover, .focusable &:focus {
 			& {
 				color: $theme-color-primary;
 				text-decoration: none;
@@ -56,10 +60,6 @@
 			span {
 				background-size: 100% 2px;
 			}
-		}
-
-		span {
-			@extend %link--animation;
 		}
 	}
 }

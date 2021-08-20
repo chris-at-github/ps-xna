@@ -21,13 +21,6 @@ a, input, select, textarea, button {
 // ---------------------------------------------------------------------------------------------------------------------
 // Allgemeine Inhalts-Definitionen
 .ce-content {
-	a {
-		@extend %link--animation;
-	}
-
-	a:hover, a:focus {
-		text-decoration: none;
-	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -200,7 +193,14 @@ a, input, select, textarea, button {
 		}
 
 		a {
-			color: #fff;
+			& {
+				color: #fff;
+			}
+
+			&:hover, .focusable &:focus {
+				color: #fff;
+				outline-color: #fff;
+			}
 		}
 	}
 }

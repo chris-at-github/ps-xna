@@ -38,6 +38,7 @@ b, strong {
 
 a {
 	@extend %link--default;
+	@extend %link--animation;
 }
 
 table {
