@@ -1,0 +1,27 @@
+%tab--container {
+	& {
+		display: flex;
+		margin: rem(0 -5px);
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		padding: rem(0 5px);
+	}
+}
+
+%tab--item {
+	padding: rem(3px 18px);
+	border: 2px solid $theme-color-primary;
+	border-radius: 3px;
+	background: $theme-color-primary;
+	font-size: rem(15px);
+	font-weight: $font-weight-bold;
+	color: #fff;
+}
+
+%tab--item-active {
+	background: #fff;
+	color: $theme-color-primary;
+}
