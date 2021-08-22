@@ -125,3 +125,13 @@ mod.web_layout.BackendLayouts {
 		}
 	}
 [END]
+
+[field('CType') === 'ce_gallery']
+	TCEFORM.tt_content {
+		layout {
+			addItems {
+				4 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.layout.4
+			}
+		}
+	}
+[END]

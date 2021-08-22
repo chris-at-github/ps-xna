@@ -36,6 +36,9 @@
 			<trans-unit id="tx_xna_tt_content.tx_xo_variant.menu.1">
 				<target>Links mit Pfeilchen</target>
 			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.layout.4">
+				<target>Weite Laufweite</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

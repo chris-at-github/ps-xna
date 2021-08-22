@@ -83,6 +83,17 @@ p, ul, ol, table {
 	padding-right: 0;
 }
 
+%container-width-wide {
+	& {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	%container-inner {
+		width: 1200px;
+	}
+}
+
 %container-width-normal {
 	%container-inner {
 		width: $page-max-width;
@@ -215,6 +226,11 @@ p, ul, ol, table {
 	%container-outer {
 		padding-left: rem(30px);
 		padding-right: rem(30px);
+	}
+
+	%container-width-wide {
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	%container-width-indent-right {

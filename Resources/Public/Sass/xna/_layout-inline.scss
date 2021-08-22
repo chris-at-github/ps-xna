@@ -142,6 +142,11 @@ body {
 	@extend %container-width-full;
 }
 
+.ce-frame--layout-4 {
+	@extend %container-width-wide;
+	@extend %container-align-center;
+}
+
 // Container / Fluid Styled Content / Abstaende
 .ce-frame--space-before-small {
 	@extend %container-space-before-small;
