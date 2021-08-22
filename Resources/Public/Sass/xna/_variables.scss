@@ -136,8 +136,9 @@ $ce-gallery--layout-slider: true !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Hero
 $ce-hero--use-css: true !default;
-$ce-hero--layout-default: true !default;
-$ce-hero--layout-slider: true !default;
+$ce-hero--layout-default: false !default;
+$ce-hero--layout-slider: false !default;
+$ce-gallery--layout-hero-slider: true !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Icon Text
