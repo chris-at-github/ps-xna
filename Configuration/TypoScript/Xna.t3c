@@ -31,8 +31,8 @@ folders {
 pages {
 
 	# cat=pages; type=int+; label=PID for footer content
-	footerContent = 161
+	footerContent = 187
 
 	# cat=pages; type=int+; label=PID for navigation content
-	navigationContent = 173
+	navigationContent = 186
 }

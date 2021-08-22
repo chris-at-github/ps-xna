@@ -1,8 +1,10 @@
-websiteTitle: 'Kist Escherich'
+websiteTitle: 'KIST + ESCHERICH'
 rootPageId: 1
 baseVariants:
   - base: 'http://kist-escherich.local'
     condition: 'applicationContext == "Development"'
+  - base: 'http://staging.kist-escherich.com'
+    condition: 'applicationContext == "Production"'
 languages:
   -
     title: Deutsch
