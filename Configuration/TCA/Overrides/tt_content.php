@@ -57,19 +57,6 @@ $GLOBALS['TCA']['tt_content']['types']['ce_hero'] = [
 	',
 ];
 
-$GLOBALS['TCA']['tt_content']['types']['ce_hero']['columnsOverrides']['media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']  = [
-	'default' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.desktop',
-		'allowedAspectRatios' => [
-			'16_9' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
-				'value' => 16 / 9
-			]
-		],
-		'selectedRatio' => '16_9',
-	],
-];
-
 $GLOBALS['TCA']['tt_content']['types']['ce_hero']['columnsOverrides']['tx_xo_file']['config'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 	'tx_xo_file',
 	[
@@ -105,6 +92,19 @@ $GLOBALS['TCA']['tt_content']['types']['ce_hero']['columnsOverrides']['tx_xo_fil
 	]
 );
 $GLOBALS['TCA']['tt_content']['types']['ce_hero']['columnsOverrides']['tx_xo_file']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
+	'default' => [
+		'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.crop_variant.default',
+		'allowedAspectRatios' => [
+			'16_9' => [
+				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
+				'value' => 16 / 9
+			],
+		],
+		'selectedRatio' => '16_9',
+	],
+];
+
+$GLOBALS['TCA']['tt_content']['types']['ce_hero_slider']['columnsOverrides']['tx_xo_elements']['config']['overrideChildTca']['columns']['media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']  = [
 	'default' => [
 		'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.crop_variant.default',
 		'allowedAspectRatios' => [

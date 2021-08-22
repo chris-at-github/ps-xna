@@ -1,4 +1,4 @@
-.ce-header + .ce-hero {
+.ce-header + .ce-hero, .ce-header + .ce-hero-slider {
 	margin-top: rem(35px);
 }
 
@@ -16,7 +16,7 @@
 }
 
 @include media-breakpoint-up(sm) {
-	.ce-header + .ce-hero {
+	.ce-header + .ce-hero, .ce-header + .ce-hero-slider {
 		margin-top: rem(45px);
 	}
 }

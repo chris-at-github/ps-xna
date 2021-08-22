@@ -126,7 +126,7 @@ mod.web_layout.BackendLayouts {
 	}
 [END]
 
-[field('CType') === 'ce_hero']
+[field('CType') === 'ce_hero' || field('CType') === 'ce_hero_slider']
 	TCEFORM.tt_content {
 		layout {
 			addItems {
