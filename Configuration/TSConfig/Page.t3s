@@ -126,12 +126,19 @@ mod.web_layout.BackendLayouts {
 	}
 [END]
 
-[field('CType') === 'ce_gallery']
+[field('CType') === 'ce_hero']
 	TCEFORM.tt_content {
 		layout {
 			addItems {
 				4 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.layout.4
 			}
 		}
+	}
+
+	TCAdefaults.tt_content {
+		header_layout = 100
+		space_before_class = auto
+		space_after_class = auto
+		layout = 4
 	}
 [END]
