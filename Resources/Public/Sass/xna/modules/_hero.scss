@@ -11,7 +11,13 @@
 	img {
 		@extend %image-responsive;
 		position: absolute;
-		top: 0; left: 0;
+		top: 0; left: 0; right: 0;
+	}
+}
+
+.hero--slider {
+	.slider--item {
+		transition-duration: 2s !important;
 	}
 }
 

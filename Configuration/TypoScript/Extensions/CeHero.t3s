@@ -15,7 +15,6 @@ plugin.tx_xo.settings.modules {
 	ce_hero {
 		image {
 			width = 1200
-			height = 675
 			cropVariant = thumbnail
 			mediaQueries {
 				0 {
