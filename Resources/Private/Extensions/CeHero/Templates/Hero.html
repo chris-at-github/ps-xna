@@ -4,9 +4,13 @@
 	<f:section name="Main">
 		<f:spaceless>
 			<f:if condition="{media.0}">
-				<div class="hero--image">
-					<f:render partial="Media" section="Main" arguments="{media: media.0, settings: settings.modules.ce_hero.image}" />
-				</div>
+				<f:render partial="Item" section="Main" arguments="{
+					identifier: data.identifier
+					header: data.header,
+					headerLayout: data.header_layout,
+					text: data.bodytext,
+					media: media.0
+				}" />
 			</f:if>
 		</f:spaceless>
 	</f:section>

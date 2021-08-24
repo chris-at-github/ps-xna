@@ -46,7 +46,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image']['
 $GLOBALS['TCA']['tt_content']['types']['ce_hero'] = [
 	'showitem' => '
 			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
-			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.header;xoHeader,tx_xo_file,
+			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.header;xoHeader,tx_xo_file, pi_flexform,
 		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.appearance,
 			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.frames;frames,
 		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.access,

@@ -2,19 +2,6 @@
 	margin-top: rem(35px);
 }
 
-.hero--image {
-	& {
-		position: relative;
-		padding-top: 56.25%;
-	}
-
-	img {
-		@extend %image-responsive;
-		position: absolute;
-		top: 0; left: 0; right: 0;
-	}
-}
-
 .ce-hero-slider {
 	.slider {
 		@extend %slider-navigation--dashed;
