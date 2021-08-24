@@ -24,7 +24,7 @@ page {
 
 	includeJSFooter {
 		application = /assets/js/xna.js
-		application.async = 1
+		application.forceOnTop = 1
 	}
 
 	// Eigene Farbangaben
