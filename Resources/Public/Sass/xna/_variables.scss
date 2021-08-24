@@ -129,10 +129,10 @@ $ce-facts--layout-inline: true !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Gallery
-$ce-gallery--use-css: true !default;
-$ce-gallery--layout-default: true !default;
-$ce-gallery--layout-slider: true !default;
-$ce-gallery--layout-hero-slider: true !default;
+$ce-gallery--use-css: false !default;
+$ce-gallery--layout-default: false !default;
+$ce-gallery--layout-slider: false !default;
+$ce-gallery--layout-hero-slider: false !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Hero

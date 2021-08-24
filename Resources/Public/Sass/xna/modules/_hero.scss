@@ -15,9 +15,17 @@
 	}
 }
 
-.hero--slider {
+.ce-hero-slider {
+	.slider {
+		@extend %slider-navigation--dashed;
+	}
+
 	.slider--item {
 		transition-duration: 2s !important;
+	}
+
+	.slider--navigation ul {
+		justify-content: center;
 	}
 }
 
