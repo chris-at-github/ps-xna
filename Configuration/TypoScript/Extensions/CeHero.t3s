@@ -14,30 +14,31 @@ tt_content {
 plugin.tx_xo.settings.modules {
 	ce_hero {
 		image {
+			renderMode = image
 			width = 1200
-			cropVariant = thumbnail
+			cropVariant = default
 			mediaQueries {
 				0 {
 					maxWidth = 576
-					cropVariant = thumbnail
+					cropVariant = default
 					mediaQuery = (min-width: 0px)
 				}
 
 				1 {
 					maxWidth = 768
-					cropVariant = thumbnail
+					cropVariant = default
 					mediaQuery = (min-width: 576px)
 				}
 
 				2 {
 					maxWidth = 992
-					cropVariant = thumbnail
+					cropVariant = default
 					mediaQuery = (min-width: 768px)
 				}
 
 				3 {
 					maxWidth = 1200
-					cropVariant = thumbnail
+					cropVariant = default
 					mediaQuery = (min-width: 992px)
 				}
 			}
