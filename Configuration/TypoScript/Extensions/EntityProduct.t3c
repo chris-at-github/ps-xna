@@ -1,1 +1,5 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:entity/Configuration/TypoScript/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:entity_product/Configuration/TypoScript/constants.typoscript">
+
+plugin.tx_entityproduct {
+	persistence.storagePid = 51
+}
