@@ -39,6 +39,12 @@
 			<trans-unit id="tx_xna_tt_content.layout.4">
 				<source>Wide</source>
 			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.frame_class.2">
+				<source>Blue</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.frame_class.3">
+				<source>Darkblue</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

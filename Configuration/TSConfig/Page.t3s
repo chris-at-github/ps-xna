@@ -18,6 +18,13 @@ TCEFORM {
 	}
 
 	tt_content {
+		frame_class {
+			addItems {
+				2 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.frame_class.2
+				3 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.frame_class.3
+			}
+		}
+
 		space_before_class {
 			addItems {
 				large = LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.space.large

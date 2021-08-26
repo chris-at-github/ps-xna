@@ -39,6 +39,12 @@
 			<trans-unit id="tx_xna_tt_content.layout.4">
 				<target>Weite Laufweite</target>
 			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.frame_class.2">
+				<target>Blue</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.frame_class.3">
+				<target>Darkblue</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

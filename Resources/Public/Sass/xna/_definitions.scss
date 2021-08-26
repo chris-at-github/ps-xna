@@ -162,7 +162,19 @@ p, ul, ol, table {
 	background: #f7f7f7;
 }
 
-// ---------------------------------------------------------------------------------------------------------------------
+%container-class-2 {
+	background: $theme-color-primary;
+}
+
+%container-class-3 {
+	background: $theme-color-primary-dark;
+}
+
+%container-class-2, %container-class-3 {
+	color: #fff;
+}
+
+	// ---------------------------------------------------------------------------------------------------------------------
 // Address
 %address {
 	& {
