@@ -153,6 +153,12 @@ p, ul, ol, table {
 	margin-bottom: rem(75px);
 }
 
+%container-space-before-opposite-medium {
+	@extend %container-space-before-medium;
+	margin-top: rem(-55px);
+	padding-top: rem(55px);
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Container / Varianten
 %container-class-0 {

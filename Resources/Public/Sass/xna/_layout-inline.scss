@@ -172,6 +172,10 @@ body {
 	@extend %container-space-after-large;
 }
 
+.ce-frame--space-before-opposite-medium {
+	@extend %container-space-before-opposite-medium;
+}
+
 // Container / Fluid Styled Content / Farbschema
 .ce-frame--class-0 {
 	@extend %container-class-0;
