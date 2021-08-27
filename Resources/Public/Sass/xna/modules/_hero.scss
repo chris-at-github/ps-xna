@@ -11,13 +11,36 @@
 		z-index: 1;
 	}
 
-	.slider--navigation ul {
-		justify-content: center;
+	.slider--navigation {
+		& {
+			bottom: rem(30px);
+		}
+
+		ul {
+			justify-content: center;
+		}
 	}
 }
 
+// >= 576px
 @include media-breakpoint-up(sm) {
 	.ce-header + .ce-hero, .ce-header + .ce-hero-slider {
 		margin-top: rem(45px);
+	}
+}
+
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	.ce-hero-slider {
+		.slider .slider--navigation {
+			& {
+				bottom: rem(46px);
+			}
+
+			ul li {
+				width: rem(60px);
+				height: rem(9px);
+			}
+		}
 	}
 }
