@@ -20,7 +20,11 @@
 	}
 
 	th, td {
-		padding: rem(3px 10px 3px 2px);
-		border-bottom: 1px solid #ccc;
+		padding: rem(5px 10px 5px 2px);
+		border-bottom: 1px solid $color-grey-lighten;
+	}
+
+	thead th, & > tbody:first-child tr:first-child th {
+		border-bottom: 2px solid $theme-color-primary;
 	}
 }
