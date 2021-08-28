@@ -130,27 +130,27 @@ p, ul, ol, table {
 }
 
 %container-space-before-small > %container-inner {
-	margin-top: rem(35px);
+	margin-top: rem(25px);
 }
 
 %container-space-before-medium > %container-inner {
-	margin-top: rem(55px);
+	margin-top: rem(35px);
 }
 
 %container-space-before-large > %container-inner {
-	margin-top: rem(75px);
+	margin-top: rem(55px);
 }
 
 %container-space-after-small > %container-inner {
-	margin-bottom: rem(35px);
+	margin-bottom: rem(25px);
 }
 
 %container-space-after-medium > %container-inner {
-	margin-bottom: rem(55px);
+	margin-bottom: rem(35px);
 }
 
 %container-space-after-large > %container-inner {
-	margin-bottom: rem(75px);
+	margin-bottom: rem(55px);
 }
 
 %container-space-before-opposite-medium {
@@ -180,7 +180,7 @@ p, ul, ol, table {
 	color: #fff;
 }
 
-	// ---------------------------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------------------
 // Address
 %address {
 	& {
@@ -244,6 +244,30 @@ p, ul, ol, table {
 	%container-outer {
 		padding-left: rem(30px);
 		padding-right: rem(30px);
+	}
+
+	%container-space-before-small > %container-inner {
+		margin-top: rem(35px);
+	}
+
+	%container-space-before-medium > %container-inner {
+		margin-top: rem(55px);
+	}
+
+	%container-space-before-large > %container-inner {
+		margin-top: rem(75px);
+	}
+
+	%container-space-after-small > %container-inner {
+		margin-bottom: rem(35px);
+	}
+
+	%container-space-after-medium > %container-inner {
+		margin-bottom: rem(55px);
+	}
+
+	%container-space-after-large > %container-inner {
+		margin-bottom: rem(75px);
 	}
 
 	%container-width-wide {
