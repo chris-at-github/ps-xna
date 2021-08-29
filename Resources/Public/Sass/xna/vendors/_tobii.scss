@@ -59,9 +59,17 @@
 			}
 
 			svg {
-				width: rem(80px);
-				height: rem(80px);
+				width: rem(11px);
+				height: rem(19px);
 			}
+		}
+
+		&.tobii__btn--previous svg {
+			margin-right: 3px;
+		}
+
+		&.tobii__btn--next svg {
+			margin-left: 3px;
 		}
 
 		&.tobii__btn--close {
@@ -77,8 +85,8 @@
 		& > button {
 			&.tobii__btn--previous, &.tobii__btn--next {
 				svg {
-					width: rem(110px);
-					height: rem(110px);
+					width: rem(15px);
+					height: rem(25px);
 				}
 			}
 		}
@@ -90,8 +98,8 @@
 		& > button {
 			&.tobii__btn--previous, &.tobii__btn--next {
 				svg {
-					width: rem(110px);
-					height: rem(110px);
+					width: rem(17px);
+					height: rem(29px);
 				}
 			}
 		}
