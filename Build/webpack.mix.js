@@ -19,6 +19,7 @@ mix.options({
 // CSS
 mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/components/collapse.css')
 	.sass('../Resources/Public/Sass/xna/components/_accordion.scss', 'assets/css/components/accordion.css')
+	.sass('../Resources/Public/Sass/xna/components/_tab.scss', 'assets/css/components/tab.css')
 	.sass('../Resources/Public/Sass/xna/vendors/_tobii.scss', 'assets/css/libraries/tobii.css')
 	.options({
 		postCss: [
@@ -31,7 +32,8 @@ mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/c
 );
 
 // JS
-mix.js('../Resources/Public/Js/components/bootstrap/collapse.js', 'assets/js/components/collapse.js');
+mix.js('../Resources/Public/Js/components/bootstrap/collapse.js', 'assets/js/components/collapse.js')
+	.js('../Resources/Public/Js/components/bootstrap/tab.js', 'assets/js/components/tab.js');
 
 mix.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', '../../../../assets/js/libraries/tobii.js');
 
