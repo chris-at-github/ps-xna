@@ -1,4 +1,11 @@
 // ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../../functions';
+@import '../../variables';
+@import '../../mixins';
+@import '../../definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Package Import
 @import '~@midzer/tobii/src/scss/tobii';
 
@@ -7,6 +14,8 @@
 :root {
 	--slide-max-width: 100%;
 	--slide-max-height: 90vh;
+	--tobii-button-size: #{rem(45px)};
+	--caption-color: #{$theme-color-primary};
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -14,38 +23,33 @@
 .tobii {
 	& {
 		font-size: $font-size-base;
-		background: rgba(#fff, 0.85);
+		background: rgba(#fff, 0.95);
 	}
 
 	.tobii__slide {
 		& [data-type] {
 			margin-left: $spacing-medium;
 			margin-right: $spacing-medium;
+			background: #fff;
+		}
+
+		figure > figcaption {
+			padding: rem(10px);
+			text-align: center;
 		}
 	}
 
 	& > button {
 		& {
+			@extend %button--rounded-icon;
 			color: inherit;
 			outline: 0;
 			opacity: inherit;
 		}
 
-		&:hover, &:focus {
-			& {
-				transform: none;
-			}
-
-			svg {
-				fill: $theme-color-hover;
-			}
-		}
-
 		svg {
-			fill: $font-color-base;
 			stroke: none;
 			color: inherit;
-			transition: fill 0.25s;
 		}
 
 		&.tobii__btn--previous, &.tobii__btn--next {
@@ -61,14 +65,21 @@
 		}
 
 		&.tobii__btn--close {
-			& {
-				top: rem(20px);
-				right: rem(20px);
-			}
+			top: rem(20px);
+			right: rem(20px);
+		}
+	}
+}
 
-			svg {
-				width: rem(43px);
-				height: rem(43px);
+// => 768px
+@include media-breakpoint-up(md) {
+	.tobii {
+		& > button {
+			&.tobii__btn--previous, &.tobii__btn--next {
+				svg {
+					width: rem(110px);
+					height: rem(110px);
+				}
 			}
 		}
 	}
@@ -81,13 +92,6 @@
 				svg {
 					width: rem(110px);
 					height: rem(110px);
-				}
-			}
-
-			&.tobii__btn--close {
-				svg {
-					width: rem(53px);
-					height: rem(53px);
 				}
 			}
 		}

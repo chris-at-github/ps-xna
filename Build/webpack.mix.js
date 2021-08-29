@@ -19,6 +19,7 @@ mix.options({
 // CSS
 mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/components/collapse.css')
 	.sass('../Resources/Public/Sass/xna/components/_accordion.scss', 'assets/css/components/accordion.css')
+	.sass('../Resources/Public/Sass/xna/vendors/_tobii.scss', 'assets/css/libraries/tobii.css')
 	.options({
 		postCss: [
 			require('postcss-cachebuster'),
@@ -32,10 +33,15 @@ mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/c
 // JS
 mix.js('../Resources/Public/Js/components/bootstrap/collapse.js', 'assets/js/components/collapse.js');
 
+mix.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', '../../../../assets/js/libraries/tobii.js');
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Production Mode
 if(mix.inProduction() === true) {
-	mix.minify(['../../../../assets/js/components/collapse.js']);
+	mix.minify([
+		'../../../../assets/js/components/collapse.js',
+		'../../../../assets/js/libraries/tobii.js'
+	]);
 	mix.minify([
 		'../../../../assets/css/components/collapse.css',
 		'../../../../assets/css/components/accordion.css'
