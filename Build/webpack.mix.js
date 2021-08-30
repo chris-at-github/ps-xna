@@ -15,7 +15,6 @@ mix.options({
 });
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Components
 // CSS
 mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/components/collapse.css')
 	.sass('../Resources/Public/Sass/xna/components/_accordion.scss', 'assets/css/components/accordion.css')
@@ -35,17 +34,23 @@ mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/c
 mix.js('../Resources/Public/Js/components/bootstrap/collapse.js', 'assets/js/components/collapse.js')
 	.js('../Resources/Public/Js/components/bootstrap/tab.js', 'assets/js/components/tab.js');
 
-mix.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', '../../../../assets/js/libraries/tobii.js');
+mix.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', '../../../../assets/js/libraries/tobii.js')
+	.copy('./node_modules/chart.js/dist/chart.js', '../../../../assets/js/libraries/chart.js');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Production Mode
 if(mix.inProduction() === true) {
 	mix.minify([
 		'../../../../assets/js/components/collapse.js',
-		'../../../../assets/js/libraries/tobii.js'
+		'../../../../assets/js/components/tab.js',
+		'../../../../assets/js/libraries/tobii.js',
+		'../../../../assets/js/libraries/chart.js'
 	]);
+
 	mix.minify([
 		'../../../../assets/css/components/collapse.css',
-		'../../../../assets/css/components/accordion.css'
+		'../../../../assets/css/components/accordion.css',
+		'../../../../assets/css/components/tab.css',
+		'../../../../assets/css/libraries/tobii.css'
 	]);
 }
