@@ -91,8 +91,6 @@ mix.webpackConfig({
 
 mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js');
 
-mix.babel('typo3conf/ext/xna/Resources/Public/Js/plugins/filter.js', 'assets/js/plugins/filter.js');
-
 mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
 	.copy('./node_modules/tiny-slider/dist/tiny-slider.js', 'assets/js/tiny-slider.js');
 

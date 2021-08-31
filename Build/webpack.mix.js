@@ -34,6 +34,8 @@ mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/c
 mix.js('../Resources/Public/Js/components/bootstrap/collapse.js', 'assets/js/components/collapse.js')
 	.js('../Resources/Public/Js/components/bootstrap/tab.js', 'assets/js/components/tab.js');
 
+mix.babel('../Resources/Public/Js/libraries/filter.js', '../../../../assets/js/libraries/filter.js');
+
 mix.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', '../../../../assets/js/libraries/tobii.js')
 	.copy('./node_modules/chart.js/dist/chart.js', '../../../../assets/js/libraries/chart.js');
 
