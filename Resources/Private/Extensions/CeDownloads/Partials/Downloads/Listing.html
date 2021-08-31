@@ -1,0 +1,21 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Main">
+		<f:if condition="{data.bodytext}">
+			<f:format.html>{data.bodytext}</f:format.html>
+		</f:if>
+
+		<ul class="downloads--container">
+			<f:for each="{files}" as="file">
+				<li class="download--item">
+					<f:render partial="Downloads/Item" section="Main" arguments="{_all}" />
+				</li>
+			</f:for>
+
+			<f:if condition="{data.tx_xna_wkhtmltopdf_enabled} == 1">
+				<li class="download--item">
+					<f:render partial="Downloads/Wkhtmltopdf" section="Main" arguments="{link: '#', title: data.tx_xna_wkhtmltopdf_title}" />
+				</li>
+			</f:if>
+		</ul>
+	</f:section>
+</div>

@@ -48,6 +48,12 @@
 			<trans-unit id="tx_xna_tt_content.space.opposite.medium">
 				<target>Mittel (Überlappend)</target>
 			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.wkhtmltopdf_enabled">
+				<source>Zeige einen PDF Printlink für die aktuelle Seite</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.wkhtmltopdf_title">
+				<source>PDF Printlink Titel</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

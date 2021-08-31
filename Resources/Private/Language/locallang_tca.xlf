@@ -48,6 +48,12 @@
 			<trans-unit id="tx_xna_tt_content.space.opposite.medium">
 				<source>Medium (Opposite)</source>
 			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.wkhtmltopdf_enabled">
+				<source>Display PDF print link for current page</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.wkhtmltopdf_title">
+				<source>PDF Print Linktitle</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
