@@ -181,6 +181,12 @@ p, ul, ol, table {
 		color: #fff;
 	}
 
+	.focusable &, .no-js & {
+		a, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]) {
+			outline-color: #fff;
+		}
+	}
+
 	.link--cta {
 		@extend %button--inverted;
 	}
