@@ -27,7 +27,7 @@
 }
 
 .link--phone {
-	&, &:hover, &:focus {
+	&, &:hover, .focusable &:focus {
 		color: $font-color-base;
 		text-decoration: none;
 	}
@@ -35,14 +35,21 @@
 
 .link--cta {
 	& {
-		display: inline-block;
-		padding: rem(10px 20px);
-		border: 2px solid $font-color-base;
-		color: $font-color-base;
+		@extend %button;
+		@include iconfont(arrow-right);
+		padding-right: rem(58px);
 	}
 
-	&:hover {
-		border-color: $link-color-hover;
-		text-decoration: none;
+	&:before {
+		position: absolute;
+		top: 17px; right: 30px;
+		font-size: rem(12px);
+		transition: transform $transition-duration;
+	}
+
+	&:hover, .focusable &:focus {
+		&:before {
+			transform: translate(5px, 0);
+		}
 	}
 }

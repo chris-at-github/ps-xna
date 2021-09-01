@@ -3,6 +3,36 @@
 	--button--rounded-icon-svg-size: #{rem(19px)};
 }
 
+%button {
+	& {
+		position: relative;
+		display: inline-block;
+		padding: rem(12px 30px);
+		border: 0;
+		background: $theme-color-primary;
+		color: #fff;
+	}
+
+	&:hover, .focusable &:focus {
+		background: $theme-color-primary-dark;
+		background-size: 0;
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+%button--inverted {
+	& {
+		background: #fff;
+		color: $theme-color-primary;
+	}
+
+	&:hover, .focusable &:focus {
+		background: #fff;
+		color: $theme-color-primary-dark;
+	}
+}
+
 %button--rounded-icon {
 	& {
 		display: flex;
