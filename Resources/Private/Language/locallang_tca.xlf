@@ -12,6 +12,9 @@
 			<trans-unit id="tx_xna_backend_layout.product.product">
 				<source>Product</source>
 			</trans-unit>
+			<trans-unit id="tx_xna_backend_layout.product.footer">
+				<source>Footer</source>
+			</trans-unit>
 
 			<trans-unit id="tx_xna_backend_layout.footer.title">
 				<source>Footer</source>

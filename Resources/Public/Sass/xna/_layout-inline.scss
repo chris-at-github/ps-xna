@@ -23,7 +23,7 @@ body {
 	flex: 1 auto; // IE 11 Fallback: auto
 }
 
-#content--header, #content--main, #content--footer {
+#content--header, #content--main, #content--product, #content--footer {
 	& > .ce-frame--space-after-auto:last-child {
 		@extend %container-space-after-medium;
 	}

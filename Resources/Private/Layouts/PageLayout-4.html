@@ -11,8 +11,8 @@
 		<f:render section="Main" />
 	</div>
 
-	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentFooter')}">
-		<div id="content--footer" class="ce-content">
+	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentProduct')}">
+		<div id="content--product" class="ce-content">
 			<f:if condition="{navigationSibling}">
 				<nav class="navigation sibling-navigation container-outer">
 					<div class="container-inner">
@@ -21,6 +21,12 @@
 				</nav>
 			</f:if>
 
+			<f:render section="Product" />
+		</div>
+	</f:if>
+
+	<f:if condition="{f:cObject(typoscriptObjectPath: 'block.contentFooter')}">
+		<div id="content--footer" class="ce-content">
 			<f:render section="Footer" />
 		</div>
 	</f:if>
