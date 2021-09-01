@@ -196,19 +196,19 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------
 // Standard-Elemente
 .ce-header--layout-1 {
-	h2, h3 {
+	&, h2, h3 {
 		@include header-1;
 	}
 }
 
 .ce-header--layout-2 {
-	h1, h3 {
+	&, h1, h3 {
 		@include header-2;
 	}
 }
 
 .ce-header--layout-3 {
-	h1, h2 {
+	&, h1, h2 {
 		@include header-3;
 	}
 }
