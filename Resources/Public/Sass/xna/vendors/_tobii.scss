@@ -13,7 +13,7 @@
 // Overwrite Variables
 :root {
 	--slide-max-width: 100%;
-	--slide-max-height: 90vh;
+	--slide-max-height: 85vh;
 	--tobii-button-size: #{rem(45px)};
 	--caption-color: #{$theme-color-primary};
 }
@@ -28,6 +28,7 @@
 
 	.tobii__slide {
 		& [data-type] {
+			overflow: inherit;
 			margin-left: $spacing-medium;
 			margin-right: $spacing-medium;
 			background: #fff;
