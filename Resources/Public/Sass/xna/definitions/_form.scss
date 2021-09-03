@@ -7,18 +7,24 @@
 %form-field {
   & {
     outline: 0;
-    padding: rem(3px);
-    border: 1px solid #ccc;
+    padding: rem(4px 8px);
+    border: 2px solid $theme-color-primary;
     border-radius: 3px;
   }
 
   &:focus {
-    border-color: #999;
+    border-color: $theme-color-primary-dark;
+  }
+
+  &[disabled] {
+    background: $color-grey-light;
+    border-color: $color-grey-light;
+    cursor: not-allowed;
   }
 }
 
 select%form-field {
-  min-height: rem(32px);
+  min-height: rem(39px);
 }
 
 %form-field--checkbox, %form-field--radio {
