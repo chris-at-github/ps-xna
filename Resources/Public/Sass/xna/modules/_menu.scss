@@ -6,25 +6,27 @@
 
 		a {
 			&:hover, .focusable &:focus {
-				span:before {
+				span:after {
 					transform: translate(5px, 0);
+					margin-left: rem(10px);
+					padding-right: 0;
 				}
 			}
 		}
 
 		span {
 			& {
-				@include iconfont(arrow-right);
-				position: relative;
-				padding: rem(0 22px 0 0);
 				background: none !important; // Aufheben der Underline-Animation
 			}
 
-			&:before {
-				position: absolute;
-				bottom: rem(3px); right: 0;
+			&:after {
+				content: iconfont-item(arrow-right);
+				margin-left: rem(5px);
+				padding-right: rem(5px);
+				font-family: $font-family-icon;
 				font-size: rem(12px);
-				transition: transform $transition-duration;
+				transition-property: margin, padding;
+				transition-duration: $transition-duration;
 			}
 		}
 	}
