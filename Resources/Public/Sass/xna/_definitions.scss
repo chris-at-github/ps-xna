@@ -181,6 +181,10 @@ p, ul, ol, table {
 		color: #fff;
 	}
 
+	a {
+		background-image: linear-gradient(#fff, #fff);
+	}
+
 	.focusable &, .no-js & {
 		a, input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]) {
 			outline-color: #fff;
