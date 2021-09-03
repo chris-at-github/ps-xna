@@ -1,7 +1,7 @@
 @mixin card--media {
 	& {
 		position: relative;
-		background: $color-grey-lighten;
+		background: $color-grey-light;
 	}
 
 	&:before {
