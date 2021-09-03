@@ -5,11 +5,44 @@
 		margin: 0;
 		padding: 0;
 	}
+
+	.contact-item--vcard,  {
+		a {
+			background-position: 34px 100%;
+		}
+
+
+		& .badge, &:hover .badge {
+			background: #fff;
+			color: $theme-color-primary;
+		}
+	}
+
+	.link--phone {
+		&:hover, .focusable &:focus {
+			color: #fff;
+		}
+	}
 }
 
 .contact-search--form {
 	& > .row {
 		margin-top: rem(20px);
+	}
+
+	.form-field {
+		& {
+			border: 3px solid $theme-color-primary-dark;
+		}
+
+		&[disabled] {
+			border-color: $theme-color-primary-dark;
+			background: $color-grey-lighten;
+		}
+	}
+
+	select.form-field {
+		min-height: rem(41px);
 	}
 }
 
