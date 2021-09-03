@@ -1,0 +1,85 @@
+// -------------------------------------------------------------------------------------------------------------------
+// Component
+.contact-item {
+	& {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.contact-search--form {
+	& > .row {
+		margin-top: rem(20px);
+	}
+}
+
+.contact-search--submit {
+	--button--rounded-icon-size: 60px;
+
+	& {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: rem(45px);
+	}
+
+	button {
+		& {
+			position: relative;
+			@extend %button--rounded-icon;
+			@extend %button--rounded-icon--inverted;
+			transform: rotate(90deg);
+
+			transition-property: width, height;
+			transition-duration: $transition-duration;
+		}
+
+		&:before {
+			border: 3px solid $theme-color-primary-dark;
+			transition: border $transition-duration;
+		}
+
+		&:hover, .focusable &:focus {
+			&:not([disabled]) {
+				//width: rem(65px);
+				//height: rem(65px);
+			}
+
+			&:not([disabled]):before {
+				border-width: 5px;
+			}
+		}
+	}
+}
+
+.contact-search--result {
+	.ce-header {
+		padding-top: rem(45px);
+	}
+}
+
+// => 768px
+@include media-breakpoint-up(md) {
+	.contact-search--submit {
+		--button--rounded-icon-size: 70px;
+	}
+}
+
+// => 992px
+@include media-breakpoint-up(lg) {
+	.contact-search--submit {
+		& {
+			margin-top: 0;
+		}
+
+		button {
+			transform: rotate(0deg);
+		}
+	}
+
+	.contact-search--result {
+		.ce-header {
+			padding-top: rem(17px);
+		}
+	}
+}

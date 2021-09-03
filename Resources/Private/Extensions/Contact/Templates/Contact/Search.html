@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+	<f:if condition="{contacts}">
+		<f:then>
+			<f:for each="{contacts}" as="contact">
+					<f:render section="Item" arguments="{_all}" />
+			</f:for>
+		</f:then>
+		<f:else>
+			<div class="contact-search--result-error"><f:translate key="error.noResult" /></div>
+		</f:else>
+	</f:if>
+
+</f:section>
+
+<f:section name="Item">
+	<div class="address contact-item">
+		<div class="address--name">
+			<f:render partial="Components/Person" section="Fullname" arguments="{person: contact}" />
+		</div>
+
+		<f:render partial="Components/Address" section="Phone" arguments="{address: contact}" />
+		<f:render partial="Components/Address" section="Mail" arguments="{address: contact}" />
+
+		<div class="contact-item--vcard">
+			<f:link.action action="vcard" arguments="{contact: contact}" pageType="{settings.vcardPageType}">
+				<span class="badge badge--default">vcf</span><f:translate key="actions.vcard" />
+			</f:link.action>
+		</div>
+	</div>
+</f:section>
+</html>
