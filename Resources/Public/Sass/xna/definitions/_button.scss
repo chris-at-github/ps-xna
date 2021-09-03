@@ -40,9 +40,12 @@
 		align-items: center;
 		width: var(--button--rounded-icon-size);
 		height: var(--button--rounded-icon-size);
+		border: 0;
+		background: none;
 		color: inherit;
 		outline: 0;
 		opacity: inherit;
+		cursor: pointer;
 	}
 
 	&:before {
@@ -75,6 +78,24 @@
 		transition: fill $transition-duration;
 		width: var(--button--rounded-icon-svg-size);
 		height: var(--button--rounded-icon-svg-size);
+	}
+
+	&[disabled] {
+		& {
+			cursor: not-allowed;
+			opacity: 0.85;
+			background: none;
+		}
+	}
+}
+
+%button--rounded-icon--inverted {
+	&:before {
+		background: #fff;
+	}
+
+	svg {
+		fill: $theme-color-primary;
 	}
 }
 
