@@ -83,8 +83,10 @@
 	&[disabled] {
 		& {
 			cursor: not-allowed;
-			opacity: 0.85;
-			background: none;
+		}
+
+		&:before {
+			background: $color-grey-lighten;
 		}
 	}
 }
@@ -96,6 +98,16 @@
 
 	svg {
 		fill: $theme-color-primary;
+	}
+
+	&:hover:not([disabled]), .focusable &:focus:not([disabled]) {
+		&:before {
+			background: $theme-color-primary;
+		}
+
+		svg {
+			fill: #fff;
+		}
 	}
 }
 

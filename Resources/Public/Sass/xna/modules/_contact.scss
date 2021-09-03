@@ -21,6 +21,7 @@
 		justify-content: center;
 		align-items: center;
 		margin-top: rem(45px);
+		min-height: rem(65px);
 	}
 
 	button {
@@ -36,17 +37,21 @@
 
 		&:before {
 			border: 3px solid $theme-color-primary-dark;
-			transition: border $transition-duration;
+			transition-property: border, background;
 		}
 
-		&:hover, .focusable &:focus {
-			&:not([disabled]) {
-				//width: rem(65px);
-				//height: rem(65px);
+		svg {
+			transition-property: fill, transform;
+		}
+
+		&:hover:not([disabled]), .focusable &:focus:not([disabled]) {
+			&:before {
+				border-color: #fff;
+				background: $theme-color-primary-dark;
 			}
 
-			&:not([disabled]):before {
-				border-width: 5px;
+			svg {
+				//transform: translate(3px, 0);
 			}
 		}
 	}
