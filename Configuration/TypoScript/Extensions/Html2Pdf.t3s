@@ -1,0 +1,28 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:html2pdf/Configuration/TypoScript/setup.typoscript">
+
+lib.htmlToPdf = TEXT
+lib.htmlToPdf {
+	value = Get this page as PDF.
+	typolink {
+		parameter.data = TSFE:id
+		addQueryString = 1
+		addQueryString.method = GET
+		addQueryString.exclude = type
+		additionalParams = &type=8080
+		useCacheHash = 1
+		returnLast = url
+	}
+}
+
+html2pdf {
+	includeCSS {
+		pdf = /assets/css/pdf.css
+	}
+}
+
+[applicationContext == "Development"]
+	html2pdf {
+		config.additionalHeaders >
+		config.tx_html2pdf >
+	}
+[END]

@@ -1,0 +1,28 @@
+.page-header {
+	position: relative;
+}
+
+.page-header .container-inner {
+	display: block !important;
+}
+
+.page-header .logo {
+	width: 208px;
+	height: 56px;
+}
+
+.hamburger, .off-canvas, #content--footer, .sticky--container, #footer {
+	display: none !important;
+}
+
+.product--long-description .collapse,
+.product--technical-data .collapse,
+.product--chart .collapse,
+.product--downloads .collapse {
+	display: block !important;
+}
+
+.product--technical-drawings .collapse,
+.product--downloads {
+	display: none;
+}

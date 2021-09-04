@@ -27,6 +27,7 @@ $EM_CONF[$_EXTKEY] = [
 			'entity_product' => '1.0.0-1.99.99',
 			'contact' => '1.0.0-1.99.99',
 			'chart' => '1.0.0-1.99.99',
+			'html2pdf' => '2.1.1-2.1.99',
 		],
 		'conflicts' => [],
 		'suggests' => [],
