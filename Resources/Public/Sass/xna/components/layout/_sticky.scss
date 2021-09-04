@@ -20,31 +20,13 @@
 	}
 
 	.sticky--icon {
-		& {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: var(--sticky-icon-size);
-			height: var(--sticky-icon-size);
-			border: 2px solid $theme-color-primary;
-			border-radius: 50%;
-			padding: 0;
-			cursor: pointer;
-			background: var(--sticky-icon-background);
-		}
+		@extend %button--rounded-icon;
+		position: relative;
+	}
 
-		&:hover, .focusable &:focus {
-			& {
-				background: var(--sticky-icon-hover-background);
-			}
-
-			svg {
-				fill: var(--sticky-icon-hover-color);
-			}
-		}
-
-		svg {
-			fill: var(--sticky-icon-color);
+	.sticky--element-totop {
+		.sticky--icon {
+			@extend %button--rounded-icon--inverted;
 		}
 	}
 
