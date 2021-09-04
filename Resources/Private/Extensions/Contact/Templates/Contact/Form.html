@@ -6,7 +6,7 @@
 		xna.data.contact = {xo:json.encode(value: countries, options: {0: 'uid', 1: 'title', 2: 'zipRegex'}) -> f:format.raw()};
 	</script>
 
-	<f:form action="search" class="form--layout-0" pageUid="{settings.searchRequestPageUid}" pageType="{settings.searchRequestPageType}">
+	<f:form action="search" class="form--layout-0" pageUid="{settings.searchRequestPageUid}" pageType="{settings.searchRequestPageType}" id="contact-search--form">
 		<div class="row">
 			<div class="col-12 col-lg-6 contact-search--form">
 				<f:if condition="{record.bodytext}">
