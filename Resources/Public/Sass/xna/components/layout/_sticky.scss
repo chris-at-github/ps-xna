@@ -26,7 +26,20 @@
 
 	.sticky--element-totop {
 		.sticky--icon {
-			@extend %button--rounded-icon--inverted;
+			& {
+				@extend %button--rounded-icon--inverted;
+			}
+
+			svg {
+				& {
+					transform: rotate(180deg);
+					transition-property: fill, transform;
+				}
+
+				.is--totop-down & {
+					transform: rotate(0deg);
+				}
+			}
 		}
 	}
 

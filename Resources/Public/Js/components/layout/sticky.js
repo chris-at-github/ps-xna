@@ -2,12 +2,15 @@
 	'use strict';
 
 	xna.on('documentLoaded', function() {
+
+		// Scroll to contact
 		if(document.querySelector('.sticky--element-contact') !== null) {
 			document.querySelector('.sticky--element-contact .sticky--icon').addEventListener('click', function(event) {
 				let node = this;
 				let target = node.getAttribute('data-target');
 				let container = document.scrollingElement || document.documentElement;
 
+				// Nur wenn das Target-Element auf der Seite vorhanden ist, ansonsten wird der Link ausfuehrt
 				if(document.querySelector(target) !== null) {
 					let frame = document.querySelector(target).closest('.ce-frame');
 					let position = xna.getElementPosition(frame);
@@ -18,6 +21,45 @@
 			});
 		}
 
+		// Scroll Down|Up
+		document.addEventListener('indicateToTopBodyClass', function() {
+			let bodyClass = 'is--totop-down';
+
+			if(window.scrollY >= 225) {
+				document.body.classList.add(bodyClass);
+			} else {
+				document.body.classList.remove(bodyClass);
+			}
+		});
+
+		if(document.querySelector('.sticky--element-totop') !== null) {
+			let throttle = false;
+
+			document.querySelector('.sticky--element-totop .sticky--icon').addEventListener('click', function(event) {
+				let bodyClass = 'is--totop-down';
+				let scrollToY = 0;
+
+				if(document.body.classList.contains(bodyClass) === false) {
+					scrollToY = 225;
+				}
+
+				xna.scrollTo(scrollToY, 250);
+				event.preventDefault();
+			});
+
+			document.addEventListener('scroll', function(event) {
+				if(throttle === false) {
+					window.requestAnimationFrame(function() {
+						xna.fireEvent('indicateToTopBodyClass');
+						throttle = false;
+					});
+
+					throttle = true;
+				}
+			});
+
+			xna.fireEvent('indicateToTopBodyClass');
+		}
 
 		// document.querySelectorAll('.sticky--element').forEach(function(node, index) {
 		// 	let trigger = node.querySelector('.sticky--icon'),
