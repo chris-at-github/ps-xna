@@ -11,6 +11,7 @@ require('./helpers/scroll-to');
 require('./helpers/create-svg-use-element');
 require('./helpers/add-query-string');
 require('./helpers/empty-node');
+require('./helpers/get-element-position');
 require('./helpers/slider');
 
 // ---------------------------------------------------------------------------------------------------------------------
