@@ -24,7 +24,9 @@
 
 @mixin card--title-link {
 	& {
+		font-weight: $font-weight-normal;
 		color: $theme-color-primary;
+		background-image: none;
 	}
 
 	svg {
