@@ -3,6 +3,7 @@
 @mixin header-1 {
 	font-size: rem(40px);
 
+	// >= 768px
 	@include media-breakpoint-up(md) {
 		margin-top: rem(80px);
 		font-size: rem(52px);
@@ -10,18 +11,20 @@
 }
 
 @mixin header-2 {
-	font-size: rem(26px);
+	font-size: rem(21px);
 
-	//@include media-breakpoint-up(md) {
-	//	font-size: rem(32px);
-	//}
+	// >= 768px
+	@include media-breakpoint-up(md) {
+		font-size: rem(26px);
+	}
 }
 
 @mixin header-3 {
-	font-size: rem(20px);
+	font-size: rem(19px);
 	font-weight: $font-weight-bold;
 
-	//@include media-breakpoint-up(md) {
-	//	font-size: rem(24px);
-	//}
+	// >= 768px
+	@include media-breakpoint-up(md) {
+		font-size: rem(21px);
+	}
 }
