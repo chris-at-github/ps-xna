@@ -28,6 +28,10 @@ a.card--title {
 			height: 100%;
 		}
 
+		.card--media {
+			@include card--media-link();
+		}
+
 		&:hover, .focusable &:focus-within {
 			& {
 				cursor: pointer;
@@ -36,6 +40,12 @@ a.card--title {
 			.card--title {
 				svg {
 					transform: translate(5px, 0);
+				}
+			}
+
+			.card--media {
+				img {
+					transform: scale(1.1);
 				}
 			}
 		}

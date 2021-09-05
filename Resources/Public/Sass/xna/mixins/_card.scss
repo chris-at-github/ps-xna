@@ -9,6 +9,27 @@
 		display: block;
 		padding-top: 56.25%;
 	}
+
+	picture {
+		position: absolute;
+		top: 0; left: 0;
+		display: block;
+	}
+
+	img {
+		@extend %image-responsive;
+	}
+}
+
+@mixin card--media-link {
+	& {
+		overflow: hidden;
+	}
+
+	img {
+		transition: transform $transition-duration;
+		transform: scale(1.0);
+	}
 }
 
 @mixin card--title {

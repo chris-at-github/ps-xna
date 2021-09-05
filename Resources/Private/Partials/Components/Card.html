@@ -40,6 +40,17 @@
 </f:section>
 
 <f:section name="Media">
-	<div class="card--media"></div>
+	<div class="card--media">
+		<f:if condition="{media}">
+			<f:render partial="Components/Media" section="Picture" arguments="{
+				file: media,
+				image: {
+					width: settings.width,
+					cropVariant: settings.cropVariant
+				},
+				sizes: settings.mediaQueries
+			}" />
+		</f:if>
+	</div>
 </f:section>
 </html>
