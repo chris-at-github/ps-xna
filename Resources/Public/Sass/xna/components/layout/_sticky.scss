@@ -30,8 +30,13 @@
 				@extend %button--rounded-icon--inverted;
 			}
 
+			&:before {
+				border-color: $theme-color-primary-dark;
+			}
+
 			svg {
 				& {
+					fill: $theme-color-primary-dark;
 					transform: rotate(180deg);
 					transition-property: fill, transform;
 				}
@@ -40,14 +45,33 @@
 					transform: rotate(0deg);
 				}
 			}
+
+			&:hover, .focusable &:focus {
+				&:before, &:not([disabled]):before {
+					background: $theme-color-primary-dark;
+				}
+			}
 		}
 	}
 
 	.sticky--element-print-pdf, .sticky--element-contact {
-		--sticky-icon-color: #fff;
-		--sticky-icon-hover-color: #{$theme-color-primary};
-		--sticky-icon-background: #{$theme-color-primary};
-		--sticky-icon-hover-background: #fff;
+		.sticky--icon {
+			&:before {
+				border-color: $theme-color-primary-dark;
+				background: $theme-color-primary-dark;
+			}
+
+			&:hover, .focusable &:focus {
+				&:before {
+					//border-color: $theme-color-primary;
+					background: #fff;
+				}
+
+				svg {
+					fill: $theme-color-primary-dark;
+				}
+			}
+		}
 	}
 
 	.sticky--element-print-pdf svg {
