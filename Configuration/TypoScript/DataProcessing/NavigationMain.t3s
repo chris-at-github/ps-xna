@@ -4,4 +4,10 @@ navigation.main.dataProcessing {
 		table = tt_content
 		as = content
 	}
+
+	110 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+	110 {
+		as = media
+		references.fieldName = media
+	}
 }

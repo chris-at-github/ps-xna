@@ -37,14 +37,8 @@
 		<ul>
 			<f:for each="{item.children}" as="card">
 				<li class="card" data-uri-target="{card.link}">
-					<f:render partial="Components/Card" section="Media" />
+					<f:render partial="Components/Card" section="Media" arguments="{media: card.media.0, settings: settings.modules.xna.navigation.pictureSettings}" />
 					<f:render partial="Components/Card" section="Title" arguments="{title: card.title, link: card.link}" />
-
-					<f:comment>
-						<a href="{card.link}" class="card--title">
-							<span>{card.title}</span><xo:svg.use name="arrow-right" viewBox="0 0 14 11" />
-						</a>
-					</f:comment>
 				</li>
 			</f:for>
 		</ul>

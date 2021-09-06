@@ -15,4 +15,25 @@ plugin.tx_xo {
 			30 = EXT:xna/Resources/Private/Extensions/Xo/Partials/
 		}
 	}
+
+	settings {
+		modules.xna {
+			navigation.pictureSettings {
+				width = 530
+				cropVariant = thumbnail
+				mediaQueries {
+					1200 {
+						width = 280
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 1200px)
+					}
+					0 {
+						width = 300
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 0px)
+					}
+				}
+			}
+		}
+	}
 }
