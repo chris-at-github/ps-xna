@@ -1,0 +1,42 @@
+.table--container {
+	& {
+		position: relative;
+	}
+
+	table {
+		margin: 0;
+	}
+
+	.table--scroll-container {
+		& {
+			overflow: auto;
+		}
+
+		tr > th:first-child, tr > td:first-child {
+			visibility: hidden;
+		}
+	}
+
+	.table--fixed-container {
+		& {
+			position: absolute;
+			top: 0;
+			left: 0; right: 0;
+			overflow: hidden;
+			//opacity: 0.5;
+			user-select: none;
+		}
+
+		table {
+			tr > th:first-child, tr > td:first-child {
+				background: #fff;
+			}
+
+			tr > th:not(:first-child), tr > td:not(:first-child) {
+				visibility: hidden;
+				////opacity: 0;
+				//color: transparent;
+			}
+		}
+	}
+}
