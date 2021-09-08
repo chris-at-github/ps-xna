@@ -194,6 +194,7 @@ a, input, select, textarea, button {
 
 		a {
 			& {
+				padding: rem(3px 0);
 				color: #fff;
 			}
 
@@ -372,6 +373,10 @@ a, input, select, textarea, button {
 		.navigation {
 			& {
 				@include navigation--layout-0;
+			}
+
+			a {
+				padding: rem(3px 10px);
 			}
 
 			a > span {
