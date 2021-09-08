@@ -23,8 +23,8 @@
 			top: 0;
 			left: 0; right: 0;
 			overflow: hidden;
-			//opacity: 0.5;
 			user-select: none;
+			cursor: move;
 		}
 
 		table {
@@ -34,9 +34,26 @@
 
 			tr > th:not(:first-child), tr > td:not(:first-child) {
 				visibility: hidden;
-				////opacity: 0;
-				//color: transparent;
 			}
+		}
+	}
+}
+
+// >= 992
+@include media-breakpoint-up(lg) {
+	.table--container {
+		.table--scroll-container {
+			& {
+				overflow: inherit;
+			}
+
+			tr > th:first-child, tr > td:first-child {
+				visibility: visible;
+			}
+		}
+
+		.table--fixed-container {
+			display: none;
 		}
 	}
 }

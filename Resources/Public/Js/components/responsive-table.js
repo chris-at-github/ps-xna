@@ -3,55 +3,75 @@
 
 	xna.on('documentLoaded', function() {
 
-		document.querySelectorAll('table').forEach(function(node, index) {
+		document.querySelectorAll('table').forEach(function(table, index) {
 			let container = document.createElement('div');
 				container.setAttribute('class', 'table--container');
 
-			let fixedTable = node.cloneNode(true);
+			let fixedTable = table.cloneNode(true);
 			let fixedContainer = document.createElement('div');
 				fixedContainer.setAttribute('class', 'table--fixed-container');
+				fixedContainer.setAttribute('aria-hidden', 'true');
 				fixedContainer.appendChild(fixedTable);
+
+			// Alle Elemente in der geclonten Tabelle mit Focus auf tabindex=-1	setzen
+			fixedContainer.querySelectorAll('a, button').forEach(function(node) {
+				node.setAttribute('tabindex', '-1');
+			});
 
 			let scrollContainer = document.createElement('div');
 				scrollContainer.setAttribute('class', 'table--scroll-container');
 
 			// Container im DOM registrieren
-			node.parentNode.insertBefore(container, node);
+			table.parentNode.insertBefore(container, table);
 
 			// Elemente dem Container hinzufuegen
 			container.appendChild(scrollContainer);
 			container.appendChild(fixedContainer);
-			scrollContainer.appendChild(node);
+			scrollContainer.appendChild(table);
 
-			let isXyz = false;
+			// Drag auf der Tabelle ermoeglichen
+			let isDragEnabled = false;
 			let dragOffsetX = 0;
 			let dragScrollX = 0;
 
-			// Add the event listeners for mousedown, mousemove, and mouseup
-			// fixedContainer.addEventListener('mousedown', e => {
-			fixedContainer.addEventListener('touchstart', e => {
-				isXyz = true;
-				//dragOffsetX = e.offsetX;
-				dragOffsetX = e.targetTouches[0].pageX;
+			let onDragStart = function(event) {
+				isDragEnabled = true;
 				dragScrollX = scrollContainer.scrollLeft;
-				console.log(dragScrollX);
-			});
 
-			// fixedContainer.addEventListener('mousemove', e => {
-			fixedContainer.addEventListener('touchmove', e => {
-				if(isXyz === true) {
-					//scrollContainer.scrollLeft = dragScrollX - (e.offsetX - dragOffsetX);
-					scrollContainer.scrollLeft = dragScrollX - (e.targetTouches[0].pageX - dragOffsetX);
-					console.log(e.targetTouches[0].pageX);
+				if(event.type === 'touchstart') {
+					dragOffsetX = event.targetTouches[0].pageX;
+
+				} else if(event.type === 'mousedown') {
+					dragOffsetX = event.offsetX;
 				}
-			});
+			};
 
-			// window.addEventListener('mouseup', e => {
-			window.addEventListener('touchend', e => {
-				isXyz = false;
-				//console.log(scrollContainer.scrollLeft);
-				console.log(453);
-			});
+			let onDragMove = function(event) {
+				if(isDragEnabled === true) {
+					if(event.type === 'touchmove') {
+						scrollContainer.scrollLeft = dragScrollX - (event.targetTouches[0].pageX - dragOffsetX);
+
+					} else if(event.type === 'mousemove') {
+						scrollContainer.scrollLeft = dragScrollX - (event.offsetX - dragOffsetX);
+					}
+				}
+			};
+
+			let onDragEnd = function(event) {
+				isDragEnabled = false;
+			};
+
+			// DargStart
+			fixedContainer.addEventListener('mousedown', onDragStart, true);
+			fixedContainer.addEventListener('touchstart', onDragStart, true);
+
+			// DargMove
+			fixedContainer.addEventListener('mousemove', onDragMove, true);
+			fixedContainer.addEventListener('touchmove', onDragMove, true);
+
+			// DargEnd
+			fixedContainer.addEventListener('mouseup', onDragEnd, true);
+			fixedContainer.addEventListener('touchend', onDragEnd, true);
 		});
 	});
 })();
