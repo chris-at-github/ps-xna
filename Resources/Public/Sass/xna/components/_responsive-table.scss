@@ -4,7 +4,14 @@
 	}
 
 	table {
-		margin: 0;
+		& {
+			margin: 0;
+		}
+
+		tr > th:first-child, tr > td:first-child {
+			min-width: rem(190px);
+			hyphens: auto;
+		}
 	}
 
 	.table--scroll-container {
@@ -34,6 +41,18 @@
 
 			tr > th:not(:first-child), tr > td:not(:first-child) {
 				visibility: hidden;
+			}
+		}
+	}
+}
+
+// >= 768
+@include media-breakpoint-up(md) {
+	.table--container {
+		table {
+			tr > th:first-child, tr > td:first-child {
+				min-width: 0;
+				hyphens: manual;
 			}
 		}
 	}
