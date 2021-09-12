@@ -1,5 +1,6 @@
 <?php
 
+$GLOBALS['TCA']['pages']['columns']['media']['label'] = 'LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.media_formlabel';
 $GLOBALS['TCA']['pages']['columns']['media']['config'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 	'media',
 	[
@@ -14,21 +15,11 @@ $GLOBALS['TCA']['pages']['columns']['media']['config'] = \TYPO3\CMS\Core\Utility
 							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
 							--palette--;;filePalette'
 				],
-				\TYPO3\CMS\Core\Resource\File::FILETYPE_TEXT => [
-					'showitem' => '
-							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-							--palette--;;filePalette'
-				],
 				\TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
 					'showitem' => '
 							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
 							--palette--;;filePalette'
 				],
-				\TYPO3\CMS\Core\Resource\File::FILETYPE_APPLICATION => [
-					'showitem' => '
-							--palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-							--palette--;;filePalette'
-				]
 			],
 			'columns' => [
 				'crop' => [
@@ -50,5 +41,6 @@ $GLOBALS['TCA']['pages']['columns']['media']['config'] = \TYPO3\CMS\Core\Utility
 			]
 		],
 		'maxitems' => 1
-	]
+	],
+	$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 );
