@@ -3,6 +3,7 @@
 	padding: rem(0 5px);
 	line-height: $line-height-base;
 	font-size: rem(14px);
+	font-weight: $font-weight-bold;
 	border-radius: 2px;
 	white-space: nowrap;
 	vertical-align: middle;
@@ -10,6 +11,6 @@
 }
 
 .badge--default {
-	background: #ccc;
+	background: $theme-color-primary;
 	color: #fff;
 }

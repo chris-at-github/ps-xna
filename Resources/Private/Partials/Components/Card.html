@@ -53,4 +53,14 @@
 		</f:if>
 	</div>
 </f:section>
+
+<f:section name="Badges">
+	<f:if condition="{badges}">
+		<ul class="card--badge-container">
+			<f:for each="{badges}" as="badge">
+				<li class="badge badge--default">{badge.title}</li>
+			</f:for>
+		</ul>
+	</f:if>
+</f:section>
 </html>
