@@ -1,0 +1,66 @@
+.taste {
+	.taste--media {
+		& {
+			background-image: none;
+		}
+
+		img {
+			@extend %image-responsive;
+		}
+	}
+}
+
+.taste--layout-aside {
+	.taste--media {
+		& {
+			display: block;
+			overflow: hidden;
+		}
+
+		img {
+			transition: transform $transition-duration;
+			transform: scale(1.0);
+		}
+
+		&:hover, .focusable &:focus {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.taste--title {
+		&, h1, h2, h3, h4 {
+			margin-top: rem(20px);
+			font-weight: $font-weight-normal;
+		}
+
+		a {
+			font-weight: $font-weight-normal;
+		}
+	}
+
+	.taste--readmore {
+		margin-top: rem(25px);
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.taste--layout-aside {
+		.taste--title {
+			&, h1, h2, h3, h4 {
+				margin-top: rem(10px);
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.taste--layout-aside {
+		.taste--title {
+			&, h1, h2, h3, h4 {
+				margin-top: rem(15px);
+			}
+		}
+	}
+}
