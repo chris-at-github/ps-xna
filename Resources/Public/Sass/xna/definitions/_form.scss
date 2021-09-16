@@ -59,6 +59,7 @@ select%form-field {
     background: #ccc;
     cursor: pointer;
     border-radius: 3px;
+    font-weight: $font-weight-normal;
   }
 
   &:hover, &:focus {
