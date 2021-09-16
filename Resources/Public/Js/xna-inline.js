@@ -81,3 +81,13 @@ window.addEventListener('keydown', function (event) {
 		document.body.classList.add('focusable');
 	}
 }, true);
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Tabellen mit Breiten versehen
+document.addEventListener('DOMContentLoaded', function(event) {
+	if(typeof(NodeList.prototype.forEach) !== 'undefined') {
+		document.querySelectorAll('table').forEach(function(table) {
+			table.setAttribute('data-columns-count', table.querySelectorAll('tr:first-child th, tr:first-child td').length);
+		});
+	}
+});

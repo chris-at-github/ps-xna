@@ -1,6 +1,7 @@
 .table--container {
 	& {
 		position: relative;
+		margin-top: $spacing-default;
 	}
 
 	table {
@@ -50,9 +51,17 @@
 @include media-breakpoint-up(md) {
 	.table--container {
 		table {
+			th, td {
+				padding-right: rem(35px);
+			}
+
 			tr > th:first-child, tr > td:first-child {
 				min-width: 0;
 				hyphens: manual;
+			}
+
+			tr > th:last-child, tr > td:last-child {
+				padding-right: rem(10px);
 			}
 		}
 	}
