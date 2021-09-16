@@ -45,11 +45,29 @@
 	}
 }
 
+.taste--layout-technology {
+	.taste--title {
+		&, h1, h2, h3, h4 {
+			font-size: rem(23px);
+		}
+
+		a {
+			color: $color-grey-darken;
+		}
+
+		strong {
+			font-weight: normal;
+			color: $theme-color-primary;
+		}
+	}
+}
+
 @include media-breakpoint-up(md) {
 	.taste--layout-aside {
 		.taste--title {
 			&, h1, h2, h3, h4 {
 				margin-top: rem(10px);
+				font-size: rem(26px);
 			}
 		}
 	}
