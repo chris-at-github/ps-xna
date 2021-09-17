@@ -4,6 +4,10 @@
 		margin-top: $spacing-default;
 	}
 
+	& + .table--container {
+		margin-top: rem(45px);
+	}
+
 	table {
 		& {
 			margin: 0;

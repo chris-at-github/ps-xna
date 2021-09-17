@@ -87,7 +87,7 @@ window.addEventListener('keydown', function (event) {
 document.addEventListener('DOMContentLoaded', function(event) {
 	if(typeof(NodeList.prototype.forEach) !== 'undefined') {
 		document.querySelectorAll('table').forEach(function(table) {
-			table.setAttribute('data-columns-count', table.querySelectorAll('tr:first-child th, tr:first-child td').length);
+			table.setAttribute('data-columns-count', table.querySelectorAll('thead > tr:first-child th').length);
 		});
 	}
 });
