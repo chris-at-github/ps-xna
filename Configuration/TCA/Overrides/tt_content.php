@@ -6,6 +6,10 @@ $GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image']['
 	'desktop' => [
 		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.desktop',
 		'allowedAspectRatios' => [
+			'9_6' => [
+				'title' => 'LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_crop_variant.ratio.9_6',
+				'value' => 9 / 6
+			],
 			'16_9' => [
 				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
 				'value' => 16 / 9

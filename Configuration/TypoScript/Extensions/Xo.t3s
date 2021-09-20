@@ -15,4 +15,19 @@ plugin.tx_xo {
 			30 = EXT:xna/Resources/Private/Extensions/Xo/Partials/
 		}
 	}
+
+	settings {
+		modules {
+			textmedia {
+				options {
+					columns {
+						7-5 = 7 / 5
+						5-7 = 5 / 7
+					}
+				}
+			}
+		}
+	}
 }
+
+module.tx_xo.settings < plugin.tx_xo.settings

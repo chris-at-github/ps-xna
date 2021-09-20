@@ -11,6 +11,14 @@ TCEFORM {
 	}
 
 	tt_content {
+		layout {
+			addItems {
+				4 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.layout.4
+				5 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.layout.5
+				6 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.layout.6
+			}
+		}
+
 		frame_class {
 			addItems {
 				2 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.class.2

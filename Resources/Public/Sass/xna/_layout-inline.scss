@@ -166,6 +166,69 @@ body {
 	@extend %container-width-full;
 }
 
+.ce-frame--layout-4, .ce-frame--layout-5, .ce-frame--layout-6 {
+	& {
+		@extend %container-width-normal;
+	}
+
+	&.ce-frame--class-2 {
+		& {
+			background: transparent;
+		}
+
+		& > .ce-frame--inner {
+			& {
+				position: relative;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0; bottom: 0;
+				left: -$spacing-medium; right: -$spacing-medium;
+				z-index: -1;
+				background: $theme-color-primary;
+			}
+		}
+
+		&.ce-frame--space-before-small > .ce-frame--inner {
+			&:before {
+				top: calc(var(--container-space-small) * -1);
+			}
+		}
+
+		&.ce-frame--space-before-medium > .ce-frame--inner {
+			&:before {
+				top: calc(var(--container-space-medium) * -1);
+			}
+		}
+
+		&.ce-frame--space-before-large > .ce-frame--inner {
+			&:before {
+				top: calc(var(--container-space-large) * -1);
+			}
+		}
+
+		&.ce-frame--space-after-small > .ce-frame--inner {
+			&:before {
+				bottom: calc(var(--container-space-small) * -1);
+			}
+		}
+
+		&.ce-frame--space-after-medium > .ce-frame--inner {
+			&:before {
+				bottom: calc(var(--container-space-medium) * -1);
+			}
+		}
+
+		&.ce-frame--space-after-large > .ce-frame--inner {
+			&:before {
+				bottom: calc(var(--container-space-large) * -1);
+			}
+		}
+	}
+}
+
 // Container / Fluid Styled Content / Abstaende
 .ce-frame--space-before-small {
 	@extend %container-space-before-small;
@@ -271,6 +334,14 @@ body {
 
 			&.ce-frame--layout-2 {
 				padding-right: 0;
+			}
+		}
+
+		.ce-frame--layout-4, .ce-frame--layout-5, .ce-frame--layout-6 {
+			&.ce-frame--class-2 > .ce-frame--inner {
+				&:before {
+					right: rem(-80px);
+				}
 			}
 		}
 	}
@@ -393,6 +464,19 @@ body {
 	.ce-content {
 		.ce-frame--outer {
 			padding-right: $spacing-default; // Ausgleich vom Sticky Container
+		}
+
+		.ce-frame--layout-4, .ce-frame--layout-5, .ce-frame--layout-6 {
+			& {
+				overflow: hidden;
+			}
+
+			&.ce-frame--class-2 > .ce-frame--inner {
+				&:before {
+					left: rem(-60px);
+					right: rem(-60px);
+				}
+			}
 		}
 	}
 }

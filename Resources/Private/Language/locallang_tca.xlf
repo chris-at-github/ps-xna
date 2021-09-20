@@ -7,18 +7,30 @@
 				<source>Petrol</source>
 			</trans-unit>
 
-
 			<trans-unit id="tx_xna_tt_content.space.large">
 				<source>Large</source>
 			</trans-unit>
 			<trans-unit id="tx_xna_tt_content.space.extralarge">
 				<source>Extra Large</source>
 			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.layout.4">
+				<source>Breakout Both</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.layout.5">
+				<source>Breakout Left</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.layout.6">
+				<source>Breakout Right</source>
+			</trans-unit>
 			<trans-unit id="tx_xna_tt_content.class.2">
 				<source>Petrol</source>
 			</trans-unit>
 			<trans-unit id="tx_xna_tt_content.class.3">
 				<source>Petrol Dark</source>
+			</trans-unit>
+
+			<trans-unit id="tx_xna_crop_variant.ratio.9_6">
+				<source>9:6</source>
 			</trans-unit>
 		</body>
 	</file>

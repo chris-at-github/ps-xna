@@ -1,4 +1,13 @@
 // ---------------------------------------------------------------------------------------------------------------------
+// CSS Variablen
+:root {
+	--container-space-small: #{$spacing-default};
+	--container-space-medium: #{$spacing-medium};
+	--container-space-large: #{rem(40px)};
+	--container-space-extra-large: #{rem(70px)};
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Typography
 %header-x {
 	margin-top: rem(40px);
@@ -100,35 +109,35 @@ p, ul, ol, table {
 }
 
 %container-space-before-small > %container-inner {
-	margin-top: $spacing-default;
+	margin-top: var(--container-space-small);
 }
 
 %container-space-before-medium > %container-inner {
-	margin-top: $spacing-medium;
+	margin-top: var(--container-space-medium);
 }
 
 %container-space-before-large > %container-inner {
-	margin-top: rem(40px);
+	margin-top: var(--container-space-large);
 }
 
 %container-space-before-extra-large > %container-inner {
-	margin-top: rem(70px);
+	margin-top: var(--container-space-extra-large);
 }
 
 %container-space-after-small > %container-inner {
-	margin-bottom: $spacing-default;
+	margin-bottom: var(--container-space-small);
 }
 
 %container-space-after-medium > %container-inner {
-	margin-bottom: $spacing-medium;
+	margin-bottom: var(--container-space-medium);
 }
 
 %container-space-after-large > %container-inner {
-	margin-bottom: rem(40px);
+	margin-bottom: var(--container-space-large);
 }
 
 %container-space-after-extra-large > %container-inner {
-	margin-bottom: rem(70px);
+	margin-bottom: var(--container-space-extra-large);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -225,34 +234,16 @@ p, ul, ol, table {
 // ---------------------------------------------------------------------------------------------------------------------
 // >= MD
 @include media-breakpoint-up(md) {
+	:root {
+		--container-space-medium: #{rem(40px)};
+		--container-space-large: #{rem(80px)};
+		--container-space-extra-large: #{rem(120px)};
+	}
+
 	%container-width-indent-right {
 		%container-inner {
 			padding-right: percentage(3 / 12);
 		}
-	}
-
-	%container-space-before-medium > %container-inner {
-		margin-top: rem(40px);
-	}
-
-	%container-space-before-large > %container-inner {
-		margin-top: rem(80px);
-	}
-
-	%container-space-before-extra-large > %container-inner {
-		margin-top: rem(120px);
-	}
-
-	%container-space-after-medium > %container-inner {
-		margin-bottom: rem(40px);
-	}
-
-	%container-space-after-large > %container-inner {
-		margin-bottom: rem(80px);
-	}
-
-	%container-space-after-extra-large > %container-inner {
-		margin-bottom: rem(120px);
 	}
 }
 
