@@ -23,7 +23,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image']['
 				'value' => 1
 			],
 		],
-		'selectedRatio' => '4_3',
+		'selectedRatio' => '9_6',
 	],
 	'mobile' => [
 		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.mobile',
@@ -41,7 +41,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image']['
 				'value' => 1
 			],
 		],
-		'selectedRatio' => '4_3',
+		'selectedRatio' => '16_9',
 	],
 ];
 
