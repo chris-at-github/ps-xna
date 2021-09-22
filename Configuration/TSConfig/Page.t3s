@@ -46,6 +46,7 @@ TCEFORM {
 	TCEFORM.tt_content {
 		tx_xo_variant {
 			addItems.2 = Frontpage
+			addItems.3 = Container
 		}
 	}
 [END]

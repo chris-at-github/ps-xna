@@ -5,23 +5,35 @@
 	<f:section name="Flash" />
 
 	<f:section name="Main">
-		<f:spaceless>
-			<f:if condition="{flash}">
-				<f:then>
-					<div class="hero--inner">
+		<f:render section="Variant-{data.tx_xo_variant}" optional="1" arguments="{_all}">
+			<f:spaceless>
+				<f:if condition="{flash}">
+					<f:then>
+						<div class="hero--inner">
+							<f:render partial="Content" section="Main" arguments="{header: data.header, headerLayout: data.header_layout, text: data.bodytext}" />
+						</div>
+					</f:then>
+					<f:else>
 						<f:render partial="Content" section="Main" arguments="{header: data.header, headerLayout: data.header_layout, text: data.bodytext}" />
-					</div>
-				</f:then>
-				<f:else>
-					<f:render partial="Content" section="Main" arguments="{header: data.header, headerLayout: data.header_layout, text: data.bodytext}" />
-				</f:else>
-			</f:if>
+					</f:else>
+				</f:if>
 
-			<f:render partial="Flash" section="Main" arguments="{_all}" />
+				<f:render partial="Flash" section="Main" arguments="{_all}" />
 
-			<f:if condition="{image.0}">
-				<f:render partial="Media" section="Main" arguments="{media: image.0, identifier: data.identifier}" />
-			</f:if>
-		</f:spaceless>
+				<f:if condition="{image.0}">
+					<f:render partial="Media" section="Main" arguments="{media: image.0, identifier: data.identifier}" />
+				</f:if>
+			</f:spaceless>
+		</f:render>
+	</f:section>
+
+	<f:section name="Variant-3">
+		<div class="hero--inner">
+			<f:render partial="Content" section="Main" arguments="{header: data.header, headerLayout: data.header_layout, text: data.bodytext}" />
+		</div>
+
+		<f:if condition="{image.0}">
+			<f:render partial="Media" section="Main" arguments="{media: image.0, identifier: data.identifier}" />
+		</f:if>
 	</f:section>
 </html>
