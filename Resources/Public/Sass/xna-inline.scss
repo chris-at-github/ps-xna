@@ -20,6 +20,7 @@ $stylesheet-context: 'embed' !default;
 // Components
 @import 'xna/components/accessibility';
 @import 'xna/components/navigation';
+@import 'xna/components/collapse';
 @import 'xna/components/layout/hamburger';
 @import 'xna/components/layout/sticky';
 

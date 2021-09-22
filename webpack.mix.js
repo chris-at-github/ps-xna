@@ -89,7 +89,8 @@ mix.webpackConfig({
 		]
 	});
 
-mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js');
+mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
+	.js('typo3conf/ext/xna/Resources/Public/Js/components/bootstrap/collapse.js', 'assets/js/components/collapse.js');
 
 mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
 	.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', 'assets/js/tobii.js')
@@ -103,6 +104,7 @@ mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 
 mix.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'assets/css/xna.css')
+	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna/components/_accordion.scss', 'assets/css/components/accordion.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna/modules/_text-media.scss', 'assets/css/modules/text-media.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna/modules/_address.scss', 'assets/css/modules/address.css')
 	.options({

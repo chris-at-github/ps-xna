@@ -31,7 +31,7 @@
 			opacity: inherit;
 		}
 
-		&:hover, &:focus {
+		&:hover, .focusable &:focus {
 			& {
 				transform: none;
 			}
@@ -42,14 +42,14 @@
 		}
 
 		svg {
-			fill: $font-color-base;
+			fill: $theme-color-primary;
 			stroke: none;
 			color: inherit;
 			transition: fill 0.25s;
 		}
 
 		&.tobii__btn--previous, &.tobii__btn--next {
-			&, &:hover, &:focus {
+			&, &:hover, .focusable &:focus {
 				top: 50%;
 				transform: translateY(-50%);
 			}

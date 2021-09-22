@@ -1,0 +1,58 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../../functions';
+@import '../../variables';
+@import '../../mixins';
+@import '../../definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Accordion
+.accordion {
+	& {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	& > li {
+		border-bottom: 1px solid #f7f7f7;
+	}
+
+	.accordion--header {
+		button {
+			& {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				padding: rem(15px 0);
+				border: 0;
+				background: transparent;
+				font-weight: $font-weight-bold;
+				text-align: left;
+				color: $font-color-base;
+				cursor: pointer;
+			}
+
+			&[aria-expanded=true] {
+				svg {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		svg {
+			display: block;
+			width: 19px;
+			height: 11px;
+			margin: 0 4px 0 0;
+			transition: transform $transition-duration;
+			fill: $theme-color-primary;
+		}
+	}
+
+	.accordion--container {
+		padding: rem(0 0 20px 0);
+	}
+}
+
