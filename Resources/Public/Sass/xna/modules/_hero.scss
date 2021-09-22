@@ -39,12 +39,19 @@
 			}
 
 			.ce-header {
+				margin-top: rem(30px);
 				font-size: rem(22px);
 				font-weight: $font-weight-base;
 			}
 
-			& > *:first-child {
-				margin-top: rem(30px);
+			.ce-flash--categories {
+				& {
+					margin-top: rem(20px);
+				}
+
+				& + .ce-header {
+					margin-top: rem(15px);
+				}
 			}
 
 			p {
@@ -94,7 +101,7 @@
 					padding: rem(10px 30px 45px 30px);
 				}
 
-				& > *:first-child {
+				.ce-header {
 					margin-top: rem(40px);
 				}
 			}

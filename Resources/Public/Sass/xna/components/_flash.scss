@@ -8,6 +8,29 @@
 	.ce-header {
 		font-weight: $font-weight-bold;
 	}
+
+	.link--cta {
+		margin: rem(15px 0 0 0);
+	}
+
+	.ce-flash--categories {
+		& {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+		}
+
+		li {
+			padding: rem(5px 10px 2px 10px);
+			background: $theme-color-important;
+			font-size: rem(16px);
+			font-weight: $font-weight-bold;
+			color: #fff;
+			border-radius: 3px;
+			text-transform: uppercase;
+		}
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
