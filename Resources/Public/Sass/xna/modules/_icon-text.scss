@@ -16,6 +16,10 @@
 			color: $theme-color-primary;
 		}
 	}
+
+	a {
+		background: none;
+	}
 }
 
 @if($ce-icon-text--layout-inline) {

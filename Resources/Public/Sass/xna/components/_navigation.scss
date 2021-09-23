@@ -13,4 +13,30 @@
 		text-decoration: none;
 		font-weight: $font-weight-bold;
 	}
+
+	a {
+		& {
+			background: none;
+			color: $font-color-base;
+		}
+
+		&:hover, .focusable {
+			color: $link-hover-color;
+		}
+
+		& > span {
+			@extend %link--animation;
+			display: inline;
+		}
+
+		&:hover, .focusable &:focus {
+			& {
+				text-decoration: none;
+			}
+
+			& > span {
+				background-size: 100% 2px;
+			}
+		}
+	}
 }

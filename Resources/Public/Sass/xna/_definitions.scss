@@ -46,6 +46,19 @@ p, ul, ol, table {
 	}
 }
 
+%link--animation {
+	& {
+		background: linear-gradient(#{$theme-color-third}, #{$theme-color-third}) no-repeat 0 100%;
+		background-size: 0 2px;
+		transition: background-size 0.25s ease-out;
+	}
+
+	&:hover, .focusable &:focus {
+		background-size: 100% 2px;
+		text-decoration: none;
+	}
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Images
 %image-responsive {

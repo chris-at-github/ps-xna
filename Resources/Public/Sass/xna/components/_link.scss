@@ -7,7 +7,7 @@
 
 	&:before {
 		position: absolute;
-		top: rem(5px); left: rem(1px);
+		top: rem(8px); left: rem(1px);
 		font-size: rem(11px);
 	}
 }
@@ -40,6 +40,7 @@
 		display: inline-block;
 		padding: rem(5px 0 5px 55px);
 		color: $theme-color-primary;
+		background: none;
 	}
 
 	&:before {

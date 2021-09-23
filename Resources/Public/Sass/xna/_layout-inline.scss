@@ -52,6 +52,7 @@ body {
 			@extend %logo;
 			max-width: rem(192px);
 			max-height: rem(66px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+			background: none;
 		}
 
 		.logo--title {
@@ -398,22 +399,12 @@ body {
 
 			a {
 				span {
-					position: relative;
 					display: inline-block;
 				}
 
 				&:hover, .focusable &:focus {
 					& {
 						color: $link-color;
-					}
-
-					span:before {
-						content: '';
-						position: absolute;
-						bottom: 0; left: 0;
-						width: 100%;
-						height: 2px;
-						background: $theme-color-primary;
 					}
 				}
 			}
@@ -441,14 +432,12 @@ body {
 			color: #fff;
 		}
 
-		.main-navigation a:hover, &.focusable .main-navigation a:focus {
-			& {
-				color: #fff;
-			}
+		.main-navigation a > span {
+			background-image: linear-gradient(#fff, #fff);
+		}
 
-			span:before {
-				background: #fff;
-			}
+		.main-navigation a:hover, &.focusable .main-navigation a:focus {
+			color: #fff;
 		}
 	}
 }

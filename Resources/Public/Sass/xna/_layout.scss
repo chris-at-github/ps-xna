@@ -32,13 +32,9 @@ a, input, select, textarea, button {
 	}
 
 	.navigation {
-		& {
-			@include navigation--layout-0;
-		}
-
 		a:hover, a:focus {
 			text-decoration: none;
-			color: $theme-color-primary;
+			color: $theme-color-third;
 		}
 	}
 }
@@ -103,6 +99,16 @@ a, input, select, textarea, button {
 	body .page-header {
 		.off-canvas {
 			display: block;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 576px
+@include media-breakpoint-up(sm) {
+	.page-footer {
+		.navigation {
+			@include navigation--layout-0;
 		}
 	}
 }
