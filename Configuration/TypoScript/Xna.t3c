@@ -27,3 +27,8 @@ folders {
 	private = typo3conf/ext/xna/Resources/Private
 	public = typo3conf/ext/xna/Resources/Public
 }
+
+pages {
+	# cat=pages; type=int+; label=Page id of common questions
+	question = 83
+}

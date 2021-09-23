@@ -2,6 +2,7 @@
 	<f:section name="Container">
 		<div class="sticky--container">
 			<f:render section="Contact" arguments="{_all}" />
+			<f:render section="Question" arguments="{_all}" />
 		</div>
 	</f:section>
 
@@ -33,5 +34,13 @@
 				</div>
 			</div>
 		</f:if>
+	</f:section>
+
+	<f:section name="Question">
+			<div class="sticky--element sticky--element-question">
+				<a class="sticky--icon" href="{f:uri.page(pageUid: settings.pages.question)}" title="{f:translate(key: 'LLL:EXT:xna/Resources/Private/Language/locallang_frontend.xlf:tx_xna_sticky.question')}">
+					<xo:svg.inline source="assets/svg/question.svg" />
+				</a>
+			</div>
 	</f:section>
 </html>

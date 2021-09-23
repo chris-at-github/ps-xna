@@ -8,6 +8,10 @@
 				offCanvas = node.querySelector('.sticky--off-canvas'),
 				close = document.querySelector('.sticky--close');
 
+			if(offCanvas === null) {
+				return false;
+			}
+
 			// Focus auf Elemente im ausgeblendeten Zustand verhindern
 			offCanvas.querySelectorAll('button, input, a').forEach(function(node) {
 				node.setAttribute('tabindex', '-1');

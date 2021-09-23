@@ -17,6 +17,10 @@ plugin.tx_xo {
 	}
 
 	settings {
+		pages {
+			question = {$pages.question}
+		}
+
 		modules {
 			textmedia {
 				options {
