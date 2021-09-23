@@ -72,6 +72,9 @@
 
 		&, a, a:hover, .focusable & a:focus, .focusable & .link--phone:focus {
 			color: #fff;
+		}
+
+		a, a:hover, .focusable & a:focus, .focusable & .link--phone:focus {
 			background-image: linear-gradient(#fff, #fff);
 		}
 	}
