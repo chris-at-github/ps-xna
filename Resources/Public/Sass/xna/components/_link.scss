@@ -62,6 +62,7 @@
 		height: rem(37px);
 		background: $theme-color-primary;
 		border-radius: 3px;
+		transition: background $transition-duration;
 	}
 
 	&:hover {
@@ -71,6 +72,10 @@
 
 		&:before {
 			transform: translate(3px, 0);
+		}
+
+		&:after {
+			background: $theme-color-hover;
 		}
 	}
 }

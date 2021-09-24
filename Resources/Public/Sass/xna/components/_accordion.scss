@@ -15,7 +15,13 @@
 	}
 
 	& > li {
-		border-bottom: 1px solid #f7f7f7;
+		& {
+			border-bottom: 1px solid #e5e5e5;
+		}
+
+		&:last-child {
+			border: 0;
+		}
 	}
 
 	.accordion--header {

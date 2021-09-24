@@ -48,7 +48,7 @@ p, ul, ol, table {
 
 %link--animation {
 	& {
-		background: linear-gradient(#{$theme-color-third}, #{$theme-color-third}) no-repeat 0 100%;
+		background: linear-gradient(#{$theme-color-third}, #{$theme-color-third}) no-repeat left 90%;
 		background-size: 0 2px;
 		transition: background-size 0.25s ease-out;
 	}
@@ -175,13 +175,27 @@ p, ul, ol, table {
 		color: #fff;
 	}
 
+	a {
+		background-image: linear-gradient(#fff, #fff);
+	}
+
 	.link--cta {
+		& {
+			background: none;
+		}
+
 		&:before {
 			color: $theme-color-primary;
 		}
 
 		&:after {
 			background: #fff;
+		}
+
+		&:hover, .focusable &:focus {
+			&:after {
+				background: #d2f1f1;
+			}
 		}
 	}
 }

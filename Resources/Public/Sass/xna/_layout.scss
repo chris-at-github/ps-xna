@@ -32,6 +32,11 @@ a, input, select, textarea, button {
 	}
 
 	.navigation {
+		ul {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
 		a:hover, a:focus {
 			text-decoration: none;
 			color: $theme-color-third;

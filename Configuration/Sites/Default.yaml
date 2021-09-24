@@ -3,6 +3,8 @@ websiteTitle: 'Physiozeit Penzberg'
 baseVariants:
   - base: 'http://physiozeit-penzberg.local'
     condition: 'applicationContext == "Development"'
+  - base: 'http://www.physiozeit-penzberg.de'
+    condition: 'applicationContext == "Production"'
 languages:
   -
     title: Deutsch
@@ -28,4 +30,4 @@ routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://xna.local/sitemap.xml"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: https://www.physiozeit-penzberg.de/sitemap.xml"

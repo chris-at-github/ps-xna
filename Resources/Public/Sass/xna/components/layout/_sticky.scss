@@ -15,7 +15,7 @@
 		}
 
 		&:not(.is--active) {
-			&:hover {
+			&:hover, .focusable &:focus {
 				transform: translate(-8px, 0);
 			}
 		}
@@ -26,7 +26,6 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: rem(60px);
 			width: rem(68px);
 			height: rem(208px);
 			padding: 0;
@@ -35,7 +34,6 @@
 			border-bottom-left-radius: 5px;
 			background: $theme-color-primary;
 			cursor: pointer;
-
 			transform: translate(8px, 0);
 		}
 
@@ -56,10 +54,6 @@
 				height: rem(60px);
 				background: #0f7d7f;
 				transition: background $transition-duration;
-			}
-
-			&:hover, .focusable &:focus {
-				background: $theme-color-primary;
 			}
 
 			svg {
