@@ -3,7 +3,7 @@ websiteTitle: 'Physiozeit Penzberg'
 baseVariants:
   - base: 'http://physiozeit-penzberg.local'
     condition: 'applicationContext == "Development"'
-  - base: 'http://www.physiozeit-penzberg.de'
+  - base: 'https://www.physiozeit-penzberg.de'
     condition: 'applicationContext == "Production"'
 languages:
   -
