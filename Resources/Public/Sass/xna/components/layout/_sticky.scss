@@ -7,10 +7,18 @@
 	}
 
 	.sticky--element {
-		position: relative;
-		transform: translate(0, 0);
-		transition: transform 0.35s;
-		transition-delay: 0.085s;
+		& {
+			position: relative;
+			transform: translate(0, 0);
+			transition: transform 0.35s;
+			transition-delay: 0.085s;
+		}
+
+		&:not(.is--active) {
+			&:hover {
+				transform: translate(-8px, 0);
+			}
+		}
 	}
 
 	.sticky--icon {
@@ -19,6 +27,7 @@
 			justify-content: center;
 			align-items: center;
 			width: rem(60px);
+			width: rem(68px);
 			height: rem(208px);
 			padding: 0;
 			border: 0;
@@ -26,6 +35,8 @@
 			border-bottom-left-radius: 5px;
 			background: $theme-color-primary;
 			cursor: pointer;
+
+			transform: translate(8px, 0);
 		}
 
 		&:hover, .focusable &:focus {
