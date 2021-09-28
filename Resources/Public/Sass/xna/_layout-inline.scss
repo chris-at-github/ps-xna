@@ -79,7 +79,7 @@ body {
 	}
 
 	#header + .ce-content, #header + #breadcrumb + .ce-content {
-		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
+		.container-outer:first-child .container-inner, .ce-frame--outer:first-child > .ce-frame--inner {
 			padding-top: rem(75px); // Hoehe des Headers
 		}
 	}
@@ -339,7 +339,7 @@ body {
 
 	.page--layout-0, .page--layout-4 {
 		#header + .ce-content, #header + #breadcrumb + .ce-content {
-			.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
+			.container-outer:first-child .container-inner, .ce-frame--outer:first-child > .ce-frame--inner {
 				padding-top: rem(130px); // Hoehe des Headers
 			}
 		}
@@ -382,7 +382,7 @@ body {
 	// Page Layout Default
 	.page--layout-0, .page--layout-4 {
 		#header + .ce-content, #header + #breadcrumb + .ce-content {
-			.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
+			.container-outer:first-child .container-inner, .ce-frame--outer:first-child > .ce-frame--inner {
 				padding-top: rem(150px); // Hoehe des Headers
 			}
 		}
