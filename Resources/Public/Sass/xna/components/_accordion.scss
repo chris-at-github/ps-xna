@@ -51,5 +51,30 @@
 			transition: transform $transition-duration;
 		}
 	}
+
+	// TODO:
+	// 1: Abstaende fuer Default hier uebernehmen (aus Produkt)
+	// 2: Klasse Default ins Produkt-Template aufnehmen und CSS dort entfernen
+	// 3: Abstaende fuer Record ce-frame--space-after-auto:last-child anpassen
+	.accordion--container {
+		margin-top: rem(30px);
+		margin-bottom: rem(45px);
+	}
+
+	& > li:last-child {
+		.accordion--container {
+			margin-bottom: 0;
+		}
+	}
+
+	.accordion--container {
+		& > .ce-frame--space-after-auto:last-child {
+			@extend %container-space-after-large;
+
+			.ce-frame--inner {
+				@extend %container-inner;
+			}
+		}
+	}
 }
 
