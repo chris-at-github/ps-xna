@@ -6,6 +6,12 @@
 @import '../../definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
+// CSS-Variablen
+:root {
+	--accordion--container-space-after: #{rem(45px)};
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Accordion
 .accordion {
 	& {
@@ -56,25 +62,31 @@
 	// 1: Abstaende fuer Default hier uebernehmen (aus Produkt)
 	// 2: Klasse Default ins Produkt-Template aufnehmen und CSS dort entfernen
 	// 3: Abstaende fuer Record ce-frame--space-after-auto:last-child anpassen
-	.accordion--container {
+
+	// Accordeon-Elemente mit direkter Texteingabe
+	.accordion--container-default {
 		margin-top: rem(30px);
-		margin-bottom: rem(45px);
+		margin-bottom: var(--accordion--container-space-after);
 	}
 
-	& > li:last-child {
-		.accordion--container {
-			margin-bottom: 0;
+	// Accordeon-Elemente mit unter Inhaltselementen
+	.accordion--container-record {
+		& > .ce-frame--space-after-auto:last-child .ce-frame--inner {
+			margin-bottom: var(--accordion--container-space-after);
 		}
 	}
 
-	.accordion--container {
-		& > .ce-frame--space-after-auto:last-child {
-			@extend %container-space-after-large;
-
-			.ce-frame--inner {
-				@extend %container-inner;
-			}
+	& > li:last-child {
+		.accordion--container-default,
+		.accordion--container-record > .ce-frame--space-after-auto:last-child .ce-frame--inner {
+			margin-bottom: 0;
 		}
 	}
 }
 
+// >= 768px
+@include media-breakpoint-up(md) {
+	:root {
+		--accordion--container-space-after: #{rem(65px)};
+	}
+}

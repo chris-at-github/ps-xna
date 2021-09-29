@@ -177,3 +177,16 @@ mod.web_layout.BackendLayouts {
 		layout = 4
 	}
 [END]
+
+[irre('parent') === 'tx_xo_domain_model_elements' && irre('field') === 'content']
+	TCAdefaults.tt_content {
+		space_before_class = small
+		space_after_class = auto
+	}
+
+	TCEFORM.tt_content {
+		colPos {
+			removeItems = 0,10,20
+		}
+	}
+[END]
