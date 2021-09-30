@@ -293,7 +293,7 @@ p, ul, ol, table {
 
 	%container-width-indent-right {
 		%container-inner {
-			padding-right: percentage(3 / 12);
+			padding-right: percentage(2 / 12);
 		}
 	}
 
@@ -334,7 +334,7 @@ p, ul, ol, table {
 @include media-breakpoint-up(xl) {
 	%container-width-indent-right {
 		%container-inner {
-			padding-right: rem(280px);
+			padding-right: rem(190px);
 		}
 	}
 }
