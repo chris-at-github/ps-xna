@@ -151,6 +151,13 @@ mod.web_layout.BackendLayouts {
 	}
 [END]
 
+[field('CType') === 'header']
+	TCAdefaults.tt_content {
+		space_before_class = auto
+		space_after_class = auto
+	}
+[END]
+
 [field('CType') === 'menu_pages']
 	TCEFORM.tt_content {
 		tx_xo_variant {

@@ -5,7 +5,7 @@ tt_content {
 		dataProcessing {
 			30 {
 				as = media
-				references.fieldName = media
+				references.fieldName = tx_xo_file
 			}
 		}
 	}
