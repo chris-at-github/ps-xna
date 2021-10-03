@@ -1,0 +1,16 @@
+.ce-accordion {
+	&.ce-frame--variant-0 {
+		.accordion--header button {
+			font-size: rem(21px);
+		}
+	}
+
+	// >= 768px
+	@include media-breakpoint-up(md) {
+		&.ce-frame--variant-0 {
+			.accordion--header button {
+				font-size: rem(26px);
+			}
+		}
+	}
+}
