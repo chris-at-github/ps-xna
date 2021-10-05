@@ -1,1 +1,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:teaser/Configuration/TypoScript/setup.typoscript">
+
+plugin.tx_teaser {
+	view {
+		partialRootPaths.16 = EXT:xna/Resources/Private/Partials/
+	}
+}
