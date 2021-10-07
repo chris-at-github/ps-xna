@@ -5,3 +5,13 @@ plugin.tx_teaser {
 		partialRootPaths.16 = EXT:xna/Resources/Private/Partials/
 	}
 }
+
+plugin.tx_xo.settings.modules {
+	teaser {
+		layouts {
+			technology = LLL:EXT:xna/Resources/Private/Language/locallang_plugin.xlf:teaser.flexform.field.layout.technology
+		}
+	}
+}
+
+module.tx_xo.settings.modules.teaser < plugin.tx_xo.settings.modules.teaser

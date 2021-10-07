@@ -1,0 +1,16 @@
+.teaser--layout-technology {
+	.teaser--title {
+		&, h1, h2, h3, h4 {
+			font-size: rem(23px);
+		}
+
+		a {
+			color: $color-grey-darken;
+		}
+
+		strong {
+			font-weight: normal;
+			color: $theme-color-primary;
+		}
+	}
+}

@@ -3,14 +3,8 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-27T06:25:54Z" product-name="xna">
 		<header/>
 		<body>
-			<trans-unit id="tx_xna_sticky.printPdf">
-				<source>Print as PDF</source>
-			</trans-unit>
-			<trans-unit id="tx_xna_teaser.technology.titlePrefix">
+			<trans-unit id="teaser.flexform.field.layout.technology">
 				<source>Technology</source>
-			</trans-unit>
-			<trans-unit id="tx_xna_teaser.technology.readmore">
-				<source>Go to technologie</source>
 			</trans-unit>
 		</body>
 	</file>

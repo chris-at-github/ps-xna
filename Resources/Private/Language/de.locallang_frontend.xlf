@@ -6,6 +6,12 @@
 			<trans-unit id="tx_xna_sticky.printPdf">
 				<target>Als PDF drucken</target>
 			</trans-unit>
+			<trans-unit id="tx_xna_teaser.technology.titlePrefix">
+				<target>Die Technologie</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_teaser.technology.readmore">
+				<target>Zur Technologie</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
