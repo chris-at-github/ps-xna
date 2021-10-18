@@ -2,6 +2,7 @@
 	& {
 		position: relative;
 		background: $color-grey-light;
+		border-radius: 5px;
 	}
 
 	&:before {
@@ -35,7 +36,7 @@
 @mixin card--title {
 	& {
 		display: flex;
-		padding: rem(3px 10px);
+		padding: rem(3px 15px);
 	}
 
 	& > span {

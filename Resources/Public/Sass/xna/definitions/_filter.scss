@@ -63,15 +63,17 @@
 
 	.filter-item--option {
 		& {
+			margin-top: rem(6px);
 			padding-top: rem(2px);
 			padding-bottom: rem(2px);
 			font-size: rem(17px);
 			font-weight: $font-weight-normal;
+			line-height: 1.2;
 			cursor: pointer;
 		}
 
 		input {
-			top: rem(9px); left: rem(2px);
+			top: rem(5px); left: rem(2px);
 		}
 	}
 

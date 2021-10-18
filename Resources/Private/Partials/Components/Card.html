@@ -15,15 +15,27 @@
 </f:section>
 
 <f:section name="Inner">
-	<f:if condition="{data.title}">
-		<f:render section="Header" arguments="{title: data.title, link: link}" />
-	</f:if>
+	<div class="card--body">
+		<f:if condition="{data.title}">
+			<f:render section="Header" arguments="{title: data.title, link: link}" />
+		</f:if>
+	</div>
 </f:section>
 
 <f:section name="Header">
 	<div class="card--header">
 		<f:render section="Title" arguments="{title: title, link: link}" />
 	</div>
+</f:section>
+
+<f:section name="Description">
+	<div class="card--description"><f:format.html>{description}</f:format.html></div>
+</f:section>
+
+<f:section name="ReadMore">
+	<a href="{link}" class="card--readmore">
+		<span>{label}</span><xo:svg.use name="arrow-right" viewBox="0 0 14 11" />
+	</a>
 </f:section>
 
 <f:section name="Title">
