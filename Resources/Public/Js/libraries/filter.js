@@ -9,6 +9,7 @@ const filter = function(element, options) {
 		paginatorSelector: '.f3-widget-paginator',
 		ajax: false,
 		beforeSubmit: null,
+		beforeAutoSubmit: null,
 		afterSubmit: null,
 		beforeProcessResponse: null,
 		beforeProcessItem: null,
@@ -52,7 +53,9 @@ filter.prototype.initialize = function(options) {
 	_.element.querySelectorAll(_.options.autoSubmitSelector).forEach(function(item) {
 		item.querySelectorAll('input, select').forEach(function(input) {
 			input.addEventListener('change', function() {
-				_.submit();
+				if(_.beforeAutoSubmit() !== false) {
+					_.submit();
+				}
 			});
 		});
 	});
@@ -164,6 +167,14 @@ filter.prototype.beforeSubmit = function() {
 	}
 };
 
+filter.prototype.beforeAutoSubmit = function() {
+	if(typeof(this.options.beforeAutoSubmit) === 'function') {
+		return this.options.beforeAutoSubmit();
+	}
+
+	return true;
+};
+
 filter.prototype.afterSubmit = function() {
 	if(typeof(this.options.afterSubmit) === 'function') {
 		this.options.afterSubmit();
@@ -198,7 +209,7 @@ filter.prototype.processResetableItem = function(item) {
 	let prev = null;
 	let autoSubmit = false;
 
-	if(item.closest(_.options.autoSubmitSelector) !== null) {
+	if(item.closest(_.options.autoSubmitSelector) !== null && _.beforeAutoSubmit() !== false) {
 		autoSubmit = true;
 	}
 

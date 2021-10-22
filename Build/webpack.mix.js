@@ -37,7 +37,8 @@ mix.js('../Resources/Public/Js/components/bootstrap/collapse.js', 'assets/js/com
 mix.babel('../Resources/Public/Js/libraries/filter.js', '../../../../assets/js/libraries/filter.js');
 
 mix.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', '../../../../assets/js/libraries/tobii.js')
-	.copy('./node_modules/chart.js/dist/chart.js', '../../../../assets/js/libraries/chart.js');
+	.copy('./node_modules/chart.js/dist/chart.js', '../../../../assets/js/libraries/chart.js')
+	.copy('./node_modules/micromodal/dist/micromodal.js', '../../../../assets/js/libraries/micromodal.js');
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Production Mode
@@ -46,7 +47,8 @@ if(mix.inProduction() === true) {
 		'../../../../assets/js/components/collapse.js',
 		'../../../../assets/js/components/tab.js',
 		'../../../../assets/js/libraries/tobii.js',
-		'../../../../assets/js/libraries/chart.js'
+		'../../../../assets/js/libraries/chart.js',
+		'../../../../assets/js/libraries/micromodal.js'
 	]);
 
 	mix.minify([

@@ -12,6 +12,9 @@
 			<trans-unit id="tx_xna_teaser.technology.readmore">
 				<source>Go to technologie</source>
 			</trans-unit>
+			<trans-unit id="tx_xna_filter.action.submit">
+				<source>Accept</source>
+			</trans-unit>
 			<trans-unit id="tx_xna_filter.action.reset">
 				<source>Reset all filters</source>
 			</trans-unit>

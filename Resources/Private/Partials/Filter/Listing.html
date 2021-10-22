@@ -19,11 +19,11 @@
 			<f:if condition="{filter.submitAll} == 1 || {filter.resetAll} == 1">
 				<div class="filter-actions">
 					<f:if condition="{filter.submitAll} == 1">
-						<button class="button filter--submit-all" type="submit"><f:translate key="LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.action.search" /></button>
+						<button class="button filter--submit-all" type="submit"><f:translate key="LLL:EXT:xna/Resources/Private/Language/locallang_frontend.xlf:tx_xna_filter.action.submit" /></button>
 					</f:if>
 
 					<f:if condition="{filter.resetAll} == 1">
-						<button type="button" class="filter-reset--all">
+						<button class="filter-reset--all" type="button">
 							<xo:svg.inline source="assets/svg/close.svg" />
 							<f:translate key="LLL:EXT:xna/Resources/Private/Language/locallang_frontend.xlf:tx_xna_filter.action.reset" />
 						</button>
