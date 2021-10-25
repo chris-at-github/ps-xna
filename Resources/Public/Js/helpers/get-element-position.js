@@ -5,8 +5,10 @@ xna.getElementPosition = function(node) {
 			y: 0
 		};
 
-	position.y = (node.getBoundingClientRect().y || node.getBoundingClientRect().top) + element.scrollTop;
-	position.x = (node.getBoundingClientRect().x || node.getBoundingClientRect().left) + element.scrollLeft; // noch nicht getestet
+	if(node !== null) {
+		position.y = (node.getBoundingClientRect().y || node.getBoundingClientRect().top) + element.scrollTop;
+		position.x = (node.getBoundingClientRect().x || node.getBoundingClientRect().left) + element.scrollLeft; // noch nicht getestet
+	}
 
 	return position;
 }

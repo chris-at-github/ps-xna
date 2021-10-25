@@ -28,5 +28,6 @@ xna.scrollTo = function(to, duration) {
 			}
 		};
 
+	console.log(change);
 	animateScroll();
 }
