@@ -49,6 +49,47 @@ select%form-field {
   }
 }
 
+%form-field--radio-custom {
+  input {
+    opacity: 0;
+  }
+
+  span:before {
+    content: '';
+    position: absolute;
+    top: rem(5px); left: rem(1px);
+    z-index: 5;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #ababab;
+    border-radius: 50%;
+    transition: border $transition-duration;
+  }
+
+  span:after {
+    content: '';
+    position: absolute;
+    top: rem(5px); left: rem(1px);
+    z-index: 10;
+    width: 13px;
+    height: 13px;
+    border: 4px solid $theme-color-primary;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform $transition-duration;
+  }
+
+  input:checked + span:after {
+    transform: scale(1.05);
+  }
+
+  &:hover, .focusable &:focus-within {
+    span:before {
+      border-color: $color-grey-darken;
+    }
+  }
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Buttons
 %button {

@@ -85,6 +85,7 @@
 %filter--tree-radio {
 	.filter-item--option {
 		@extend %form-field--radio;
+		@extend %form-field--radio-custom;
 	}
 }
 
