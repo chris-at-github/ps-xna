@@ -207,11 +207,6 @@ filter.prototype.afterProcessItem = function(item) {
 filter.prototype.processResetableItem = function(item) {
 	let _ = this;
 	let prev = null;
-	let autoSubmit = false;
-
-	if(item.closest(_.options.autoSubmitSelector) !== null && _.beforeAutoSubmit() !== false) {
-		autoSubmit = true;
-	}
 
 	// Radio / Checkbox zuruecksetzen
 	item.querySelectorAll('input[type=radio]').forEach(function(node) {
@@ -220,7 +215,7 @@ filter.prototype.processResetableItem = function(item) {
 				node.checked = false;
 				prev = null;
 
-				if(autoSubmit === true) {
+				if(item.closest(_.options.autoSubmitSelector) !== null && _.beforeAutoSubmit() !== false) {
 					_.submit();
 				}
 
