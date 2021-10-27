@@ -163,7 +163,7 @@ filter.prototype.beforeSubmit = function() {
 	this.processResetAllButton();
 
 	if(typeof(this.options.beforeSubmit) === 'function') {
-		this.options.beforeSubmit();
+		this.options.beforeSubmit(this);
 	}
 };
 
@@ -177,7 +177,7 @@ filter.prototype.beforeAutoSubmit = function() {
 
 filter.prototype.afterSubmit = function() {
 	if(typeof(this.options.afterSubmit) === 'function') {
-		this.options.afterSubmit();
+		this.options.afterSubmit(this);
 	}
 };
 
