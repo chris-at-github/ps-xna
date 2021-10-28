@@ -163,7 +163,7 @@ a.card--title {
 	&.readmore-container-open,
 	&.readmore-container-opened {
 		.card:nth-child(1n+1) {
-			display: block;
+			display: flex;
 		}
 	}
 }
@@ -204,7 +204,7 @@ a.card--title {
 	&.readmore-container-open,
 	&.readmore-container-opened {
 		.card:nth-child(1n+1) {
-			display: block;
+			display: flex;
 		}
 	}
 }
@@ -212,7 +212,7 @@ a.card--title {
 @include media-breakpoint-up(md) {
 	.readmore-container {
 		.card:nth-child(2), .card:nth-child(3) {
-			display: block;
+			display: flex;
 		}
 	}
 }
