@@ -74,7 +74,7 @@ body {
 .page--layout-0, .page--layout-4 {
 	#breadcrumb {
 		position: absolute;
-		top: rem(140px);
+		top: rem(180px);
 		left: 0; right: 0;
 	}
 
@@ -344,6 +344,10 @@ body {
 			}
 		}
 	}
+
+	.ce-header--layout-1 {
+		margin-bottom: rem(35px);
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -381,6 +385,10 @@ body {
 	// ---------------------------------------------------------------------------------------------------------------------
 	// Page Layout Default
 	.page--layout-0, .page--layout-4 {
+		#breadcrumb {
+			top: rem(200px);
+		}
+
 		#header + .ce-content, #header + #breadcrumb + .ce-content {
 			.container-outer:first-child .container-inner, .ce-frame--outer:first-child > .ce-frame--inner {
 				padding-top: rem(150px); // Hoehe des Headers

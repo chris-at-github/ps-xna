@@ -16,10 +16,6 @@
 				margin: rem(0 12px 0 0);
 			}
 
-			&:first-child a {
-				font-weight: $font-weight-bold;
-			}
-
 			&:last-child {
 				margin: 0;
 			}
@@ -45,7 +41,7 @@
 	a {
 		& {
 			font-weight: $font-weight-normal;
-			color: $color-grey-darken;
+			color: $color-grey;
 		}
 
 		& > span {
