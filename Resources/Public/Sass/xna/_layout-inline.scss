@@ -21,6 +21,7 @@ body {
 
 #content--main {
 	flex: 1 auto; // IE 11 Fallback: auto
+	min-height: rem(350px);
 }
 
 #content--header, #content--main, #content--product, #content--footer {
