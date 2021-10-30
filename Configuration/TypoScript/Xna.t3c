@@ -36,3 +36,6 @@ pages {
 	# cat=pages; type=int+; label=PID for navigation content
 	navigationContent = 186
 }
+
+// Sonderfaelle fur Module -> Dateien muessen als letztes geladen werden, damit alle Einstellungen bereits gesetzt sind
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xna/Configuration/TypoScript/Extensions/EntityProduct.t3c">

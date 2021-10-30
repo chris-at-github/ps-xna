@@ -66,5 +66,7 @@ page {
 	}
 }
 
+// Sonderfaelle fur Module -> Dateien muessen als letztes geladen werden, damit alle Einstellungen bereits gesetzt sind
 // Sonderfall fuer Html2Pdf Extension -> hier muss page Object fertig zusammengebaut sein
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:xna/Configuration/TypoScript/Extensions/EntityProduct.t3s">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:xna/Configuration/TypoScript/Extensions/Html2Pdf.t3s">
