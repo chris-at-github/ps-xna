@@ -40,10 +40,10 @@ TCEFORM {
 	}
 }
 
-TCAdefaults.tt_content {
-	space_before_class = medium
-	space_after_class = large
-}
+#TCAdefaults.tt_content {
+#	space_before_class = medium
+#	space_after_class = large
+#}
 
 mod.web_layout.BackendLayouts {
 	default {
@@ -194,6 +194,16 @@ mod.web_layout.BackendLayouts {
 	TCEFORM.tt_content {
 		colPos {
 			removeItems = 0,10,20
+		}
+	}
+[END]
+
+[field('list_type') === 'teaser_frontend']
+	TCEFORM.tt_content {
+		tx_xo_variant {
+			addItems {
+				1 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.tx_xo_variant.teaser.1
+			}
 		}
 	}
 [END]
