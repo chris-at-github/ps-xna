@@ -17,6 +17,10 @@ plugin.tx_xo {
 	}
 
 	settings {
+		pages {
+			individualProduct = {$pages.individualProduct}
+		}
+
 		modules.xna {
 			navigation.pictureSettings {
 				width = 530
