@@ -11,16 +11,8 @@
 			background-position: 34px 100%;
 		}
 
-
 		& .badge, &:hover .badge {
-			background: #fff;
-			color: $theme-color-primary;
-		}
-	}
-
-	.link--phone {
-		&:hover, .focusable &:focus {
-			color: #fff;
+			background: $theme-color-primary-dark;
 		}
 	}
 }
@@ -91,8 +83,22 @@
 }
 
 .contact-search--result {
-	.ce-header {
-		padding-top: rem(45px);
+	margin-top: 35px;
+}
+
+.contact-search--result-container {
+	& {
+		padding: 20px;
+		border-radius: 5px;
+		background: #fff;
+		color: $theme-color-primary;
+	}
+
+	a {
+		.ce-frame--class-2 & {
+			color: $theme-color-primary;
+			background-image: linear-gradient(#{$theme-color-primary}, #{$theme-color-primary});
+		}
 	}
 }
 
@@ -116,8 +122,6 @@
 	}
 
 	.contact-search--result {
-		.ce-header {
-			padding-top: rem(17px);
-		}
+		margin-top: 0;
 	}
 }
