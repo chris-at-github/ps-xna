@@ -1,3 +1,9 @@
+.teaser--layout-aside {
+	.teaser--media {
+		border-radius: 5px;
+	}
+}
+
 .teaser--layout-technology {
 	.teaser--title {
 		&, h1, h2, h3, h4 {
@@ -62,6 +68,12 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 768px
 @include media-breakpoint-up(md) {
+	.teaser--layout-aside {
+		.teaser--body {
+			padding-left: rem(15px);
+		}
+	}
+
 	.ce-teaser-frontend.ce-frame--variant-1 {
 		.ce-frame--inner {
 			&:before {
