@@ -82,16 +82,16 @@
 	}
 }
 
-.contact-search--result {
-	margin-top: 35px;
-}
-
 .contact-search--result-container {
 	& {
-		padding: 20px;
+		padding: rem(20px);
 		border-radius: 5px;
 		background: #fff;
 		color: $theme-color-primary;
+	}
+
+	.is-contact-open & {
+		margin-top: rem(45px);
 	}
 
 	a {
@@ -121,7 +121,7 @@
 		}
 	}
 
-	.contact-search--result {
+	.is-contact-open .contact-search--result-container {
 		margin-top: 0;
 	}
 }
