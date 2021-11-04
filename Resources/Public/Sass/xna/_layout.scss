@@ -353,9 +353,14 @@ a, input, select, textarea, button {
 		}
 
 		.main-navigation {
-			& > ul > li:hover .navigation--container-outer {
+			.no-js & > ul > li:hover .navigation--container-outer {
 				display: block;
 			}
+
+			//& > ul > li[aria-expanded='true'] .navigation--container-outer {
+			//	display: block;
+			//	opacity: 0;
+			//}
 		}
 	}
 

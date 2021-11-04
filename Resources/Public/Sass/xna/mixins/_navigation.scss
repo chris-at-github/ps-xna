@@ -34,6 +34,10 @@
 			}
 
 			& > li {
+				&[aria-expanded='true'] {
+					outline: 2px solid red;
+				}
+
 				&:hover, .focusable &:focus-within {
 					& > a > span {
 						background-size: 100% 2px;
@@ -92,6 +96,21 @@
 	}
 
 	@if $render-children {
+		& > ul > li {
+			&.navigation-item--in .navigation--container-outer,
+			&.navigation-item--out .navigation--container-outer {
+				display: block;
+				opacity: 0;
+				transform: scaleY(0.95);
+			}
+
+			&.navigation-item--active .navigation--container-outer {
+				display: block;
+				opacity: 1;
+				transform: scaleY(1);
+			}
+		}
+
 		.navigation--container-outer {
 			position: absolute;
 			top: 115px;
@@ -99,6 +118,10 @@
 			display: none;
 			padding-left: rem(30px);
 			padding-right: rem(30px);
+
+			transition-duration: 0.5s;
+			transition-property: opacity, transform;
+			transform-origin: top;
 		}
 
 		.navigation--container-background {
@@ -378,6 +401,7 @@
 
 	ul li {
 		ul {
+			display: none;
 			position: absolute;
 			top: 0; left: 0;
 			z-index: 5;
@@ -389,7 +413,16 @@
 			transition: transform 0.25s ease-out;
 		}
 
-		&[aria-expanded="true"] .navigation--container-inner > ul, &[aria-expanded="true"] > ul {
+		&.navigation-item--in .navigation--container-inner > ul,
+		&.navigation-item--in > ul,
+		&.navigation-item--out .navigation--container-inner > ul,
+		&.navigation-item--out > ul {
+			display: block;
+		}
+
+		&.navigation-item--active .navigation--container-inner > ul,
+		&.navigation-item--active > ul {
+			display: block;
 			transform: translate(0, 0);
 		}
 	}
@@ -409,13 +442,16 @@
 		}
 	}
 
-	.navigation-item--backlink > span {
+	.navigation-item--backlink > button {
 		& {
 			position: relative;
-			padding-left: rem(60px);
+			width: 100%;
+			padding: rem(10px 24px 10px 60px);
+			border: 0;
 			background: $theme-color-primary;
 			cursor: pointer;
 			color: #fff;
+			text-align: left;
 		}
 
 		svg {
