@@ -119,7 +119,10 @@
 
 				item.addEventListener('click', function(event) {
 					navigation.itemExpand(item, listItem);
-					event.preventDefault();
+
+					if(listItem.hasAttribute('aria-expanded') === true && navigation.isMobileEnabled() === true) {
+						event.preventDefault();
+					}
 				});
 
 				listItem.addEventListener('mousemove', function(event) {
