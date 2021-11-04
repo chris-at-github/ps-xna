@@ -290,6 +290,10 @@
 						margin-top: rem(30px);
 					}
 
+					&.navigation-item--parentlink + li {
+						margin-top: rem(15px);
+					}
+
 					& > span {
 						padding: 1px 10px;
 						font-size: rem(17px);
