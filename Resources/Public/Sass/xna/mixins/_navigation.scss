@@ -34,10 +34,6 @@
 			}
 
 			& > li {
-				&[aria-expanded='true'] {
-					outline: 2px solid red;
-				}
-
 				&:hover, .focusable &:focus-within {
 					& > a > span {
 						background-size: 100% 2px;
