@@ -10,7 +10,7 @@
 				<source>Technology</source>
 			</trans-unit>
 			<trans-unit id="tx_xna_teaser.technology.readmore">
-				<source>Go to technologie</source>
+				<source>Go to technology</source>
 			</trans-unit>
 			<trans-unit id="tx_xna_filter.action.submit">
 				<source>Accept</source>
