@@ -74,8 +74,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image']['
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Hero | Hero Slider
-$GLOBALS['TCA']['tt_content']['types']['ce_hero'] = [
-	'showitem' => '
+$GLOBALS['TCA']['tt_content']['types']['ce_hero']['showitem'] = '
 			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.general;general,
 			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.header;xoHeader,tx_xo_file, pi_flexform,
 		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.appearance,
@@ -85,8 +84,8 @@ $GLOBALS['TCA']['tt_content']['types']['ce_hero'] = [
 			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.visibility;visibility,
 			--palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:palette.access;access,
 		--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xml:tabs.extended
-	',
-];
+	';
+
 
 $GLOBALS['TCA']['tt_content']['types']['ce_hero']['columnsOverrides']['tx_xo_file']['config'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 	'tx_xo_file',
@@ -122,6 +121,7 @@ $GLOBALS['TCA']['tt_content']['types']['ce_hero']['columnsOverrides']['tx_xo_fil
 		'maxitems' => 1
 	]
 );
+
 $GLOBALS['TCA']['tt_content']['types']['ce_hero']['columnsOverrides']['tx_xo_file']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
 	'default' => [
 		'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.crop_variant.default',
