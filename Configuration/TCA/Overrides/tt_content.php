@@ -32,6 +32,10 @@ $tmpXnaTtContentColumns = [
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTCAcolumns('tt_content', $tmpXnaTtContentColumns);
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Allgemeine Ueberschreibungen
+$GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['pi_flexform']['l10n_mode'] = 'exclude';
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Text Image (Textpic)
 $GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']  = [
 	'desktop' => [

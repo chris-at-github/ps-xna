@@ -1,5 +1,6 @@
 <?php
 
+$GLOBALS['TCA']['pages']['columns']['media']['l10n_mode'] = 'exclude';
 $GLOBALS['TCA']['pages']['columns']['media']['label'] = 'LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.media_formlabel';
 $GLOBALS['TCA']['pages']['columns']['media']['config'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
 	'media',
@@ -40,7 +41,10 @@ $GLOBALS['TCA']['pages']['columns']['media']['config'] = \TYPO3\CMS\Core\Utility
 				]
 			]
 		],
-		'maxitems' => 1
+		'maxitems' => 1,
+//		'behaviour' => [
+//			'allowLanguageSynchronization' => true
+//		]
 	],
 	$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 );
