@@ -33,6 +33,8 @@ $tmpXnaTtContentColumns = [
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Allgemeine Ueberschreibungen
+// sinnloses Label entfernen -> weitere Infos stehen in den Tabs
+$GLOBALS['TCA']['tt_content']['columns']['pi_flexform']['label'] = ' ';
 $GLOBALS['TCA']['tt_content']['types']['list']['columnsOverrides']['pi_flexform']['l10n_mode'] = 'exclude';
 
 // ---------------------------------------------------------------------------------------------------------------------
