@@ -47,10 +47,10 @@ TCEFORM {
 	}
 }
 
-#TCAdefaults.tt_content {
-#	space_before_class = medium
-#	space_after_class = large
-#}
+TCAdefaults.tt_content {
+	space_before_class = auto
+	space_after_class = auto
+}
 
 mod.web_layout.BackendLayouts {
 	default {
@@ -165,6 +165,12 @@ mod.web_layout.BackendLayouts {
 	}
 [END]
 
+[field('CType') === 'text']
+	TCAdefaults.tt_content {
+		layout = 1
+	}
+[END]
+
 [field('CType') === 'menu_pages']
 	TCEFORM.tt_content {
 		tx_xo_variant {
@@ -187,7 +193,7 @@ mod.web_layout.BackendLayouts {
 	TCAdefaults.tt_content {
 		header_layout = 100
 		space_before_class = auto
-		space_after_class = auto
+		space_after_class = small
 		layout = 4
 	}
 [END]
