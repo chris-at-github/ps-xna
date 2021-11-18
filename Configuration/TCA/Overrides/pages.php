@@ -51,4 +51,4 @@ $GLOBALS['TCA']['pages']['columns']['media']['config'] = \TYPO3\CMS\Core\Utility
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Uebersetzungsverhalten von bestehenden Feldern anpassen
-$GLOBALS['TCA']['pages']['columns']['exclude_slug_for_subpages']['l10n_mode'] = 'exclude';
+//$GLOBALS['TCA']['pages']['columns']['exclude_slug_for_subpages']['l10n_mode'] = 'exclude';
