@@ -48,3 +48,7 @@ $GLOBALS['TCA']['pages']['columns']['media']['config'] = \TYPO3\CMS\Core\Utility
 	],
 	$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
 );
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Uebersetzungsverhalten von bestehenden Feldern anpassen
+$GLOBALS['TCA']['pages']['columns']['exclude_slug_for_subpages']['l10n_mode'] = 'exclude';
