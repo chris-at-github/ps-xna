@@ -74,7 +74,7 @@ $GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image']['
 				'value' => 1
 			],
 		],
-		'selectedRatio' => '4_3',
+		'selectedRatio' => '16_9',
 	],
 ];
 
