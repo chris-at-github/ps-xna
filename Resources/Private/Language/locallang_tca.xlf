@@ -51,9 +51,6 @@
 			<trans-unit id="tx_xna_tt_content.frame_class.3">
 				<source>Darkblue</source>
 			</trans-unit>
-			<trans-unit id="tx_xna_tt_content.space.opposite.medium">
-				<source>Medium (Opposite)</source>
-			</trans-unit>
 			<trans-unit id="tx_xna_tt_content.wkhtmltopdf_enabled">
 				<source>Display PDF print link for current page</source>
 			</trans-unit>
