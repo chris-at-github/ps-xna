@@ -16,7 +16,7 @@
 %tab--item {
 	padding: rem(3px 18px);
 	border: 2px solid $theme-color-primary;
-	border-radius: 3px;
+	border-radius: $border-radius-default;
 	background: $theme-color-primary;
 	font-size: rem(15px);
 	font-weight: $font-weight-bold;

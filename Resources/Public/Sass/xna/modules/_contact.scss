@@ -85,7 +85,7 @@
 .contact-search--result-container {
 	& {
 		padding: rem(20px);
-		border-radius: 5px;
+		border-radius: $border-radius-default;
 		background: #fff;
 		color: $theme-color-primary;
 	}

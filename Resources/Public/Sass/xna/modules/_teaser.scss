@@ -1,6 +1,6 @@
 .teaser--layout-aside {
 	.teaser--media {
-		border-radius: 5px;
+		border-radius: $border-radius-default;
 	}
 }
 
@@ -25,7 +25,7 @@
 	.ce-frame--inner {
 		& {
 			position: relative;
-			border-radius: 5px;
+			border-radius: $border-radius-default;
 			color: #fff;
 			overflow: hidden;
 		}
