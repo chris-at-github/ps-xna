@@ -211,6 +211,10 @@ mod.web_layout.BackendLayouts {
 [END]
 
 [field('list_type') === 'teaser_frontend']
+	TCAdefaults.tt_content {
+		space_before_class = medium
+	}
+
 	TCEFORM.tt_content {
 		tx_xo_variant {
 			addItems {
