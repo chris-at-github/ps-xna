@@ -125,13 +125,25 @@ a.card--title {
 		}
 
 		&:before, &:after {
-			top: -15px;
-			bottom: -15px;
+			top: -2px;
+			bottom: -2px;
 		}
 
 		a, a:focus, .focusable & a {
 			outline: 0;
 		}
+	}
+}
+
+.card--layout-1 {
+	.card--body {
+		background: transparent;
+	}
+
+	.card--title,
+	.card--description {
+		padding-left: rem(10px);
+		padding-right: rem(10px);
 	}
 }
 
@@ -152,6 +164,10 @@ a.card--title {
 }
 
 .readmore-container {
+	& {
+		margin-top: rem(-45px);
+	}
+
 	.card--container {
 		margin-top: 0;
 	}
