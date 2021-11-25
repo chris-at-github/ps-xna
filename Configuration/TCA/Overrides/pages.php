@@ -26,12 +26,30 @@ $GLOBALS['TCA']['pages']['columns']['media']['config'] = \TYPO3\CMS\Core\Utility
 				'crop' => [
 					'config' => [
 						'cropVariants' => [
-							'thumbnail' => [
-								'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.crop_variant.default',
+							'desktop' => [
+								'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.desktop',
 								'allowedAspectRatios' => [
 									'16_9' => [
 										'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
 										'value' => 16 / 9
+									],
+									'4_3' => [
+										'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3',
+										'value' => 4 / 3
+									],
+								],
+								'selectedRatio' => '16_9',
+							],
+							'mobile' => [
+								'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.mobile',
+								'allowedAspectRatios' => [
+									'16_9' => [
+										'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
+										'value' => 16 / 9
+									],
+									'4_3' => [
+										'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3',
+										'value' => 4 / 3
 									],
 								],
 								'selectedRatio' => '16_9',

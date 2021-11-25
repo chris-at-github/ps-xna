@@ -11,6 +11,35 @@ plugin.tx_xo.settings.modules {
 		layouts {
 			technology = LLL:EXT:xna/Resources/Private/Language/locallang_plugin.xlf:teaser.flexform.field.layout.technology
 		}
+
+		pictureSettings {
+			aside {
+				width = 720
+				cropVariant = desktop
+				mediaQueries {
+					992 {
+						width = 460
+						cropVariant = desktop
+						mediaQuery = (min-width: 992px)
+					}
+					768 {
+						width = 372
+						cropVariant = desktop
+						mediaQuery = (min-width: 768px)
+					}
+					576 {
+						width = 720
+						cropVariant = mobile
+						mediaQuery = (min-width: 576px)
+					}
+					0 {
+						width = 545
+						cropVariant = mobile
+						mediaQuery = (min-width: 0px)
+					}
+				}
+			}
+		}
 	}
 }
 

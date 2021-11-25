@@ -1,0 +1,7 @@
+block.subNavigation {
+	1 {
+		NO {
+			linkWrap = <span> | </span><svg class="svg-sprite svg-sprite--arrow-right" viewBox="0 0 14 11"><use xlink:href="#sprite-arrow-right"></use></svg>
+		}
+	}
+}
