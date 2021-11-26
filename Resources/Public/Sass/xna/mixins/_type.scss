@@ -28,3 +28,29 @@
 		font-size: rem(21px);
 	}
 }
+
+@mixin link-arrow {
+	span {
+		& {
+			display: inline;
+		}
+
+		&:after {
+			display: inline;
+			content: iconfont-item(arrow-right);
+			margin-left: rem(12px);
+			padding-right: rem(5px);
+			font-family: $font-family-icon;
+			font-size: rem(12px);
+			transition-property: margin, padding;
+			transition-duration: $transition-duration;
+		}
+	}
+
+	&:hover, .focusable &:focus {
+		span:after {
+			margin-left: rem(17px);
+			padding-right: 0;
+		}
+	}
+}

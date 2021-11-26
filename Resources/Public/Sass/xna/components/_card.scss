@@ -4,6 +4,7 @@
 
 a.card--title {
 	@include card--title-link();
+	@include link-arrow();
 }
 
 .card--media {

@@ -51,12 +51,19 @@
 		background-image: none;
 	}
 
-	svg {
-		width: 14px;
-		height: 11px;
-		margin: rem(10px 0 0 12px);
-		flex-shrink: 0;
-		fill: $theme-color-primary;
-		transition: transform $transition-duration;
-	}
+	//span {
+	//	display: inline;
+	//}
+	//
+	//svg {
+	//	display: inline;
+	//	width: 14px;
+	//	height: 11px;
+	//	//margin: rem(10px 0 0 12px);
+	//	margin-left: rem(12px);
+	//	padding-right: rem(5px);
+	//	//flex-shrink: 0;
+	//	fill: $theme-color-primary;
+	//	//transition: transform $transition-duration;
+	//}
 }
