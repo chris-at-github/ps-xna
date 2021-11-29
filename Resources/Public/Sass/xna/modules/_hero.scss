@@ -31,6 +31,12 @@
 
 // >= 1200px
 @include media-breakpoint-up(xl) {
+	.ce-hero.ce-frame--space-after-auto {
+		& + .ce-frame--class-1, & + .ce-frame--class-2, & + .ce-frame--class-3 {
+			margin-top: rem(35px);
+		}
+	}
+
 	.ce-hero-slider {
 		.slider .slider--navigation {
 			& {
