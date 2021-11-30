@@ -1,0 +1,58 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Define Variables
+$stylesheet-context: 'import' !default;
+
+$iconfont-create-font-face: true !default;
+$iconfont-create-icon-class: true !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'definitions';
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap Overrides
+
+// Fuer den PDF-Druck ist nur eine gewisse Aufloesung moeglich, daher werden die Breakpoints reduziert
+$pdf-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px
+);
+
+// wkhtmltopdf kann keine Media-Queries -> daher wird das globale Mixin fuer Media-Queries ueberschrieben und der Code
+// direkt ausgegeben, falls die Media-Query fuer die PDF Version freigeschalten ist
+@mixin media-breakpoint-up($name, $breakpoints: $pdf-breakpoints) {
+	@if(map-get($breakpoints, $name) != null) {
+		@content;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Module, die in der PDF Version verwendet werden
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Spezielle Definitionen fuer die PDF Version
+* {
+	background: gold;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 576px
+@include media-breakpoint-up(sm) {
+	* {
+		background: red;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	* {
+		background: red;
+	}
+}
