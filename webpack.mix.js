@@ -101,6 +101,7 @@ mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 
 mix.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'assets/css/xna.css')
+	.sass('typo3conf/ext/xna/Resources/Public/Sass/print.scss', 'assets/css/print.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/pdf.scss', 'assets/css/pdf.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna/modules/_text-media.scss', 'assets/css/modules/text-media.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna/modules/_address.scss', 'assets/css/modules/address.css')

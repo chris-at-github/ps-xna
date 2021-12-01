@@ -1,28 +1,23 @@
-.page-header {
-	position: relative;
-}
+// ---------------------------------------------------------------------------------------------------------------------
+// Define Variables
+$stylesheet-context: 'print' !default;
 
-.page-header .container-inner {
-	display: block !important;
-}
+$tx-product-frontend--use-css: false !default;
 
-.page-header .logo {
-	width: 208px;
-	height: 56px;
-}
+$iconfont-create-font-face: false !default;
+$iconfont-create-icon-class: false !default;
 
-.hamburger, .off-canvas, #content--footer, .sticky--container, #footer {
-	display: none !important;
-}
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'definitions';
 
-.product--long-description .collapse,
-.product--technical-data .collapse,
-.product--chart .collapse,
-.product--downloads .collapse {
-	display: block !important;
-}
+// ---------------------------------------------------------------------------------------------------------------------
+// XNA Global
+@import 'xna/print';
 
-.product--technical-drawings .collapse,
-.product--downloads {
-	display: none;
-}
+// ---------------------------------------------------------------------------------------------------------------------
+// Modules
+@import '../../../../entity_product/Resources/Public/Sass/product-frontend';

@@ -20,6 +20,9 @@ navigation.main {
 page {
 	includeCSS {
 		application = /assets/css/xna.css
+
+		print = /assets/css/print.css
+		print.media = print
 	}
 
 	includeJSFooter {
