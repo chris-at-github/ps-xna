@@ -1,0 +1,10 @@
+dataProcessing.pageResource = Ps\Xo\DataProcessing\PageResourceProcessor
+dataProcessing.pageResource {
+	inlineCss {
+		10 = /assets/css/xna-inline.css
+	}
+
+	inlineJs {
+		10 = assets/js/xna-inline.js
+	}
+}
