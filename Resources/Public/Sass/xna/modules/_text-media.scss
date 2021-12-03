@@ -62,9 +62,9 @@
 	}
 
 	.ce-textmedia--content {
-		& {
-			margin-top: $spacing-default;
-		}
+		//& {
+		//	margin-top: $spacing-default;
+		//}
 
 		& > *:first-child, .ce-header > *:first-child {
 			margin-top: 0;
