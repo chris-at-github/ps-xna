@@ -189,3 +189,9 @@
 		}
 	}
 }
+
+@include stylesheet-context($stylesheet-context-pdf) {
+	.ce-teaser-frontend--default {
+		display: none;
+	}
+}

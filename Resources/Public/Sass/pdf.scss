@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Define Variables
-$stylesheet-context: 'import' !default;
+$stylesheet-context: 'screen', 'embed', 'import', 'pdf' !default;
 
 $iconfont-create-font-face: true !default;
 $iconfont-create-icon-class: true !default;
@@ -12,47 +12,39 @@ $iconfont-create-icon-class: true !default;
 @import 'mixins';
 @import 'definitions';
 
+// ---------------------------------------------------------------------------------------------------------------------
+// XNA
+
+// Basics
+@import 'xna/reboot';
+@import 'xna/type';
+@import 'xna/font';
+@import 'xna/iconfont';
+
+// Components
+@import 'xna/grid';
+@import 'xna/components/accessibility';
+@import 'xna/components/card';
+@import 'xna/components/link';
+@import 'xna/components/list';
+@import 'xna/components/table';
+@import 'xna/components/form';
+@import 'xna/components/badge';
+@import 'xna/components/responsive-table';
+@import 'xna/components/readmore-container';
+
+// Layout
+@import 'xna/layout-inline';
+@import 'xna/layout';
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Bootstrap Overrides
-
-// Fuer den PDF-Druck ist nur eine gewisse Aufloesung moeglich, daher werden die Breakpoints reduziert
-$pdf-breakpoints: (
-	xs: 0,
-	sm: 576px,
-	md: 768px,
-	lg: 992px
-);
-
-// wkhtmltopdf kann keine Media-Queries -> daher wird das globale Mixin fuer Media-Queries ueberschrieben und der Code
-// direkt ausgegeben, falls die Media-Query fuer die PDF Version freigeschalten ist
-@mixin media-breakpoint-up($name, $breakpoints: $pdf-breakpoints) {
-	@if(map-get($breakpoints, $name) != null) {
-		@content;
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Module, die in der PDF Version verwendet werden
+// Module
+@import 'xna/modules/text-media';
+@import '../../../../entity_product/Resources/Public/Sass/product-frontend';
+@import '../../../../teaser/Resources/Public/Sass/teaser';
+@import '../../../../ce_hero/Resources/Public/Sass/hero';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Spezielle Definitionen fuer die PDF Version
-* {
-	background: gold;
-}
+@import 'xna/print';
 
-// ---------------------------------------------------------------------------------------------------------------------
-// >= 576px
-@include media-breakpoint-up(sm) {
-	* {
-		background: red;
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// >= 1200px
-@include media-breakpoint-up(xl) {
-	* {
-		background: red;
-	}
-}

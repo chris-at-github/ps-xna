@@ -102,7 +102,6 @@ mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 mix.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/editor.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna.scss', 'assets/css/xna.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/print.scss', 'assets/css/print.css')
-	.sass('typo3conf/ext/xna/Resources/Public/Sass/pdf.scss', 'assets/css/pdf.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna/modules/_text-media.scss', 'assets/css/modules/text-media.css')
 	.sass('typo3conf/ext/xna/Resources/Public/Sass/xna/modules/_address.scss', 'assets/css/modules/address.css')
 	.options({
@@ -114,12 +113,6 @@ mix.sass('typo3conf/ext/xna/Resources/Public/Sass/editor.scss', 'assets/css/edit
 		]
 	}
 );
-
-// mix.postCss('assets/css/xna.css', 'assets/css', [
-// 	require('postcss-inline-svg')({
-// 		paths: ['./assets/svg']
-// 	})
-// ]);
 
 mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/xna-inline.css')
 	.options({
@@ -138,6 +131,32 @@ mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/
 			]
 		}
 	);
+
+mix.sass('typo3conf/ext/xna/Resources/Public/Sass/pdf.scss', 'assets/css/pdf.css')
+	.options({
+		postCss: [
+			require('postcss-remove-media-query-ranges')({
+				min: 576,
+				removeMin: true
+			}),
+			require('postcss-remove-media-query-ranges')({
+				min: 768,
+				removeMin: true
+			}),
+			require('postcss-remove-media-query-ranges')({
+				min: 992,
+				removeMin: true
+			}),
+			require('postcss-cachebuster'),
+			require('postcss-combine-duplicated-selectors')({
+				removeDuplicatedProperties: true
+			})
+		]
+	});
+
+// mix.postCss('typo3temp/assets/pdf.css', 'assets/css', [
+// 		require('postcss-unmq')
+// 	]);
 
 if(mix.inProduction() === true) {
 	mix.babel('assets/js/xna.js', 'assets/js/xna.js');

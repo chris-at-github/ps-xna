@@ -14,11 +14,37 @@ block.htmlToPdf {
 	}
 }
 
+
+
 html2pdf {
+	includeCSS >
 	includeCSS {
 		pdf = /assets/css/pdf.css
 	}
+
+	10.dataProcessing.150 {
+		inlineCss >
+	}
 }
+
+[request.getQueryParams()['type'] == 8080]
+	plugin.tx_scriptmerger {
+		css.enable = 0
+		javascript.enable = 0
+	}
+
+	plugin.tx_xo.settings {
+		moduleProcessor {
+			cssModuleEnabled = 0
+			cssModuleInlineLimit = 0
+			cssUseMinifyOnProduction = 0
+
+			jsModuleEnabled = 0
+			jsModuleInlineLimit = 0
+			jsUseMinifyOnProduction = 0
+		}
+	}
+[END]
 
 [applicationContext == "Development"]
 	html2pdf {
