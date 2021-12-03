@@ -12,6 +12,18 @@
 	}
 }
 
+.ce-frame--space-before-medium, .ce-frame--space-before-large {
+	.ce-frame--inner {
+		margin-top: 20px !important;
+	}
+}
+
+.ce-frame--space-after-medium, .ce-frame--space-after-large {
+	.ce-frame--inner {
+		margin-bottom: 20px !important;
+	}
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Header
 .page-header {

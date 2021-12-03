@@ -1,11 +1,10 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Einsatzzweck (Inline, Import)
-//$stylesheet-context: 'import' !default;
+$stylesheet-context: null !default;
+$stylesheet-context-screen: 'screen' !default;
 $stylesheet-context-embed: 'embed' !default;
 $stylesheet-context-import: 'import' !default;
 $stylesheet-context-print: 'print' !default;
-
-$stylesheet-context: null !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Colors
