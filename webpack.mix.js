@@ -133,26 +133,26 @@ mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/
 	);
 
 mix.sass('typo3conf/ext/xna/Resources/Public/Sass/pdf.scss', 'assets/css/pdf.css')
-	.options({
-		postCss: [
-			require('postcss-remove-media-query-ranges')({
-				min: 576,
-				removeMin: true
-			}),
-			require('postcss-remove-media-query-ranges')({
-				min: 768,
-				removeMin: true
-			}),
-			require('postcss-remove-media-query-ranges')({
-				min: 992,
-				removeMin: true
-			}),
-			require('postcss-cachebuster'),
-			require('postcss-combine-duplicated-selectors')({
-				removeDuplicatedProperties: true
-			})
-		]
-	});
+.options({
+	postCss: [
+		require('postcss-remove-media-query-ranges')({
+			min: 576,
+			removeMin: true
+		}),
+		require('postcss-remove-media-query-ranges')({
+			min: 768,
+			removeMin: true
+		}),
+		require('postcss-remove-media-query-ranges')({
+			min: 992,
+			removeMin: true
+		}),
+		require('postcss-cachebuster'),
+		require('postcss-combine-duplicated-selectors')({
+			removeDuplicatedProperties: true
+		})
+	]
+});
 
 // mix.postCss('typo3temp/assets/pdf.css', 'assets/css', [
 // 		require('postcss-unmq')
