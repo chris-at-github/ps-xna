@@ -14,9 +14,19 @@ block.htmlToPdf {
 	}
 }
 
-
-
 html2pdf {
+	config {
+		tx_html2pdf.binOptions {
+			margin-top = 10
+			margin-left = 5
+			margin-right = 5
+			header-center >
+			footer-left >
+			footer-center >
+			footer-right >
+		}
+	}
+
 	includeCSS >
 	includeCSS {
 		pdf = /assets/css/pdf.css

@@ -150,6 +150,12 @@
 }
 
 @include stylesheet-context($stylesheet-context-print) {
+	.teaser--layout-aside {
+		.teaser--media {
+			border-radius: 0;
+		}
+	}
+
 	.ce-teaser-frontend--technology {
 		.row {
 			display: block;
@@ -163,12 +169,18 @@
 		&.ce-frame--variant-1 {
 			.ce-frame--inner {
 				& {
+					border-radius: 0;
 					color: $font-color-base;
 				}
 
 				&:before {
 					display: none;
 				}
+			}
+
+			.teaser--body {
+				padding-left: 0;
+				padding-right: 0;
 			}
 
 			.teaser--title {
@@ -187,11 +199,5 @@
 				}
 			}
 		}
-	}
-}
-
-@include stylesheet-context($stylesheet-context-pdf) {
-	.ce-teaser-frontend--default {
-		display: none;
 	}
 }
