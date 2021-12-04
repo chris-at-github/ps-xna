@@ -195,7 +195,8 @@
 				}
 
 				img {
-					object-fit: contain;
+					object-fit: initial;
+					height: auto;
 				}
 			}
 		}
