@@ -156,6 +156,12 @@
 	}
 }
 
+@include stylesheet-context($stylesheet-context-print) {
+	.ce-textmedia {
+		page-break-inside: avoid;
+	}
+}
+
 @include stylesheet-context($stylesheet-context-pdf) {
 	.ce-textmedia--grid {
 		display: -webkit-box;
