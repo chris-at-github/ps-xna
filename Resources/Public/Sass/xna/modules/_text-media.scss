@@ -62,10 +62,6 @@
 	}
 
 	.ce-textmedia--content {
-		//& {
-		//	margin-top: $spacing-default;
-		//}
-
 		& > *:first-child, .ce-header > *:first-child {
 			margin-top: 0;
 		}
@@ -86,10 +82,6 @@
 // >= 768px
 @include media-breakpoint-up(md) {
 	.ce-textmedia--grid {
-		.ce-textmedia--content {
-			margin-top: 0;
-		}
-
 		&.ce-textmedia--arrangement-after.ce-textmedia--media-position-left,
 		&.ce-textmedia--arrangement-before.ce-textmedia--media-position-right {
 			flex-direction: row-reverse;
@@ -161,5 +153,11 @@
 				width: percentage(4 / 12);
 			}
 		}
+	}
+}
+
+@include stylesheet-context($stylesheet-context-pdf) {
+	.ce-textmedia--grid {
+		display: -webkit-box;
 	}
 }
