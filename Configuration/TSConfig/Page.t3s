@@ -192,7 +192,7 @@ mod.web_layout.BackendLayouts {
 	TCAdefaults.tt_content {
 		header_layout = 100
 		space_before_class = auto
-		space_after_class = small
+		space_after_class = auto
 		layout = 4
 	}
 [END]
