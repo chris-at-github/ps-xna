@@ -1,4 +1,11 @@
 // ---------------------------------------------------------------------------------------------------------------------
+// Pre-Define Variables
+$iconfont-create-font-face: false !default;
+$iconfont-create-icon-class: false !default;
+
+$stylesheet-context: 'screen' !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Bootstrap & XNA
 @import '../../functions';
 @import '../../variables';

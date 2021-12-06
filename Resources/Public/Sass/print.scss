@@ -19,6 +19,10 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/print';
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Modules
+// Components | Modules
+@import 'xna/components/accordion';
 @import '../../../../entity_product/Resources/Public/Sass/product-frontend';
+@import '../../../../entity_product/Resources/Public/Sass/product-keyfact';
 @import '../../../../teaser/Resources/Public/Sass/teaser';
+@import '../../../../ce_marker/Resources/Public/Sass/marker';
+@import '../../../../chart/Resources/Public/Sass/chart';

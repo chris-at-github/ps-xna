@@ -30,7 +30,7 @@
 
 .ce-frame--class-2, .ce-frame--class-3 {
 	&, a {
-		color: $font-color-base;
+		color: $font-color-base !important;
 	}
 }
 
@@ -75,6 +75,14 @@ h1, .h1 {
 	margin-top: 40px !important;
 }
 
+table {
+	page-break-inside: avoid;
+}
+
 .link--cta {
 	display: none;
+}
+
+.tobii {
+	display: none !important;
 }

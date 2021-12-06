@@ -38,13 +38,21 @@ $iconfont-create-icon-class: true !default;
 @import 'xna/layout';
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Module
+// Components | Modules
+@import 'xna/components/accordion';
 @import 'xna/modules/text-media';
 @import '../../../../entity_product/Resources/Public/Sass/product-frontend';
+@import '../../../../entity_product/Resources/Public/Sass/product-keyfact';
 @import '../../../../teaser/Resources/Public/Sass/teaser';
 @import '../../../../ce_hero/Resources/Public/Sass/hero';
+@import '../../../../ce_marker/Resources/Public/Sass/marker';
+@import '../../../../chart/Resources/Public/Sass/chart';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Spezielle Definitionen fuer die PDF Version
 @import 'xna/print';
+
+.page-header {
+	padding-top: 0;
+}
 
