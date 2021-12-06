@@ -91,8 +91,7 @@ mix.webpackConfig({
 
 mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js');
 
-mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
-	.copy('./node_modules/tiny-slider/dist/tiny-slider.js', 'assets/js/tiny-slider.js');
+mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js');
 
 mix.copy('./typo3conf/ext/xna/Resources/Public/Images/*', './assets/images')
 	.copy('./typo3conf/ext/xna/Resources/Public/Svg/Embed/*', './assets/svg')
@@ -132,42 +131,12 @@ mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/
 		}
 	);
 
-// mix.sass('typo3conf/ext/xna/Resources/Public/Sass/pdf.scss', 'assets/css/pdf.css')
-// .options({
-// 	postCss: [
-// 		require('postcss-remove-media-query-ranges')({
-// 			min: 576,
-// 			removeMin: true
-// 		}),
-// 		require('postcss-remove-media-query-ranges')({
-// 			min: 768,
-// 			removeMin: true
-// 		}),
-// 		require('postcss-remove-media-query-ranges')({
-// 			min: 992,
-// 			removeMin: true
-// 		}),
-// 		require('postcss-cachebuster'),
-// 		require('postcss-combine-duplicated-selectors')({
-// 			removeDuplicatedProperties: true
-// 		})
-// 	]
-// });
-
-// mix.postCss('typo3temp/assets/pdf.css', 'assets/css', [
-// 		require('postcss-unmq')
-// 	]);
-
 if(mix.inProduction() === true) {
 	mix.babel('assets/js/xna.js', 'assets/js/xna.js');
 
 	mix.minify([
 		'assets/js/xna.js',
-		'assets/js/xna-inline.js',
-		'assets/js/tobii.js',
-		'assets/js/tiny-slider.js',
-		'assets/js/chartjs.js',
-		'assets/js/plugins/filter.js'
+		'assets/js/xna-inline.js'
 	]);
 
 	mix.minify([
