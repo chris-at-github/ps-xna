@@ -49,7 +49,6 @@ html2pdf {
 			cssModuleInlineLimit = 0
 			cssUseMinifyOnProduction = 0
 
-			#jsModuleEnabled = 0
 			jsModuleInlineLimit = 0
 			jsUseMinifyOnProduction = 0
 		}
