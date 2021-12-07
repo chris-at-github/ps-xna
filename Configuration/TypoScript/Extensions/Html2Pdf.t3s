@@ -16,8 +16,6 @@ block.htmlToPdf {
 
 html2pdf {
 	config {
-
-
 		tx_html2pdf {
 			enable.if.isFalse.data = TSFE:no_cache // field:no_cache
 
@@ -31,6 +29,10 @@ html2pdf {
 				footer-right >
 			}
 		}
+	}
+
+	includeJSFooter {
+		application >
 	}
 
 	includeCSS >
