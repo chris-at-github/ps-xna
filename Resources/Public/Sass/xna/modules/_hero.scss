@@ -1,5 +1,7 @@
 .ce-header + .ce-hero, .ce-header + .ce-hero-slider {
-	margin-top: rem(35px);
+	&.ce-hero.ce-frame--space-before-auto {
+		margin-top: rem(35px);
+	}
 }
 
 .ce-hero-slider {
@@ -19,13 +21,6 @@
 		ul {
 			justify-content: center;
 		}
-	}
-}
-
-// >= 768px
-@include media-breakpoint-up(md) {
-	.ce-header + .ce-hero, .ce-header + .ce-hero-slider {
-		margin-top: 0;
 	}
 }
 
