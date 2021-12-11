@@ -17,7 +17,7 @@
 	@include stylesheet-context($stylesheet-context-embed) {
 		a {
 			& {
-				color: $font-color-base;
+				color: $theme-color-primary;
 			}
 
 			&:hover, .focusable &:focus {
@@ -34,6 +34,10 @@
 			}
 
 			& > li {
+				& > a > span {
+					background-size: 0 2px;
+				}
+
 				&:hover, .focusable &:focus-within {
 					& > a > span {
 						background-size: 100% 2px;
@@ -298,7 +302,7 @@
 						padding: 1px 10px;
 						font-size: rem(17px);
 						font-weight: $font-weight-bold;
-						color: $theme-color-primary;
+						color: $color-grey-darken;
 					}
 
 					& > ul {
