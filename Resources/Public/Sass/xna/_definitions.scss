@@ -48,12 +48,12 @@ p, ul, ol, table {
 %link--animation {
 	& {
 		background: linear-gradient(#{$theme-color-primary}, #{$theme-color-primary}) no-repeat 0 100%;
-		background-size: 0 2px;
+		background-size: 0 1px;
 		transition: background-size 0.25s ease-out;
 	}
 
 	&:hover, .focusable &:focus {
-		background-size: 100% 2px;
+		background-size: 100% 1px;
 		text-decoration: none;
 	}
 }
