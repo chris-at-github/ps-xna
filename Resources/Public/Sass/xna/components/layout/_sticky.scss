@@ -25,9 +25,16 @@
 	}
 
 	.sticky--element-totop {
+		& {
+			max-height: 0;
+			transition: max-height $transition-duration;
+		}
+
 		.sticky--icon {
 			& {
 				@extend %button--rounded-icon--inverted;
+				transform: scale(0);
+				transition: transform $transition-duration;
 			}
 
 			&:before {
@@ -35,15 +42,8 @@
 			}
 
 			svg {
-				& {
-					fill: $theme-color-primary-dark;
-					transform: rotate(180deg);
-					transition-property: fill, transform;
-				}
-
-				.is--totop-down & {
-					transform: rotate(0deg);
-				}
+				fill: $theme-color-primary-dark;
+				transition-property: fill, transform;
 			}
 
 			&:hover, .focusable &:focus {
@@ -51,6 +51,14 @@
 					background: $theme-color-primary-dark;
 				}
 			}
+
+			.is--totop-down & {
+				transform: scale(1);
+			}
+		}
+
+		.is--totop-down & {
+			max-height: var(--sticky-icon-size);
 		}
 	}
 
