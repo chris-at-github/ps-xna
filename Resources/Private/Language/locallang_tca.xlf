@@ -42,6 +42,9 @@
 			<trans-unit id="tx_xna_tt_content.tx_xo_variant.teaser.1">
 				<source>Blue Background (Technology)</source>
 			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.tx_xo_variant.teaser.2">
+				<source>Grey Container / Transparent Images (Technology)</source>
+			</trans-unit>
 			<trans-unit id="tx_xna_tt_content.layout.4">
 				<source>Wide</source>
 			</trans-unit>
