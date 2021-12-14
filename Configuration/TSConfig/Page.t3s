@@ -170,7 +170,7 @@ mod.web_layout.BackendLayouts {
 	}
 [END]
 
-[field('CType') === 'menu_pages']
+[field('CType') === 'menu_pages' || field('CType') === 'menu_subpages']
 	TCEFORM.tt_content {
 		tx_xo_variant {
 			addItems {
