@@ -16,6 +16,7 @@
 	--slide-max-height: 85vh;
 	--tobii-button-size: #{rem(45px)};
 	--caption-color: #{$theme-color-primary};
+	--caption-background: #fff;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -74,8 +75,14 @@
 		}
 
 		&.tobii__btn--close {
-			top: rem(20px);
-			right: rem(20px);
+			& {
+				top: rem(20px);
+				right: rem(20px);
+			}
+
+			svg {
+				transform: scale(1);
+			}
 		}
 	}
 }
