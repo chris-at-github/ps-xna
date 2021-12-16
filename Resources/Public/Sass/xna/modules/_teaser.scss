@@ -97,6 +97,52 @@
 		}
 	}
 
+	.ce-teaser-frontend.ce-frame--variant-2 {
+		.card--media {
+			& {
+				background: transparent;
+			}
+
+			& + .card--body {
+				margin-top: 0;
+			}
+		}
+
+		.card--body {
+			background: $color-grey-lighter;
+			padding-top: rem(20px);
+			padding-bottom: rem(35px);
+		}
+
+		.card--title, .card--description {
+			padding-left: rem(15px);
+			padding-right: rem(15px);
+		}
+
+		.card[data-uri-target] {
+			&:hover, .focusable &:focus-within {
+				.card--body {
+					background: $theme-color-primary;
+					color: #fff;
+					transition-property: color, background;
+					transition-duration: $transition-duration;
+				}
+
+				.card--title {
+					& {
+						color: #fff;
+						transition: color $transition-duration;
+					}
+
+					span:after {
+						margin-left: rem(12px);
+						padding-right: rem(5px);
+					}
+				}
+			}
+		}
+	}
+
 	// ---------------------------------------------------------------------------------------------------------------------
 	// >= 768px
 	@include media-breakpoint-up(md) {
