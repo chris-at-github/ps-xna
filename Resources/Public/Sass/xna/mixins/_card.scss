@@ -39,7 +39,7 @@
 		padding: rem(3px 15px);
 	}
 
-	& > span {
+	& > span, & > a > span {
 		font-size: rem(20px);
 	}
 }

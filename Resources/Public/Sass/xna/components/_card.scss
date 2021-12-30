@@ -2,7 +2,7 @@
 	@include card--title();
 }
 
-a.card--title {
+a.card--title, .card--title > a {
 	@include card--title-link();
 	@include link-arrow();
 }
@@ -12,11 +12,17 @@ a.card--title {
 }
 
 .card--body {
-	//position: relative;
-	z-index: 10;
-	padding: rem(15px 0 30px 0);
-	border-radius: $border-radius-default;
-	background: $color-grey-lighter;
+	& {
+		z-index: 10;
+		padding: rem(15px 0 30px 0);
+		border-radius: $border-radius-default;
+		background: $color-grey-lighter;
+	}
+
+	h1, h2, h3, h4 {
+		margin-top: 0;
+		font-size: inherit;
+	}
 }
 
 .card--description {
@@ -89,7 +95,7 @@ a.card--title {
 			position: relative;
 		}
 
-		.card--title:after {
+		a.card--title:after, .card--title > a:after {
 			content: '';
 			position: absolute;
 			top: 0; left: 0;

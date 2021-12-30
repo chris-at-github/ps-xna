@@ -39,15 +39,36 @@
 </f:section>
 
 <f:section name="Title">
+	<f:switch expression="{titleType}">
+		<f:case value="1">
+			<h1 class="card--title"><f:render section="TitleInner" arguments="{title: title, link: link}" /></h1>
+		</f:case>
+		<f:case value="2">
+			<h2 class="card--title"><f:render section="TitleInner" arguments="{title: title, link: link}" /></h2>
+		</f:case>
+		<f:case value="3">
+			<h3 class="card--title"><f:render section="TitleInner" arguments="{title: title, link: link}" /></h3>
+		</f:case>
+		<f:case value="4">
+			<h4 class="card--title"><f:render section="TitleInner" arguments="{title: title, link: link}" /></h4>
+		</f:case>
+		<f:defaultCase>
+			<f:if condition="{link}">
+				<f:then>
+					<a href="{link}" class="card--title"><span>{title}</span></a>
+				</f:then>
+				<f:else>
+					<div class="card--title">{title}</div>
+				</f:else>
+			</f:if>
+		</f:defaultCase>
+	</f:switch>
+</f:section>
+
+<f:section name="TitleInner">
 	<f:if condition="{link}">
-		<f:then>
-			<a href="{link}" class="card--title">
-				<span>{title}</span>
-			</a>
-		</f:then>
-		<f:else>
-			<div class="card--title">{title}</div>
-		</f:else>
+		<f:then><a href="{link}"><span>{title}</span></a></f:then>
+		<f:else>{title}</f:else>
 	</f:if>
 </f:section>
 
