@@ -29,6 +29,10 @@
 	}
 }
 
+@mixin header-4 {
+	font-weight: $font-weight-bold;
+}
+
 @mixin link-arrow {
 	span {
 		& {

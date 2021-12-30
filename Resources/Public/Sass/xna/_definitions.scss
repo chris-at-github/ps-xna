@@ -19,6 +19,10 @@
 	@include header-3;
 }
 
+%header-4 {
+	@include header-4;
+}
+
 %subheader {
 	font-size: rem(21px);
 }
