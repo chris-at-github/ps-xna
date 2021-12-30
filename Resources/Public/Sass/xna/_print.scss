@@ -36,19 +36,19 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // XO print settings fields
-.ce-frame--print-break-before {
+.print--break-before {
 	page-break-before: always;
 }
 
-.ce-frame--print-break-after {
+.print--break-after {
 	page-break-after: always;
 }
 
-.ce-frame--print-visibility-hidden {
+.print--visibility-hidden {
 	display: none !important;
 }
 
-.ce-frame--print-visibility-visible {
+.print--visibility-visible {
 	display: block !important;
 }
 
