@@ -224,3 +224,17 @@ mod.web_layout.BackendLayouts {
 		}
 	}
 [END]
+
+[field('list_type') === 'entityproduct_keyfact']
+	TCAdefaults.tt_content {
+		frame_class = 2
+		space_before_class = medium
+		space_after_class = large
+	}
+[END]
+
+[field('list_type') === 'entityproduct_teaser']
+	TCAdefaults.tt_content {
+		space_before_class = medium
+	}
+[END]
