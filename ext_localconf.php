@@ -15,3 +15,7 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['xoMinimal'] = 'EXT:xna/Configurat
 
 // Language Override
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:xo/Resources/Private/Language/locallang_frontend.xlf'][] = 'EXT:xna/Resources/Private/Language/locallang_frontend.xlf';
+
+// KeSearch Indexer
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['ke_search']['modifyPageContentFields'][] = \Ps\Xna\KeSearchIndexer\ContentElementRecords::class;
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['ke_search']['modifyContentFromContentElement'][] = \Ps\Xna\KeSearchIndexer\ContentElementRecords::class;

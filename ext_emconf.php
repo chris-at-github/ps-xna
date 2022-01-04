@@ -28,6 +28,7 @@ $EM_CONF[$_EXTKEY] = [
 			'chart' => '1.0.0-1.99.99',
 			'html2pdf' => '2.1.1-2.1.99',
 			'teaser' => '1.0.0-1.99.99',
+			'ke_search' => '4.2.0-4.2.99',
 		],
 		'conflicts' => [],
 		'suggests' => [],
