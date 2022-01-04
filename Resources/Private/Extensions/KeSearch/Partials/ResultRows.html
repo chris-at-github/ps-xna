@@ -4,13 +4,11 @@
 	<div id="kesearch_pagebrowser_top"><f:render partial="PageBrowser" arguments="{conf: conf, numberofresults:numberofresults, pagebrowser:pagebrowser}" /></div>
 </f:if>
 
-<div id="kesearch_results">
-	<ul>
-		<f:for each="{resultrows}" as="resultrow">
-			<f:render partial="ResultRow" arguments="{conf: conf, resultrow: resultrow}" />
-		</f:for>
-	</ul>
-</div>
+<ul class="search--result-list">
+	<f:for each="{resultrows}" as="resultrow">
+		<f:render partial="ResultRow" arguments="{conf: conf, resultrow: resultrow}" />
+	</f:for>
+</ul>
 
 <f:if condition="{conf.pagebrowserAtBottom}">
 	<div id="kesearch_pagebrowser_bottom"><f:render partial="PageBrowser" arguments="{conf: conf, numberofresults:numberofresults, pagebrowser:pagebrowser}" /></div>

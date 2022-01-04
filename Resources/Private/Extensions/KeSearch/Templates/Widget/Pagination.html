@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+			xmlns:kesearch="http://typo3.org/ns/Tpwd\KeSearch\ViewHelpers"
+			xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+<f:spaceless>
+	<ul>
+		<f:if condition="{pagination.previous}">
+			<li>
+				<kesearch:link
+					piVars="{page: pagination.previous}"
+					keepPiVars="1"
+					class="prev"
+					additionalAttributes="{'aria-label': '{f:translate(key: \'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.prev\')}'}">
+					<xo:svg.inline source="/assets/svg/chevron-left.svg" />
+				</kesearch:link>
+			</li>
+		</f:if>
+		<f:for each="{pagination.pages}" as="page">
+			<li>
+				<kesearch:link
+					piVars="{page: page}"
+					keepPiVars="1"
+					class="{f:if(condition: '{page} == {pagination.currentPage}', then: 'current')}">{page}
+				</kesearch:link>
+			</li>
+		</f:for>
+		<f:if condition="{pagination.next}">
+			<li>
+				<kesearch:link
+					piVars="{page: pagination.next}"
+					keepPiVars="1"
+					class="next"
+					additionalAttributes="{'aria-label': '{f:translate(key: \'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.next\')}'}">
+					<xo:svg.inline source="/assets/svg/chevron-right.svg" />
+				</kesearch:link>
+			</li>
+		</f:if>
+	</ul>
+</f:spaceless>

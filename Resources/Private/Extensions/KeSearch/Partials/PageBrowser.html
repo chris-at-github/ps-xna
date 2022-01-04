@@ -1,0 +1,6 @@
+<f:if condition="{numberofresults} > {conf.resultsPerPage}">
+	<div class="search--result-pagination-container">
+		<div class="search--result-pagination-description">{f:translate(key: 'LLL:EXT:ke_search/Resources/Private/Language/locallang_searchbox.xlf:results')} {pagebrowser.start} {f:translate(key: 'LLL:EXT:ke_search/Resources/Private/Language/locallang_searchbox.xlf:until')} {pagebrowser.end} {f:translate(key: 'LLL:EXT:ke_search/Resources/Private/Language/locallang_searchbox.xlf:of')} {pagebrowser.total}</div>
+		<div class="search--result-pagination"><f:format.raw>{pagebrowser.pages_list}</f:format.raw></div>
+	</div>
+</f:if>

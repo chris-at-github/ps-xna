@@ -15,6 +15,10 @@ $stylesheet-context: 'screen' !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Search Form
 .search--form {
+	& {
+		margin: $spacing-default 0 0 0;
+	}
+
 	.search--form-keyword-container {
 		position: relative;
 	}
@@ -68,7 +72,107 @@ $stylesheet-context: 'screen' !default;
 	}
 
 	.search--form-action {
-		margin: $spacing-default 0 0 0;
+		margin: rem(10px 0 0 0);
+	}
+}
+
+.search--result-list {
+	& {
+		list-style: none;
+		padding: 0;
+	}
+
+	& > li {
+		position: relative;
+	}
+
+	.search--result-list-item-title + .search--result-list-item-teaser {
+		margin-top: rem(5px);
+	}
+
+	.hit {
+		color: #000;
+		border-bottom: 1px dotted $theme-color-primary;
+	}
+}
+
+.search--result-pagination-container {
+	& {
+		margin: rem(45px 0 0 0);
+	}
+
+	.search--result-pagination-description {
+		color: $color-grey-darken;
+	}
+}
+
+.search--result-pagination {
+	& {
+		margin: rem(10px 0 0 0);
+	}
+
+	ul {
+		display: flex;
+		margin: rem(0 -5px);
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		padding: rem(0 5px);
+	}
+
+	a {
+		& {
+			display: block;
+			background: $theme-color-primary;
+			color: #fff;
+			width: rem(34px);
+			height: rem(34px);
+			border: 2px solid $theme-color-primary;
+			border-radius: 50%;
+			text-align: center;
+			line-height: rem(30px);
+			font-weight: $font-weight-base;
+			transition: all $transition-duration;
+		}
+
+		&:hover, .focusable &:focus {
+			background: #fff;
+			color: $theme-color-primary;
+			font-weight: $font-weight-bold;
+		}
+	}
+
+	.current {
+		color: $theme-color-primary;
+		background: #fff;
+		font-weight: $font-weight-bold;
+		cursor: default;
+	}
+
+	.prev, .next {
+		svg {
+			position: relative;
+			fill: #fff;
+			width: rem(9px);
+			height: rem(15px);
+			transition: fill $transition-duration;
+		}
+
+		&:hover, .focusable &:focus {
+			svg {
+				fill: $theme-color-primary;
+			}
+		}
+	}
+
+	.prev svg {
+		top: 2px; right: 1px;
+	}
+
+	.next svg {
+		top: 2px; left: 1px;
 	}
 }
 
@@ -76,7 +180,19 @@ $stylesheet-context: 'screen' !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 768px
 @include media-breakpoint-up(md) {
+	.search--form {
+		margin: 0;
+	}
 
+	.search--result-list {
+		& {
+			margin: rem(75px 0 0 0);
+		}
+
+		.search--result-list-item-title a {
+			font-weight: $font-weight-base;
+		}
+	}
 }
 
 @include stylesheet-context($stylesheet-context-print) {
