@@ -1,0 +1,83 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Pre-Define Variables
+$iconfont-create-font-face: false !default;
+$iconfont-create-icon-class: false !default;
+
+$stylesheet-context: 'screen' !default;
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../../functions';
+@import '../../variables';
+@import '../../mixins';
+@import '../../definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Search Form
+.search--form {
+	.search--form-keyword-container {
+		position: relative;
+	}
+
+	.search--form-keyword {
+		& {
+			display: block;
+			position: relative;
+			z-index: 5;
+			width: 100%;
+
+			padding: rem(12px 20px);
+			border: 0;
+			border-radius: $border-radius-default;
+			background: $color-grey-lighter;
+		}
+
+		&:focus {
+			background: $color-grey-light;
+		}
+	}
+
+	.search--form-keyword-reset {
+		& {
+			position: absolute;
+			top: 0; right: 0;
+			z-index: 10;
+			width: rem(52px);
+			height: rem(52px);
+			border: 0;
+			background: transparent;
+			cursor: pointer;
+			text-align: center;
+
+			svg {
+				margin: 15px 0 0 0;
+				width: 21px;
+				height: 21px;
+			}
+		}
+
+		svg {
+			fill: #666;
+		}
+
+		&:hover, &:focus {
+			svg {
+				fill: $link-color-hover;
+			}
+		}
+	}
+
+	.search--form-action {
+		margin: $spacing-default 0 0 0;
+	}
+}
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+
+}
+
+@include stylesheet-context($stylesheet-context-print) {
+}

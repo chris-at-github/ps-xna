@@ -1,0 +1,49 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+			xmlns:kesearch="http://typo3.org/ns/Tpwd\KeSearch\ViewHelpers"
+			xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+<f:layout name="General" />
+
+<f:section name="content">
+	<form method="get" id="form_kesearch_pi1" class="search--form" action="{f:uri.page(pageUid: targetpage)}">
+		<f:if condition="{isEmptySearch} == FALSE">
+			<f:format.raw><script>history.replaceState(null,'','</f:format.raw><kesearch:link keepPiVars="1" uriOnly="1" /><f:format.raw>');</script></f:format.raw>
+		</f:if>
+
+		<div>
+			<f:if condition="{lparam}">
+				<input type="hidden" name="L" value="{lparam}" />
+			</f:if>
+			<f:if condition="{mpparam}">
+				<input type="hidden" name="MP" value="{mpparam}" />
+			</f:if>
+			<f:if condition="{typeparam}">
+				<input type="hidden" name="type" value="{typeparam}" />
+			</f:if>
+			<f:if condition="{page}">
+				<input id="kesearchpagenumber" type="hidden" name="tx_kesearch_pi1[page]" value="{page}" />
+			</f:if>
+			<input id="resetFilters" type="hidden" name="tx_kesearch_pi1[resetFilters]" value="0" />
+			<f:if condition="{sortByField}">
+				<input id="sortByField" type="hidden" name="tx_kesearch_pi1[sortByField]" value="{sortByField}" />
+			</f:if>
+			<f:if condition="{sortByDir}">
+				<input id="sortByDir" type="hidden" name="tx_kesearch_pi1[sortByDir]" value="{sortByDir}" />
+			</f:if>
+		</div>
+
+		<div class="search--form-keyword-container">
+			<input type="search" id="ke_search_sword" class="search--form-keyword" name="tx_kesearch_pi1[sword]" value="{searchword -> f:format.raw()}" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.placeholder')}" placeholder="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.placeholder')}" {f:if(condition: '{extConf.allowEmptySearch} == 0', then: 'required')} minlength="{extConf.searchWordLength}" />
+			<a href="{resetUrl}" class="search--form-keyword-reset" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.reset')}"><xo:svg.use name="close" viewBox="0 0 11 11" /></a>
+		</div>
+
+		<f:if condition="{filters}">
+			<div id="kesearch_filters"><f:render partial="Filters" arguments="{conf: conf, numberofresults: numberofresults, resultrows: resultrows, filters: filters}" /></div>
+		</f:if>
+
+		<div class="search--form-action">
+			<button type="submit" class="button"><f:translate key="LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.submit" /></button>
+		</div>
+	</form>
+</f:section>
