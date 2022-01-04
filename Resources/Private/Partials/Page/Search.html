@@ -1,0 +1,17 @@
+<div xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:section name="Icon">
+		<f:link.page pageUid="{settings.pages.search}" class="search-widget search-widget--link" additionalAttributes="{aria-expanded: 'false', aria-controls: 'search-widget--field', aria-label: '{f:translate(key: \'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.link\')}'}" title="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.link')}">
+			<xo:svg.use name="search" viewBox="0 0 32 32" />
+		</f:link.page>
+	</f:section>
+
+	<f:section name="Field">
+		<form action="{f:uri.page(pageUid: settings.pages.search)}" class="search-widget search-widget--field" id="search-widget--field">
+			<input type="hidden" name="tx_kesearch_pi1[page]" value="1">
+			<input type="hidden" name="tx_kesearch_pi1[resetFilters]" value="0">
+			<input type="text" class="search-widget--keyword" name="tx_kesearch_pi1[sword]" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.placeholder')}" placeholder="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.placeholder')}" tabindex="-1" />
+			<button class="search-widget--submit" type="submit" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.submit')}" tabindex="-1"><xo:svg.use name="search" viewBox="0 0 32 32" /></button>
+			<button class="search-widget--close" type="button"  aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.close')}" tabindex="-1"><xo:svg.use name="close" viewBox="0 0 11 11" /></button>
+		</form>
+	</f:section>
+</div>
