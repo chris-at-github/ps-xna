@@ -19,3 +19,6 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['locallangXMLOverride']['EXT:xo/Resources/Pri
 // KeSearch Indexer
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['ke_search']['modifyPageContentFields'][] = \Ps\Xna\KeSearchIndexer\ContentElementRecords::class;
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['ke_search']['modifyContentFromContentElement'][] = \Ps\Xna\KeSearchIndexer\ContentElementRecords::class;
+
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['ke_search']['modifyPageContentFields'][] = \Ps\Xna\KeSearchIndexer\RemoveContentFromHiddenParent::class;
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['ke_search']['contentElementShouldBeIndexed'][] = \Ps\Xna\KeSearchIndexer\RemoveContentFromHiddenParent::class;
