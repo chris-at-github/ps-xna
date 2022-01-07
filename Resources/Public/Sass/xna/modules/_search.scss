@@ -84,6 +84,11 @@ $stylesheet-context: 'screen' !default;
 
 	& > li {
 		position: relative;
+		margin-top: rem(45px);
+	}
+
+	.search--result-list-item-title {
+		margin-top: 0;
 	}
 
 	.search--result-list-item-title + .search--result-list-item-teaser {
