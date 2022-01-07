@@ -20,6 +20,9 @@ mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/c
 	.sass('../Resources/Public/Sass/xna/components/_accordion.scss', 'assets/css/components/accordion.css')
 	.sass('../Resources/Public/Sass/xna/components/_tab.scss', 'assets/css/components/tab.css')
 	.sass('../Resources/Public/Sass/xna/vendors/_tobii.scss', 'assets/css/libraries/tobii.css')
+	.sass('../Resources/Public/Sass/xna/modules/_text-media.scss', 'assets/css/modules/text-media.css')
+	.sass('../Resources/Public/Sass/xna/modules/_address.scss', 'assets/css/modules/address.css')
+	.sass('../Resources/Public/Sass/xna/modules/_search.scss', 'assets/css/modules/search.css')
 	.options({
 		postCss: [
 			require('postcss-cachebuster'),
@@ -33,6 +36,7 @@ mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/c
 // JS
 mix.js('../Resources/Public/Js/components/bootstrap/collapse.js', 'assets/js/components/collapse.js')
 	.js('../Resources/Public/Js/components/bootstrap/tab.js', 'assets/js/components/tab.js')
+	.js('../Resources/Public/Js/modules/search.js', 'assets/js/modules/search.js')
 	.js('../Resources/Public/Js/libraries/tiny-slider.js', 'assets/js/libraries/tiny-slider.js');
 
 mix.babel('../Resources/Public/Js/libraries/filter.js', '../../../../assets/js/libraries/filter.js');

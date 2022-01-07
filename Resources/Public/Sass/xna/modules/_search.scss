@@ -20,7 +20,15 @@ $stylesheet-context: 'screen' !default;
 	}
 
 	.search--form-keyword-container {
-		position: relative;
+		& {
+			position: relative;
+		}
+
+		&.is--search-keyword {
+			.search--form-keyword-reset {
+				opacity: 1;
+			}
+		}
 	}
 
 	.search--form-keyword {
@@ -52,6 +60,8 @@ $stylesheet-context: 'screen' !default;
 			background: transparent;
 			cursor: pointer;
 			text-align: center;
+			opacity: 0;
+			transition: opacity $transition-duration;
 
 			svg {
 				margin: 15px 0 0 0;

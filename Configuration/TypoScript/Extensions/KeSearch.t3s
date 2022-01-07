@@ -9,8 +9,8 @@ tt_content.list.dataProcessing.200 {
 			10 = /assets/css/modules/search.css
 		}
 
-#		importJs {
-#			10 = /assets/js/contact.js
-#		}
+		importJs {
+			10 = /assets/js/modules/search.js
+		}
 	}
 }

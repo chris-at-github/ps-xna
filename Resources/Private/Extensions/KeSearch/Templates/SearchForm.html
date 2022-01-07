@@ -35,7 +35,7 @@
 
 		<div class="search--form-keyword-container">
 			<input type="search" id="ke_search_sword" class="search--form-keyword" name="tx_kesearch_pi1[sword]" value="{searchword -> f:format.raw()}" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.placeholder')}" placeholder="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.placeholder')}" {f:if(condition: '{extConf.allowEmptySearch} == 0', then: 'required')} minlength="{extConf.searchWordLength}" />
-			<a href="{resetUrl}" class="search--form-keyword-reset" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.reset')}"><xo:svg.use name="close" viewBox="0 0 11 11" /></a>
+			<a href="{resetUrl}" class="search--form-keyword-reset" aria-hidden="true" aria-label="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_search.reset')}"><xo:svg.use name="close" viewBox="0 0 11 11" /></a>
 		</div>
 
 		<f:if condition="{filters}">
