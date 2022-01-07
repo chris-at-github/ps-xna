@@ -86,6 +86,10 @@ $stylesheet-context: 'screen' !default;
 	}
 }
 
+.search--result-notice {
+	margin-top: rem(45px);
+}
+
 .search--result-list {
 	& {
 		list-style: none;
