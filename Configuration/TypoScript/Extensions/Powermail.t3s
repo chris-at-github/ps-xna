@@ -1,1 +1,4 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/Main/setup.typoscript">
+
+// @see: https://www.forestlake.de/2018/07/12/powermail-link-in-label/
+plugin.tx_powermail.settings.setup.misc.htmlForLabels = 1
