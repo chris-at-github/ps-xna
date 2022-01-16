@@ -1,5 +1,17 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:powermail/Configuration/TypoScript/Main/constants.typoscript">
 
-plugin.tx_powermail.settings.spamshield.enable = 0
-plugin.tx_powermail.settings.validation.client = 0
-plugin.tx_powermail.settings.db.enable = 0
+plugin.tx_powermail {
+	view {
+		partialRootPath = EXT:xna/Resources/Private/Extensions/Powermail/Partials/
+	}
+
+	settings {
+		spamshield.enable = 0
+		validation.client = 0
+		db.enable = 0
+
+		javascript {
+			addAdditionalJavaScript = 0
+		}
+	}
+}

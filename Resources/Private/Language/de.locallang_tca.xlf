@@ -43,7 +43,10 @@
 				<target>Grauer Container / Transparente Bilder (Technologie)</target>
 			</trans-unit>
 			<trans-unit id="tx_xna_tt_content.tx_xo_variant.teaser.1">
-				<source>Blau (Technologie)</source>
+				<target>Blau (Technologie)</target>
+			</trans-unit>
+			<trans-unit id="tx_xna_tt_content.tx_xo_variant.powermail">
+				<target>Newsletter</target>
 			</trans-unit>
 			<trans-unit id="tx_xna_tt_content.layout.4">
 				<target>Weite Laufweite</target>

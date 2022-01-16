@@ -23,6 +23,7 @@ mix.sass('../Resources/Public/Sass/xna/components/_collapse.scss', 'assets/css/c
 	.sass('../Resources/Public/Sass/xna/modules/_text-media.scss', 'assets/css/modules/text-media.css')
 	.sass('../Resources/Public/Sass/xna/modules/_address.scss', 'assets/css/modules/address.css')
 	.sass('../Resources/Public/Sass/xna/modules/_search.scss', 'assets/css/modules/search.css')
+	.sass('../Resources/Public/Sass/xna/modules/_newsletter.scss', 'assets/css/modules/newsletter.css')
 	.options({
 		postCss: [
 			require('postcss-cachebuster'),
@@ -62,6 +63,10 @@ if(mix.inProduction() === true) {
 		'../../../../assets/css/components/collapse.css',
 		'../../../../assets/css/components/accordion.css',
 		'../../../../assets/css/components/tab.css',
-		'../../../../assets/css/libraries/tobii.css'
+		'../../../../assets/css/libraries/tobii.css',
+		'../../../../assets/css/modules/text-media.css',
+		'../../../../assets/css/modules/address.css',
+		'../../../../assets/css/modules/search.css',
+		'../../../../assets/css/modules/newsletter.css'
 	]);
 }
