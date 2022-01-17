@@ -8,12 +8,18 @@
   & {
     outline: 0;
     padding: rem(4px 8px);
-    border: 2px solid $theme-color-primary;
+    //border: 2px solid $theme-color-primary;
+    border: 2px solid $color-grey-light;
     border-radius: $border-radius-default;
+    background: $color-grey-light;
+    transition-property: border, background;
+    transition-duration: $transition-duration;
   }
 
   &:focus {
-    border-color: $theme-color-primary-dark;
+    //border-color: $theme-color-primary-dark;
+    border-color: $theme-color-primary;
+    background: #fff;
   }
 
   &[disabled] {
@@ -30,7 +36,11 @@ select%form-field {
 %form-field--checkbox, %form-field--radio {
   & {
     position: relative;
-    padding: rem(0 0 0 23px);
+    padding: rem(0 0 0 26px);
+  }
+
+  & + %form-field--checkbox {
+    margin: rem(3px 0 0 0);
   }
 
   .focusable & {
@@ -49,14 +59,60 @@ select%form-field {
   }
 }
 
-%form-field--radio-custom {
+%form-field--checkbox-custom, %form-field--radio-custom {
+  & {
+    padding: rem(0 0 0 28px);
+  }
+
   input {
     opacity: 0;
   }
 
-  span:before {
+  label {
+    & {
+      display: inline-block;
+      font-weight: $font-weight-base;
+      cursor: pointer;
+    }
+
+    &:hover span:after {
+      background: $color-grey-lighten;
+    }
+  }
+
+  span:after {
     content: '';
     position: absolute;
+    top: rem(4px); left: rem(1px);
+    z-index: 5;
+    width: 19px;
+    height: 19px;
+    background: $color-grey-light;
+    border-radius: 2px;
+    transition: background 0.15s;
+  }
+
+  span:before {
+    position: absolute;
+    top: rem(8px); left: rem(5px);
+    z-index: 10;
+    opacity: 0;
+    font-size: 8px;
+    color: #fff;
+    transition: opacity $transition-duration;
+  }
+
+  input:checked + span:before {
+    opacity: 1;
+  }
+
+  input:checked + span:after {
+    background: $theme-color-primary;
+  }
+}
+
+%form-field--radio-custom {
+  span:before {
     top: rem(5px); left: rem(1px);
     z-index: 5;
     width: 13px;
