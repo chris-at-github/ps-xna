@@ -31,6 +31,7 @@ $EM_CONF[$_EXTKEY] = [
 			'teaser' => '1.0.0-1.99.99',
 			'ke_search' => '4.2.0-4.2.99',
 			'cleverreach' => '0.1.8-0.1.99',
+			'news_extended' => '1.0.0-1.99.99',
 		],
 		'conflicts' => [],
 		'suggests' => [],
