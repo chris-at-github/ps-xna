@@ -1,0 +1,14 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:news_extended/Configuration/TypoScript/setup.typoscript">
+
+plugin.tx_news {
+	settings {
+		cssFile >
+		displayDummyIfNoMedia = 0
+		analytics >
+		detail {
+			checkPidOfNewsRecord = 1
+			showSocialShareButtons = 0
+		}
+	}
+}
