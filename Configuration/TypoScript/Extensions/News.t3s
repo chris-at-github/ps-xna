@@ -2,6 +2,21 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:news_extended/Configuration/TypoScript/setup.typoscript">
 
 plugin.tx_news {
+	view {
+		layoutRootPaths {
+			10 = EXT:xna/Resources/Private/Extensions/News/Layouts/
+		}
+
+		templateRootPaths {
+			10 = EXT:xna/Resources/Private/Extensions/News/Templates/
+		}
+
+		partialRootPaths {
+			10 = EXT:xna/Resources/Private/Extensions/News/Partials/
+			21 = EXT:ce_downloads/Resources/Private/Partials/
+		}
+	}
+
 	settings {
 		cssFile >
 		displayDummyIfNoMedia = 0
@@ -9,6 +24,17 @@ plugin.tx_news {
 		detail {
 			checkPidOfNewsRecord = 1
 			showSocialShareButtons = 0
+		}
+	}
+}
+
+tt_content.list.dataProcessing {
+	200 {
+		news_pi1 {
+			importCss {
+				10 = /assets/css/modules/news.css
+				20 = /assets/css/modules/downloads.css
+			}
 		}
 	}
 }
