@@ -12,8 +12,10 @@ plugin.tx_news {
 		}
 
 		partialRootPaths {
-			10 = EXT:xna/Resources/Private/Extensions/News/Partials/
-			21 = EXT:ce_downloads/Resources/Private/Partials/
+			10 = EXT:xo/Resources/Private/Extensions/Xo/Partials/
+			15 = EXT:xna/Resources/Private/Extensions/News/Partials/
+			20 = EXT:xna/Resources/Private/Partials/
+			25 = EXT:ce_downloads/Resources/Private/Partials/
 		}
 	}
 
@@ -24,6 +26,10 @@ plugin.tx_news {
 		detail {
 			checkPidOfNewsRecord = 1
 			showSocialShareButtons = 0
+		}
+
+		list {
+			paginate.insertAbove = 0
 		}
 	}
 }
