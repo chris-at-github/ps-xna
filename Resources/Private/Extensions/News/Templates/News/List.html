@@ -56,7 +56,7 @@
 		</f:comment>
 
 		<f:for each="{news}" as="newsItem" iteration="iterator">
-			<f:render partial="List/Item" arguments="{newsItem: newsItem, settings:settings, iterator:iterator}"/>
+			<f:render partial="List/Item" section="Main" arguments="{newsItem: newsItem, settings:settings, iterator:iterator}"/>
 		</f:for>
 	</ul>
 </f:section>

@@ -3,69 +3,78 @@
 		xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
-	<li class="card articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" data-uri-target="{n:link(newsItem: newsItem, settings: settings, uriOnly: 1)}">
-		<n:excludeDisplayedNews newsItem="{newsItem}" />
+<f:section name="Main">
+	<f:if condition="{newsItem.noDetail}">
+		<f:then>
+			<li class="card articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+				<n:excludeDisplayedNews newsItem="{newsItem}" />
+				<f:render section="Variant{newsItem.layout -> xo:format.ucFirst()}" optional="1" arguments="{_all}" />
+			</li>
+		</f:then>
+		<f:else>
+			<li class="card articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" data-uri-target="{n:link(newsItem: newsItem, settings: settings, uriOnly: 1)}">
+				<n:excludeDisplayedNews newsItem="{newsItem}" />
+				<f:render section="Variant{newsItem.layout -> xo:format.ucFirst()}" optional="1" arguments="{_all}" />
+			</li>
+		</f:else>
+	</f:if>
+</f:section>
 
-		<f:if condition="{newsItem.mediaPreviews}">
-			<!-- media preview element -->
-			<f:then>
-				<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-					<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
-						<div class="card--media">
-							<f:if condition="{mediaElement.originalResource.type} == 2 || {mediaElement.originalResource.type} == 5">
-								<f:render partial="Components/Media" section="Picture" arguments="{
-									file: mediaElement.originalResource,
-									image: {
-										width: 400,
-										cropVariant: 'default'
-									},
-									sizes: settings.mediaQueries
-								}" />
-							</f:if>
-							<f:if condition="{mediaElement.originalResource.type} == 4">
-								<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
-							</f:if>
-						</div>
-					</f:alias>
-				</n:link>
-			</f:then>
-			<f:else>
-				<f:comment>
-					<!--
-					<f:if condition="{settings.displayDummyIfNoMedia}">
-						<div class="news-img-wrap">
-							<span class="no-media-element">
-								<n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
-									<f:image src="{settings.list.media.dummyImage}" title="" alt="" loading="{settings.list.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
-								</n:link>
-							</span>
-						</div>
-					</f:if>
-					-->
-				</f:comment>
-			</f:else>
+<f:section name="VariantDefault">
+	<f:render section="Badge" arguments="{_all}" />
+	<f:render section="Media" arguments="{_all}" />
+
+	<div class="card--body">
+		<f:render section="Date" arguments="{_all}" />
+		<f:render section="Title" arguments="{_all}" />
+
+		<f:if condition="{newsItem.teaser}">
+			<f:render partial="Components/Card" section="Description" arguments="{description: '{newsItem.teaser -> f:format.crop(maxCharacters: \'{settings.cropMaxCharacters}\', respectWordBoundaries: 1)}'}" />
 		</f:if>
+	</div>
+</f:section>
 
-		<f:if condition="{newsItem.firstCategory}">
-			<ul class="card--badge-container">
-				<li class="badge badge--default">{newsItem.firstCategory.title}</li>
-			</ul>
-		</f:if>
+<f:section name="Badge">
+	<f:if condition="{newsItem.firstCategory}">
+		<ul class="card--badge-container">
+			<li class="badge badge--default">{newsItem.firstCategory.title}</li>
+		</ul>
+	</f:if>
+</f:section>
 
-		<div class="card--body">
-			<f:render partial="Components/Card" section="Title" arguments="{title: newsItem.title, titleType: settings.titleType, link: '{n:link(newsItem: newsItem, settings: settings, uriOnly: 1)}'}" />
-
-			<f:if condition="{newsItem.teaser}">
-				<f:render partial="Components/Card" section="Description" arguments="{description: '{newsItem.teaser -> f:format.crop(maxCharacters: \'{settings.cropMaxCharacters}\', respectWordBoundaries: 1)}'}" />
-			</f:if>
-
-			<!-- date -->
-			<span class="news-list-date">
-				<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
-					<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-				</time>
-			</span>
+<f:section name="Media">
+	<f:if condition="{newsItem.mediaPreviews}">
+		<div class="card--media">
+			<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+				<f:if condition="{mediaElement.originalResource.type} == 2 || {mediaElement.originalResource.type} == 5">
+					<f:render partial="Components/Media" section="Picture" arguments="{
+							file: mediaElement.originalResource,
+							image: {
+								width: settings.pictureSettings.card.width,
+								cropVariant: 'default'
+							},
+							sizes: settings.pictureSettings.card.mediaQueries
+						}" />
+				</f:if>
+				<f:if condition="{mediaElement.originalResource.type} == 4">
+					<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
+				</f:if>
+			</f:alias>
 		</div>
+	</f:if>
+</f:section>
 
-	</li>
+<f:section name="Date">
+	<time class="card--date" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+		<f:format.date format="{f:translate(key: 'LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_date.format.date')}">{newsItem.datetime}</f:format.date>
+	</time>
+</f:section>
+
+<f:section name="Title">
+	<f:if condition="{newsItem.noDetail}">
+		<f:then><f:render partial="Components/Card" section="Title" arguments="{title: newsItem.title, titleType: settings.titleType}" /></f:then>
+		<f:else><f:render partial="Components/Card" section="Title" arguments="{title: newsItem.title, titleType: settings.titleType, link: '{n:link(newsItem: newsItem, settings: settings, uriOnly: 1)}'}" /></f:else>
+	</f:if>
+</f:section>
+
 </html>

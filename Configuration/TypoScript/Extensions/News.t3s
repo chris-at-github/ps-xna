@@ -30,6 +30,53 @@ plugin.tx_news {
 
 		list {
 			paginate.insertAbove = 0
+			paginate.insertBelow = 0
+		}
+
+		pictureSettings {
+			detail {
+				width = 720
+				cropVariant = default
+				mediaQueries {
+					992 {
+						maxWidth = 570
+						cropVariant = default
+						mediaQuery = (min-width: 992px)
+					}
+					768 {
+						width = 460
+						cropVariant = default
+						mediaQuery = (min-width: 768px)
+					}
+					576 {
+						width = 720
+						cropVariant = default
+						mediaQuery = (min-width: 576px)
+					}
+					0 {
+						width = 530
+						cropVariant = default
+						mediaQuery = (min-width: 0px)
+					}
+				}
+			}
+
+			card {
+				width = 530
+				cropVariant = thumbnail
+				mediaQueries {
+					576 {
+						width = 360
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 576px)
+					}
+					0 {
+						width = 530
+						cropVariant = thumbnail
+						mediaQuery = (min-width: 0px)
+					}
+				}
+			}
 		}
 	}
 }

@@ -17,7 +17,14 @@
 					</a>
 				</f:then>
 				<f:else>
-					<f:image image="{mediaElement}" alt="{mediaElement.alternative}" loading="{settings.detail.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}" additionalAttributes="{itemprop:'image'}" />
+					<f:render partial="Components/Media" section="Picture" arguments="{
+							file: mediaElement.originalResource,
+							image: {
+								width: settings.pictureSettings.detail.width,
+								cropVariant: 'default'
+							},
+							sizes: settings.pictureSettings.detail.mediaQueries
+						}" />
 				</f:else>
 			</f:if>
 		</f:else>
