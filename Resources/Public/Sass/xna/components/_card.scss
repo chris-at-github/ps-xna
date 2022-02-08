@@ -11,6 +11,19 @@ a.card--title, .card--title > a {
 	@include card--media();
 }
 
+.card--date {
+	& {
+		display: block;
+		padding: rem(0 15px);
+		font-size: rem(16px);
+		color: $theme-color-secondary;
+	}
+
+	& + .card--title {
+		margin-top: rem(10px);
+	}
+}
+
 .card--body {
 	& {
 		z-index: 10;
@@ -61,6 +74,7 @@ a.card--title, .card--title > a {
 	& {
 		position: absolute;
 		top: 10px; left: 10px;
+		z-index: 5;
 		margin: rem(0 -5px);
 		padding: 0;
 		list-style: none;
