@@ -4,7 +4,7 @@
 			data-namespace-typo3-fluid="true">
 <f:layout name="General"/>
 
-<f:section name="content">
+<f:section name="Main">
 	<f:if condition="{news}">
 		<f:then>
 			<div class="news-list-view" >
@@ -47,14 +47,6 @@
 
 <f:section name="CardContainer">
 	<ul class="card--container {additionalClass}">
-		<f:comment>
-			<!--
-			<f:for each="{products}" as="product">
-				<f:render section="Item" arguments="{category: category, product: product, settings: settings}" />
-			</f:for>
-			-->
-		</f:comment>
-
 		<f:for each="{news}" as="newsItem" iteration="iterator">
 			<f:render partial="List/Item" section="Main" arguments="{newsItem: newsItem, settings:settings, iterator:iterator}"/>
 		</f:for>

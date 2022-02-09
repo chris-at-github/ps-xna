@@ -6,21 +6,21 @@
 <f:section name="Main">
 	<f:if condition="{newsItem.noDetail}">
 		<f:then>
-			<li class="card articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+			<li class="card card--layout-{newsItem.layout} articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
 				<n:excludeDisplayedNews newsItem="{newsItem}" />
-				<f:render section="Variant{newsItem.layout -> xo:format.ucFirst()}" optional="1" arguments="{_all}" />
+				<f:render section="Variant-{newsItem.layout -> xo:format.ucFirst()}" optional="1" arguments="{_all}" />
 			</li>
 		</f:then>
 		<f:else>
-			<li class="card articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" data-uri-target="{n:link(newsItem: newsItem, settings: settings, uriOnly: 1)}">
+			<li class="card card--layout-{newsItem.layout} articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" data-uri-target="{n:link(newsItem: newsItem, settings: settings, uriOnly: 1)}">
 				<n:excludeDisplayedNews newsItem="{newsItem}" />
-				<f:render section="Variant{newsItem.layout -> xo:format.ucFirst()}" optional="1" arguments="{_all}" />
+				<f:render section="Variant-{newsItem.layout -> xo:format.ucFirst()}" optional="1" arguments="{_all}" />
 			</li>
 		</f:else>
 	</f:if>
 </f:section>
 
-<f:section name="VariantDefault">
+<f:section name="Variant-0">
 	<f:render section="Badge" arguments="{_all}" />
 	<f:render section="Media" arguments="{_all}" />
 
@@ -32,6 +32,14 @@
 			<f:render partial="Components/Card" section="Description" arguments="{description: '{newsItem.teaser -> f:format.crop(maxCharacters: \'{settings.cropMaxCharacters}\', respectWordBoundaries: 1)}'}" />
 		</f:if>
 	</div>
+</f:section>
+
+<f:section name="Variant-1">
+	<f:render section="Variant-0" arguments="{_all}" />
+</f:section>
+
+<f:section name="Variant-2">
+	<f:render section="Variant-0" arguments="{_all}" />
 </f:section>
 
 <f:section name="Badge">

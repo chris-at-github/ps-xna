@@ -234,6 +234,23 @@
 						color: $theme-color-primary;
 					}
 				}
+
+				.card--container {
+					.card {
+						width: 100%;
+						margin: 0;
+					}
+
+					.card + .card {
+						margin-top: rem(45px);
+					}
+
+					.card--layout-2[data-uri-target] {
+						.card--title {
+							color: #fff;
+						}
+					}
+				}
 			}
 		}
 
@@ -392,7 +409,7 @@
 		}
 	}
 
-	//& > ul > li:nth-child(2) > .navigation--container-outer {
+	//& > ul > li:nth-child(4) > .navigation--container-outer {
 	//	display: block;
 	//}
 }

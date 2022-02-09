@@ -168,6 +168,22 @@ a.card--title, .card--title > a {
 	}
 }
 
+.card--layout-2 {
+	&, .card--date {
+		color: #fff;
+	}
+
+	.card--body {
+		background: $theme-color-primary;
+	}
+
+	&[data-uri-target] {
+		.card--title {
+			color: #fff;
+		}
+	}
+}
+
 .card--container {
 	& {
 		margin-top: rem(-45px);
