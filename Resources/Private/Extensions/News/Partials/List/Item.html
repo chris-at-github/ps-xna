@@ -4,13 +4,19 @@
 	  data-namespace-typo3-fluid="true">
 
 <f:section name="Main">
-	<f:if condition="{newsItem.noDetail}">
+	<f:if condition="{newsItem.internalurl}">
 		<f:then>
-			<li class="card card--layout-{newsItem.layout} articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+			<li class="card card--layout-{newsItem.layout} articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" data-uri-target="{f:uri.typolink(parameter: newsItem.internalurl)}">
 				<n:excludeDisplayedNews newsItem="{newsItem}" />
 				<f:render section="Variant-{newsItem.layout -> xo:format.ucFirst()}" optional="1" arguments="{_all}" />
 			</li>
 		</f:then>
+		<f:else if="{newsItem.noDetail}">
+			<li class="card card--layout-{newsItem.layout} articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+				<n:excludeDisplayedNews newsItem="{newsItem}" />
+				<f:render section="Variant-{newsItem.layout -> xo:format.ucFirst()}" optional="1" arguments="{_all}" />
+			</li>
+		</f:else>
 		<f:else>
 			<li class="card card--layout-{newsItem.layout} articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" data-uri-target="{n:link(newsItem: newsItem, settings: settings, uriOnly: 1)}">
 				<n:excludeDisplayedNews newsItem="{newsItem}" />
@@ -25,12 +31,18 @@
 	<f:render section="Media" arguments="{_all}" />
 
 	<div class="card--body">
-		<f:render section="Date" arguments="{_all}" />
+		<f:if condition="{newsItem.typeEvent}">
+			<f:then><f:render section="EventDate" arguments="{_all}" /></f:then>
+			<f:else><f:render section="Date" arguments="{_all}" /></f:else>
+		</f:if>
+
 		<f:render section="Title" arguments="{_all}" />
 
 		<f:if condition="{newsItem.teaser}">
 			<f:render partial="Components/Card" section="Description" arguments="{description: '{newsItem.teaser -> f:format.crop(maxCharacters: \'{settings.cropMaxCharacters}\', respectWordBoundaries: 1)}'}" />
 		</f:if>
+
+		<f:render section="ReadMore" arguments="{_all}" />
 	</div>
 </f:section>
 
@@ -43,7 +55,21 @@
 </f:section>
 
 <f:section name="Variant-3">
-	<f:render section="Variant-0" arguments="{_all}" />
+	<div class="card--body">
+		<f:render section="Title" arguments="{_all}" />
+		<f:render section="Media" arguments="{_all}" />
+
+		<f:if condition="{newsItem.typeEvent}">
+			<f:then><f:render section="EventDate" arguments="{_all}" /></f:then>
+			<f:else><f:render section="Date" arguments="{_all}" /></f:else>
+		</f:if>
+
+		<f:if condition="{newsItem.teaser}">
+			<f:render partial="Components/Card" section="Description" arguments="{description: '{newsItem.teaser -> f:format.crop(maxCharacters: \'{settings.cropMaxCharacters}\', respectWordBoundaries: 1)}'}" />
+		</f:if>
+
+		<f:render section="ReadMore" arguments="{_all}" />
+	</div>
 </f:section>
 
 <f:section name="Badge">
@@ -82,11 +108,35 @@
 	</time>
 </f:section>
 
+<f:section name="EventDate">
+	<div class="card--date">
+		<f:for each="{newsItem.formattedEventDate}" as="formattedEventDateItem">
+			<span class="card--date-item">{formattedEventDateItem}</span>
+		</f:for>
+	</div>
+</f:section>
+
 <f:section name="Title">
-	<f:if condition="{newsItem.noDetail}">
-		<f:then><f:render partial="Components/Card" section="Title" arguments="{title: newsItem.title, titleType: settings.titleType}" /></f:then>
-		<f:else><f:render partial="Components/Card" section="Title" arguments="{title: newsItem.title, titleType: settings.titleType, link: '{n:link(newsItem: newsItem, settings: settings, uriOnly: 1)}'}" /></f:else>
+	<f:if condition="{newsItem.internalurl}">
+		<f:then>
+			<f:link.typolink parameter="{newsItem.internalurl}" class="card--title"><span>{newsItem.title}</span></f:link.typolink>
+		</f:then>
+		<f:else if="{newsItem.noDetail}">
+			<div class="card--title"><span>{newsItem.title}</span></div>
+		</f:else>
+		<f:else>
+			<a href="{n:link(newsItem: newsItem, settings: settings, uriOnly: 1)}" class="card--title"><span>{newsItem.title}</span></a>
+		</f:else>
 	</f:if>
+</f:section>
+
+<f:section name="ReadMore">
+	<f:if condition="{newsItem.internalurl}">
+		<f:link.typolink parameter="{newsItem.internalurl}" class="card--readmore">
+			<span><f:translate key="LLL:EXT:news_extended/Resources/Private/Language/locallang.xlf:tx_newsextended.action.readmore" /></span><xo:svg.use name="arrow-right" viewBox="0 0 14 11" />
+		</f:link.typolink>
+	</f:if>
+
 </f:section>
 
 </html>

@@ -250,6 +250,16 @@
 							color: #fff;
 						}
 					}
+
+					.card--layout-3[data-uri-target] {
+						.card--title {
+							color: $font-color-base;
+						}
+
+						.svg-sprite--arrow-right {
+							display: inline;
+						}
+					}
 				}
 			}
 		}

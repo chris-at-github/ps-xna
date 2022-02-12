@@ -13,10 +13,16 @@ a.card--title, .card--title > a {
 
 .card--date {
 	& {
-		display: block;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 		padding: rem(0 15px);
 		font-size: rem(16px);
 		color: $theme-color-secondary;
+	}
+
+	.card--date-item {
+		padding: rem(0 3px 0 0);
 	}
 
 	& + .card--title {
@@ -113,6 +119,7 @@ a.card--title, .card--title > a {
 			content: '';
 			position: absolute;
 			top: 0; left: 0;
+			z-index: 5;
 			width: 100%;
 			height: 100%;
 		}
@@ -180,6 +187,72 @@ a.card--title, .card--title > a {
 	&[data-uri-target] {
 		.card--title {
 			color: #fff;
+		}
+	}
+}
+
+.card--layout-3 {
+	.card--body {
+		transition: background $transition-duration;
+	}
+
+	.card--title {
+		margin: rem(0 0 10px 0);
+		font-size: rem(20px);
+	}
+
+	.card--media {
+		& {
+			padding: rem(0 15px);
+			border-radius: 0;
+			background: transparent;
+		}
+
+		&:before {
+			display: none;
+		}
+
+		picture {
+			position: relative;
+			height: rem(100px);
+		}
+
+		img {
+			width: auto;
+			max-height: 100%;
+		}
+	}
+
+	.card--date, .card--location, .card--description {
+		margin: rem(15px 0 0 0);
+	}
+
+	&[data-uri-target] {
+		.card--title {
+			& {
+				margin: rem(0 0 10px 0);
+				color: $font-color-base;
+			}
+
+			span:after {
+				display: none;
+			}
+		}
+
+		&:hover, .focusable &:focus-within {
+			.card--body {
+				background: $color-grey-light;
+			}
+
+			.card--media img {
+				transform: none;
+			}
+
+			.card--readmore {
+				svg {
+					transform: translate(5px, 0);
+				}
+			}
 		}
 	}
 }

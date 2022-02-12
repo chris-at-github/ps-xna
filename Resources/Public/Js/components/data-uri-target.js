@@ -4,12 +4,12 @@
 (function () {
 	'use strict';
 
-	xna.on('documentLoaded', function() {
-		document.querySelectorAll('[data-uri-target]').forEach(function(node) {
-			node.addEventListener('click', function(event) {
-				document.location.href = node.dataset.uriTarget;
-				event.preventDefault();
-			});
-		});
-	});
+	// xna.on('documentLoaded', function() {
+	// 	document.querySelectorAll('[data-uri-target]').forEach(function(node) {
+	// 		node.addEventListener('click', function(event) {
+	// 			document.location.href = node.dataset.uriTarget;
+	// 			event.preventDefault();
+	// 		});
+	// 	});
+	// });
 })();
