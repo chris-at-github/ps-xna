@@ -23,17 +23,22 @@ plugin.tx_xo {
 
 		modules.xna {
 			navigation.pictureSettings {
-				width = 530
-				cropVariant = thumbnail
+				width = 280
+				cropVariant = desktop
 				mediaQueries {
-					1200 {
+					992 {
+						width = 260
+						cropVariant = desktop
+						mediaQuery = (min-width: 992px)
+					}
+					576 {
 						width = 280
-						cropVariant = thumbnail
-						mediaQuery = (min-width: 1200px)
+						cropVariant = desktop
+						mediaQuery = (min-width: 576px)
 					}
 					0 {
-						width = 300
-						cropVariant = thumbnail
+						width = 1
+						cropVariant = desktop
 						mediaQuery = (min-width: 0px)
 					}
 				}
