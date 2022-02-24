@@ -23,6 +23,18 @@
 		position: absolute;
 		top: rem(0px); left: rem(1px);
 		font-size: rem(16px);
+		transform: translate(0, 0);
+		transition: transform 0.15s;
+	}
+
+	&:hover, .focusable &:focus {
+		& {
+			background: none;
+		}
+
+		&:before {
+			transform: translate(0, 3px);
+		}
 	}
 }
 
