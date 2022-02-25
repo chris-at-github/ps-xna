@@ -94,6 +94,7 @@ a.card--title, .card--title > a {
 
 .card {
 	& {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 	}
