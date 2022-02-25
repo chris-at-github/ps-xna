@@ -148,7 +148,19 @@ mod.web_layout.BackendLayouts {
 	}
 [END]
 
-#["{$pages.navigationContent}" in tree.rootLineIds]
+[246 in tree.rootLineIds]
+	TCAdefaults.tx_news_domain_model_news {
+		tx_ps14_layout = 1
+	}
+[END]
+
+[249 in tree.rootLineIds]
+	TCAdefaults.tx_news_domain_model_news {
+		type = 3
+		tx_ps14_no_detail = 1
+	}
+[END]
+
 [186 in tree.rootLineIds]
 	TCAdefaults.tt_content {
 		header_layout = container
