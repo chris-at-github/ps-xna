@@ -16,6 +16,7 @@ a.card--title, .card--title > a {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		margin-top: rem(10px);
 		padding: rem(0 15px);
 		font-size: rem(16px);
 		color: $theme-color-secondary;
@@ -23,10 +24,6 @@ a.card--title, .card--title > a {
 
 	.card--date-item {
 		padding: rem(0 3px 0 0);
-	}
-
-	& + .card--title {
-		margin-top: rem(10px);
 	}
 }
 
