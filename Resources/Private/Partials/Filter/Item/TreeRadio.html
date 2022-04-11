@@ -25,6 +25,7 @@
 			<label class="filter-item--option" for="{properties.identifier}" title="{properties.description}">
 				<f:form.radio id="{properties.identifier}" name="{filter.identifier}[{item.name}][{groupedBy}][]" value="{properties.value}" checked="{properties.selected}" additionalAttributes="{data-filter-name: item.name}" />
 				<span>{properties.label}</span>
+				<f:if condition="{properties.description}"><span class="filter-item--option-description"><xo:svg.inline source="assets/svg/help.svg" /></span></f:if>
 			</label>
 
 			<f:if condition="{properties.children}">

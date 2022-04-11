@@ -93,10 +93,10 @@ select%form-field {
   }
 
   span:before {
+    content: '';
     position: absolute;
     top: rem(8px); left: rem(5px);
     z-index: 10;
-    opacity: 0;
     font-size: 8px;
     color: #fff;
     transition: opacity $transition-duration;
@@ -106,9 +106,6 @@ select%form-field {
     opacity: 1;
   }
 
-  input:checked + span:after {
-    background: $theme-color-primary;
-  }
 }
 
 %form-field--radio-custom {

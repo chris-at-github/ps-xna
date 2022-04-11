@@ -85,8 +85,49 @@
 
 %filter--tree-radio {
 	.filter-item--option {
-		@extend %form-field--radio;
-		@extend %form-field--radio-custom;
+		& {
+			display: flex;
+			@extend %form-field--radio;
+			@extend %form-field--radio-custom;
+		}
+
+		.filter-item--option-description {
+			& {
+				position: relative;
+				top: rem(-3px);
+				margin: rem(0 0 0 5px);
+				background: $color-grey-lighten;
+				width: 17px;
+				height: 17px;
+				border-radius: 50%;
+				transition: background $transition-duration;
+			}
+
+			svg {
+				position: absolute;
+				top: 4px; left: 4px;
+				width: 10px;
+				height: 10px;
+				fill: $font-color-base;
+				transition: fill $transition-duration;
+			}
+
+			&:before, &:after {
+				display: none;
+			}
+		}
+
+		&:hover, .focusable &:focus {
+			.filter-item--option-description {
+				& {
+					background: $theme-color-primary;
+				}
+
+				svg {
+					fill: #fff;
+				}
+			}
+		}
 	}
 }
 
