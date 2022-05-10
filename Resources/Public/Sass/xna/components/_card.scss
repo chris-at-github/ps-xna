@@ -27,6 +27,30 @@ a.card--title, .card--title > a {
 	}
 }
 
+.card--event-date {
+	& {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: rem(60px);
+		height: rem(60px);
+		color: #fff;
+		background: $theme-color-primary;
+		border-radius: $border-radius-default;
+		line-height: 1;
+	}
+
+	.card--event-date-month {
+		font-size: rem(22px);
+	}
+
+	.card--event-date-year {
+		margin-top: rem(3px);
+		font-size: rem(15px);
+	}
+}
+
 .card--body {
 	& {
 		z-index: 10;
@@ -190,18 +214,48 @@ a.card--title, .card--title > a {
 	}
 }
 
-.card--layout-3 {
-	.card--body {
-		transition: background $transition-duration;
+.card--layout-3, .card--layout-4 {
+	& {
+		border-radius: $border-radius-default;
+	}
+
+	.card--header {
+		position: relative;
+		padding: rem(15px 15px 0 95px);
+	}
+
+	.card--event-date {
+		position: absolute;
+		top: rem(15px); left: rem(15px);
 	}
 
 	.card--title {
 		margin: rem(0 0 10px 0);
+		padding: 0;
 		font-size: rem(20px);
+	}
+
+	.card--date, .card--location {
+		margin: 0;
+		padding: 0;
+		font-size: rem(15px);
+		font-weight: $font-weight-bold;
+	}
+
+	.card--body {
+		background: transparent;
+		border-radius: 0;
+	}
+
+	.card--readmore {
+		display: inline-block;
+		margin-top: rem(10px);
+		font-weight: $font-weight-bold;
 	}
 
 	.card--media {
 		& {
+			margin: rem(15px 0 0 0);
 			padding: rem(0 15px);
 			border-radius: 0;
 			background: transparent;
@@ -212,37 +266,31 @@ a.card--title, .card--title > a {
 		}
 
 		picture {
+			display: block;
 			position: relative;
 			height: rem(100px);
 		}
 
 		img {
-			width: auto;
+			object-fit: contain;
+			object-position: top left;
+			height: inherit;
 			max-height: 100%;
 		}
 	}
 
-	.card--date, .card--location, .card--description {
+	.card--description {
 		margin: rem(15px 0 0 0);
 	}
 
 	&[data-uri-target] {
 		.card--title {
-			& {
-				margin: rem(0 0 10px 0);
-				color: $font-color-base;
-			}
-
 			span:after {
 				display: none;
 			}
 		}
 
 		&:hover, .focusable &:focus-within {
-			.card--body {
-				background: $color-grey-light;
-			}
-
 			.card--media img {
 				transform: none;
 			}
@@ -252,6 +300,61 @@ a.card--title, .card--title > a {
 					transform: translate(5px, 0);
 				}
 			}
+		}
+	}
+}
+
+.card--layout-3 {
+	& {
+		background: $color-grey-lighter;
+	}
+
+	.card--date, .card--location {
+		color: $theme-color-primary;
+	}
+
+	&[data-uri-target] {
+		.card--title {
+			color: $font-color-base;
+		}
+
+		&:hover, .focusable &:focus-within {
+			background: $color-grey-light;
+		}
+	}
+}
+
+.card--layout-4 {
+	& {
+		background: $theme-color-primary;
+		color: #fff;
+	}
+
+	.card--event-date {
+		& {
+			background: #fff;
+		}
+
+		.card--event-date-month, .card--event-date-year {
+			color: $theme-color-primary;
+		}
+	}
+
+	.card--title, .card--date, .card--location, .card--readmore {
+		color: #fff;
+	}
+
+	.card--readmore svg {
+		fill: #fff;
+	}
+
+	&[data-uri-target] {
+		.card--title {
+			color: #fff;
+		}
+
+		&:hover, .focusable &:focus-within {
+			background: $theme-color-primary-dark;
 		}
 	}
 }
@@ -315,7 +418,32 @@ a.card--title, .card--title > a {
 	}
 }
 
+@include media-breakpoint-up(xl) {
+	.card--event-date {
+		& {
+			width: rem(80px);
+			height: rem(80px);
+		}
 
+		.card--event-date-month {
+			font-size: rem(28px);
+		}
+
+		.card--event-date-year {
+			font-size: rem(18px);
+		}
+	}
+
+	.card--layout-3, .card--layout-4 {
+		.card--header {
+			padding-left: rem(115px);
+		}
+
+		.card--title > span {
+			font-size: rem(28px);
+		}
+	}
+}
 
 .readmore-container {
 	.card--container {
