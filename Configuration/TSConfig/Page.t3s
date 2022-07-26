@@ -238,7 +238,7 @@ mod.web_layout.BackendLayouts {
 	}
 [END]
 
-[field('list_type') === 'entityproduct_keyfact']
+[field('list_type') === 'entityproduct_keyfact' || field('CType') === 'entityproduct_keyfacts']
 	TCAdefaults.tt_content {
 		frame_class = 2
 		space_before_class = medium
