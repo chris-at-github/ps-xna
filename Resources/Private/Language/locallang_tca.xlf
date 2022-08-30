@@ -63,6 +63,10 @@
 			<trans-unit id="tx_xna_tt_content.wkhtmltopdf_title">
 				<source>PDF Print Linktitle</source>
 			</trans-unit>
+
+			<trans-unit id="tx_xna_tt_address.additional_description" resname="tx_xna_tt_address.additional_description">
+				<source>Additional Description</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
