@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+	<ul>
+		<xo:grouped each="{contacts}" groupBy="continent" groupKey="continent" as="countries">
+			<f:if condition="{continent}">
+				<li>
+					<header>{continent.title}</header>
+
+					<ul>
+						<f:for each="{countries}" as="country">
+							<f:if condition="{country}">
+								<li>{country.firstName} {country.lastName}</li>
+							</f:if>
+						</f:for>
+					</ul>
+
+				</li>
+			</f:if>
+		</xo:grouped>
+	</ul>
+</f:section>
+</html>
