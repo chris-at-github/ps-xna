@@ -1,12 +1,18 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="Main">
-	<ul>
-		<xo:grouped each="{contacts}" groupBy="continent" groupKey="continent" as="countries">
-			<f:if condition="{continent}">
-				<li>
-					<header>{continent.title}</header>
+	<div class="tabs">
+		<ul class="tab--container nav" id="tab--continents" role="tablist">
+			<xo:grouped each="{contacts}" groupBy="continent" groupKey="continent" as="countries" iteration="iterator" removeEmpty="true">
+				<li role="presentation">
+					<button id="tab-continent-{continent.uid}" class="{f:if(condition: iterator.isFirst, then: 'active')}" data-bs-toggle="tab" data-bs-target="#tab-content-continent-{continent.uid}" type="button" role="tab" aria-controls="#tab-content-continent-{continent.uid}" aria-selected="{f:if(condition: iterator.isFirst, then: 'true', else: 'false')}">{continent.title}</button>
+				</li>
+			</xo:grouped>
+		</ul>
 
+		<div class="tab--content">
+			<xo:grouped each="{contacts}" groupBy="continent" groupKey="continent" as="countries" iteration="iterator" removeEmpty="true">
+				<div class="tab--pane fade {f:if(condition: iterator.isFirst, then: 'show active')}" id="tab-content-continent-{continent.uid}" role="tabpanel" aria-labelledby="tab-continent-{continent.uid}">
 					<ul>
 						<f:for each="{countries}" as="country">
 							<f:if condition="{country}">
@@ -14,10 +20,9 @@
 							</f:if>
 						</f:for>
 					</ul>
-
-				</li>
-			</f:if>
-		</xo:grouped>
-	</ul>
+				</div>
+			</xo:grouped>
+		</div>
+	</div>
 </f:section>
 </html>
