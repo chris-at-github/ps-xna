@@ -12,6 +12,7 @@
   "dependencies": {
     "@midzer/tobii": "^2.1.0",
     "chart.js": "^3.4.1",
+    "cross-env": "^7.0.3",
     "micromodal": "^0.4.6",
     "tiny-slider": "^2.9.3",
     "whatwg-fetch": "^3.5.0"
