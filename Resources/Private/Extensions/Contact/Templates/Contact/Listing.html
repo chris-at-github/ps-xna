@@ -38,7 +38,12 @@
 
 <f:section name="Item">
 	<tr>
-		<td>{country.country.title}</td>
+		<td>
+			{country.country.title}
+			<f:if condition="{country.description}">
+				<div class="address--item address--description"><f:format.html>{country.description}</f:format.html></div>
+			</f:if>
+		</td>
 		<td>
 			<f:if condition="{country.firstName} && {country.lastName}">
 				<div class="address--item address--name"><f:render partial="Components/Person" section="Fullname" arguments="{person: country}" /></div>
