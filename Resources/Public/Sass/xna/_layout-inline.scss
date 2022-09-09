@@ -78,7 +78,7 @@ body {
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Page Layout Default
-.page--layout-0, .page--layout-4 {
+.page--layout-0, .page--layout-4, .page--layout-5 {
 	#breadcrumb {
 		position: absolute;
 		top: rem(180px);
@@ -340,7 +340,7 @@ body {
 		}
 	}
 
-	.page--layout-0, .page--layout-4 {
+	.page--layout-0, .page--layout-4, .page--layout-5 {
 		#header + .ce-content, #header + #breadcrumb + .ce-content {
 			.container-outer:first-child .container-inner, .ce-frame--outer:first-child > .ce-frame--inner {
 				padding-top: rem(130px); // Hoehe des Headers
@@ -387,7 +387,7 @@ body {
 
 	// ---------------------------------------------------------------------------------------------------------------------
 	// Page Layout Default
-	.page--layout-0, .page--layout-4 {
+	.page--layout-0, .page--layout-4, .page--layout-5 {
 		#breadcrumb {
 			top: rem(200px);
 		}

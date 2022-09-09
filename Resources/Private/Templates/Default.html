@@ -14,6 +14,8 @@
 	</f:section>
 
 	<f:section name="Footer">
-		<f:cObject typoscriptObjectPath="block.contentFooter" />
+		<f:if condition="{data.layout} != 5">
+			<f:cObject typoscriptObjectPath="block.contentFooter" />
+		</f:if>
 	</f:section>
 </html>

@@ -29,6 +29,10 @@
 			<trans-unit id="tx_xna_pages.layout.4">
 				<source>Product</source>
 			</trans-unit>
+			<trans-unit id="tx_xna_pages.layout.5">
+				<source>Without Footer</source>
+			</trans-unit>
+
 			<trans-unit id="tx_xna_pages.tx_xo_navigation_layout.product">
 				<source>Product</source>
 			</trans-unit>
