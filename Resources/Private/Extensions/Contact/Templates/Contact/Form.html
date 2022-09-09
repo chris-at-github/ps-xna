@@ -3,7 +3,7 @@
 <f:section name="Main">
 
 	<script>
-		xna.data.contact = {xo:json.encode(value: countries, options: {0: 'uid', 1: 'title', 2: 'zipRegex'}) -> f:format.raw()};
+		xna.data.productLines = {xo:json.encode(value: productLines) -> f:format.raw()};
 	</script>
 
 	<f:form action="search" class="form--layout-0" pageUid="{settings.searchRequestPageUid}" pageType="{settings.searchRequestPageType}" id="contact-search--form">
@@ -14,9 +14,14 @@
 				</f:if>
 
 				<div class="row">
+					<div class="col-12 form-item">
+						<label class="form-label" for="location-product-line"><f:translate key="LLL:EXT:contact/Resources/Private/Language/locallang.xlf:productLine" /></label>
+						<f:form.select name="productLine" class="form-field contact-search--product-lines" id="location-product-line" options="{productLines}" optionLabelField="title" prependOptionLabel="" prependOptionValue="0" />
+					</div>
+
 					<div class="col-12 col-sm-6 form-item">
 						<label class="form-label" for="location-country"><f:translate key="LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo.country" /></label>
-						<f:form.select name="country" class="form-field contact-search--countries" id="location-country" options="{countries}" optionLabelField="title" prependOptionLabel="" prependOptionValue="0" />
+						<f:form.select name="country" class="form-field contact-search--countries" id="location-country" disabled="disabled" prependOptionLabel="" prependOptionValue="0" />
 					</div>
 
 					<div class="col-12 col-sm-6 form-item">
