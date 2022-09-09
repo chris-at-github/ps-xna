@@ -2,6 +2,14 @@
 <f:layout name="Default" />
 <f:section name="Main">
 
+	<f:if condition="{record.header}">
+		<header class="ce-header ce-header--layout-{record.header_class}">
+			<f:render partial="Header/Header" arguments="{
+				header: record.header,
+				layout: record.header_layout}" />
+		</header>
+	</f:if>
+
 	<script>
 		xna.data.productLines = {xo:json.encode(value: productLines) -> f:format.raw()};
 	</script>
