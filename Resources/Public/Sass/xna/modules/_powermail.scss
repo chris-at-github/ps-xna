@@ -15,7 +15,7 @@ $stylesheet-context: 'screen' !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Register
-.ce-powermail-pi1.ce-frame--variant-1 {
+.ce-powermail-pi1 {
 	.powermail_fieldwrap {
 		@extend %form-item;
 		margin: rem(10px 0 0 0);
@@ -37,7 +37,8 @@ $stylesheet-context: 'screen' !default;
 	}
 
 	.powermail_input,
-	.powermail_select {
+	.powermail_select,
+	.powermail_textarea {
 		width: 100%;
 		@extend %form-field;
 	}
@@ -61,6 +62,12 @@ $stylesheet-context: 'screen' !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 768px
 @include media-breakpoint-up(md) {
+	.ce-powermail-pi1 {
+		.powermail_fieldwrap {
+			margin-top: rem(20px);
+		}
+	}
+
 	.ce-powermail-pi1.ce-frame--variant-1 {
 		.powermail_fieldset {
 			margin-top: rem(-20px);
@@ -80,6 +87,12 @@ $stylesheet-context: 'screen' !default;
 
 		.powermail_fieldwrap_anrede .powermail_field {
 			width: calc(50% - 15px);
+		}
+	}
+
+	.ce-powermail-pi1.ce-frame--variant-0 {
+		.powermail_fieldwrap {
+			max-width: percentage(9 / 12);
 		}
 	}
 }

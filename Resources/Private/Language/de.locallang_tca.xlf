@@ -49,7 +49,7 @@
 			<trans-unit id="tx_xna_tt_content.tx_xo_variant.teaser.1">
 				<target>Blau (Technologie)</target>
 			</trans-unit>
-			<trans-unit id="tx_xna_tt_content.tx_xo_variant.powermail">
+			<trans-unit id="tx_xna_tt_content.tx_xo_variant.powermail.1">
 				<target>Newsletter</target>
 			</trans-unit>
 			<trans-unit id="tx_xna_tt_content.layout.4">

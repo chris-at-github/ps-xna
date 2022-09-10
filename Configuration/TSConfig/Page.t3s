@@ -257,7 +257,8 @@ mod.web_layout.BackendLayouts {
 	TCEFORM.tt_content {
 		tx_xo_variant {
 			addItems {
-				1 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.tx_xo_variant.powermail
+				1 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.tx_xo_variant.powermail.1
+				2 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_tt_content.tx_xo_variant.powermail.2
 			}
 		}
 	}

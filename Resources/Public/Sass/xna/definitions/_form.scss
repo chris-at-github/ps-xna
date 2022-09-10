@@ -98,14 +98,14 @@ select%form-field {
     top: rem(8px); left: rem(5px);
     z-index: 10;
     font-size: 8px;
-    color: #fff;
+    color: #000;
+    opacity: 0;
     transition: opacity $transition-duration;
   }
 
   input:checked + span:before {
     opacity: 1;
   }
-
 }
 
 %form-field--radio-custom {

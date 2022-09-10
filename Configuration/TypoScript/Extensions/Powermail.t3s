@@ -6,7 +6,7 @@ plugin.tx_powermail.settings.setup.misc.htmlForLabels = 1
 tt_content.list.dataProcessing.200 {
 	powermail_pi1 {
 		importCss {
-			10 = /assets/css/modules/newsletter.css
+			10 = /assets/css/modules/powermail.css
 		}
 	}
 }
