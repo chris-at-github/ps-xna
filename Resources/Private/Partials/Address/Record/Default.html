@@ -13,7 +13,22 @@
 			<div class="col-12 col-md-6 col-lg-4">
 				<f:if condition="{settings.display.location} == 1">
 					<div class="address--item-group">
-						<f:render partial="Components/Address" section="Location" arguments="{_all}" />
+						<f:if condition="{address.address}">
+							<div class="address--item address--street">{address.address}</div>
+						</f:if>
+
+						<f:if condition="{address.zip} && {address.city}">
+							<div class="address--item">
+								<span class="address--item address--zip">{address.zip}</span>
+								<span class="address--item address--city">{address.city}</span>
+							</div>
+						</f:if>
+
+						<f:if condition="{address.latitude} && {address.longitude}">
+							<div class="address--item address--google-maps-link">
+								<a href="https://www.google.com/maps/place/{address.latitude},{address.longitude}" target="_blank"><xo:svg.inline source="assets/svg/map.svg" /> <f:translate key="LLL:EXT:xo/Resources/Private/Language/locallang_frontend.xlf:tx_xo_address.google-maps-link" /></a>
+							</div>
+						</f:if>
 					</div>
 				</f:if>
 

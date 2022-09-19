@@ -12,6 +12,16 @@
 		@extend %address;
 	}
 
+	.address--google-maps-link {
+		svg {
+			position: relative;
+			top: 1px;
+			fill: $theme-color-primary;
+			width: 18px;
+			height: 15px;
+		}
+	}
+
 	.address--description, .address--additional-description {
 		& {
 			font-size: rem(15px);
