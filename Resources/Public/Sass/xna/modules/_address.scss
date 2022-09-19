@@ -11,4 +11,29 @@
 	.address {
 		@extend %address;
 	}
+
+	.address--description {
+		& {
+			font-size: rem(15px);
+			color: $color-grey;
+		}
+
+		ul {
+			margin-top: rem(10px);
+		}
+
+		li {
+			& {
+				margin-top: rem(3px);
+				padding: rem(0 0 0 15px);
+			}
+
+			&:before {
+				top: 10px;
+				width: 4px;
+				height: 4px;
+				border-color: $color-grey;
+			}
+		}
+	}
 }
