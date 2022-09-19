@@ -1,0 +1,45 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:section name="Main">
+	<address class="address">
+		<f:if condition="{settings.display.name} == 1">
+			<f:render partial="Components/Address" section="Name" arguments="{_all}" />
+		</f:if>
+
+		<f:if condition="{settings.display.description} == 1">
+			<f:render partial="Components/Address" section="Description" arguments="{_all}" />
+		</f:if>
+
+		<div class="row">
+			<div class="col-12 col-md-6 col-lg-4">
+				<f:if condition="{settings.display.location} == 1">
+					<div class="address--item-group">
+						<f:render partial="Components/Address" section="Location" arguments="{_all}" />
+					</div>
+				</f:if>
+
+				<f:if condition="{settings.display.contact} == 1">
+					<f:render partial="Components/Address" section="Contact" arguments="{_all}" />
+				</f:if>
+			</div>
+			<div class="col-12 col-md-6 col-lg-8">
+				<f:if condition="{settings.display.openingHours} == 1">
+					<f:if condition="{address.openingHours} || {address.openingHoursDescription}">
+						<div class="address--item-group address--opening-hours">
+							<f:render partial="Components/Address" section="OpeningHoursDaysGrouped" arguments="{_all}" />
+							<f:render partial="Components/Address" section="OpeningHoursDescription" arguments="{_all}" />
+						</div>
+					</f:if>
+				</f:if>
+			</div>
+		</div>
+
+		<f:if condition="{settings.display.description} == 1">
+			<f:render partial="Components/Address" section="AdditionalDescription" arguments="{_all}" />
+		</f:if>
+
+		<f:if condition="{settings.structuredDataType} == 'localBusiness'">
+			<xo:jsonLd.localBusiness address="{address}" mainOpeningHoursCategory="{settings.structuredDataMainOpeningHoursCategory}" />
+		</f:if>
+	</address>
+</f:section>
+</html>

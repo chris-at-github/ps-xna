@@ -12,7 +12,7 @@
 		@extend %address;
 	}
 
-	.address--description {
+	.address--description, .address--additional-description {
 		& {
 			font-size: rem(15px);
 			color: $color-grey;
@@ -33,6 +33,34 @@
 				width: 4px;
 				height: 4px;
 				border-color: $color-grey;
+			}
+		}
+	}
+
+	.address--opening-hours-grouped {
+		& {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		li + li {
+			margin-top: rem(15px);
+		}
+	}
+
+	.address--opening-hours-grouped-title {
+		font-weight: $font-weight-bold;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 992px
+@include media-breakpoint-up(lg) {
+	.ce-address {
+		.address--opening-hours-grouped {
+			li + li {
+				margin-top: rem(35px);
 			}
 		}
 	}
