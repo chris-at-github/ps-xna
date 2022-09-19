@@ -213,6 +213,7 @@ body {
 .ce-header--layout-3 {
 	&, h1, h2 {
 		@include header-3;
+		color: $theme-color-primary;
 	}
 }
 
@@ -382,6 +383,12 @@ body {
 			& > ul {
 				justify-content: flex-start;
 			}
+		}
+	}
+
+	.ce-header--layout-2 {
+		&, h1, h2, h3 {
+			font-size: rem(28px);
 		}
 	}
 

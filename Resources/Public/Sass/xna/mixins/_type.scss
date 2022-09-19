@@ -27,6 +27,12 @@
 	@include media-breakpoint-up(md) {
 		font-size: rem(21px);
 	}
+
+	// >= 992px
+	@include media-breakpoint-up(lg) {
+		font-size: rem(23px);
+		font-weight: $font-weight-normal;
+	}
 }
 
 @mixin header-4 {
