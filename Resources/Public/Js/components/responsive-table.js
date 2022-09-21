@@ -4,6 +4,10 @@
 	xna.on('documentLoaded', function() {
 
 		document.querySelectorAll('table').forEach(function(table, index) {
+			if(table.getAttribute('data-table-scroll') !== null && table.getAttribute('data-table-scroll') === 'disabled') {
+				return;
+			}
+
 			let container = document.createElement('div');
 				container.setAttribute('class', 'table--container');
 
