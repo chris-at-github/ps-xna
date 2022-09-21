@@ -1,11 +1,16 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="Default" />
 <f:section name="Main">
+
+	<div class="contact-listing--map-container">
+		<xo:svg.inline source="{settings.listingMapFilepath}" />
+	</div>
+
 	<div class="tabs">
 		<ul class="tab--container nav" id="tab--continents" role="tablist">
 			<xo:grouped each="{contacts}" groupBy="continent" groupKey="continent" as="countries" iteration="iterator" removeEmpty="true">
 				<li role="presentation">
-					<button id="tab-continent-{continent.uid}" class="{f:if(condition: iterator.isFirst, then: 'active')}" data-bs-toggle="tab" data-bs-target="#tab-content-continent-{continent.uid}" type="button" role="tab" aria-controls="#tab-content-continent-{continent.uid}" aria-selected="{f:if(condition: iterator.isFirst, then: 'true', else: 'false')}">{continent.title}</button>
+					<button id="tab-continent-{continent.uid}" class="{f:if(condition: iterator.isFirst, then: 'active')}" data-target-continent="contact-listing--map-continent-{continent.identifier}" data-bs-toggle="tab" data-bs-target="#tab-content-continent-{continent.uid}" type="button" role="tab" aria-controls="#tab-content-continent-{continent.uid}" aria-selected="{f:if(condition: iterator.isFirst, then: 'true', else: 'false')}">{continent.title}</button>
 				</li>
 			</xo:grouped>
 		</ul>

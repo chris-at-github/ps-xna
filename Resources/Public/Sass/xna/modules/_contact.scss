@@ -125,3 +125,22 @@
 		margin-top: 0;
 	}
 }
+
+.contact-listing--map-continent {
+	fill: $color-grey-lighten;
+	transition: all $transition-duration;
+}
+
+.contact-listing--map-continent-default {
+	&:hover {
+		fill: darken($color-grey-lighten, 15%);
+		cursor: pointer;
+	}
+}
+
+.contact-listing--map-continent-active {
+	&, &:hover {
+		fill: $theme-color-primary;
+	}
+}
+
