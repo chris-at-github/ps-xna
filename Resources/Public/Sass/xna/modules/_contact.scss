@@ -124,6 +124,18 @@
 	margin-top: rem(35px);
 }
 
+.contact-listing--tabs {
+	.table--scroll-container a {
+		position: relative;
+		z-index: 1000;
+	}
+
+	.table--fixed-container tr > td:first-child {
+		position: relative;
+		z-index: 1005;
+	}
+}
+
 .contact-listing--table {
 	//& {
 	//	display: block;
@@ -153,7 +165,6 @@
 	//		margin-top: 0;
 	//	}
 	//}
-
 	.contact-listing--country-title {
 		margin: 0;
 		font-size: $font-size-base;
