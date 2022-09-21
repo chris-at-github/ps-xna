@@ -102,6 +102,94 @@
 	}
 }
 
+.contact-listing--map-continent {
+	fill: $color-grey-lighten;
+	transition: all $transition-duration;
+}
+
+.contact-listing--map-continent-default {
+	&:hover {
+		fill: darken($color-grey-lighten, 15%);
+		cursor: pointer;
+	}
+}
+
+.contact-listing--map-continent-active {
+	&, &:hover {
+		fill: $theme-color-primary;
+	}
+}
+
+.contact-listing--header + .contact-listing--tabs {
+	margin-top: rem(35px);
+}
+
+.contact-listing--table {
+	//& {
+	//	display: block;
+	//	width: 100%;
+	//}
+	//
+	//tbody, tr {
+	//	display: block;
+	//}
+	//
+	//thead {
+	//	display: none;
+	//}
+	//
+	//tr {
+	//	padding: rem(15px 0);
+	//	border-bottom: 1px solid #ececed;
+	//}
+	//
+	//td {
+	//	& {
+	//		display: block;
+	//		margin-top: rem(10px);
+	//	}
+	//
+	//	&:first-child {
+	//		margin-top: 0;
+	//	}
+	//}
+
+	.contact-listing--country-title {
+		margin: 0;
+		font-size: $font-size-base;
+		line-height: 1.5;
+	}
+
+	.contact-listing--country-description {
+		& {
+			font-size: rem(15px);
+		}
+
+		.list--default {
+			& {
+				margin-top: 0;
+			}
+
+			li {
+				& {
+					margin-top: rem(3px);
+					padding: rem(0 0 0 15px);
+				}
+
+				&:before {
+					top: 10px;
+					width: 4px;
+					height: 4px;
+				}
+			}
+		}
+	}
+
+	.address--phone, .address--mail {
+		white-space: nowrap;
+	}
+}
+
 // => 768px
 @include media-breakpoint-up(md) {
 	.contact-search--submit {
@@ -124,23 +212,14 @@
 	.is-contact-open .contact-search--result-container {
 		margin-top: 0;
 	}
-}
 
-.contact-listing--map-continent {
-	fill: $color-grey-lighten;
-	transition: all $transition-duration;
-}
+	.contact-listing--table {
+		.contact-listing--country-title {
+			font-weight: $font-weight-bold;
+		}
 
-.contact-listing--map-continent-default {
-	&:hover {
-		fill: darken($color-grey-lighten, 15%);
-		cursor: pointer;
+		.address--phone, .address--mail {
+			white-space: normal;
+		}
 	}
 }
-
-.contact-listing--map-continent-active {
-	&, &:hover {
-		fill: $theme-color-primary;
-	}
-}
-
