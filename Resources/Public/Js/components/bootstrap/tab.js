@@ -299,6 +299,7 @@
 		}
 
 	}
+
 	/**
 	 * ------------------------------------------------------------------------
 	 * Data Api implementation
@@ -318,6 +319,14 @@
 		const data = Tab.getOrCreateInstance(this);
 		data.show();
 	});
+
+	/**
+	 * ------------------------------------------------------------------------
+	 * Global Object
+	 */
+	window.bootstrap = window.bootstrap || {};
+	window.bootstrap.tab = Tab;
+
 	/**
 	 * ------------------------------------------------------------------------
 	 * jQuery
@@ -326,7 +335,6 @@
 	 */
 
 	defineJQueryPlugin(Tab);
-
 	return Tab;
 
 })));
