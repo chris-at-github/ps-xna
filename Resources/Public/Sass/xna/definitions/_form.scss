@@ -30,7 +30,13 @@
 }
 
 select%form-field {
-  min-height: rem(39px);
+  & {
+    min-height: rem(39px);
+  }
+
+  &[disabled] {
+    opacity: 1;
+  }
 }
 
 %form-field--checkbox, %form-field--radio {

@@ -14,7 +14,7 @@
 		xna.data.productLines = {xo:json.encode(value: productLines) -> f:format.raw()};
 	</script>
 
-	<f:form action="search" class="form--layout-0" pageUid="{settings.searchRequestPageUid}" pageType="{settings.searchRequestPageType}" id="contact-search--form">
+	<f:form action="search" class="form--layout-0 contact-search--form-container" pageUid="{settings.searchRequestPageUid}" pageType="{settings.searchRequestPageType}">
 		<div class="row">
 			<div class="col-12 col-lg-6 contact-search--form">
 				<f:if condition="{record.bodytext}">

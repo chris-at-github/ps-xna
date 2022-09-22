@@ -17,24 +17,17 @@
 	}
 }
 
+.contact-search--form-container > .row {
+	align-items: center;
+}
+
 .contact-search--form {
 	& > .row {
 		margin-top: rem(20px);
 	}
 
-	.form-field {
-		& {
-			border: 3px solid $theme-color-primary-dark;
-		}
-
-		&[disabled] {
-			border-color: $theme-color-primary-dark;
-			background: $color-grey-lighten;
-		}
-	}
-
 	select.form-field {
-		min-height: rem(41px);
+		min-height: rem(39px);
 	}
 }
 
@@ -53,15 +46,13 @@
 		& {
 			position: relative;
 			@extend %button--rounded-icon;
-			@extend %button--rounded-icon--inverted;
 			transform: rotate(90deg);
-
+			pointer-events: none;
 			transition-property: width, height;
 			transition-duration: $transition-duration;
 		}
 
 		&:before {
-			border: 3px solid $theme-color-primary-dark;
 			transition-property: border, background;
 		}
 
@@ -69,14 +60,85 @@
 			transition-property: fill, transform;
 		}
 
+		&:not([disabled]) {
+			pointer-events: initial;
+		}
+	}
+}
+
+.ce-frame--class-1 {
+	.contact-search--form {
+		.form-field {
+			& {
+				border: 2px solid $color-grey-lighten;
+				background: #fff;
+			}
+
+			&[disabled] {
+				border-color: $color-grey-light;
+				background: $color-grey-light;
+			}
+		}
+	}
+
+	button {
+		&:before {
+			border-color: $color-grey-lighten;
+		}
+
+		svg {
+			fill: $color-grey;
+		}
+
+		&:not([disabled]) {
+			&:before {
+				border-color: $theme-color-primary;
+			}
+
+			svg {
+				fill: #fff;
+			}
+		}
+
+		&:hover:not([disabled]), .focusable &:focus:not([disabled]) {
+			&:before {
+				background: #fff;
+			}
+
+			svg {
+				fill: $theme-color-primary;
+			}
+		}
+	}
+}
+
+.ce-frame--class-2 {
+	.contact-search--form {
+		.form-field {
+			& {
+				border: 2px solid $theme-color-primary-dark;
+			}
+
+			&[disabled] {
+				border-color: $theme-color-primary-dark;
+				background: $color-grey-lighten;
+			}
+		}
+	}
+
+	button {
+		& {
+			@extend %button--rounded-icon--inverted;
+		}
+
+		&:before {
+			border: 3px solid $theme-color-primary-dark;
+		}
+
 		&:hover:not([disabled]), .focusable &:focus:not([disabled]) {
 			&:before {
 				border-color: #fff;
 				background: $theme-color-primary-dark;
-			}
-
-			svg {
-				//transform: translate(3px, 0);
 			}
 		}
 	}
