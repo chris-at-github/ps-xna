@@ -1,7 +1,7 @@
 rootPageId: 1
 websiteTitle: 'XNA'
 baseVariants:
-  - base: 'http://xna.local'
+  - base: 'https://ps14-xna.ddev.site/'
     condition: 'applicationContext == "Development"'
 languages:
   -
