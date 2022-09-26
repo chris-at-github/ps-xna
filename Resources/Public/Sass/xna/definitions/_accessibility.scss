@@ -31,8 +31,15 @@
 	}
 }
 
+%accessibility-focus-within {
+	&:focus-within {
+		outline: 2px dashed rgba($font-color-base, 0.75);
+		transition: outline $transition-duration;
+	}
+}
+
 %accessibility-focus-overflow {
-	&:focus {
+	&:focus, &:focus-within {
 		& {
 			display: block;
 			position: relative;

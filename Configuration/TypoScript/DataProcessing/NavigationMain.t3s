@@ -1,0 +1,13 @@
+navigation.main.dataProcessing {
+	105 = Ps\Xo\DataProcessing\NavigationContentProcessor
+	105 {
+		table = tt_content
+		as = content
+	}
+
+	110 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+	110 {
+		as = media
+		references.fieldName = media
+	}
+}

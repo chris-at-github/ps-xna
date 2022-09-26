@@ -54,6 +54,12 @@
 			z-index: -1;
 		}
 
+		// Elemente aus der mobilen Navigation ausblenden
+		.navigation-item--backlink, .navigation-item--parentlink {
+			display: none;
+		}
+
+		// Standard-Styles fuer alle Layouts
 		.navigation--container-inner {
 			& {
 				width: $page-max-width;
@@ -109,6 +115,7 @@
 
 	ul li {
 		ul {
+			display: none;
 			position: absolute;
 			top: 0; left: 0;
 			z-index: 5;
@@ -120,7 +127,16 @@
 			transition: transform 0.25s ease-out;
 		}
 
-		&[aria-expanded="true"] .navigation--container-inner > ul, &[aria-expanded="true"] > ul {
+		&.navigation-item--in .navigation--container-inner > ul,
+		&.navigation-item--in > ul,
+		&.navigation-item--out .navigation--container-inner > ul,
+		&.navigation-item--out > ul {
+			display: block;
+		}
+
+		&.navigation-item--active .navigation--container-inner > ul,
+		&.navigation-item--active > ul {
+			display: block;
 			transform: translate(0, 0);
 		}
 	}
@@ -140,12 +156,16 @@
 		}
 	}
 
-	.navigation-item--backlink > span {
+	.navigation-item--backlink > button {
 		& {
 			position: relative;
-			padding-left: rem(60px);
-			background: #eaeaea;
+			width: 100%;
+			padding: rem(10px 24px 10px 60px);
+			border: 0;
+			background: $theme-color-primary;
 			cursor: pointer;
+			color: #fff;
+			text-align: left;
 		}
 
 		svg {
@@ -153,7 +173,7 @@
 			top: rem(15px); left: rem(21px);
 			width: 17px;
 			height: 19px;
-			fill: $font-color-base;
+			fill: #fff;
 		}
 	}
 

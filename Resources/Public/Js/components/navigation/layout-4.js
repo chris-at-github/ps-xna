@@ -4,30 +4,40 @@
 	xna.on('documentLoaded', function() {
 
 		let navigation = {
-			isEnabled: function() {
+			isMobileEnabled: function() {
 				return document.body.classList.contains('is--off-canvas-active');
 			},
 
-			itemExpand: function(event) {
-				let item = this;
-				let parent = item.parentElement;
+			itemExpand: function(item, listItem) {
 
-				// nur wenn es Kind Elemente gibt und die mobile Navigation aktiv ist
-				if(navigation.isEnabled() === true && parent.hasAttribute('aria-expanded') === true) {
+				// nur wenn es Kind Elemente gibt
+				if(listItem.hasAttribute('aria-expanded') === true && listItem.getAttribute('aria-expanded') === 'false') {
 
-					if(parent.getAttribute('aria-expanded') === 'false') {
+					// Backlink und Direktlink einbinden
+					navigation.itemBeforeExpand(item, listItem);
 
-						// Backlink und Direktlink einbinden
-						navigation.itemBeforeExpand(item, parent);
-						parent.setAttribute('aria-expanded', 'true');
-					}
+					listItem.setAttribute('aria-expanded', 'true');
+					listItem.classList.add('navigation-item--in');
 
-					event.preventDefault();
+					setTimeout(function() {
+						listItem.classList.add('navigation-item--active');
+						listItem.classList.remove('navigation-item--in');
+					}, 10);
 				}
 			},
 
-			itemReduce: function(item, parent) {
-				parent.setAttribute('aria-expanded', 'false');
+			itemReduce: function(item, listItem) {
+
+				// nur wenn es Kind Elemente gibt
+				if(listItem.hasAttribute('aria-expanded') === true) {
+					listItem.classList.add('navigation-item--out');
+					listItem.classList.remove('navigation-item--active');
+					listItem.setAttribute('aria-expanded', 'false');
+
+					setTimeout(function() {
+						listItem.classList.remove('navigation-item--out');
+					}, 350);
+				}
 			},
 
 			itemBeforeExpand: function(item, parent) {
@@ -46,8 +56,8 @@
 
 			createBackLink: function(item, parent) {
 				let backlink = document.createElement('li'),
-					text = document.createElement('span'),
-					svg = xna.createSvgUseElement('#sprite-chevron-left', {'viewBox': '0 0 6 12'});
+					text = document.createElement('button'),
+					svg = xna.createSvgUseElement('#sprite-arrow-left', {'viewBox': '0 0 14 11'});
 
 				backlink.classList.add('navigation-item--backlink');
 				backlink.addEventListener('click', function() {
@@ -70,7 +80,11 @@
 				parentlink.classList.add('navigation-item--parentlink');
 
 				link.removeChild(link.querySelector('svg'));
-				link.appendChild(svg);
+
+				// nur wenn das Elternelemet ein Link ist
+				if(link.tagName.toLocaleLowerCase() === 'a') {
+					link.appendChild(svg);
+				}
 
 				parentlink.appendChild(link);
 
@@ -94,15 +108,53 @@
 			});
 
 			node.querySelectorAll('li > a, li > span').forEach(function(item) {
-				let parent = item.parentElement;
+				let listItem = item.parentElement;
+				let active = false;
+				let timeout = false;
 
-
-				item.addEventListener('click', navigation.itemExpand);
-
-				if(parent.hasAttribute('aria-expanded') === true) {
+				if(listItem.hasAttribute('aria-expanded') === true) {
 					let svg = xna.createSvgUseElement('#sprite-chevron-right', {'viewBox': '0 0 6 12'});
 					item.appendChild(svg);
 				}
+
+				item.addEventListener('click', function(event) {
+					navigation.itemExpand(item, listItem);
+
+					if(listItem.hasAttribute('aria-expanded') === true && navigation.isMobileEnabled() === true) {
+						event.preventDefault();
+					}
+				});
+
+				listItem.addEventListener('mousemove', function(event) {
+					if(active === false && navigation.isMobileEnabled() === false) {
+						active = true;
+						navigation.itemExpand(item, listItem);
+					}
+				});
+
+				listItem.addEventListener('mouseleave', function(event) {
+					if(navigation.isMobileEnabled() === false) {
+						active = false;
+						navigation.itemReduce(item, listItem);
+					}
+				});
+
+				listItem.addEventListener('focusin', function(event) {
+					if(navigation.isMobileEnabled() === false) {
+						timeout = false;
+						navigation.itemExpand(item, listItem);
+					}
+				});
+
+				listItem.addEventListener('focusout', function(event) {
+					timeout = true;
+
+					setTimeout(function() {
+						if(timeout === true) {
+							// navigation.itemReduce(item, listItem);
+						}
+					}, 10);
+				});
 			});
 		});
 	});

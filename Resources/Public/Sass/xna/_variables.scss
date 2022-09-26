@@ -10,6 +10,10 @@ $theme-color-primary: #2c808d !default;
 $theme-color-secondary: #96b53a !default;
 $theme-color-hover: #000 !default;
 
+$color-grey-light: #ccc !default;
+$color-grey: #999 !default;
+$color-grey-dark: #333 !default;
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Header
 $headings-font-weight: 400 !default;
@@ -40,6 +44,7 @@ $grid-offset-enabled: false !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Border Radius
 $border-radius-small: 3px !default;
+$border-radius-default: 5px !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout

@@ -8,15 +8,21 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TypoScript/DataProcessing/" extensions="t3s">
 
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/System/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/Block/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/DataProcessing/" extensions="t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xna/Configuration/TypoScript/Extensions/" extensions="t3s">
 
 navigation.main {
 	expandAll = 1
+	levels = 4
 }
 
 page {
 	includeCSS {
 		application = /assets/css/xna.css
+
+		print = /assets/css/print.css
+		print.media = print
 	}
 
 	includeJSFooter {
@@ -58,6 +64,7 @@ page {
 			120 < dataProcessing.flash
 			130 < dataProcessing.providerData
 			140 < dataProcessing.site
+			150 < dataProcessing.pageResource
 		}
 	}
 }

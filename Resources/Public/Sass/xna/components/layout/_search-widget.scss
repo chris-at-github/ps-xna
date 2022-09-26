@@ -3,6 +3,11 @@
 		display: none;
 		align-items: center;
 		justify-content: center;
+		background: none;
+	}
+
+	&:after {
+		display: none;
 	}
 
 	&:hover svg {
