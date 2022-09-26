@@ -89,7 +89,8 @@ mix.webpackConfig({
 		]
 	});
 
-mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js');
+mix.js('typo3conf/ext/xna/Resources/Public/Js/xna.js', 'assets/js/xna.js')
+	.js('typo3conf/ext/xna/Resources/Public/Js/components/bootstrap/collapse.js', 'assets/js/components/collapse.js');
 
 mix.copy('typo3conf/ext/xna/Resources/Public/Js/xna-inline.js', 'assets/js/xna-inline.js')
 	.copy('./node_modules/@midzer/tobii/dist/tobii.min.js', 'assets/js/tobii.js')
