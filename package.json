@@ -29,5 +29,24 @@
 		"sass-loader": "^7.1.0",
 		"svg-spritemap-webpack-plugin": "^3.9.1",
 		"vue-template-compiler": "^2.6.10"
+	},
+	"assets": {
+		"css": {
+			"typo3conf/ext/xna/Resources/Public/Sass/xna.scss": "assets/css/xna.css",
+			"typo3conf/ext/xna/Resources/Public/Sass/editor.scss": "assets/css/editor.css",
+			"typo3conf/ext/xna/Resources/Public/Sass/print.scss": "assets/css/print.css"
+		},
+		"js": {
+			"typo3conf/ext/xna/Resources/Public/Js/xna.js": "assets/js/xna.js"
+		},
+		"copy": {
+			"typo3conf/ext/xna/Resources/Public/Js/xna-inline.js": "assets/js/xna-inline.js",
+			"typo3conf/ext/xna/Resources/Public/Images/*": "./assets/images",
+			"typo3conf/ext/xna/Resources/Public/Svg/Embed/*": "./assets/svg",
+			"typo3conf/ext/xna/Resources/Public/Fonts/*": "./assets/fonts",
+			"typo3conf/ext/xna/Resources/Public/Icons/*": "./assets/icons",
+			"./node_modules/@midzer/tobii/dist/tobii.min.js": "assets/js/tobii.js",
+			"./node_modules/tiny-slider/dist/tiny-slider.js": "assets/js/tiny-slider.js"
+		}
 	}
 }
