@@ -1,7 +1,8 @@
 rootPageId: 1
-websiteTitle: 'XNA'
+websiteTitle: 'Haus Buachwald'
 baseVariants:
-  - base: 'https://ps14-xna.ddev.site/'
+  -
+    base: 'https://haus-buachwald-at.ddev.site'
     condition: 'applicationContext == "Development"'
 languages:
   -
