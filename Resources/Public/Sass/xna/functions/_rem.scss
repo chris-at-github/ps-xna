@@ -9,7 +9,7 @@
  */
 @function rem($values) {
 	// Create a couple of empty lists as output buffers.
-	$base-font-size: $font-size-base-px; // should be consistent with your html/body font-size
+	$base-font-size: $font__size-default; // should be consistent with your html/body font-size
 	$rem-values: ();
 
 	// Loop through the $values list
@@ -22,7 +22,7 @@
 			$rem-values: join($rem-values, 0);
 		} @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
 			// px value given - calculate rem value from base-font-size
-			$new-rem-value: $value / $font-size-base-px;
+			$new-rem-value: $value / $font__size-default;
 			$rem-values: join($rem-values, #{$new-rem-value}rem);
 		} @else {
 			$rem-values: join($rem-values, #{$value}rem);
