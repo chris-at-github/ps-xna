@@ -3,8 +3,6 @@ const assets = require('./package').assets;
 const spritemap = require('svg-spritemap-webpack-plugin');
 
 // var iconfont = require('iconfont-plugin-webpack');
-// var ImageminPlugin = require('imagemin-webpack-plugin').default;
-// var imageminMozjpeg = require('imagemin-mozjpeg');
 
 // Stopping at 95% emitting
 // @see: https://github.com/JeffreyWay/laravel-mix/issues/1126
@@ -62,15 +60,6 @@ mix.webpackConfig({
 			// 		pattern: './typo3conf/ext/xna/Resources/Public/Svg/Font/*.svg', // required - watch these files to reload
 			// 		cwd: undefined // optional - current working dir for watching
 			// 	},
-			// }),
-			//
-			// new ImageminPlugin({
-			// 	test: /\.(jpe?g|png|gif)$/i,
-			// 	plugins: [
-			// 		imageminMozjpeg({
-			// 			quality: 90,
-			// 		})
-			// 	]
 			// })
 		]
 	});
