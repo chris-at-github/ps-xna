@@ -2,36 +2,36 @@
 // Define Variables
 $stylesheet-context: 'screen', 'import' !default;
 
-$iconfont-create-font-face: false !default;
-$iconfont-create-icon-class: false !default;
-
+//$iconfont-create-font-face: false !default;
+//$iconfont-create-icon-class: false !default;
+//
 // ---------------------------------------------------------------------------------------------------------------------
-// Bootstrap & XNA
+// Definitions
 @import 'functions';
 @import 'variables';
-@import 'mixins';
-@import 'definitions';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Vendors
-@import 'xna/vendors/tiny-slider';
-@import 'xna/vendors/tobii';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Components
-@import 'xna/grid';
-@import 'xna/iconfont';
-@import 'xna/components/accessibility';
-@import 'xna/components/link';
-@import 'xna/components/list';
-@import 'xna/components/table';
-@import 'xna/components/form';
-//@import 'xna/components/modal';
-//@import 'xna/components/flash';
-@import 'xna/components/responsive-table';
-@import 'xna/components/readmore-container';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Layout
-@import 'xna/layout';
-@import 'xna/components/layout/sticky';
+//@import 'mixins';
+//@import 'definitions';
+//
+//// ---------------------------------------------------------------------------------------------------------------------
+//// Vendors
+//@import 'xna/vendors/tiny-slider';
+//@import 'xna/vendors/tobii';
+//
+//// ---------------------------------------------------------------------------------------------------------------------
+//// Components
+//@import 'xna/grid';
+//@import 'xna/iconfont';
+//@import 'xna/components/accessibility';
+//@import 'xna/components/link';
+//@import 'xna/components/list';
+//@import 'xna/components/table';
+//@import 'xna/components/form';
+////@import 'xna/components/modal';
+////@import 'xna/components/flash';
+//@import 'xna/components/responsive-table';
+//@import 'xna/components/readmore-container';
+//
+//// ---------------------------------------------------------------------------------------------------------------------
+//// Layout
+//@import 'xna/layout';
+//@import 'xna/components/layout/sticky';

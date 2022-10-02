@@ -1,19 +1,19 @@
-// ---------------------------------------------------------------------------------------------------------------------
-// Define Variables
-$stylesheet-context: 'print' !default;
-
-$tx-product-frontend--use-css: false !default;
-
-$iconfont-create-font-face: false !default;
-$iconfont-create-icon-class: false !default;
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Bootstrap & XNA
-@import 'functions';
-@import 'variables';
-@import 'mixins';
-@import 'definitions';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// XNA Global
-@import 'xna/print';
+//// ---------------------------------------------------------------------------------------------------------------------
+//// Define Variables
+//$stylesheet-context: 'print' !default;
+//
+//$tx-product-frontend--use-css: false !default;
+//
+//$iconfont-create-font-face: false !default;
+//$iconfont-create-icon-class: false !default;
+//
+//// ---------------------------------------------------------------------------------------------------------------------
+//// Bootstrap & XNA
+//@import 'functions';
+//@import 'variables';
+//@import 'mixins';
+//@import 'definitions';
+//
+//// ---------------------------------------------------------------------------------------------------------------------
+//// XNA Global
+//@import 'xna/print';
