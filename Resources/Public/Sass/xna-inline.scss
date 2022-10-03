@@ -7,7 +7,7 @@ $stylesheet-context: 'screen', 'embed' !default;
 @import 'functions';
 @import 'variables';
 @import 'mixins';
-////@import 'definitions';
+@import 'definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // HTML | Fonts
@@ -16,17 +16,17 @@ $stylesheet-context: 'screen', 'embed' !default;
 @import 'bootstrap/normalize';
 @import 'bootstrap/type';
 
-////// ---------------------------------------------------------------------------------------------------------------------
-////// Components
-////@import 'xna/components/accessibility';
-////@import 'xna/components/navigation';
-////@import 'xna/components/navigation/breadcrumb';
-////@import 'xna/components/navigation/language';
-////@import 'xna/components/layout/hamburger';
-////@import 'xna/components/layout/search-widget';
-////@import 'xna/components/layout/flash';
-////@import 'xna/components/layout/sticky';
-////
-////// ---------------------------------------------------------------------------------------------------------------------
-////// Layout
+// ---------------------------------------------------------------------------------------------------------------------
+// Components
+@import 'components/accessibility';
+//@import 'xna/components/navigation';
+//@import 'xna/components/navigation/breadcrumb';
+//@import 'xna/components/navigation/language';
+//@import 'xna/components/layout/hamburger';
+//@import 'xna/components/layout/search-widget';
+//@import 'xna/components/layout/flash';
+//@import 'xna/components/layout/sticky';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
 @import 'layout/layout-inline';
