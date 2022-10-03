@@ -11,7 +11,7 @@
 	}
 
 	&:hover svg {
-		fill: $link-color-hover;
+		fill: var(--link__color-active);
 	}
 
 	svg {
@@ -31,7 +31,7 @@
 
 			padding: rem(8px 10px);
 			border: 0;
-			border-radius: $border-radius-small;
+			border-radius: var(--border-radius--default);
 			background: #f7f7f7;
 		}
 
@@ -57,7 +57,7 @@
 
 		&:hover, &:focus {
 			svg {
-				fill: $link-color-hover;
+				fill: var(--link__color-active);
 			}
 		}
 	}

@@ -23,7 +23,7 @@ $stylesheet-context: 'screen', 'embed' !default;
 @import 'components/navigation/breadcrumb';
 @import 'components/navigation/language';
 @import 'components/layout/hamburger';
-//@import 'xna/components/layout/search-widget';
+@import 'components/layout/search-widget';
 //@import 'xna/components/layout/flash';
 //@import 'xna/components/layout/sticky';
 
