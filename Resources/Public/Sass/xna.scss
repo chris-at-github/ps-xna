@@ -2,16 +2,13 @@
 // Define Variables
 $stylesheet-context: 'screen', 'import' !default;
 
-//$iconfont-create-font-face: false !default;
-//$iconfont-create-icon-class: false !default;
-//
 // ---------------------------------------------------------------------------------------------------------------------
 // Definitions
 @import 'functions';
 @import 'variables';
-//@import 'mixins';
-//@import 'definitions';
-//
+@import 'mixins';
+@import 'definitions';
+
 //// ---------------------------------------------------------------------------------------------------------------------
 //// Vendors
 //@import 'xna/vendors/tiny-slider';
@@ -20,18 +17,15 @@ $stylesheet-context: 'screen', 'import' !default;
 //// ---------------------------------------------------------------------------------------------------------------------
 //// Components
 //@import 'xna/grid';
-//@import 'xna/iconfont';
-//@import 'xna/components/accessibility';
 //@import 'xna/components/link';
 //@import 'xna/components/list';
 //@import 'xna/components/table';
 //@import 'xna/components/form';
 ////@import 'xna/components/modal';
-////@import 'xna/components/flash';
 //@import 'xna/components/responsive-table';
 //@import 'xna/components/readmore-container';
-//
-//// ---------------------------------------------------------------------------------------------------------------------
-//// Layout
-//@import 'xna/layout';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layout
+@import 'layout/layout';
 //@import 'xna/components/layout/sticky';

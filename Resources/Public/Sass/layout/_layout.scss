@@ -38,7 +38,7 @@ a, input, select, textarea, button {
 	}
 
 	.address {
-		margin: $spacing-medium 0 0 0;
+		margin: var(--html-element__spacing-default) 0 0 0;
 	}
 }
 
@@ -63,7 +63,7 @@ a, input, select, textarea, button {
 		.navigation {
 			& {
 				@include navigation--layout-4();
-				padding: $spacing-medium 0 0 0;
+				padding: var(--spacing--default) 0 0 0;
 			}
 
 			li {
@@ -77,7 +77,7 @@ a, input, select, textarea, button {
 			}
 
 			a, li > span {
-				padding: rem(10px) $spacing-medium;
+				padding: rem(10px) var(--spacing--default);
 			}
 
 			a:hover {
@@ -89,12 +89,12 @@ a, input, select, textarea, button {
 			& {
 				position: relative;
 				z-index: 1;
-				margin: $spacing-default 0 0 0;
-				padding: 0 $spacing-default;
+				margin: var(--spacing--default) 0 0 0;
+				padding: 0 var(--spacing--default);
 			}
 
 			.search-widget--submit {
-				right: $spacing-default;
+				right: var(--container-spacing__x);
 			}
 
 			.search-widget--close {
@@ -103,7 +103,7 @@ a, input, select, textarea, button {
 		}
 
 		.language-navigation {
-			padding: rem(20px) 0 0 $spacing-default;
+			padding: rem(20px) 0 0 var(--spacing--default);
 		}
 
 		.is--off-canvas-active & {
