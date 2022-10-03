@@ -2,15 +2,19 @@
 // Flash
 #flash {
 	& {
-		@extend %container-class-1;
-		@extend %container-space-before-small;
-		@extend %container-space-after-small;
-
 		position: relative;
 		z-index: 5;
+		padding-top: 0.1px;
+		padding-bottom: 0.1px;
+		background: var(--color__gray-light);
+	}
+
+	.ce-frame__inner {
+		margin-top: var(--container-spacing__y--small);
+		margin-bottom: var(--container-spacing__y--small);
 	}
 
 	.ce-header {
-		font-weight: $font-weight-bold;
+		font-weight: var(--font__weight-bold);
 	}
 }

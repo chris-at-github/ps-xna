@@ -24,7 +24,7 @@ $stylesheet-context: 'screen', 'embed' !default;
 @import 'components/navigation/language';
 @import 'components/layout/hamburger';
 @import 'components/layout/search-widget';
-//@import 'xna/components/layout/flash';
+@import 'components/layout/flash';
 //@import 'xna/components/layout/sticky';
 
 // ---------------------------------------------------------------------------------------------------------------------
