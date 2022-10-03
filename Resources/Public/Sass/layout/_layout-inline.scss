@@ -66,21 +66,30 @@ body {
 		min-height: rem(60px);
 	}
 
-	//.logo {
-	//	& {
-	//		@extend %logo;
-	//		max-width: 120px;
-	//		max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
-	//	}
-	//
-	//	svg {
-	//		fill: $font-color-base;
-	//	}
-	//
-	//	&:hover svg {
-	//		fill: $link-color-hover;
-	//	}
-	//}
+	.logo {
+		& {
+			display: block;
+			max-width: 120px;
+			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+		}
+
+		img, svg {
+			max-width: 100%;
+			display: block;
+		}
+
+		img {
+			height: auto;
+		}
+
+		svg {
+			fill: var(--font__color-default);
+		}
+
+		&:hover svg {
+			fill: var(--link__color);
+		}
+	}
 
 	.hamburger {
 		position: relative;
