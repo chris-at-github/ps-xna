@@ -1,7 +1,7 @@
 .table--container {
 	& {
 		position: relative;
-		margin-top: $spacing-default;
+		margin-top: var(--html-element__spacing-default);
 	}
 
 	& + .table--container {
