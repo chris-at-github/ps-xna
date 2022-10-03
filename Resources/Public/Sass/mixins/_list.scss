@@ -30,7 +30,7 @@
 			content: '';
 			position: absolute;
 			top: 12px; left: 0;
-			border: 2px solid $font-color-base;
+			border: 2px solid var(--font__color-default);
 			border-radius: 50%;
 		}
 	}

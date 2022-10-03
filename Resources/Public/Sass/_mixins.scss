@@ -1,14 +1,5 @@
-// ---------------------------------------------------------------------------------------------------------------------
-// Bootstrap
-@import 'bootstrap/mixins/breakpoints';
-@import 'bootstrap/mixins/grid';
-@import 'bootstrap/mixins/clearfix';
-
-// ---------------------------------------------------------------------------------------------------------------------
-// XNA
-@import 'xna/mixins/stylesheet-context';
-@import 'xna/mixins/type';
-@import 'xna/mixins/list';
-@import 'xna/mixins/table';
-@import 'xna/mixins/grid-column';
-@import 'xna/mixins/navigation';
+@import 'mixins/stylesheet-context';
+@import 'mixins/type';
+@import 'mixins/list';
+@import 'mixins/table';
+//@import 'mixins/navigation';
