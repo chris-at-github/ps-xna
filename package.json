@@ -12,6 +12,7 @@
 	"dependencies": {
 		"@midzer/tobii": "^2.1.0",
 		"micromodal": "^0.4.6",
+		"postcss-inline-svg": "^4.1.0",
 		"tiny-slider": "^2.9.3",
 		"whatwg-fetch": "^3.5.0"
 	},

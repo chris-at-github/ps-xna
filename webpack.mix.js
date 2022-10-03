@@ -72,6 +72,7 @@ for(const [source, target] of Object.entries(assets.css)) {
 	mix.sass(source, target)
 		.options({
 			postCss: [
+				require('postcss-inline-svg'),
 				require('postcss-cachebuster'),
 				require('postcss-combine-duplicated-selectors')({
 					removeDuplicatedProperties: true
@@ -85,6 +86,7 @@ for(const [source, target] of Object.entries(assets.css)) {
 mix.sass('typo3conf/ext/xna/Resources/Public/Sass/xna-inline.scss', 'assets/css/xna-inline.css')
 	.options({
 			postCss: [
+				require('postcss-inline-svg'),
 				require('postcss-cachebuster'),
 				require('postcss-combine-duplicated-selectors')({
 					removeDuplicatedProperties: true

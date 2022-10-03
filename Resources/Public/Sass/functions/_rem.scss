@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /*
  * a small mixin for easy use of rem with px as fallback
  * usage: @include x-rem(font-size, 14px)
@@ -22,7 +24,7 @@
 			$rem-values: join($rem-values, 0);
 		} @else if type-of($value) == number and not unitless($value) and (unit($value) == px) {
 			// px value given - calculate rem value from base-font-size
-			$new-rem-value: $value / $font__size-default;
+			$new-rem-value: math.div($value, $font__size-default);
 			$rem-values: join($rem-values, #{$new-rem-value}rem);
 		} @else {
 			$rem-values: join($rem-values, #{$value}rem);

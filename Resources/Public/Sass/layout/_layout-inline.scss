@@ -7,6 +7,7 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Hauptbereiche
 body {
+	@include body;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -25,8 +26,16 @@ body {
 
 #content--header, #content--main {
 	& > .ce-frame--space-after-auto:last-child {
-		@extend %container-space-after-medium;
+		//@extend %container-space-after-medium;
 	}
+}
+
+h1 {
+	background: gold;
+}
+
+h1 {
+	background: red;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -47,21 +56,21 @@ body {
 		min-height: rem(60px);
 	}
 
-	.logo {
-		& {
-			@extend %logo;
-			max-width: 120px;
-			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
-		}
-
-		svg {
-			fill: $font-color-base;
-		}
-
-		&:hover svg {
-			fill: $link-color-hover;
-		}
-	}
+	//.logo {
+	//	& {
+	//		@extend %logo;
+	//		max-width: 120px;
+	//		max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+	//	}
+	//
+	//	svg {
+	//		fill: $font-color-base;
+	//	}
+	//
+	//	&:hover svg {
+	//		fill: $link-color-hover;
+	//	}
+	//}
 
 	.hamburger {
 		position: relative;
@@ -85,90 +94,122 @@ body {
 	}
 }
 
-// ---------------------------------------------------------------------------------------------------------------------
-// Container / Layout
-.container-outer {
-	@extend %container-outer;
-	@extend %container-width-normal;
-	@extend %container-align-center;
-}
-
-.container-inner {
-	@extend %container-inner;
-}
-
-// Container / Fluid Styled Content
-.ce-frame--outer {
-	@extend %container-outer;
-	@extend %container-align-center;
-}
-
-.ce-frame--inner {
-	@extend %container-inner;
-}
-
-// Container / Fluid Styled Content / Laufweiten
-.ce-frame--layout-0 {
-	@extend %container-width-normal;
-}
-
-.ce-frame--layout-1 {
-	@extend %container-width-indent-right;
-}
-
-.ce-frame--layout-2 {
-	@extend %container-width-full;
-}
-
-// Container / Fluid Styled Content / Abstaende
-.ce-frame--space-before-small {
-	@extend %container-space-before-small;
-}
-
-.ce-frame--space-before-medium {
-	@extend %container-space-before-medium;
-}
-
-.ce-frame--space-after-small {
-	@extend %container-space-after-small;
-}
-
-.ce-frame--space-after-medium {
-	@extend %container-space-after-medium;
-}
-
-// Container / Fluid Styled Content / Farbschema
-.ce-frame--class-0 {
-	@extend %container-class-0;
-}
-
-.ce-frame--class-1 {
-	@extend %container-class-1;
-}
+//// ---------------------------------------------------------------------------------------------------------------------
+//// Container / Layout
+//.container-outer {
+//	@extend %container-outer;
+//	@extend %container-width-normal;
+//	@extend %container-align-center;
+//}
+//
+//.container-inner {
+//	@extend %container-inner;
+//}
+//
+//// Container / Fluid Styled Content
+//.ce-frame--outer {
+//	@extend %container-outer;
+//	@extend %container-align-center;
+//}
+//
+//.ce-frame--inner {
+//	@extend %container-inner;
+//}
+//
+//// Container / Fluid Styled Content / Laufweiten
+//.ce-frame--layout-0 {
+//	@extend %container-width-normal;
+//}
+//
+//.ce-frame--layout-1 {
+//	@extend %container-width-indent-right;
+//}
+//
+//.ce-frame--layout-2 {
+//	@extend %container-width-full;
+//}
+//
+//// Container / Fluid Styled Content / Abstaende
+//.ce-frame--space-before-small {
+//	@extend %container-space-before-small;
+//}
+//
+//.ce-frame--space-before-medium {
+//	@extend %container-space-before-medium;
+//}
+//
+//.ce-frame--space-after-small {
+//	@extend %container-space-after-small;
+//}
+//
+//.ce-frame--space-after-medium {
+//	@extend %container-space-after-medium;
+//}
+//
+//// Container / Fluid Styled Content / Farbschema
+//.ce-frame--class-0 {
+//	@extend %container-class-0;
+//}
+//
+//.ce-frame--class-1 {
+//	@extend %container-class-1;
+//}
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Standard-Elemente
 .ce-header--layout-1 {
-	h2, h3 {
+	h1, h2, h3, h4 {
 		@include header-1;
 	}
 }
 
 .ce-header--layout-2 {
-	h1, h3 {
+	& {
+		margin-top: var(--header-2__spacing-top);
+	}
+
+	h1, h2, h3, h4 {
 		@include header-2;
 	}
 }
 
 .ce-header--layout-3 {
-	h1, h2 {
+	& {
+		margin-top: var(--header-3__spacing-top);
+	}
+
+	h1, h2, h3, h4 {
 		@include header-3;
 	}
 }
 
-.ce-header--layout-2, .ce-header--layout-3 {
-	& + p, & + ul, & + ol, & + table {
-		margin-top: $spacing-small;
+.ce-header--layout-4 {
+	& {
+		margin-top: var(--header-4__spacing-top);
+	}
+
+	h1, h2, h3, h4 {
+		@include header-4;
+	}
+}
+
+.ce-header--layout-1, .ce-header--layout-2, .ce-header--layout-3, .ce-header--layout-4 {
+	h1, h2, h3, h4 {
+		margin-top: 0;
+	}
+
+	& + .ce-bodytext {
+		margin-top: var(--html-element__spacing-header);
+	}
+}
+
+.ce-bodytext {
+	& {
+		@include bodytext;
+	}
+
+	& > *:first-child {
+		margin-top: 0;
 	}
 }
 
@@ -256,7 +297,7 @@ body {
 		.meta-navigation {
 			& {
 				grid-area: meta-navigation;
-				@include navigation--layout-0;
+				//@include navigation--layout-0;
 			}
 
 			ul {
@@ -270,7 +311,7 @@ body {
 
 		.main-navigation {
 			& {
-				@include navigation--layout-2(false);
+				//@include navigation--layout-2(false);
 				padding-left: 10px;
 			}
 

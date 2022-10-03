@@ -1,41 +1,41 @@
-// ---------------------------------------------------------------------------------------------------------------------
-// Typography
-%header-x {
-	margin-top: rem(40px);
-	margin-bottom: 0;
-	font-weight: $headings-font-weight;
-	line-height: $headings-line-height;
-}
+//// ---------------------------------------------------------------------------------------------------------------------
+//// Typography
+//%header-x {
+//	margin-top: rem(40px);
+//	margin-bottom: 0;
+//	font-weight: $headings-font-weight;
+//	line-height: $headings-line-height;
+//}
+//
+//%header-1 {
+//	@include header-1;
+//}
+//
+//%header-2 {
+//	@include header-2;
+//}
+//
+//%header-3 {
+//	@include header-3;
+//}
+//
+//p, ul, ol, table {
+//	@extend %header-sibling !optional;
+//}
 
-%header-1 {
-	@include header-1;
-}
-
-%header-2 {
-	@include header-2;
-}
-
-%header-3 {
-	@include header-3;
-}
-
-p, ul, ol, table {
-	@extend %header-sibling !optional;
-}
-
-%link--default {
-	& {
-		font-weight: $font-weight-bold;
-		color: $link-color;
-		text-decoration: none;
-		transition: color 0.35s;
-	}
-
-	&:hover, &:focus {
-		color: $link-color-hover;
-		text-decoration: underline;
-	}
-}
+//%link--default {
+//	& {
+//		font-weight: $font-weight-bold;
+//		color: $link-color;
+//		text-decoration: none;
+//		transition: color 0.35s;
+//	}
+//
+//	&:hover, &:focus {
+//		color: $link-color-hover;
+//		text-decoration: underline;
+//	}
+//}
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Images

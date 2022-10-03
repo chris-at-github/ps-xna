@@ -56,11 +56,12 @@ $font__size-default: 16px;
 	--header__font-family: var(--font__family-default);
 	--header__font-weight: var(--font__weight-default);
 	--header__line-height: 1.15;
+	--header__spacing-top: #{rem(40px)};
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Page
 	--page__max-width: 1140px;
-	--page__spacing-x: 20px;
+	--page__spacing-x: #{rem(20px)};
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Grid
@@ -80,10 +81,10 @@ $font__size-default: 16px;
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Spacing
-	--spacing--default: rem(20px);
-	--spacing--small: rem(20px);
-	--spacing--medium: rem(50px);
-	--spacing--large: rem(80px);
+	--spacing--small: #{rem(10px)};
+	--spacing--default: #{rem(20px)};
+	--spacing--medium: #{rem(50px)};
+	--spacing--large: #{rem(80px)};
 }
 
 //// ---------------------------------------------------------------------------------------------------------------------

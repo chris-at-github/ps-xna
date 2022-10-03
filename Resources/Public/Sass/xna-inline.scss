@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Define Variables
-$stylesheet-context: 'screen', 'import' !default;
+$stylesheet-context: 'screen', 'embed' !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Functions | Variables | Mixins
@@ -11,9 +11,9 @@ $stylesheet-context: 'screen', 'import' !default;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // HTML | Fonts
+@import 'font';
 @import 'normalize';
-@import 'xna/font';
-//@import 'xna/type';
+@import 'type';
 //
 //@import 'xna/iconfont';
 //
@@ -30,4 +30,4 @@ $stylesheet-context: 'screen', 'import' !default;
 //
 //// ---------------------------------------------------------------------------------------------------------------------
 //// Layout
-//@import 'xna/layout-inline';
+@import 'layout/layout-inline';

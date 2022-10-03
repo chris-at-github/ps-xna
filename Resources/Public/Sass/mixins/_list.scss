@@ -53,7 +53,7 @@
 
 @mixin list--check {
 	li {
-		@include iconfont(check);
+		content: svg-load('../Svg/Embed/close.svg', fill=#ff0000);
 		padding: rem(0 0 0 20px);
 	}
 
