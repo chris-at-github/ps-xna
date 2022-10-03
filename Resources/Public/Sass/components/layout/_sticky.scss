@@ -1,4 +1,4 @@
-@include stylesheet-context($stylesheet-context-embed) {
+@include stylesheet-context($stylesheet-context--embed) {
 	.sticky--container {
 		position: fixed;
 		top: 200px; right: 0;
@@ -26,7 +26,7 @@
 		}
 
 		svg {
-			fill: $font-color-base;
+			fill: var(--font__color-default);
 		}
 	}
 
@@ -44,11 +44,11 @@
 		padding: rem(10px 20px);
 		background: #f7f7f7;
 		transform: translate(rem(440px), 0);
-		transition: transform $transition-duration;
+		transition: transform var(--transition__duration-default);
 	}
 }
 
-@include stylesheet-context($stylesheet-context-import) {
+@include stylesheet-context($stylesheet-context--import) {
 	.sticky--close {
 		& {
 			position: absolute;
@@ -76,8 +76,8 @@
 	}
 
 	.sticky--element-contact {
-		.address {
-			@extend %address;
-		}
+		//.address {
+		//	@extend %address;
+		//}
 	}
 }
