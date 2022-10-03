@@ -14,7 +14,7 @@
 }
 
 @mixin navigation--layout-2($render-children: false) {
-	@include stylesheet-context($stylesheet-context-embed) {
+	@include stylesheet-context($stylesheet-context--embed) {
 		& > ul {
 			& {
 				display: flex;
@@ -40,8 +40,8 @@
 			left: 0;
 			right: 0;
 			display: none;
-			padding-left: $spacing-medium;
-			padding-right: $spacing-medium;
+			padding-left: var(--container-spacing__x);
+			padding-right: var(--container-spacing__x);
 		}
 
 		.navigation--container-background {
@@ -62,7 +62,7 @@
 		// Standard-Styles fuer alle Layouts
 		.navigation--container-inner {
 			& {
-				width: $page-max-width;
+				width: var(--page__max-width);
 				max-width: 100%;
 				margin-left: auto;
 				margin-right: auto;
@@ -87,7 +87,7 @@
 
 			& > ul > li > ul > li {
 				a {
-					font-weight: $font-weight-normal;
+					font-weight: var(--font__weight-bold);
 				}
 			}
 		}
@@ -152,7 +152,7 @@
 			top: rem(15px); right: rem(24px);
 			width: 17px;
 			height: 19px;
-			fill: $font-color-base;
+			fill: var(--font__color-default);
 		}
 	}
 
@@ -162,7 +162,7 @@
 			width: 100%;
 			padding: rem(10px 24px 10px 60px);
 			border: 0;
-			background: $theme-color-primary;
+			background: var(--color__primary);
 			cursor: pointer;
 			color: #fff;
 			text-align: left;
@@ -190,7 +190,7 @@
 			top: rem(15px); right: rem(28px);
 			width: 17px;
 			height: 19px;
-			fill: $font-color-base;
+			fill: var(--font__color-default);
 		}
 	}
 

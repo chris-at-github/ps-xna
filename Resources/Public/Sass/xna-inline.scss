@@ -19,7 +19,7 @@ $stylesheet-context: 'screen', 'embed' !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Components
 @import 'components/accessibility';
-//@import 'xna/components/navigation';
+@import 'components/navigation';
 //@import 'xna/components/navigation/breadcrumb';
 //@import 'xna/components/navigation/language';
 //@import 'xna/components/layout/hamburger';
