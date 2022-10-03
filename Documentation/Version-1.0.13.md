@@ -9,3 +9,6 @@
 * Bootstrap entfernt
 * Kein Unterordner XNA mehr
 * Iconfont entfernt
+
+# Umstellung auf BEM
+* ce-frame--inner auf ce-frame__inner
