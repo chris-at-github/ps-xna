@@ -21,7 +21,7 @@ $stylesheet-context: 'screen', 'embed' !default;
 @import 'components/accessibility';
 @import 'components/navigation';
 //@import 'xna/components/navigation/breadcrumb';
-//@import 'xna/components/navigation/language';
+@import 'components/navigation/language';
 //@import 'xna/components/layout/hamburger';
 //@import 'xna/components/layout/search-widget';
 //@import 'xna/components/layout/flash';
