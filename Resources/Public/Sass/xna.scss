@@ -28,4 +28,4 @@ $stylesheet-context: 'screen', 'import' !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout
 @import 'layout/layout';
-//@import 'xna/components/layout/sticky';
+@import 'components/layout/sticky';
