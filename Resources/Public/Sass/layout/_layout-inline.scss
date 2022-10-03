@@ -1,4 +1,16 @@
 // ---------------------------------------------------------------------------------------------------------------------
+// Variablen
+:root {
+	--page__offset-top: #{rem(80px)};
+
+	--container-spacing__y--small: #{rem(20px)};
+	--container-spacing__y--medium: #{rem(20px)};
+	--container-spacing__y--large: #{rem(40px)};
+	--container-spacing__x: #{rem(20px)};
+	--container-spacing__indent--right: 0;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // SVG Container
 .svg-sprite--container {
 	display: none;
@@ -26,16 +38,14 @@ body {
 
 #content--header, #content--main {
 	& > .ce-frame--space-after-auto:last-child {
-		//@extend %container-space-after-medium;
+		& {
+			padding-bottom: 0.1px;
+		}
+
+		.ce-frame__inner {
+			margin-bottom: var(--container-spacing__y--medium);
+		}
 	}
-}
-
-h1 {
-	background: gold;
-}
-
-h1 {
-	background: red;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -88,72 +98,94 @@ h1 {
 	}
 
 	#header + .ce-content, #header + #breadcrumb + .ce-content {
-		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
-			padding-top: rem(80px); // Hoehe des Headers
+		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame__inner {
+			padding-top: var(--page__offset-top); // Hoehe des Headers
 		}
 	}
 }
 
-//// ---------------------------------------------------------------------------------------------------------------------
-//// Container / Layout
-//.container-outer {
-//	@extend %container-outer;
-//	@extend %container-width-normal;
-//	@extend %container-align-center;
-//}
-//
-//.container-inner {
-//	@extend %container-inner;
-//}
-//
-//// Container / Fluid Styled Content
-//.ce-frame--outer {
-//	@extend %container-outer;
-//	@extend %container-align-center;
-//}
-//
-//.ce-frame--inner {
-//	@extend %container-inner;
-//}
-//
-//// Container / Fluid Styled Content / Laufweiten
-//.ce-frame--layout-0 {
-//	@extend %container-width-normal;
-//}
-//
-//.ce-frame--layout-1 {
-//	@extend %container-width-indent-right;
-//}
-//
-//.ce-frame--layout-2 {
-//	@extend %container-width-full;
-//}
-//
-//// Container / Fluid Styled Content / Abstaende
-//.ce-frame--space-before-small {
-//	@extend %container-space-before-small;
-//}
-//
-//.ce-frame--space-before-medium {
-//	@extend %container-space-before-medium;
-//}
-//
-//.ce-frame--space-after-small {
-//	@extend %container-space-after-small;
-//}
-//
-//.ce-frame--space-after-medium {
-//	@extend %container-space-after-medium;
-//}
-//
-//// Container / Fluid Styled Content / Farbschema
-//.ce-frame--class-0 {
-//	@extend %container-class-0;
-//}
-//
-//.ce-frame--class-1 {
-//	@extend %container-class-1;
-//}
+// ---------------------------------------------------------------------------------------------------------------------
+// Container / Layout
+.container-outer {
+	max-width: var(--page__max-width);
+	padding-left: var(--container-spacing__x);
+	padding-right: var(--container-spacing__x);
+}
+
+.container-inner {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Container / Fluid Styled Content
+.ce-frame {
+	padding-left: var(--container-spacing__x);
+	padding-right: var(--container-spacing__x);
+}
+
+.ce-frame__inner {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Container / Fluid Styled Content / Laufweiten
+.ce-frame--layout-0 .ce-frame__inner {
+	max-width: var(--page__max-width);
+}
+
+.ce-frame--layout-1 .ce-frame__inner {
+	max-width: var(--page__max-width);
+	padding-right: var(--container-spacing__indent--right);
+}
+
+.ce-frame--layout-2 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+// Container / Fluid Styled Content / Abstaende
+.ce-frame--space-before-small,
+.ce-frame--space-before-medium,
+.ce-frame--space-before-large {
+	padding-top: 0.1px;
+}
+
+.ce-frame--space-after-small,
+.ce-frame--space-after-medium,
+.ce-frame--space-after-large {
+	padding-bottom: 0.1px;
+}
+
+.ce-frame--space-before-small > .ce-frame__inner {
+	margin-top: var(--container-spacing__y--small);
+}
+
+.ce-frame--space-before-medium > .ce-frame__inner {
+	margin-top: var(--container-spacing__y--medium);
+}
+
+.ce-frame--space-before-large > .ce-frame__inner {
+	margin-top: var(--container-spacing__y--large);
+}
+
+.ce-frame--space-after-small > .ce-frame__inner {
+	margin-bottom: var(--container-spacing__y--small);
+}
+
+.ce-frame--space-after-medium > .ce-frame__inner {
+	margin-bottom: var(--container-spacing__y--medium);
+}
+
+.ce-frame--space-after-large > .ce-frame__inner {
+	margin-bottom: var(--container-spacing__y--large);
+}
+
+// Container / Fluid Styled Content / Farbschema
+.ce-frame--class-1 {
+	background: var(--color__gray-light);
+}
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Standard-Elemente
@@ -234,12 +266,16 @@ h1 {
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 768px
 @include media-breakpoint-up(md) {
+	:root {
+		--page__offset-top: #{rem(130px)};
+
+		--container-spacing__y--medium: #{rem(40px)};
+		--container-spacing__y--large: #{rem(80px)};
+		--container-spacing__indent--right: percentage(3 / 12);
+	}
+
 	.page-header {
 		.container-inner {
-			//-ms-grid-columns: 140px 1fr 60px;
-			//grid-template-columns: 140px auto 60px;
-			//grid-gap: 30px;
-
 			position: relative;
 			display: grid;
 			grid-template-columns: 140px 1fr;
@@ -324,12 +360,12 @@ h1 {
 			}
 		}
 	}
+}
 
-	.page--layout-0 {
-		#header + .ce-content, #header + #breadcrumb + .ce-content {
-			.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame--inner {
-				padding-top: rem(130px); // Hoehe des Headers
-			}
-		}
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	:root {
+		--container-spacing__indent--right: #{rem(280px)};
 	}
 }

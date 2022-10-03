@@ -1,123 +1,8 @@
-//// ---------------------------------------------------------------------------------------------------------------------
-//// Typography
-//%header-x {
-//	margin-top: rem(40px);
-//	margin-bottom: 0;
-//	font-weight: $headings-font-weight;
-//	line-height: $headings-line-height;
-//}
-//
-//%header-1 {
-//	@include header-1;
-//}
-//
-//%header-2 {
-//	@include header-2;
-//}
-//
-//%header-3 {
-//	@include header-3;
-//}
-//
-//p, ul, ol, table {
-//	@extend %header-sibling !optional;
-//}
-
-//%link--default {
-//	& {
-//		font-weight: $font-weight-bold;
-//		color: $link-color;
-//		text-decoration: none;
-//		transition: color 0.35s;
-//	}
-//
-//	&:hover, &:focus {
-//		color: $link-color-hover;
-//		text-decoration: underline;
-//	}
-//}
-
 // ---------------------------------------------------------------------------------------------------------------------
 // Images
 %image-responsive {
 	max-width: 100%;
 	height: auto;
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Container
-%container-outer {
-	padding-left: $spacing-medium;
-	padding-right: $spacing-medium;
-}
-
-%container-inner {
-	max-width: 100%;
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Container / Laufweiten
-%container-width-full {
-	padding-left: 0;
-	padding-right: 0;
-}
-
-%container-width-normal {
-	%container-inner {
-		width: $page-max-width;
-	}
-}
-
-%container-width-indent-right {
-	%container-inner {
-		width: $page-max-width;
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Container / Ausrichtung
-%container-align-center {
-	%container-inner {
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Container / Abstaende
-%container-space-before-small,
-%container-space-before-medium {
-	padding-top: 0.1px;
-}
-
-%container-space-after-small,
-%container-space-after-medium {
-	padding-bottom: 0.1px;
-}
-
-%container-space-before-small > %container-inner {
-	margin-top: $spacing-default;
-}
-
-%container-space-before-medium > %container-inner {
-	margin-top: $spacing-medium;
-}
-
-%container-space-after-small > %container-inner {
-	margin-bottom: $spacing-default;
-}
-
-%container-space-after-medium > %container-inner {
-	margin-bottom: $spacing-medium;
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Container / Varianten
-%container-class-0 {
-}
-
-%container-class-1 {
-	background: #f7f7f7;
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -174,34 +59,6 @@
 			dd {
 				grid-column: 2;
 			}
-		}
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// >= MD
-@include media-breakpoint-up(md) {
-	%container-width-indent-right {
-		%container-inner {
-			padding-right: percentage(3 / 12);
-		}
-	}
-
-	%container-space-before-medium > %container-inner {
-		margin-top: rem(40px);
-	}
-
-	%container-space-after-medium > %container-inner {
-		margin-bottom: rem(40px);
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// >= LG
-@include media-breakpoint-up(xl) {
-	%container-width-indent-right {
-		%container-inner {
-			padding-right: rem(280px);
 		}
 	}
 }
