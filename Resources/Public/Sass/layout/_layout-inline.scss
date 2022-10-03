@@ -116,13 +116,12 @@ body {
 // ---------------------------------------------------------------------------------------------------------------------
 // Container / Layout
 .container-outer {
-	max-width: var(--page__max-width);
 	padding-left: var(--container-spacing__x);
 	padding-right: var(--container-spacing__x);
 }
 
 .container-inner {
-	max-width: 100%;
+	max-width: var(--page__max-width);
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -342,7 +341,7 @@ body {
 		.meta-navigation {
 			& {
 				grid-area: meta-navigation;
-				//@include navigation--layout-0;
+				@include navigation--layout-0;
 			}
 
 			ul {
@@ -356,7 +355,7 @@ body {
 
 		.main-navigation {
 			& {
-				//@include navigation--layout-2(false);
+				@include navigation--layout-2(false);
 				padding-left: 10px;
 			}
 
