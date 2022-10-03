@@ -21,29 +21,29 @@
 	}
 
 	&:hover {
-		@if $hamburger-hover-use-filter == true {
-			filter: $hamburger-hover-filter;
-		}
-		@else {
-			opacity: $hamburger-hover-opacity;
-		}
+		//@if $hamburger-hover-use-filter == true {
+		//	filter: $hamburger-hover-filter;
+		//}
+		//@else {
+		//	opacity: $hamburger-hover-opacity;
+		//}
 	}
 
 	&.is-active {
-		&:hover {
-			@if $hamburger-hover-use-filter == true {
-				filter: $hamburger-active-hover-filter;
-			}
-			@else {
-				opacity: $hamburger-active-hover-opacity;
-			}
-		}
-
-		.hamburger-inner,
-		.hamburger-inner::before,
-		.hamburger-inner::after {
-			background-color: $hamburger-active-layer-color;
-		}
+		//&:hover {
+		//	@if $hamburger-hover-use-filter == true {
+		//		filter: $hamburger-active-hover-filter;
+		//	}
+		//	@else {
+		//		opacity: $hamburger-active-hover-opacity;
+		//	}
+		//}
+		//
+		//.hamburger-inner,
+		//.hamburger-inner::before,
+		//.hamburger-inner::after {
+		//	background-color: $hamburger-active-layer-color;
+		//}
 	}
 }
 
@@ -66,7 +66,7 @@
 	&::after {
 		width: $hamburger-layer-width;
 		height: $hamburger-layer-height;
-		background-color: $hamburger-layer-color;
+		background-color: var(--font__color-default);
 		border-radius: $hamburger-layer-border-radius;
 		position: absolute;
 		transition-property: transform;
@@ -119,7 +119,7 @@
 
 	&:hover .hamburger-inner {
 		&, &::before, &::after {
-			background: $hamburger-hover-color;
+			background: var(--link__color-active);
 		}
 	}
 

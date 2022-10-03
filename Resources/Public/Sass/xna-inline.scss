@@ -20,9 +20,9 @@ $stylesheet-context: 'screen', 'embed' !default;
 // Components
 @import 'components/accessibility';
 @import 'components/navigation';
-//@import 'xna/components/navigation/breadcrumb';
+@import 'components/navigation/breadcrumb';
 @import 'components/navigation/language';
-//@import 'xna/components/layout/hamburger';
+@import 'components/layout/hamburger';
 //@import 'xna/components/layout/search-widget';
 //@import 'xna/components/layout/flash';
 //@import 'xna/components/layout/sticky';
