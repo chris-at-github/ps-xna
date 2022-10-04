@@ -49,6 +49,23 @@ body {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Logo
+.logo {
+	& {
+		display: block;
+	}
+
+	.logo__image {
+		max-width: 100%;
+		display: block;
+	}
+
+	.logo__image--image {
+		height: auto;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Page Header
 .page-header {
 	& {
@@ -66,27 +83,17 @@ body {
 		min-height: rem(60px);
 	}
 
-	.logo {
+	.page-header__logo {
 		& {
-			display: block;
 			max-width: 120px;
 			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
 		}
 
-		img, svg {
-			max-width: 100%;
-			display: block;
-		}
-
-		img {
-			height: auto;
-		}
-
-		svg {
+		.logo__image--svg {
 			fill: var(--font__color-default);
 		}
 
-		&:hover svg {
+		&:hover .logo__image--svg {
 			fill: var(--link__color);
 		}
 	}
