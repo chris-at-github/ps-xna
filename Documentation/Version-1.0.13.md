@@ -12,3 +12,4 @@
 
 # Umstellung auf BEM
 * ce-frame--inner auf ce-frame__inner
+* Hamburger Klassen (hamburger__container, hamburger__rules)
