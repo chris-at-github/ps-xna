@@ -1,16 +1,81 @@
-//table {
-//	@include table--default;
-//}
-//
-//// ---------------------------------------------------------------------------------------------------------------------
-//// Text-Klassen
-//.text--small {
-//	font-size: 85%;
-//}
-//
-//.text--large {
-//	font-size: 120%;
-//}
+// ---------------------------------------------------------------------------------------------------------------------
+// Text-Klassen
+.text--small {
+	font-size: 85%;
+}
+
+.text--large {
+	font-size: 120%;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Link-Klassen
+.link--external, .link--download {
+	& {
+		position: relative;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		background: var(--link__color);
+		transition: background var(--transition__duration-default);
+	}
+
+	&:hover, .focusable &:focus {
+		&:before {
+			background: var(--link__color-active);
+		}
+	}
+}
+
+.link--external {
+	& {
+		padding: rem(0 0 0 19px);
+	}
+
+	&:before {
+		mask-image: svg-load('../Svg/Embed/external.svg');
+		top: rem(7px); left: rem(1px);
+		width: rem(10px);
+		height: rem(10px);
+	}
+}
+
+.link--download {
+	& {
+		padding: rem(0 0 0 24px);
+	}
+
+	&:before {
+		mask-image: svg-load('../Svg/Embed/download.svg');
+		position: absolute;
+		top: rem(3px); left: rem(1px);
+		width: rem(16px);
+		height: rem(16px);
+	}
+}
+
+.link--phone {
+	&, &:hover, &:focus {
+		color: var(--font__color-default);
+		text-decoration: none;
+	}
+}
+
+.link--cta {
+	& {
+		display: inline-block;
+		padding: rem(10px 20px);
+		border: 2px solid var(--color__primary);
+		color: var(--color__primary);
+	}
+
+	&:hover {
+		border-color: var(--color__primary-dark);
+		text-decoration: none;
+	}
+}
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Listen
