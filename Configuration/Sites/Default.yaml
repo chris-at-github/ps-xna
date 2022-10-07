@@ -1,8 +1,8 @@
 rootPageId: 1
-websiteTitle: 'Haus Buachwald'
+websiteTitle: 'XNA'
 baseVariants:
   -
-    base: 'https://haus-buachwald-at.ddev.site'
+    base: 'https://ps14-xna.ddev.site'
     condition: 'applicationContext == "Development"'
 languages:
   -
@@ -42,4 +42,4 @@ routes:
   -
     route: robots.txt
     type: staticText
-    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: http://xna.local/sitemap.xml"
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /vendor/\r\nDisallow: /typo3_src/\r\nSitemap: https://ps14-xna.ddev.site/sitemap.xml"
