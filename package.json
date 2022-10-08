@@ -33,7 +33,8 @@
 		"css": {
 			"typo3conf/ext/xna/Resources/Public/Sass/xna.scss": "assets/css/xna.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/editor.scss": "assets/css/editor.css",
-			"typo3conf/ext/xna/Resources/Public/Sass/print.scss": "assets/css/print.css"
+			"typo3conf/ext/xna/Resources/Public/Sass/print.scss": "assets/css/print.css",
+			"typo3conf/ext/ps14_hero/Resources/Public/Sass/hero.scss": "assets/css/modules/hero.css"
 		},
 		"js": {
 			"typo3conf/ext/xna/Resources/Public/Js/xna.js": "assets/js/xna.js"
