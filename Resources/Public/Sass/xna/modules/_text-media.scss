@@ -1,4 +1,8 @@
 // ---------------------------------------------------------------------------------------------------------------------
+// Use
+@use 'sass:math';
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Bootstrap & XNA
 @import '../../functions';
 @import '../../variables';
@@ -107,21 +111,21 @@
 	.ce-textmedia--grid-33-66 {
 		&.ce-textmedia--arrangement-before {
 			.ce-textmedia--column:nth-child(1) {
-				width: percentage(4 / 12);
+				width: math.div(4, 12);
 			}
 
 			.ce-textmedia--column:nth-child(2) {
-				width: percentage(8 / 12);
+				width: math.div(8, 12);
 			}
 		}
 
 		&.ce-textmedia--arrangement-after {
 			.ce-textmedia--column:nth-child(1) {
-				width: percentage(8 / 12);
+				width: math.div(8, 12);
 			}
 
 			.ce-textmedia--column:nth-child(2) {
-				width: percentage(4 / 12);
+				width: math.div(4, 12);
 			}
 		}
 	}
@@ -129,28 +133,28 @@
 	.ce-textmedia--grid-50-50 {
 		.ce-textmedia--column:nth-child(1),
 		.ce-textmedia--column:nth-child(2) {
-			width: percentage(6 / 12);
+			width: math.div(6, 12);
 		}
 	}
 
 	.ce-textmedia--grid-66-33 {
 		&.ce-textmedia--arrangement-before {
 			.ce-textmedia--column:nth-child(1) {
-				width: percentage(4 / 12);
+				width: math.div(4, 12);
 			}
 
 			.ce-textmedia--column:nth-child(2) {
-				width: percentage(8 / 12);
+				width: math.div(8, 12);
 			}
 		}
 
 		&.ce-textmedia--arrangement-after {
 			.ce-textmedia--column:nth-child(1) {
-				width: percentage(8 / 12);
+				width: math.div(8, 12);
 			}
 
 			.ce-textmedia--column:nth-child(2) {
-				width: percentage(4 / 12);
+				width: math.div(4, 12);
 			}
 		}
 	}

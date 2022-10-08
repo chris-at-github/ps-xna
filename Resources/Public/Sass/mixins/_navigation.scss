@@ -1,3 +1,7 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Use
+@use 'sass:math';
+
 @mixin navigation--layout-0 {
 	ul {
 		display: flex;
@@ -80,7 +84,7 @@
 				}
 
 				& > li {
-					width: percentage(6 / 12);
+					width: math.div(6, 12);
 					margin: rem(20px 0 0 0);
 				}
 			}
@@ -95,7 +99,7 @@
 		@include media-breakpoint-up(lg) {
 			.navigation--container-inner {
 				& > ul > li {
-					width: percentage(4 / 12);
+					width: math.div(4, 12);
 				}
 			}
 		}
