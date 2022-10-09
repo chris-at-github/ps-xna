@@ -41,22 +41,18 @@
 		<f:render section="Main" />
 	</div>
 
-	<f:if condition="{data.tx_xo_no_sticky} == 0">
-		<f:render partial="Page/Sticky" section="Container" arguments="{_all}" />
-	</f:if>
+	<f:comment>
+		<f:if condition="{data.tx_xo_no_sticky} == 0">
+			<f:render partial="Page/Sticky" section="Container" arguments="{_all}" />
+		</f:if>
+	</f:comment>
 
 	<div id="footer" class="container-outer page-footer">
 		<div class="container-inner">
-			<f:render partial="Page/Copyright" section="Main" arguments="{_all}" />
-
 			<f:if condition="{navigationFooter}">
 				<nav class="navigation">
 					<f:render partial="Navigation/Listing" section="Main" arguments="{navigation: navigationFooter}" />
 				</nav>
-			</f:if>
-
-			<f:if condition="{providerData.0}">
-				<f:render partial="Page/Contact" section="Main" arguments="{address: providerData.0}" />
 			</f:if>
 		</div>
 	</div>

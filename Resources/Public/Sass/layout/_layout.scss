@@ -24,7 +24,7 @@ a, input, select, textarea, button {
 	& {
 		padding-top: rem(20px);
 		padding-bottom: rem(20px);
-		background: #f7f7f7;
+		background: #3d3c38;
 	}
 
 	.navigation {
@@ -32,13 +32,14 @@ a, input, select, textarea, button {
 			@include navigation--layout-0;
 		}
 
+		a {
+			color: var(--color__gray-light);
+		}
+
 		a:hover, a:focus {
 			text-decoration: none;
+			color: #fff;
 		}
-	}
-
-	.address {
-		margin: var(--html-element__spacing-default) 0 0 0;
 	}
 }
 
