@@ -71,8 +71,9 @@ $hamburger-layer-spacing: 5px !default;
 // ---------------------------------------------------------------------------------------------------------------------
 // Hero
 $ps14-hero-hero--use-css: true !default;
-$ps14-hero-hero--layout-default: true !default;
-$ps14-hero-hero--layout-slider: true !default;
+$ps14-hero--layout-default: true !default;
+$ps14-hero--layout-slider: false !default;
+$ps14-hero--layout-video: false !default;
 
 //// ---------------------------------------------------------------------------------------------------------------------
 //// Icon Text
