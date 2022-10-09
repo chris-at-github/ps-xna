@@ -8,6 +8,9 @@
 	--container-spacing__y--large: #{rem(40px)};
 	--container-spacing__x: #{rem(20px)};
 	--container-spacing__indent--right: 0;
+
+	--page__logo-width: #{rem(180px)};
+	--page__logo-height: #{rem(16px)};
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -76,17 +79,17 @@ body {
 	.container-inner {
 		display: -ms-grid;
 		display: grid;
-		-ms-grid-columns: 1fr 60px;
 		grid-template-columns: auto 60px;
 		grid-gap: 10px;
 		align-items: center;
-		min-height: rem(60px);
+		padding: rem(20px 0);
+		min-height: rem(20px);
 	}
 
 	.page-header__logo {
 		& {
-			max-width: 120px;
-			max-height: rem(60px); // muss fuer den IE 11 der Anzeigehoehe entsprechen
+			max-width: var(--page__logo-width);
+			max-height: var(--page__logo-height); // muss fuer den IE 11 der Anzeigehoehe entsprechen
 		}
 
 		.logo__image--svg {
@@ -287,18 +290,21 @@ body {
 		--container-spacing__y--medium: #{rem(40px)};
 		--container-spacing__y--large: #{rem(80px)};
 		--container-spacing__indent--right: percentage(3 / 12);
+
+		--page__logo-width: #{rem(310px)};
+		--page__logo-height: #{rem(27px)};
 	}
 
 	.page-header {
 		.container-inner {
 			position: relative;
 			display: grid;
-			grid-template-columns: 140px 1fr;
-			grid-template-rows: 35px 60px;
-			gap: 5px 30px;
+			grid-template-columns: 310px 1fr;
+			grid-template-rows: 35px;
+			gap: 5px var(--container-spacing__x);
 			grid-template-areas:
-				'. off-canvas off-canvas'
-				'logo off-canvas off-canvas';
+				'logo off-canvas';
+			padding: rem(35px 0);
 		}
 
 		.off-canvas {
