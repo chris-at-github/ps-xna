@@ -1,6 +1,20 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:xo/Configuration/TSConfig/Page.t3s">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TSConfig/Elements/" extensions="t3s">
 
+TCEFORM {
+	tt_content {
+		frame_class {
+			altLabels {
+				1 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.class.1
+			}
+
+			addItems {
+				2 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.class.2
+			}
+		}
+	}
+}
+
 [irre('parent') === 'tx_xo_domain_model_elements' && irre('field') === 'content']
 	TCAdefaults.tt_content {
 		space_before_class = small

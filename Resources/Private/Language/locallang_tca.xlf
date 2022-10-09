@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-11-27T06:25:54Z" product-name="xna">
+		<header/>
+		<body>
+			<trans-unit id="tx_xo_tt_content.class.1">
+				<source>Beige</source>
+			</trans-unit>
+			<trans-unit id="tx_xo_tt_content.class.2">
+				<source>Gray Dark</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

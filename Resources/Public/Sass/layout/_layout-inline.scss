@@ -202,7 +202,12 @@ body {
 
 // Container / Fluid Styled Content / Farbschema
 .ce-frame--class-1 {
-	background: var(--color__gray-light);
+	background: var(--color__primary-light);
+}
+
+.ce-frame--class-2 {
+	background: var(--color__gray-dark);
+	color: var(--color__gray-light);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
