@@ -1,39 +1,4 @@
 // ---------------------------------------------------------------------------------------------------------------------
-// Variables
-:root {
-	--header-1__font-family: var(--header__font-family);
-	--header-1__font-size: #{rem(40px)};
-	--header-1__font-weight: var(--header__font-weight);
-
-	--header-2__spacing-top: var(--header__spacing-top);
-	--header-2__font-family: var(--header__font-family);
-	--header-2__font-size: #{rem(26px)};
-	--header-2__font-weight: var(--header__font-weight);
-
-	--header-3__spacing-top: var(--header__spacing-top);
-	--header-3__font-family: var(--header__font-family);
-	--header-3__font-size: #{rem(22px)};
-	--header-3__font-weight: var(--header__font-weight);
-
-	--header-4__spacing-top: var(--header__spacing-top);
-	--header-4__font-family: var(--header__font-family);
-	--header-4__font-size: #{rem(22px)};
-	--header-4__font-weight: var(--header__font-weight);
-
-	--html-element__spacing-default: var(--spacing--default);
-	--html-element__spacing-header: var(--spacing--small);
-}
-
-@include media-breakpoint-up(md) {
-	:root {
-		--header-1__font-size: #{rem(52px)};
-		--header-2__font-size: #{rem(32px)};
-		--header-3__font-size: #{rem(24px)};
-		--header-4__font-size: #{rem(24px)};
-	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
 // Header
 @mixin header-1 {
 	font-family: var(--header-1__font-family);
