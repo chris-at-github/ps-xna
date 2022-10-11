@@ -117,7 +117,7 @@ body {
 	}
 
 	#header + .ce-content, #header + #breadcrumb + .ce-content {
-		.container-outer:first-child .container-inner, .ce-frame:first-child .ce-frame__inner {
+		.container:first-child > .container__inner, .ce-frame--outer:first-child > .ce-frame__inner {
 			padding-top: var(--page__offset-top); // Hoehe des Headers
 		}
 	}
@@ -137,7 +137,7 @@ body {
 }
 
 // Container / Fluid Styled Content
-.ce-frame {
+.ce-frame--outer {
 	padding-left: var(--container-spacing__x);
 	padding-right: var(--container-spacing__x);
 }

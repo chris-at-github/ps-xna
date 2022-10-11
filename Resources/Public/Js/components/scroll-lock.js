@@ -23,14 +23,14 @@
 
 		// bestehende Padding auslesen und Scrollbar-Breite auf alle Container addieren
 		document.addEventListener('scrolllock.activate', function(event) {
-			document.querySelectorAll('.container-outer, .ce-frame--outer').forEach(function(node) {
+			document.querySelectorAll('.container, .ce-frame--outer').forEach(function(node) {
 				node.style.paddingRight = event.detail.scrollbarWidth + parseInt(xna.getCssProperty(node, 'padding-right')) + 'px';
 			});
 		});
 
 		// gesetzte Paddings (per Style-Attribute) entfernen
 		document.addEventListener('scrolllock.deactivate', function(event) {
-			document.querySelectorAll('.container-outer, .ce-frame--outer').forEach(function(node) {
+			document.querySelectorAll('.container, .ce-frame--outer').forEach(function(node) {
 				node.removeAttribute('style');
 			});
 		});
