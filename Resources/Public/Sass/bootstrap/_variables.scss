@@ -43,8 +43,8 @@
 	--header-1__font-weight: var(--header__font-weight);
 
 	--header-2__spacing-top: var(--header__spacing-top);
-	--header-2__font-family: var(--header__font-family);
-	--header-2__font-size: #{rem(26px)};
+	--header-2__font-family: 'Roboto Slab', 'Georgia', 'Times New', serif;
+	--header-2__font-size: #{rem(34px)};
 	--header-2__font-weight: var(--header__font-weight);
 
 	--header-3__spacing-top: var(--header__spacing-top);
@@ -60,7 +60,7 @@
 	// -------------------------------------------------------------------------------------------------------------------
 	// HTML Elements
 	--html-element__spacing-default: var(--spacing--default);
-	--html-element__spacing-header: #{rem(35px)};
+	--html-element__spacing-header: #{rem(30px)};
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Page

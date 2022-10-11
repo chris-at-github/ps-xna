@@ -214,6 +214,10 @@ body {
 		color: var(--color__gray-light);
 	}
 
+	.ce-header--layout-3 + .ce-bodytext {
+		margin-top: #{rem(15px)};
+	}
+
 	.ce-bodytext {
 		a {
 			border-color: var(--color__gray);
