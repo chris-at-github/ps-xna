@@ -206,8 +206,19 @@ body {
 }
 
 .ce-frame--class-2 {
-	background: var(--color__gray-dark);
-	color: var(--color__gray-light);
+	--link__color: var(--color__gray-light);
+	--link__color-active: #fff;
+
+	& {
+		background: var(--color__gray-dark);
+		color: var(--color__gray-light);
+	}
+
+	.ce-bodytext {
+		a {
+			border-color: var(--color__gray-light);
+		}
+	}
 }
 
 // ---------------------------------------------------------------------------------------------------------------------

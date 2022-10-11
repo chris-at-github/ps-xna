@@ -78,12 +78,14 @@
 			font-weight: var(--font__weight-bold);
 			color: var(--link__color);
 			text-decoration: none;
-			transition: color var(--transition__duration-default);
+			transition: color var(--transition__duration-default), border var(--transition__duration-default);
+			border-bottom: 2px solid var(--color__primary);
 		}
 
 		&:hover, &:focus {
 			color: var(--link__color-active);
-			text-decoration: underline;
+			text-decoration: none;
+			border-color: var(--color__secondary);
 		}
 	}
 }
