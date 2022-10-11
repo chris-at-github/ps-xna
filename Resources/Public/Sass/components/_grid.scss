@@ -1,0 +1,6 @@
+.grid {
+	display: grid;
+	grid-template-rows: repeat(var(--grid__rows, 1), 1fr);
+	grid-template-columns: repeat(var(--grid__columns, 12), 1fr);
+	gap: var(--grid__gap);
+}
