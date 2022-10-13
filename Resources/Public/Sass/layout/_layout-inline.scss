@@ -199,6 +199,43 @@ body {
 	margin-bottom: var(--container-spacing__y--large);
 }
 
+// Background
+.ce-frame--background {
+	position: relative;
+}
+
+.ce-frame__background {
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	background-size: cover;
+	z-index: -1;
+}
+
+.ce-frame__background--vertical-top {
+	background-position-y: top;
+}
+
+.ce-frame__background--vertical-bottom {
+	background-position-y: bottom;
+}
+
+.ce-frame__background--vertical-center {
+	background-position-y: center;
+}
+
+.ce-frame__background--horizontal-left {
+	background-position-x: left;
+}
+
+.ce-frame__background--horizontal-right {
+	background-position-x: right;
+}
+
+.ce-frame__background--horizontal-center {
+	background-position-x: center;
+}
+
 // Container / Fluid Styled Content / Farbschema
 .ce-frame--class-1 {
 	background: var(--color__primary-light);
