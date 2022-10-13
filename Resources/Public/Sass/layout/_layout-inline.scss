@@ -76,12 +76,11 @@ body {
 		padding-bottom: rem(10px);
 	}
 
-	.container-inner {
-		display: -ms-grid;
-		display: grid;
-		grid-template-columns: auto 60px;
-		grid-gap: 10px;
-		align-items: center;
+	.container__inner {
+		//display: grid;
+		//grid-template-columns: auto 60px;
+		//grid-gap: 10px;
+		//align-items: center;
 		padding: rem(20px 0);
 		min-height: rem(20px);
 	}
@@ -125,12 +124,12 @@ body {
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Container / Layout
-.container-outer {
+.container {
 	padding-left: var(--container-spacing__x);
 	padding-right: var(--container-spacing__x);
 }
 
-.container-inner {
+.container__inner {
 	max-width: var(--page__max-width);
 	margin-left: auto;
 	margin-right: auto;

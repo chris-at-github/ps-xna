@@ -11,7 +11,7 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Image
-.ce-image--item {
+.ce-image__item {
 	& {
 		margin: 0;
 	}
@@ -25,24 +25,24 @@
 	}
 }
 
-.ce-image--container {
+.ce-image__container {
 	display: flex;
 	height: 100%;
 }
 
-.ce-image--container-horizontal-center {
+.ce-image__container--horizontal-center {
 	justify-content: center;
 }
 
-.ce-image--container-horizontal-right {
+.ce-image__container--horizontal-right {
 	justify-content: flex-end;
 }
 
-.ce-image--container-vertical-center {
+.ce-image__container--vertical-center {
 	align-items: center;
 }
 
-.ce-image--container-vertical-bottom {
+.ce-image__container--vertical-bottom {
 	align-items: flex-end;
 }
 
