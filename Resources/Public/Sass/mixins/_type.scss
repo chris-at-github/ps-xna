@@ -88,4 +88,12 @@
 			border-color: var(--color__secondary);
 		}
 	}
+
+	.link--cta {
+		&, &:hover, .focusable &:focus {
+			border: 0;
+			color: #fff;
+			transition: background var(--transition__duration-default)
+		}
+	}
 }

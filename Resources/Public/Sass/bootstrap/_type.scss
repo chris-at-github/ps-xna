@@ -57,7 +57,7 @@
 }
 
 .link--phone {
-	&, &:hover, &:focus {
+	&, &:hover, .focusable &:focus {
 		color: var(--font__color-default);
 		text-decoration: none;
 	}
@@ -66,13 +66,16 @@
 .link--cta {
 	& {
 		display: inline-block;
-		padding: rem(10px 20px);
-		border: 2px solid var(--color__primary);
-		color: var(--color__primary);
+		padding: rem(10px 45px);
+		border: 0;
+		border-radius: var(--border-radius--small);
+		background: var(--color__primary);
+		color: #fff;
+		transition: background var(--transition__duration-default);
 	}
 
-	&:hover {
-		border-color: var(--color__primary-dark);
+	&:hover, .focusable &:focus {
+		background: var(--color__secondary);
 		text-decoration: none;
 	}
 }
