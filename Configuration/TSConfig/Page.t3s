@@ -27,3 +27,15 @@ TCEFORM {
 		}
 	}
 [END]
+
+[field('CType') === 'text']
+	TCEFORM {
+		tt_content {
+			tx_xo_variant {
+				addItems {
+					1 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.variant.1
+				}
+			}
+		}
+	}
+[END]

@@ -9,6 +9,9 @@
 			<trans-unit id="tx_xo_tt_content.class.2">
 				<source>Gray Dark</source>
 			</trans-unit>
+			<trans-unit id="tx_xo_tt_content.variant.1">
+				<source>Banner</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
