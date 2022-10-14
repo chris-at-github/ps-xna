@@ -20,12 +20,13 @@ $stylesheet-context: 'screen', 'embed' !default;
 // Components
 @import 'components/accessibility';
 @import 'components/navigation';
-@import 'components/navigation/breadcrumb';
-@import 'components/navigation/language';
+//@import 'components/navigation/breadcrumb';
+//@import 'components/navigation/language';
+@import 'components/collapse';
+//@import 'components/layout/search-widget';
+//@import 'components/layout/flash';
+//@import 'components/layout/sticky';
 @import 'components/layout/hamburger';
-@import 'components/layout/search-widget';
-@import 'components/layout/flash';
-@import 'components/layout/sticky';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout

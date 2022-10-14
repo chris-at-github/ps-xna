@@ -1,9 +1,8 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Bootstrap & XNA
-@import '../../functions';
-@import '../../variables';
-@import '../../mixins';
-@import '../../definitions';
+@import '../functions';
+@import '../variables';
+@import '../mixins';;
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Collapse
@@ -16,5 +15,5 @@
 .collapsing {
 	height: 0;
 	overflow: hidden;
-	transition: height $transition-duration ease;
+	transition: height var(--transition__duration-default) ease;
 }

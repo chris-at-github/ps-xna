@@ -34,11 +34,13 @@
 			"typo3conf/ext/xna/Resources/Public/Sass/xna.scss": "assets/css/xna.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/editor.scss": "assets/css/editor.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/print.scss": "assets/css/print.css",
+			"typo3conf/ext/xna/Resources/Public/Sass/components/_accordion.scss": "assets/css/components/accordion.css",
 			"typo3conf/ext/ps14_hero/Resources/Public/Sass/hero.scss": "assets/css/modules/hero.css",
 			"typo3conf/ext/ps14_container_columns/Resources/Public/Sass/container-columns.scss": "assets/css/modules/container-columns.css"
 		},
 		"js": {
-			"typo3conf/ext/xna/Resources/Public/Js/xna.js": "assets/js/xna.js"
+			"typo3conf/ext/xna/Resources/Public/Js/xna.js": "assets/js/xna.js",
+			"typo3conf/ext/xna/Resources/Public/Js/components/bootstrap/collapse.js": "assets/js/components/collapse.js"
 		},
 		"copy": {
 			"typo3conf/ext/xna/Resources/Public/Js/xna-inline.js": "assets/js/xna-inline.js",
