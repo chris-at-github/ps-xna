@@ -49,8 +49,8 @@
 
 	--header-3__spacing-top: var(--header__spacing-top);
 	--header-3__font-family: var(--header__font-family);
-	--header-3__font-size: #{rem(22px)};
-	--header-3__font-weight: var(--header__font-weight);
+	--header-3__font-size: #{rem(20px)};
+	--header-3__font-weight: var(--font__weight-bold);
 
 	--header-4__spacing-top: var(--header__spacing-top);
 	--header-4__font-family: var(--header__font-family);
@@ -97,7 +97,6 @@
 	:root {
 		--header-1__font-size: #{rem(52px)};
 		--header-2__font-size: #{rem(32px)};
-		--header-3__font-size: #{rem(24px)};
 		--header-4__font-size: #{rem(24px)};
 	}
 }
