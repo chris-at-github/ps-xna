@@ -280,6 +280,21 @@ body {
 	}
 }
 
+.ce-frame--variant-2 {
+	--header-3__spacing-top: 0;
+	--html-element__spacing-header: #{rem(20px)};
+
+	& {
+		padding-top: 0.1px;
+		padding-bottom: 0.1px;
+		border-radius: var(--border-radius--default);
+	}
+
+	.ce-frame__inner {
+		padding: rem(30px 20px 45px 20px);
+	}
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // Standard-Elemente
 .ce-header--layout-1 {

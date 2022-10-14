@@ -34,6 +34,7 @@ TCEFORM {
 			tx_xo_variant {
 				addItems {
 					1 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.variant.1
+					2 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.variant.2
 				}
 			}
 		}
