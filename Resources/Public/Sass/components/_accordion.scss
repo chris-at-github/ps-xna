@@ -14,7 +14,7 @@
 	}
 
 	& > li {
-		border-bottom: 1px solid #f7f7f7;
+		border-bottom: 1px solid var(--color__primary-light);
 	}
 
 	.accordion--header {
@@ -27,7 +27,8 @@
 				padding: rem(15px 0);
 				border: 0;
 				background: transparent;
-				font-weight: var(--font__weight-bold);
+				font-size: var(--header-3__font-size);
+				font-weight: var(--header-3__font-weight);
 				text-align: left;
 				color: var(--font__color-default);
 				cursor: pointer;
