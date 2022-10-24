@@ -10,7 +10,7 @@
 		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
 	},
 	"dependencies": {
-		"@midzer/tobii": "^2.1.0",
+		"@midzer/tobii": "^2.4.0",
 		"micromodal": "^0.4.6",
 		"postcss-inline-svg": "^4.1.0",
 		"tiny-slider": "^2.9.3",
@@ -50,8 +50,8 @@
 			"typo3conf/ext/xna/Resources/Public/Svg/Embed/*": "./assets/svg",
 			"typo3conf/ext/xna/Resources/Public/Fonts/*": "./assets/fonts",
 			"typo3conf/ext/xna/Resources/Public/Icons/*": "./assets/icons",
-			"./node_modules/@midzer/tobii/dist/tobii.min.js": "assets/js/tobii.js",
-			"./node_modules/tiny-slider/dist/tiny-slider.js": "assets/js/tiny-slider.js"
+			"./node_modules/@midzer/tobii/dist/tobii.min.js": "assets/js/vendors/tobii.js",
+			"./node_modules/tiny-slider/dist/tiny-slider.js": "assets/js/vendors/tiny-slider.js"
 		}
 	}
 }
