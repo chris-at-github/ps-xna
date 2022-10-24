@@ -32,8 +32,8 @@ page {
 
 	// Eigene Farbangaben
 	headerData {
-		1567860045.wrap = <link rel="mask-icon" href="|icons/safari-pinned-tab.svg" color="#000">
-		1567860047.value = <meta name="msapplication-TileColor" content="#000">
+		1567860045.wrap = <link rel="mask-icon" href="|icons/safari-pinned-tab.svg" color="#504e49">
+		1567860047.value = <meta name="msapplication-TileColor" content="#504e49">
 	}
 
 	10 {
