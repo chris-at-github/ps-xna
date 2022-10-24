@@ -1,1 +1,9 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:ps14_hero/Configuration/TypoScript/setup.typoscript">
+
+tt_content {
+	ps14_hero {
+
+		// fuer den Einsatz im Hero wird kein JS benoetigt
+		dataProcessing.130.importJs >
+	}
+}
