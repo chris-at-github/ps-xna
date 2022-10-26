@@ -1,3 +1,55 @@
 .address {
-	@extend %address;
+	& {
+		font-style: normal;
+	}
+
+	.address--name, .address--header {
+		font-weight: var(--font__weight-bold);
+	}
+
+	.address--item-group {
+		&, & + .address--item {
+			margin: rem(10px 0 0 0);
+		}
+	}
+
+	.address--zip + .address--city {
+		margin-left: 5px;
+	}
+
+	.address--opening-hours {
+		dl {
+			margin-top: 0;
+		}
+
+		dt {
+			display: block;
+		}
+
+		dd {
+			display: block;
+			margin: 0;
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 576px
+@include media-breakpoint-up(sm) {
+	.address {
+		.address--opening-hours {
+			dl {
+				display: grid;
+				grid-template-columns: rem(200px) auto;
+			}
+
+			dt {
+				grid-column: 1;
+			}
+
+			dd {
+				grid-column: 2;
+			}
+		}
+	}
 }

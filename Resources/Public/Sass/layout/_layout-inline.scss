@@ -261,40 +261,6 @@ body {
 	}
 }
 
-// Varianten (nur Standard Elemente)
-.ce-frame--variant-1 {
-	& {
-		text-align: center;
-	}
-
-	.ce-header {
-		text-transform: uppercase;
-	}
-
-	.ce-bodytext {
-		font-size: #{rem(20px)};
-	}
-
-	.link--cta {
-		margin-top: #{rem(40px)};
-	}
-}
-
-.ce-frame--variant-2 {
-	--header-3__spacing-top: 0;
-	--html-element__spacing-header: #{rem(20px)};
-
-	& {
-		padding-top: 0.1px;
-		padding-bottom: 0.1px;
-		border-radius: var(--border-radius--default);
-	}
-
-	.ce-frame__inner {
-		padding: rem(30px 20px 45px 20px);
-	}
-}
-
 // ---------------------------------------------------------------------------------------------------------------------
 // Standard-Elemente
 .ce-header--layout-1 {
@@ -354,6 +320,47 @@ body {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Varianten (nur Standard Elemente)
+.ce-frame--variant-1 {
+	& {
+		text-align: center;
+	}
+
+	.ce-header {
+		text-transform: uppercase;
+	}
+
+	.ce-bodytext {
+		font-size: #{rem(20px)};
+	}
+
+	.link--cta {
+		margin-top: #{rem(40px)};
+	}
+}
+
+.ce-frame--variant-2 {
+	//--header-3__spacing-top: 0;
+	//--html-element__spacing-header: #{rem(20px)};
+
+	& {
+		padding-top: 0.1px;
+		padding-bottom: 0.1px;
+		border-radius: var(--border-radius--default);
+	}
+
+	.ce-frame__inner {
+		padding: rem(30px 20px 45px 20px);
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Abstand Address
+.ce-address {
+	--html-element__spacing-header: #{rem(20px)};
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // < 576px
 @include media-breakpoint-down(sm) {
 	.page-header {
@@ -393,7 +400,7 @@ body {
 			grid-template-rows: 35px;
 			gap: 5px var(--container-spacing__x);
 			grid-template-areas:
-				'logo off-canvas';
+			'logo off-canvas';
 			padding: rem(35px 0);
 		}
 
@@ -405,8 +412,8 @@ body {
 			grid-template-rows: 35px 60px;
 			gap: 5px 20px;
 			grid-template-areas:
-				'meta-navigation language-navigation language-navigation'
-				'main-navigation main-navigation search';
+			'meta-navigation language-navigation language-navigation'
+			'main-navigation main-navigation search';
 		}
 
 		.logo {
