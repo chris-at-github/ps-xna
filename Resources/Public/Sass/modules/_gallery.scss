@@ -1,0 +1,22 @@
+.ce-gallery--default {
+	.gallery--image {
+		& {
+			border: 0;
+		}
+
+		img {
+			outline: 3px solid transparent;
+			transition: outline var(--transition__duration-default);
+		}
+
+		&:hover, .focusable &:focus {
+			img {
+				outline-color: var(--color__secondary);
+			}
+		}
+
+		img {
+			border-radius: var(--border-radius--default);
+		}
+	}
+}

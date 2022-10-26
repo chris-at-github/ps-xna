@@ -5,93 +5,68 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Overwrite Variables
 :root {
-	--slide-max-width: 100%;
-	--slide-max-height: 90vh;
+	--tobii-slide-max-width: 98vw;
+	--tobii-slide-max-height: 85vh;
+
+	--tobii-button-background: var(--color__primary-dark);
+	--tobii-button-color: var(--color__primary-light);
+	--tobii-button-size: #{rem(60px)};
+	--tobii-button-svg-size: #{rem(30px)};
+	--tobii-transition-duration: var(--transition__duration-default);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Overwrite
-/*
-.tobii {
+.tobii__slider {
+	top: 0;
+}
+
+.tobii__btn {
 	& {
-		font-size: $font-size-base;
-		background: rgba(#fff, 0.85);
+		width: var(--tobii-button-size);
+		height: var(--tobii-button-size);
+		border: 0;
+		border-radius: var(--border-radius--small);
+		opacity: 1;
 	}
 
-	.tobii__slide {
-		& [data-type] {
-			margin-left: $spacing-medium;
-			margin-right: $spacing-medium;
-		}
+	@media screen and (prefers-reduced-motion: no-preference) {
+		transition-property: background;
+		will-change: background;
 	}
 
-	& > button {
+	&:hover, .focusable &:focus {
+		--tobii-button-background: var(--color__secondary);
+	}
+
+	& svg {
+		fill: currentColor;
+		stroke: none;
+	}
+
+	&.tobii__btn--previous,
+	&.tobii__btn--next {
 		& {
-			color: inherit;
-			outline: 0;
-			opacity: inherit;
-		}
-
-		&:hover, &:focus {
-			& {
-				transform: none;
-			}
-
-			svg {
-				fill: $theme-color-hover;
-			}
+			background: var(--tobii-button-background);
 		}
 
 		svg {
-			fill: $font-color-base;
-			stroke: none;
-			color: inherit;
-			transition: fill 0.25s;
+			width: rem(16px);
+			height: var(--tobii-button-svg-size);
+		}
+	}
+
+	&.tobii__btn--close {
+		& {
+			top: 1vw; right: 1vw;
+			width: var(--tobii-button-size);
+			height: var(--tobii-button-size);
 		}
 
-		&.tobii__btn--previous, &.tobii__btn--next {
-			&, &:hover, &:focus {
-				top: 50%;
-				transform: translateY(-50%);
-			}
-
-			svg {
-				width: rem(80px);
-				height: rem(80px);
-			}
-		}
-
-		&.tobii__btn--close {
-			& {
-				top: rem(20px);
-				right: rem(20px);
-			}
-
-			svg {
-				width: rem(43px);
-				height: rem(43px);
-			}
+		svg {
+			transform: none;
+			width: var(--tobii-button-svg-size);
+			height: var(--tobii-button-svg-size);
 		}
 	}
 }
-
-@include media-breakpoint-up(xl) {
-	.tobii {
-		& > button {
-			&.tobii__btn--previous, &.tobii__btn--next {
-				svg {
-					width: rem(110px);
-					height: rem(110px);
-				}
-			}
-
-			&.tobii__btn--close {
-				svg {
-					width: rem(53px);
-					height: rem(53px);
-				}
-			}
-		}
-	}
-}
-*/
