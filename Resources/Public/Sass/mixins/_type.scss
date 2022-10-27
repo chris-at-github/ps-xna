@@ -1,5 +1,10 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Header
+@mixin header-x {
+	hyphens: auto;
+	hyphenate-limit-chars: 10 3 4;
+}
+
 @mixin header-1 {
 	font-family: var(--header-1__font-family);
 	font-size: var(--header-1__font-size);
@@ -43,6 +48,10 @@
 }
 
 @mixin bodytext {
+	h1, h2, h3, h4 {
+		@include header-x;
+	}
+
 	h1 {
 		@include header-1;
 	}

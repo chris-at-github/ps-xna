@@ -32,6 +32,8 @@
 				text-align: left;
 				color: var(--font__color-default);
 				cursor: pointer;
+				hyphens: auto;
+				hyphenate-limit-chars: 10 3 4;
 			}
 
 			&[aria-expanded=true] {
