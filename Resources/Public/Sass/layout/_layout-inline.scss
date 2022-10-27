@@ -92,11 +92,7 @@ body {
 		}
 
 		.logo__image--svg {
-			fill: var(--font__color-default);
-		}
-
-		&:hover .logo__image--svg {
-			fill: var(--link__color);
+			fill: var(--color-logo);
 		}
 	}
 
@@ -108,7 +104,7 @@ body {
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Page Layout Default
-.page--layout-0 {
+.page--layout-0, .page--layout-4 {
 	#breadcrumb {
 		position: absolute;
 		top: rem(130px);
@@ -120,6 +116,10 @@ body {
 			padding-top: var(--page__offset-top); // Hoehe des Headers
 		}
 	}
+}
+
+.page--layout-4 {
+	--color-logo: var(--color__primary-dark);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
