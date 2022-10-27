@@ -17,12 +17,7 @@ lib.contentElement {
 // ---------------------------------------------------------------------------------------------------------------------
 // Ueberschreiben von Inhaltselementen
 tt_content {
-	xo_teaser.dataProcessing {
-		35 {
-			settings.teaser.media {
-				width = 370
-				height = 370
-			}
-		}
+	list.dataProcessing.200 {
+		xo_addressrecord.importCss.10 >
 	}
 }
