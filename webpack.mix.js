@@ -125,7 +125,7 @@ for(const [source, target] of Object.entries(assets.js)) {
 
 // Minify (*.min.js) fuer produktive Seiten
 if(mix.inProduction() === true) {
-	// mix.babel('assets/js/xna.js', 'assets/js/xna.js');
+	mix.minify('assets/js/xna-inline.js');
 
 	for(const [source, target] of Object.entries(assets.js)) {
 		mix.minify(target);
