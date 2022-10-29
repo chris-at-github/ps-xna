@@ -19,6 +19,19 @@
 			<trans-unit id="tx_xo_tt_content.variant.2">
 				<source>Container</source>
 			</trans-unit>
+
+			<trans-unit id="container-furnishing.title">
+				<source>Furnishing Container</source>
+			</trans-unit>
+			<trans-unit id="container-furnishing.description">
+				<source>Special container element for the content elements for furnishing.</source>
+			</trans-unit>
+			<trans-unit id="container-furnishing.column.main">
+				<source>Main</source>
+			</trans-unit>
+			<trans-unit id="container-furnishing.column.additional">
+				<source>Additional</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

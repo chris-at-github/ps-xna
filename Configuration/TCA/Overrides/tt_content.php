@@ -42,122 +42,19 @@ $GLOBALS['TCA']['tt_content']['types']['textpic']['columnsOverrides']['image']['
 ];
 
 // ---------------------------------------------------------------------------------------------------------------------
-// Hero
-$GLOBALS['TCA']['tt_content']['types']['ce_hero']['columnsOverrides']['image']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']  = [
-	'desktop' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.desktop',
-		'allowedAspectRatios' => [
-			'16_9' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
-				'value' => 16 / 9
-			]
+// Special Container Furnishing
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer((
+new \B13\Container\Tca\ContainerConfiguration(
+	'ps14_xna_furnishing', // CType
+	'LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:container-furnishing.title', // label
+	'LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:container-furnishing.description', // description
+	[
+		[
+			['name' => 'LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:container-furnishing.column.main', 'colPos' => 4101],
 		],
-		'selectedRatio' => '16_9',
-	],
-	'mobile' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.mobile',
-		'allowedAspectRatios' => [
-			'4_3' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3',
-				'value' => 4 / 3
-			],
-		],
-		'selectedRatio' => '4_3',
-	],
-];
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Gallery
-$GLOBALS['TCA']['tt_content']['types']['ce_gallery']['columnsOverrides']['tx_xo_file']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants'] = [
-	'fullsize' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.fullsize',
-		'allowedAspectRatios' => [
-			'NaN' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.free',
-				'value' => 0.0
-			],
-		],
-		'selectedRatio' => 'NaN',
-	],
-	'thumbnail' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.thumbnail',
-		'allowedAspectRatios' => [
-			'16_9' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.16_9',
-				'value' => 16 / 9
-			],
-			'4_3' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3',
-				'value' => 4 / 3
-			],
-			'1_1' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',
-				'value' => 1
-			],
-		],
-		'selectedRatio' => '4_3',
-	],
-];
-
-// ---------------------------------------------------------------------------------------------------------------------
-// XO Slider
-$GLOBALS['TCA']['tt_content']['types']['xo_slider']['columnsOverrides']['tx_xo_elements']['config']['overrideChildTca']['columns']['media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']  = [
-	'desktop' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.desktop',
-		'allowedAspectRatios' => [
-			'21_9' => [
-				'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.ratio.21_9',
-				'value' => 21 / 9
-			],
-		],
-		'selectedRatio' => '21_9',
-	],
-	'mobile' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.mobile',
-		'allowedAspectRatios' => [
-			'4_3' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.4_3',
-				'value' => 4 / 3
-			],
-		],
-		'selectedRatio' => '4_3',
-	],
-];
-
-// ---------------------------------------------------------------------------------------------------------------------
-// XO Media Wall
-$GLOBALS['TCA']['tt_content']['types']['xo_media_wall']['columnsOverrides']['tx_xo_elements']['config']['overrideChildTca']['columns']['media']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']  = [
-	'fullsize' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.fullsize',
-		'allowedAspectRatios' => [
-			'NaN' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.free',
-				'value' => 0.0
-			],
-		],
-		'selectedRatio' => 'NaN',
-	],
-	'thumbnail' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.thumbnail',
-		'allowedAspectRatios' => [
-			'1_1' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',
-				'value' => 1
-			],
-		],
-		'selectedRatio' => '1_1',
-	],
-];
-
-$GLOBALS['TCA']['tt_content']['types']['xo_media_wall']['columnsOverrides']['tx_xo_elements']['config']['overrideChildTca']['columns']['thumbnail']['config']['overrideChildTca']['columns']['crop']['config']['cropVariants']  = [
-	'thumbnail' => [
-		'title' => 'LLL:EXT:xo/Resources/Private/Language/locallang_tca.xlf:tx_xo_crop_variant.thumbnail',
-		'allowedAspectRatios' => [
-			'1_1' => [
-				'title' => 'LLL:EXT:core/Resources/Private/Language/locallang_wizards.xlf:imwizard.ratio.1_1',
-				'value' => 1
-			],
-		],
-		'selectedRatio' => '1_1',
-	],
-];
+		[
+			['name' => 'LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:container-furnishing.column.additional', 'colPos' => 4102]
+		]
+	]
+)
+));
