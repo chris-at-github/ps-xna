@@ -58,3 +58,5 @@ new \B13\Container\Tca\ContainerConfiguration(
 	]
 )
 ));
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes('tt_content', '--palette--;;xoBackgroundMedia', 'ps14_xna_furnishing', 'after:space_after_class');

@@ -1,0 +1,58 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Use
+@use 'sass:math';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../functions';
+@import '../variables';
+@import '../mixins';
+
+.ce-furnishing--main {
+	.ce-furnishing__media {
+		display: none;
+	}
+
+	& > .ce-frame__inner {
+		max-width: calc(var(--page__max-width) / 2);
+		margin-left: 0;
+		padding-left: var(--container-spacing__x);
+		padding-right: var(--container-spacing__x);
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 768px
+@include media-breakpoint-up(md) {
+	.ce-furnishing--main {
+		& {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.ce-furnishing__media {
+			& {
+				display: block;
+				position: relative;
+			}
+
+			.ce-frame__background {
+				right: calc(var(--grid__gap) / 2);
+			}
+		}
+
+		& > .ce-frame__inner {
+			padding-left: calc(var(--grid__gap) / 2);
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	.ce-furnishing--main {
+		& > .ce-frame__inner {
+			padding-right: 0;
+		}
+	}
+}

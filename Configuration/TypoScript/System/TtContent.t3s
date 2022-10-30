@@ -20,4 +20,39 @@ tt_content {
 	list.dataProcessing.200 {
 		xo_addressrecord.importCss.10 >
 	}
+
+	ps14_xna_furnishing < lib.contentElement
+	ps14_xna_furnishing {
+		templateName = Furnishing
+		templateRootPaths {
+			10 = EXT:xna/Resources/Private/Templates/Content/
+		}
+
+		dataProcessing {
+#			110 = Ps\Xo\DataProcessing\FlexFormProcessor
+#			110 {
+#				fieldName = pi_flexform
+#				as = flexform
+#			}
+#
+			130 = Ps\Xo\DataProcessing\ModuleProcessor
+			130 {
+				importCss {
+					10 = /assets/css/modules/furnishing.css
+				}
+			}
+
+			4101 = B13\Container\DataProcessing\ContainerProcessor
+			4101 {
+				colPos = 4101
+				as = columnMain
+			}
+
+			4102 = B13\Container\DataProcessing\ContainerProcessor
+			4102 {
+				colPos = 4102
+				as = columnAdditional
+			}
+		}
+	}
 }

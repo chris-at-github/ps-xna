@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:xo="http://typo3.org/ns/Ps/Xo/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	<f:section name="Main">
+		<div id="c{data.uid}" class="ce-frame ce-furnishing--main ce-frame--class-{data.frame_class} ce-frame--variant-{data.tx_xo_variant} ce-frame--space-before-{data.space_before_class} ce-frame--space-after-{data.space_after_class}">
+			<div class="ce-furnishing__media">
+				<f:render partial="BackgroundMedia" arguments="{_all}" />
+			</div>
+
+			<div class="ce-frame__inner">
+				<f:for each="{columnMain}" as="content">
+					<f:format.raw>{content.renderedContent}</f:format.raw>
+				</f:for>
+			</div>
+		</div>
+	</f:section>
+</html>
