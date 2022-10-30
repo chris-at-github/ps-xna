@@ -109,9 +109,9 @@ audio, canvas, iframe, img, svg, video {
   vertical-align: top;
 }
 
-svg:not([fill]) {
-  fill: currentColor;
-}
+//svg:not([fill]) {
+//  fill: currentColor;
+//}
 
 iframe {
   border: 0;
