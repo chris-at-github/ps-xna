@@ -1,5 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:employee/Configuration/TypoScript/constants.typoscript">
-
-plugin.tx_employee {
-	persistence.storagePid = 76
-}

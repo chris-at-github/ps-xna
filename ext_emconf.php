@@ -22,6 +22,7 @@ $EM_CONF[$_EXTKEY] = [
 			'ps14_hero' => '1.0.4-1.99.99',
 			'ps14_container_columns' => '1.0.1-1.99.99',
 			'ps14_accordion' => '1.0.1-1.99.99',
+			'ps14_icon_text' => '1.0.3-1.99.99',
 		],
 		'conflicts' => [],
 		'suggests' => [],
