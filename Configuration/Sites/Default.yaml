@@ -1,9 +1,10 @@
 rootPageId: 1
 websiteTitle: 'Haus Buachwald'
 baseVariants:
-  -
-    base: 'https://staging.hausbuachwald.at/'
+  - base: 'https://www.hausbuachwald.at/'
     condition: 'applicationContext == "Production"'
+  - base: 'https://staging.hausbuachwald.at/'
+    condition: 'applicationContext == "Production/Staging"'
   - base: 'https://haus-buachwald-at.ddev.site'
     condition: 'applicationContext == "Development"'
 languages:
