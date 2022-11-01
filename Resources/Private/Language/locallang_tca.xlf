@@ -19,6 +19,9 @@
 			<trans-unit id="tx_xo_tt_content.variant.2">
 				<source>Container</source>
 			</trans-unit>
+			<trans-unit id="tx_xo_tt_content.variant.3">
+				<source>Block Slider</source>
+			</trans-unit>
 
 			<trans-unit id="container-furnishing.title">
 				<source>Furnishing Container</source>

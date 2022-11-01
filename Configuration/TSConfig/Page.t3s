@@ -48,3 +48,17 @@ TCEFORM {
 		}
 	}
 [END]
+
+[field('CType') === 'textpic']
+	TCEFORM {
+		tt_content {
+			pi_flexform.disabled = 1
+
+			tx_xo_variant {
+				addItems {
+					3 = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xo_tt_content.variant.3
+				}
+			}
+		}
+	}
+[END]
