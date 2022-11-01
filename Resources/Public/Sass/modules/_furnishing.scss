@@ -8,7 +8,7 @@
 @import '../variables';
 @import '../mixins';
 
-.ce-furnishing--main {
+.ce-furnishing__main {
 	.ce-furnishing__media {
 		display: none;
 	}
@@ -21,10 +21,28 @@
 	}
 }
 
+.ce-furnishing__additional {
+	& {
+		display: none;
+	}
+
+	& > .ce-frame__inner {
+		padding-left: var(--container-spacing__x);
+		padding-right: var(--container-spacing__x);
+	}
+}
+
+.readmore-container-open,
+.readmore-container-opened {
+	.ce-furnishing__additional {
+		display: block;
+	}
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 768px
 @include media-breakpoint-up(md) {
-	.ce-furnishing--main {
+	.ce-furnishing__main {
 		& {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -50,7 +68,7 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 1200px
 @include media-breakpoint-up(xl) {
-	.ce-furnishing--main {
+	.ce-furnishing__main {
 		& > .ce-frame__inner {
 			padding-right: 0;
 		}

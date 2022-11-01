@@ -1,34 +1,17 @@
 .readmore-container {
 	.readmore-container--collapse {
-		transition: max-height $transition-duration;
+		transition: max-height var(--transition__duration-default);
 		overflow: hidden;
 	}
 
 	.readmore-container--toggle {
-		& {
-			display: flex;
-			justify-content: center;
-			align-items: flex-end;
-			height: rem(96px);
-			transition-property: transform, height;
-			transition-duration: $transition-duration;
-			transform: scale(1);
-		}
-
-		button {
-			& {
-				position: relative;
-				padding-left: rem(66px);
-			}
-
-			svg {
-				position: absolute;
-				top: rem(19px); left: rem(30px);
-				width: 24px;
-				height: 14px;
-				fill: #fff;
-			}
-		}
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		height: rem(96px);
+		transition-property: transform, height;
+		transition-duration: var(--transition__duration-default);
+		transform: scale(1);
 	}
 
 	&.readmore-container-open {

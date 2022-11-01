@@ -2,15 +2,31 @@
 	<f:layout name="Default" />
 
 	<f:section name="Main">
-		<div id="c{data.uid}" class="ce-frame ce-furnishing--main ce-frame--class-{data.frame_class} ce-frame--variant-{data.tx_xo_variant} ce-frame--space-before-{data.space_before_class} ce-frame--space-after-{data.space_after_class}">
-			<div class="ce-furnishing__media">
-				<f:render partial="BackgroundMedia" arguments="{_all}" />
+		<div id="c{data.uid}" class="readmore-container ce-frame ce-frame--class-{data.frame_class} ce-frame--variant-{data.tx_xo_variant} ce-frame--space-before-{data.space_before_class} ce-frame--space-after-{data.space_after_class}">
+			<div class="ce-furnishing__main">
+				<div class="ce-furnishing__media">
+					<f:render partial="BackgroundMedia" arguments="{_all}" />
+				</div>
+
+				<div class="ce-frame__inner">
+					<f:for each="{columnMain}" as="content">
+						<f:format.raw>{content.renderedContent}</f:format.raw>
+					</f:for>
+
+					<div class="readmore-container--toggle">
+						<button class="button"><f:translate key="LLL:EXT:xna/Resources/Private/Language/locallang_frontend.xlf:furnishing.readmore" /></button>
+					</div>
+				</div>
 			</div>
 
-			<div class="ce-frame__inner">
-				<f:for each="{columnMain}" as="content">
-					<f:format.raw>{content.renderedContent}</f:format.raw>
-				</f:for>
+			<div class="ce-furnishing__additional readmore-container--collapse">
+				<div class="ce-frame__inner">
+					<div class="readmore-container--body">
+						<f:for each="{columnAdditional}" as="content">
+							<f:format.raw>{content.renderedContent}</f:format.raw>
+						</f:for>
+					</div>
+				</div>
 			</div>
 		</div>
 	</f:section>

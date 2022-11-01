@@ -18,12 +18,12 @@ require('./helpers/slider');
 // Components
 require('./components/data-uri-target');
 require('./components/scroll-lock');
-require('./components/responsive-table');
+// require('./components/responsive-table');
 require('./components/readmore-container');
-require('./components/navigation/layout-0');
-require('./components/navigation/layout-4');
-require('./components/layout/search-widget');
-require('./components/layout/sticky');
+// require('./components/navigation/layout-0');
+// require('./components/navigation/layout-4');
+// require('./components/layout/search-widget');
+// require('./components/layout/sticky');
 
 // // ---------------------------------------------------------------------------------------------------------------------
 // // Elements

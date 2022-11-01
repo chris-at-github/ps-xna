@@ -305,13 +305,23 @@ body {
 	}
 }
 
-.ce-header--layout-1, .ce-header--layout-2, .ce-header--layout-3, .ce-header--layout-4 {
+.ce-header--layout-1, .ce-header--layout-2 {
 	h1, h2, h3, h4 {
 		margin-top: 0;
 	}
 
 	& + .ce-bodytext {
 		margin-top: var(--html-element__spacing-header);
+	}
+}
+
+.ce-header--layout-3, .ce-header--layout-4 {
+	h3, h4 {
+		margin-top: 0;
+	}
+
+	& + .ce-bodytext {
+		margin-top: rem(20px);
 	}
 }
 
@@ -358,12 +368,6 @@ body {
 	.ce-frame__inner {
 		padding: rem(30px 20px 45px 20px);
 	}
-}
-
-// ---------------------------------------------------------------------------------------------------------------------
-// Abstand Address
-.ce-address {
-	--html-element__spacing-header: #{rem(20px)};
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
