@@ -21,6 +21,10 @@
 			<f:render partial="Components/Person" section="Fullname" arguments="{person: contact}" />
 		</div>
 
+		<f:if condition="{contact.company}">
+			<div class="address--item address--company">{contact.company}</div>
+		</f:if>
+
 		<f:render partial="Components/Address" section="Phone" arguments="{address: contact}" />
 		<f:render partial="Components/Address" section="Mail" arguments="{address: contact}" />
 
