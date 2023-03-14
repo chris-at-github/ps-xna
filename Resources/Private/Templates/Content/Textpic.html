@@ -44,10 +44,11 @@
 			</f:if>
 
 			<f:if condition="{flexform.arrangement} == 'before'">
-				<f:else><div class="ce-textmedia--column ce-textmedia--media"><f:render partial="Media/Gallery" section="Container" arguments="{_all}"/></div></f:else>
 				<f:then><div class="ce-textmedia--column ce-textmedia--content"><f:render section="Content" arguments="{_all}" /></div></f:then>
+				<f:else><div class="ce-textmedia--column ce-textmedia--media"><f:render partial="Media/Gallery" section="Container" arguments="{_all}"/></div></f:else>
 			</f:if>
 		</div>
+
 	</f:section>
 
 	<f:section name="Content">
