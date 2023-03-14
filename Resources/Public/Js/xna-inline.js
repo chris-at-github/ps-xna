@@ -6,6 +6,9 @@ xna.data = xna.data || {};
 xna.l10n = xna.l10n || {};
 xna.settings = xna.settings || {};
 
+// Fehler in TinySlider beheben
+var exports = exports || {};
+
 // ---------------------------------------------------------------------------------------------------------------------
 // eigene On-Event Methode um Asynchrone Skripte besser steuern zu koennen -> damit koennen Callbacks auf Events bereits
 // im Voraus gesammelt werden bzw. auf bereits gefeuerte Events kann immer noch eine Callback-Methode angewandt werden

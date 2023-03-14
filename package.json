@@ -34,6 +34,7 @@
 			"typo3conf/ext/xna/Resources/Public/Sass/xna.scss": "assets/css/xna.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/editor.scss": "assets/css/editor.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/print.scss": "assets/css/print.css",
+			"typo3conf/ext/xna/Resources/Public/Sass/vendors/_tiny-slider.scss": "assets/css/vendors/tiny-slider.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/components/_accordion.scss": "assets/css/components/accordion.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/modules/_text-media.scss": "assets/css/modules/text-media.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/modules/_furnishing.scss": "assets/css/modules/furnishing.css",
@@ -45,7 +46,8 @@
 		"js": {
 			"typo3conf/ext/xna/Resources/Public/Js/xna.js": "assets/js/xna.js",
 			"typo3conf/ext/xna/Resources/Public/Js/components/bootstrap/collapse.js": "assets/js/components/collapse.js",
-			"typo3conf/ext/ps14_gallery/Resources/Public/Js/gallery.js": "assets/js/modules/gallery.js"
+			"typo3conf/ext/ps14_gallery/Resources/Public/Js/gallery.js": "assets/js/modules/gallery.js",
+			"typo3conf/ext/xna/Resources/Public/Js/modules/text-media.js": "assets/js/modules/text-media.js"
 		},
 		"copy": {
 			"typo3conf/ext/xna/Resources/Public/Js/xna-inline.js": "assets/js/xna-inline.js",

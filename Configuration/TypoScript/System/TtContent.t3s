@@ -56,4 +56,8 @@ tt_content {
 			}
 		}
 	}
+
+	textpic.dataProcessing {
+		130 = Ps\Xna\DataProcessing\TextMediaProcessor
+	}
 }

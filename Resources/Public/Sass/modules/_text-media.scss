@@ -48,6 +48,22 @@
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Block Slider
+.ce-textmedia.ce-frame--variant-3 {
+	& {
+		overflow: hidden;
+	}
+	//.ce-textmedia--grid {
+	//	display: grid;
+	//	margin: 0;
+	//}
+
+	.ce-textmedia--media {
+		padding: 0;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Columns
 .ce-textmedia--grid {
 	& {
@@ -75,8 +91,8 @@
 
 .ce-textmedia--column {
 	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-left: var(--container-spacing__x);
+	padding-right: var(--container-spacing__x);
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -134,7 +150,7 @@
 	.ce-textmedia--grid-50-50 {
 		.ce-textmedia--column:nth-child(1),
 		.ce-textmedia--column:nth-child(2) {
-			width: math.div(6, 12);
+			width: math.percentage(math.div(6, 12));
 		}
 	}
 
@@ -157,6 +173,18 @@
 			.ce-textmedia--column:nth-child(2) {
 				width: math.div(4, 12);
 			}
+		}
+	}
+
+	.ce-textmedia.ce-frame--variant-3 {
+		//.ce-textmedia--grid {
+		//	display: grid;
+		//	grid-template-columns: 1fr 1fr;
+		//}
+
+		.ce-textmedia--content {
+			max-width: calc(var(--page__max-width) / 2);
+			margin-left: 0;
 		}
 	}
 }
