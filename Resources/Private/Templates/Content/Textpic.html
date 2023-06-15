@@ -40,12 +40,22 @@
 		<div class="ce-textmedia--container ce-textmedia--grid ce-textmedia--grid-{flexform.column} ce-textmedia--arrangement-{flexform.arrangement} ce-textmedia--media-position-{gallery.position.horizontal}">
 			<f:if condition="{flexform.arrangement} == 'after'">
 				<f:then><div class="ce-textmedia--column ce-textmedia--content"><f:render section="Content" arguments="{_all}" /></div></f:then>
-				<f:else><div class="ce-textmedia--column ce-textmedia--media"><f:render partial="Media/Gallery" section="Container" arguments="{_all}"/></div></f:else>
+				<f:else>
+					<div class="ce-textmedia--column ce-textmedia--media">
+						<f:render partial="Media/Gallery" section="Container" arguments="{_all}" />
+						<f:render section="SliderNavigation" arguments="{_all}" />
+					</div>
+				</f:else>
 			</f:if>
 
 			<f:if condition="{flexform.arrangement} == 'before'">
 				<f:then><div class="ce-textmedia--column ce-textmedia--content"><f:render section="Content" arguments="{_all}" /></div></f:then>
-				<f:else><div class="ce-textmedia--column ce-textmedia--media"><f:render partial="Media/Gallery" section="Container" arguments="{_all}"/></div></f:else>
+				<f:else>
+					<div class="ce-textmedia--column ce-textmedia--media">
+						<f:render partial="Media/Gallery" section="Container" arguments="{_all}" />
+						<f:render section="SliderNavigation" arguments="{_all}" />
+					</div>
+				</f:else>
 			</f:if>
 		</div>
 
@@ -56,6 +66,22 @@
 			<f:render partial="Header/All" arguments="{_all}"/>
 		</f:if>
 
-		<f:format.html>{data.bodytext}</f:format.html>
+		<f:if condition="{data.bodytext}">
+			<div class="ce-bodytext"><f:format.html>{data.bodytext}</f:format.html></div>
+		</f:if>
+	</f:section>
+
+	<f:section name="SliderNavigation">
+		<f:if condition="{data.tx_xo_variant} == 3 && {files}">
+			<div class="slider--navigation">
+				<div class="slider--navigation-inner">
+					<ul>
+						<f:for each="{files}" as="file" iteration="iterator">
+							<li><button aria-controls="ce-image__item--{file.uid}"><span>{iterator.cycle}</span></button></li>
+						</f:for>
+					</ul>
+				</div>
+			</div>
+		</f:if>
 	</f:section>
 </html>

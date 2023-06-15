@@ -36,6 +36,7 @@
 			"typo3conf/ext/xna/Resources/Public/Sass/print.scss": "assets/css/print.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/vendors/_tiny-slider.scss": "assets/css/vendors/tiny-slider.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/components/_accordion.scss": "assets/css/components/accordion.css",
+			"typo3conf/ext/xna/Resources/Public/Sass/components/_slider.scss": "assets/css/components/slider.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/modules/_text-media.scss": "assets/css/modules/text-media.css",
 			"typo3conf/ext/xna/Resources/Public/Sass/modules/_furnishing.scss": "assets/css/modules/furnishing.css",
 			"typo3conf/ext/ps14_hero/Resources/Public/Sass/hero.scss": "assets/css/modules/hero.css",

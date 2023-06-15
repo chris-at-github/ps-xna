@@ -1,0 +1,110 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Bootstrap & XNA
+@import '../functions';
+@import '../variables';
+@import '../mixins';
+@import '../definitions';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Controls
+// 1: bis vollstaendigen initialisieren des Sliders nur das erste Element anzeigen
+.slider--controls {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	opacity: 0; // 1
+}
+
+.slider--prev, .slider--next {
+	button {
+		display: block;
+		cursor: pointer;
+		border: 0;
+		outline: 0;
+		background: transparent;
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Navigation
+.slider--navigation {
+	& {
+		opacity: 0; // 1
+	}
+
+	ul {
+		& {
+			display: flex;
+			justify-content: center;
+			gap: rem(5px);
+			margin: 0;
+			padding: rem(10px);
+		}
+
+		li {
+			& {
+				width: rem(13px);
+				height: rem(13px);
+				padding: 0;
+				line-height: 0;
+			}
+
+			&.tns-nav-active button {
+				& {
+					cursor: default;
+					pointer-events: none;
+				}
+
+				&:before {
+					background: var(--color__primary);
+				}
+			}
+		}
+	}
+
+	button {
+		& {
+			position: relative;
+			border: 0;
+			background: transparent;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			top: 0;
+			width: rem(13px);
+			height: rem(13px);
+			border: 2px solid var(--color__primary);
+			border-radius: 50%;
+			transition: all 0.25s;
+		}
+
+		&:hover:before {
+			border-color: var(--color__secondary);
+			background: var(--color__secondary);
+			cursor: pointer;
+		}
+
+		.tns-nav-active & {
+			& {
+				cursor: default;
+			}
+
+			&:before {
+				background: var(--color__primary);
+			}
+		}
+
+		span {
+			@extend %accessibility-hidden;
+			@extend %accessibility-hidden-focusable;
+		}
+	}
+}
+
+.slider--initialized {
+	.slider--controls, .slider--navigation {
+		opacity: 1;
+	}
+}

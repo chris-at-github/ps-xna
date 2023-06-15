@@ -30,6 +30,7 @@ class TextMediaProcessor extends \Ps\Xo\DataProcessing\TextMediaProcessor implem
 				'/assets/js/vendors/tiny-slider.js' => ['forceOnTop' => true],
 				'/assets/js/modules/text-media.js'
 			]);
+			$this->addImportCssFiles(['/assets/css/components/slider.css']);
 			$this->addImportCssFiles(['/assets/css/vendors/tiny-slider.css']);
 		}
 

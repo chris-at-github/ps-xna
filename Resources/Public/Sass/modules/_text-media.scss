@@ -7,6 +7,7 @@
 @import '../functions';
 @import '../variables';
 @import '../mixins';
+@import '../definitions';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Image
@@ -50,16 +51,26 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // Block Slider
 .ce-textmedia.ce-frame--variant-3 {
+	--header-3__font-family: var(--font__family-serif);
+
 	& {
 		overflow: hidden;
 	}
-	//.ce-textmedia--grid {
-	//	display: grid;
-	//	margin: 0;
-	//}
+
+	.ce-textmedia--grid {
+		margin-left: 0;
+		margin-right: 0;
+	}
 
 	.ce-textmedia--media {
 		padding: 0;
+	}
+
+	.ce-image__item img {
+		width: 100%;
+		height: 100%;
+		max-height: 700px;
+		object-fit: cover;
 	}
 }
 
@@ -96,8 +107,8 @@
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
-// >= 768px
-@include media-breakpoint-up(md) {
+// >= 992px
+@include media-breakpoint-up(lg) {
 	.ce-textmedia--grid {
 		.ce-textmedia--content {
 			margin-top: 0;
@@ -177,14 +188,66 @@
 	}
 
 	.ce-textmedia.ce-frame--variant-3 {
-		//.ce-textmedia--grid {
-		//	display: grid;
-		//	grid-template-columns: 1fr 1fr;
-		//}
+		.ce-textmedia--column {
+			min-height: rem(500px);
+		}
+
+		.ce-textmedia--media {
+			position: relative;
+		}
 
 		.ce-textmedia--content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			max-width: calc(var(--page__max-width) / 2);
 			margin-left: 0;
+			padding-top: rem(20px);
+			padding-bottom: rem(20px);
+		}
+
+		.ce-image__item {
+			& {
+				display: flex !important;
+				flex: 1;
+				height: 100%;
+			}
+
+			picture {
+				width: 100%;
+			}
+		}
+
+		.tns-outer, .tns-ovh, .tns-inner, .tns-horizontal {
+			 height: 100%;
+		 }
+
+		.slider--navigation {
+			position: absolute;
+			top: 0;	bottom: 0;
+		}
+
+		.slider--navigation-inner {
+			& {
+				display: flex;
+				height: 100%;
+			}
+
+			& > ul {
+				flex-direction: column;
+			}
+		}
+
+		.ce-textmedia--media-position-left {
+			.slider--navigation {
+				left: 0;
+			}
+		}
+
+		.ce-textmedia--media-position-right {
+			.slider--navigation {
+				right: 0;
+			}
 		}
 	}
 }

@@ -28,55 +28,60 @@
 		// 	});
 		// }
 
-		console.log(465464);
-
 		// Slider
 		if(typeof(tns) === 'function') {
-			console.log(123);
-			// document.querySelectorAll('.ce-gallery--slider').forEach(function(node, index) {
-			//
+			document.querySelectorAll('.ce-frame--variant-3.ce-textmedia').forEach(function(node, index) {
+
 			// 	// Event CeGallery_BeforeSliderInitialize ausfuehren
 			// 	xna.fireEvent('CeGallery_BeforeSliderInitialize', {node: node});
 			//
 			// 	// Controls | Navigation anzeigen
 			// 	let controls = node.querySelector('.slider--controls .slider--controls-inner');
-			// 	let navigation = node.querySelector('.slider--navigation .slider--navigation-inner');
-			//
-			// 	let slider = tns({
-			// 		container: node.querySelector('.slider--container'),
+				let navigation = node.querySelector('.slider--navigation .slider--navigation-inner ul');
+				let controls = null;
+				// navigation = null;
+
+				let slider = tns({
+					container: node.querySelector('.ce-image__container'),
 			// 		center: false,
 			// 		loop: false,
-			// 		autoWidth: true,
-			// 		items: 1,
-			// 		gutter: 0,
-			// 		autoplay: false,
-			// 		controls: (controls !== null),
-			// 		controlsContainer: node.querySelector('.slider--controls .slider--controls-inner'),
-			// 		nav: (navigation !== null),
-			// 		navContainer: node.querySelector('.slider--navigation .slider--navigation-inner ul'),
-			// 		onInit: function() {
-			//
-			// 			// CSS Lazyload durch setzen der Klasse slider--initialized
-			// 			node.querySelector('.slider').classList.add('slider--initialized');
-			//
-			// 			node.querySelectorAll('.tns-item').forEach(function(item, index) {
-			//
-			// 				// Focus auf geklonte Eintraege verhindern
-			// 				if(item.classList.contains('tns-slide-cloned') === true) {
-			// 					item.querySelectorAll('a, button').forEach(function(element) {
-			// 						element.setAttribute('tabindex', '-1');
-			// 					});
-			// 				} else {
-			// 					item.removeAttribute('aria-hidden');
-			// 				}
-			//
-			// 				// Beim Fokusieren eines Links / Buttons innerhalb eines Eintrags immer zu diesem Eintrag springen
-			// 				item.querySelectorAll('a, button').forEach(function(element) {
-			// 					element.addEventListener('focus', function() {
-			// 						slider.goTo(item.getAttribute('data-index'));
-			// 					});
-			// 				});
-			// 			});
+					autoWidth: false,
+					items: 1,
+					gutter: 0,
+					autoplay: true,
+					controls: false,
+					nav: (navigation !== null),
+					navContainer: node.querySelector('.slider--navigation .slider--navigation-inner ul'),
+					animateIn: 'tns-fadeIn',
+					animateOut: 'tns-fadeOut',
+					speed: 1000,
+					mode: 'gallery',
+					onInit: function() {
+
+						// CSS Lazyload durch setzen der Klasse slider--initialized
+						node.querySelector('.ce-textmedia--media').classList.add('slider--initialized');
+
+						// Autoplay Button entfernen
+						node.querySelector('button[data-action="stop"]').remove();
+
+						// node.querySelectorAll('.tns-item').forEach(function(item, index) {
+						//
+						// 	// Focus auf geklonte Eintraege verhindern
+						// 	if(item.classList.contains('tns-slide-cloned') === true) {
+						// 		item.querySelectorAll('a, button').forEach(function(element) {
+						// 			element.setAttribute('tabindex', '-1');
+						// 		});
+						// 	} else {
+						// 		item.removeAttribute('aria-hidden');
+						// 	}
+						//
+						// 	// Beim Fokusieren eines Links / Buttons innerhalb eines Eintrags immer zu diesem Eintrag springen
+						// 	item.querySelectorAll('a, button').forEach(function(element) {
+						// 		element.addEventListener('focus', function() {
+						// 			slider.goTo(item.getAttribute('data-index'));
+						// 		});
+						// 	});
+						// });
 			//
 			// 			// Slider Controls wieder fixen
 			// 			if(controls !== null) {
@@ -92,14 +97,12 @@
 			// 					item.removeAttribute('aria-label');
 			// 				});
 			// 			}
-			// 		}
-			// 	});
+					}
+				});
 			//
 			// 	// Event CeGallery_AfterSliderInitialize ausfuehren
 			// 	xna.fireEvent('CeGallery_AfterSliderInitialize', {node: node, slider: slider});
-			// });
+			});
 		}
 	});
 })();
-
-console.log(3847294);

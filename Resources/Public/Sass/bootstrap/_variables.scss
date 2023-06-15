@@ -21,6 +21,7 @@
 	// -------------------------------------------------------------------------------------------------------------------
 	// Font
 	--font__family-default: 'Montserrat', Arial, sans-serif;
+	--font__family-serif: 'Libre Baskerville', 'Georgia', 'Times New', serif;
 	--font__size-default: #{rem(17px)};
 	--font__color-default: var(--color__gray-dark);
 	--font__weight-default: 400;
@@ -40,12 +41,12 @@
 	--header__line-height: 1.15;
 	--header__spacing-top: #{rem(40px)};
 
-	--header-1__font-family: 'Libre Baskerville', 'Georgia', 'Times New', serif;
+	--header-1__font-family: var(--font__family-serif);
 	--header-1__font-size: #{rem(34px)};
 	--header-1__font-weight: var(--header__font-weight);
 
 	--header-2__spacing-top: var(--header__spacing-top);
-	--header-2__font-family: 'Libre Baskerville', 'Georgia', 'Times New', serif;
+	--header-2__font-family: var(--font__family-serif);
 	--header-2__font-size: #{rem(26px)};
 	--header-2__font-weight: var(--header__font-weight);
 
