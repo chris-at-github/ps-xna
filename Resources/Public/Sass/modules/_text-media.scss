@@ -245,6 +245,10 @@
 		}
 
 		.ce-textmedia--media-position-right {
+			.ce-textmedia--content {
+				padding-left: 0;
+			}
+
 			.slider--navigation {
 				right: 0;
 			}
