@@ -16,3 +16,34 @@ plugin.tx_xo {
 		}
 	}
 }
+
+plugin.tx_xo.settings {
+	modules {
+		textmedia {
+			pictureMediaQueries {
+				intext {
+					1200 {
+						maxWidth = 990
+						cropVariant = desktop
+					}
+					992 {
+						maxWidth = 600
+						cropVariant = desktop
+					}
+					768 {
+						maxWidth = 975
+						cropVariant = mobile
+					}
+					576 {
+						maxWidth = 750
+						cropVariant = mobile
+					}
+					0 {
+						maxWidth = 560
+						cropVariant = mobile
+					}
+				}
+			}
+		}
+	}
+}
