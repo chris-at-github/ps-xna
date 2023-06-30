@@ -57,6 +57,44 @@ tt_content {
 		}
 	}
 
+	ps14_xna_sketch < lib.contentElement
+	ps14_xna_sketch {
+		templateName = Sketch
+		templateRootPaths {
+			10 = EXT:xna/Resources/Private/Templates/Content/
+		}
+
+		dataProcessing {
+			30 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+			30 {
+				as = elements
+				table = tx_xo_domain_model_elements
+				pidInList.field = pid
+				where {
+					data = field:uid
+					intval = 1
+					wrap = foreign_uid=|
+				}
+				orderBy = sorting
+
+				dataProcessing {
+					10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+					10 {
+						as = media
+						references.fieldName = media
+					}
+				}
+			}
+
+			130 = Ps\Xo\DataProcessing\ModuleProcessor
+			130 {
+				importCss {
+					10 = /assets/css/modules/sketch.css
+				}
+			}
+		}
+	}
+
 	textpic.dataProcessing {
 		130 = Ps\Xna\DataProcessing\TextMediaProcessor
 	}

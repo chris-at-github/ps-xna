@@ -23,6 +23,23 @@ TCEFORM {
 	}
 }
 
+mod.wizards.newContentElement.wizardItems {
+	common {
+		elements {
+			ps14_xna_sketch {
+				iconIdentifier = content-image
+				title = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:sketch.title
+				description = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:sketch.description
+				tt_content_defValues {
+					CType = ps14_xna_sketch
+				}
+			}
+		}
+
+		show := addToList(ps14_xna_sketch)
+	}
+}
+
 [irre('parent') === 'tx_xo_domain_model_elements' && irre('field') === 'content']
 	TCAdefaults.tt_content {
 		space_before_class = small
