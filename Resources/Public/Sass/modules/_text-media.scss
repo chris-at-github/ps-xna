@@ -245,12 +245,20 @@
 		}
 
 		.ce-textmedia--media-position-right {
-			.ce-textmedia--content {
-				padding-left: 0;
-			}
-
 			.slider--navigation {
 				right: 0;
+			}
+		}
+	}
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 992px
+@include media-breakpoint-up(xl) {
+	.ce-textmedia.ce-frame--variant-3 {
+		.ce-textmedia--media-position-right {
+			.ce-textmedia--content {
+				padding-left: 0;
 			}
 		}
 	}
