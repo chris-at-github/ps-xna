@@ -2,6 +2,47 @@
 	<f:layout name="Default" />
 
 	<f:section name="Main">
-		<f:debug>{_all}</f:debug>
+		<div class="sketch">
+<!--		<button data-type="html" data-target="#selector" class="tobii-trigger">Obergeschoss</button>-->
+
+			<ul class="sketch-listing">
+				<f:for each="{elements}" as="floor">
+					<f:if condition="{floor.media.0}">
+						<li class="sketch-listing__item">
+							<button data-type="html" data-target="#sketch-floor--{floor.data.uid}" class="tobii-trigger sketch-listing__button" data-group="sketch-floor">
+								<xo:svg.inline source="{floor.media.0.publicUrl}" attributes="{class: 'sketch-listing__thumbnail'}" />
+								<span class="sketch-listing__title">{floor.data.title}</span>
+							</button>
+						</li>
+					</f:if>
+				</f:for>
+			</ul>
+
+			<div class="sketch__floor-container">
+				<f:for each="{elements}" as="floor">
+					<f:if condition="{floor.media.0}">
+						<div class="sketch-floor" id="sketch-floor--{floor.data.uid}">
+							<f:if condition="{floor.data.title}">
+								<header class="sketch-floor__title">{floor.data.title}</header>
+							</f:if>
+
+							<div class="sketch-floor__body">
+								<div class="sketch-floor__image">
+									<xo:svg.inline source="{floor.media.0.publicUrl}" />
+								</div>
+
+								<f:if condition="{floor.data.description}">
+									<div class="sketch-floor__description ce-bodytext"><f:format.html>{floor.data.description}</f:format.html></div>
+								</f:if>
+							</div>
+						</div>
+					</f:if>
+				</f:for>
+			</div>
+		</div>
+<!--		<div id="selector" class="x-t">-->
+<!--			kjkdlfjkdslfjdaslkfjds afjdlksa fjlösdajf löasjdflö-->
+<!--		</div>-->
+<!--		</div>-->
 	</f:section>
 </html>

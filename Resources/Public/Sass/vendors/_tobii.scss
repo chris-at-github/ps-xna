@@ -21,6 +21,14 @@
 	top: 0;
 }
 
+.tobii__slide {
+	.tobii-html {
+		width: var(--page__max-width);
+		max-width: 100%;
+		background: transparent;
+	}
+}
+
 .tobii__btn {
 	& {
 		width: var(--tobii-button-size);
