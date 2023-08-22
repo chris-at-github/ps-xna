@@ -144,11 +144,27 @@
 	}
 
 	// ---------------------------------------------------------------------------------------------------------------------
+	// >= 576px
+	@include media-breakpoint-up(sm) {
+		.teaser--layout-aside {
+			.teaser--sub-navigation-layout-columns ul {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-column-gap: rem(30px);
+			}
+		}
+	}
+
+	// ---------------------------------------------------------------------------------------------------------------------
 	// >= 768px
 	@include media-breakpoint-up(md) {
 		.teaser--layout-aside {
 			.teaser--body {
 				padding-left: rem(15px);
+			}
+
+			.teaser--sub-navigation-layout-columns ul {
+				grid-template-columns: 1fr;
 			}
 		}
 
@@ -183,6 +199,10 @@
 		.teaser--layout-aside {
 			.teaser--body {
 				padding-left: rem(30px);
+			}
+
+			.teaser--sub-navigation-layout-columns ul {
+				grid-template-columns: 1fr 1fr;
 			}
 		}
 
