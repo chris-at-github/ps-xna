@@ -260,12 +260,29 @@
 					}
 
 					.card--layout-3[data-uri-target] {
+						.card--header {
+							padding-top: 0;
+							padding-left: rem(15px);
+						}
+
 						.card--title {
+							padding-left: 0;
+							padding-right: 0;
 							color: $font-color-base;
 						}
 
 						.svg-sprite--arrow-right {
 							display: inline;
+						}
+
+						.card--event-date {
+							position: relative;
+							left: 0;
+							margin-bottom: rem(30px);
+						}
+
+						.card--media {
+							display: none;
 						}
 					}
 				}
