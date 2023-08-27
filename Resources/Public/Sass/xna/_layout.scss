@@ -295,6 +295,10 @@ a, input, select, textarea, button {
 @include media-breakpoint-up(md) {
 	.page-header {
 
+		.is--sticky-header & {
+			border-bottom: 2px solid $color-grey-lighten;
+		}
+
 		.off-canvas {
 			.is--search-widget & {
 				position: relative;
