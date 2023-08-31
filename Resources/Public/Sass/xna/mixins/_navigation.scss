@@ -219,6 +219,12 @@
 				}
 
 				.ce-menu-subpages, .ce-menu-pages {
+					& {
+						background: $color-grey-lighter;
+						padding: rem(15px 15px);
+						border-radius: $border-radius-default;
+					}
+
 					.ce-header {
 						font-size: rem(20px);
 					}
@@ -226,6 +232,31 @@
 					ul {
 						margin: rem(15px -10px 0 -10px);
 						padding: 0;
+					}
+
+					.ce-readmore {
+						& {
+							margin: rem(25px 0 0 0);
+						}
+
+						.ce-readmore__item {
+							flex: 1;
+						}
+
+						.ce-readmore__link {
+							& {
+								@include link-arrow();
+								padding: 0;
+							}
+
+							&:hover, .focusable &:focus {
+								background: transparent;
+
+								span {
+									background-size: 0;
+								}
+							}
+						}
 					}
 				}
 
@@ -444,7 +475,7 @@
 		}
 	}
 
-	//& > ul > li:nth-child(4) > .navigation--container-outer {
+	//& > ul > li:nth-child(1) > .navigation--container-outer {
 	//	display: block;
 	//}
 }
