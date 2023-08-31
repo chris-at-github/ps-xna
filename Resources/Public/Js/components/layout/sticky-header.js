@@ -18,9 +18,9 @@
 			xna.fireEvent('indicateToTopBodyClass');
 		});
 
-		document.addEventListener('stickyHeaderScrollToElement', function() {
+		document.addEventListener('stickyHeaderScrollToElement', function(event) {
 			const stickyHeaderOffset= getComputedStyle(document.body).getPropertyValue('--sticky-header--offset');
-			const targetElement = document.querySelector(window.location.hash);
+			const targetElement = document.querySelector(event.detail.targetSelector);
 
 			if(targetElement !== null && parseInt(stickyHeaderOffset) !== 0) {
 				setTimeout(function() {
@@ -34,8 +34,20 @@
 		// Hash aus URL auslesen
 		window.addEventListener('load', function() {
 			if(window.location.hash !== '') {
-				xna.fireEvent('stickyHeaderScrollToElement');
+				xna.fireEvent('stickyHeaderScrollToElement', { targetSelector: window.location.hash });
 			}
+		});
+
+		// alle Ankerlinks auf der aktuellen Seite abfangen
+		document.querySelectorAll('a').forEach(function(link, index) {
+			link.addEventListener('click', function(event) {
+				const href = link.getAttribute('href');
+
+				if(href.indexOf('#') === 0) {
+					xna.fireEvent('stickyHeaderScrollToElement', { targetSelector: href });
+					event.preventDefault();
+				}
+			});
 		});
 	});
 })();
