@@ -271,6 +271,7 @@ body {
 	.page-header {
 		& {
 			position: fixed;
+			z-index: 1100;
 			padding-top: rem(15px);
 			padding-bottom: rem(15px);
 			background: $white;
