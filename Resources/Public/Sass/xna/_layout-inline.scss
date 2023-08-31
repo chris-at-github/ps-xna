@@ -87,8 +87,9 @@ body {
 .page--layout-0, .page--layout-4, .page--layout-5 {
 	#breadcrumb {
 		position: absolute;
-		top: rem(180px);
+		top: rem(140px);
 		left: 0; right: 0;
+		height: rem(60px);
 	}
 
 	#header + .ce-content, #header + #breadcrumb + .ce-content {
@@ -417,7 +418,7 @@ body {
 	// Page Layout Default
 	.page--layout-0, .page--layout-4, .page--layout-5 {
 		#breadcrumb {
-			top: rem(200px);
+			top: rem(160px);
 		}
 
 		#header + .ce-content, #header + #breadcrumb + .ce-content {

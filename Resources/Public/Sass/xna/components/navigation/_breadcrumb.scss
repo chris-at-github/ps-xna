@@ -67,7 +67,8 @@
 @include media-breakpoint-up(md) {
 	.breadcrumb {
 		& {
-			display: block;
+			display: flex;
+			align-items: flex-end;
 		}
 	}
 }
