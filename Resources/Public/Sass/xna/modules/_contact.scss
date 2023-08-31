@@ -233,11 +233,13 @@
 		line-height: 1.5;
 	}
 
-	.contact-listing--country-description {
-		& {
-			font-size: rem(15px);
+	.contact-listing--country-product-lines {
+		li:first-child {
+			margin-top: 0;
 		}
+	}
 
+	.contact-listing--country-description {
 		.list--default {
 			& {
 				margin-top: 0;

@@ -75,6 +75,9 @@
 			</f:if>
 		</td>
 		<td>
+			<f:if condition="{country.country.countryDescription}">
+				<div class="contact-listing--country-description"><f:format.html>{country.country.countryDescription}</f:format.html></div>
+			</f:if>
 			<f:render partial="Components/Address" section="Phone" arguments="{address: country}" />
 			<f:render partial="Components/Address" section="Mail" arguments="{address: country}" />
 		</td>
