@@ -91,3 +91,35 @@ tt_content.list.dataProcessing {
 		}
 	}
 }
+
+plugin.tx_seo {
+	config {
+		xmlSitemap {
+			sitemaps {
+				news {
+					provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+					config {
+						table = tx_news_domain_model_news
+						sortField = sorting
+						lastModifiedField = tstamp
+						#						changeFreqField = news_changefreq
+						#						priorityField = news_priority
+						#						additionalWhere = AND (no_index = 0 OR no_follow = 0)
+						pid = {$plugin.tx_news.settings.sitemap.startingpoint}
+						url {
+							pageId = {$plugin.tx_news.settings.sitemap.detailPid}
+							fieldToParameterMap {
+								uid = tx_news_pi1[news]
+							}
+
+							additionalGetParameters {
+								tx_news_pi1.controller = News
+								tx_news_pi1.action = detail
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

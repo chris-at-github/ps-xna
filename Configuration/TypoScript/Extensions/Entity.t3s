@@ -1,1 +1,3 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:entity/Configuration/TypoScript/setup.typoscript">
+
+plugin.tx_seo.config.xmlSitemap.sitemaps.entityFrontend >

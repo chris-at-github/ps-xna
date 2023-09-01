@@ -1,1 +1,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:news/Configuration/TypoScript/constants.typoscript">
+
+plugin.tx_news.settings.sitemap {
+	startingpoint = 246
+	detailPid = 248
+}
