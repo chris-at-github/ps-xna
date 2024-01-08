@@ -41,6 +41,13 @@
 				<f:render partial="Components/Address" section="Phone" arguments="{_all}" />
 			</div>
 
+			<f:if condition="{address.fax}">
+				<div class="address--item-group">
+					<xo:svg.inline source="assets/svg/icon-fax.svg" attributes="{class: 'address--item-icon address--item-icon-fax'}" />
+					<f:render partial="Components/Address" section="Fax" arguments="{_all}" />
+				</div>
+			</f:if>
+
 			<div class="address--item-group">
 				<xo:svg.inline source="assets/svg/icon-mail.svg" attributes="{class: 'address--item-icon address--item-icon-mail'}" />
 				<f:render partial="Components/Address" section="Mail" arguments="{_all}" />
