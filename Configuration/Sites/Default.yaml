@@ -1,7 +1,7 @@
 rootPageId: 1
 websiteTitle: 'Physiozeit Penzberg'
 baseVariants:
-  - base: 'http://physiozeit-penzberg.local'
+  - base: 'https://physiozeit-penzberg-de.ddev.site/'
     condition: 'applicationContext == "Development"'
   - base: 'https://www.physiozeit-penzberg.de'
     condition: 'applicationContext == "Production"'
