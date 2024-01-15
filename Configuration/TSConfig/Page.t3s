@@ -51,6 +51,14 @@ TCEFORM {
 	}
 [END]
 
+[field('CType') === 'ce_hero_container']
+	TCEFORM.tt_content {
+		tx_xo_variant {
+			addItems.2 = Frontpage
+		}
+	}
+[END]
+
 [field('list_type') === 'xo_addressrecord']
 	TCEFORM.tt_content {
 		tx_xo_variant {

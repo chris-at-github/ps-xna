@@ -1,4 +1,5 @@
-.ce-hero {
+.ce-hero,
+.ce-hero-container {
 	&.ce-frame--variant-2 {
 		%hero--title {
 			& {
@@ -89,7 +90,8 @@
 
 // >= 768px
 @include media-breakpoint-up(md) {
-	.ce-hero {
+	.ce-hero,
+	.ce-hero-container {
 		&.ce-frame--variant-2 {
 			& {
 				padding-right: 1.5rem;
@@ -174,7 +176,8 @@
 }
 
 @include media-breakpoint-up(xl) {
-	.ce-hero {
+	.ce-hero,
+	.ce-hero-container {
 		&.ce-frame--variant-2 {
 			.hero--background {
 				left: -215px;
