@@ -6,6 +6,9 @@ xna.data = xna.data || {};
 xna.l10n = xna.l10n || {};
 xna.settings = xna.settings || {};
 
+// Fallback fuer Exports
+var exports = exports || {};
+
 // ---------------------------------------------------------------------------------------------------------------------
 // eigene On-Event Methode um Asynchrone Skripte besser steuern zu koennen -> damit koennen Callbacks auf Events bereits
 // im Voraus gesammelt werden bzw. auf bereits gefeuerte Events kann immer noch eine Callback-Methode angewandt werden
@@ -23,12 +26,12 @@ xna.onEventCallbacks = xna.onEventCallbacks || {};
 
 if(typeof xna.on !== 'function') {
 	xna.on = function(event, callback) {
-		if(typeof(this.onEventFired[event]) !== 'undefined' && this.onEventFired[event] === true) {
+		if(typeof (this.onEventFired[event]) !== 'undefined' && this.onEventFired[event] === true) {
 			callback();
 			return;
 		}
 
-		if(typeof(this.onEventCallbacks[event]) === 'undefined') {
+		if(typeof (this.onEventCallbacks[event]) === 'undefined') {
 			this.onEventCallbacks[event] = [];
 		}
 
@@ -38,11 +41,11 @@ if(typeof xna.on !== 'function') {
 
 if(typeof xna.fire !== 'function') {
 	xna.fire = function(event) {
-		if(typeof(this.onEventFired[event]) !== 'undefined') {
+		if(typeof (this.onEventFired[event]) !== 'undefined') {
 			return;
 		}
 
-		if(typeof(this.onEventCallbacks[event]) !== 'undefined') {
+		if(typeof (this.onEventCallbacks[event]) !== 'undefined') {
 			this.onEventCallbacks[event].forEach(function(callback, i) {
 				callback();
 			});
@@ -76,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 });
 
 // Focus-Klasse setzen
-window.addEventListener('keydown', function (event) {
+window.addEventListener('keydown', function(event) {
 	if(event.key === 'Tab') {
 		document.body.classList.add('focusable');
 	}
