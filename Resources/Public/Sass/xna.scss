@@ -27,6 +27,11 @@ $iconfont-create-icon-class: false !default;
 @import 'xna/components/table';
 @import 'xna/components/form';
 @import 'xna/components/flash';
+@import 'xna/components/badge';
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Modules
+@import 'xna/modules/slider';
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Layout

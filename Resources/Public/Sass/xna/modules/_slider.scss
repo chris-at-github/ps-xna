@@ -1,0 +1,35 @@
+.slider {
+	&__group {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+.slider--frontpage {
+	.slide__badge + .slide__header {
+		margin-top: rem(15px);
+	}
+
+	.slide__header {
+		font-size: rem(22px);
+		font-weight: $font-weight-base;
+	}
+
+	p {
+		margin-top: rem(15px);
+	}
+}
+
+// >= 768px
+@include media-breakpoint-up(md) {
+	.slider--frontpage {
+		.slide__badge + .slide__header {
+			margin-top: rem(35px);
+		}
+
+		.slide__header {
+			font-size: rem(24px);
+		}
+	}
+}
