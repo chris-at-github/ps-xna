@@ -44,6 +44,13 @@
 			<trans-unit id="tx_xna_pages.tx_xna_main_header_slogan">
 				<source>Use slogan as main header</source>
 			</trans-unit>
+
+			<trans-unit id="tx_xna_pages.module.bicycle_new">
+				<source>New Bicyle</source>
+			</trans-unit>
+			<trans-unit id="tx_xna_pages.module.bicycle_used">
+				<source>Used Bicyle</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

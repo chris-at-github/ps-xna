@@ -2,6 +2,15 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:xo/Configuration/TSConfig/Elements/" extensions="t3s">
 
 TCEFORM {
+	pages {
+		module {
+			addItems {
+				bicycle_new = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_pages.module.bicycle_new
+				bicycle_used = LLL:EXT:xna/Resources/Private/Language/locallang_tca.xlf:tx_xna_pages.module.bicycle_used
+			}
+		}
+	}
+
 	tt_content {
 		space_before_class {
 			addItems {
