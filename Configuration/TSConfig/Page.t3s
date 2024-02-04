@@ -42,3 +42,24 @@ mod.wizards.newContentElement.wizardItems {
 		show := addToList(xna_news_alert)
 	}
 }
+
+[53 in tree.rootLineIds]
+	TCEFORM.tx_entity_domain_model_entity {
+		long_description.disabled = 1
+		tx_entitybicyclemarket_discount_price.disabled = 1
+	}
+[END]
+
+[59 in tree.rootLineIds]
+	TCAdefaults.tx_entity_domain_model_entity {
+		tx_entitybicyclemarket_condition = new
+	}
+
+	TCEFORM.tx_entity_domain_model_entity {
+		tx_entitybicyclemarket_condition_description.disabled = 1
+		tx_entitybicyclemarket_service_condition.disabled = 1
+		tx_entitybicyclemarket_price_negotiation_basis.disabled = 1
+		tx_entitybicyclemarket_manufacturer_guarantee.disabled = 1
+		tx_entitybicyclemarket_token.disabled = 1
+	}
+[END]
