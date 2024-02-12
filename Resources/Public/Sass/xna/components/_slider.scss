@@ -46,13 +46,13 @@
 					top: 0;
 					width: 11px;
 					height: 11px;
-					border: 2px solid #fff;
+					border: 2px solid $link-color;
 					border-radius: 50%;
 					transition: all 0.25s;
 				}
 
 				&:hover:before {
-					border-color: $link-color;
+					border-color: $link-color-hover;
 				}
 
 				&.tns-nav-active {
@@ -61,12 +61,12 @@
 					}
 
 					&:before {
-						background: #fff;
+						background: $link-color;
 					}
 
 					&:hover:before {
-						background: #fff;
-						border-color: #fff;
+						background: $link-color;
+						border-color: $link-color;
 					}
 				}
 			}

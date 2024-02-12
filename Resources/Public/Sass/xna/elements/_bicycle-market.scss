@@ -92,7 +92,7 @@
 		}
 	}
 
-	.bicycle-modal--header, .bicycle-modal--properties, .bicycle-modal--price {
+	.bicycle-modal--header {
 		padding: 0.1px rem(10px);
 	}
 
@@ -137,44 +137,78 @@
 		}
 	}
 
-	.bicycle-modal--price {
-		margin: rem(5px 0 35px 0);
-		padding-top: rem(20px);
+	.bicycle-modal--property {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		padding: rem(20px 10px);
 		border-top: 1px solid #e9e9e9;
 	}
 
-	.bicycle-modal--price-value {
+	.bicycle-modal--property-value-large {
 		font-size: rem(20px);
 	}
 
-	.bicycle-modal--properties {
-		margin: rem(0 0 65px 0);
-		padding-top: rem(5px);
+	.bicycle-modal--property-value-html > *:first-child {
+		margin-top: 0;
+	}
+
+	.bicycle-modal--item-number {
+		color: #656565;
+	}
+
+	.bicycle-modal--sizes {
 		border-top: 1px solid #e9e9e9;
 	}
 
-	.bicycle-modal--property-title {
-		margin-top: rem(15px);
-		font-weight: $font-weight-bold;
-	}
-
-	.bicycle-modal--property-value {
-		p {
-			margin-top: 0;
-		}
-	}
-
-	.bicycle-modal--property-value-manufacturer-guarantee {
+	.bicycle-modal--size {
 		& {
-			@include iconfont(check);
+			border: 0;
 		}
 
-		&:before {
-			margin: rem(0 8px 0 0);
-			font-size: rem(18px);
-			color: #00beee;
+		& + .bicycle-modal--size {
+			border-top: 1px solid #e9e9e9;
 		}
 	}
+
+	//.bicycle-modal--price {
+	//	margin: rem(5px 0 35px 0);
+	//	padding-top: rem(20px);
+	//	border-top: 1px solid #e9e9e9;
+	//}
+	//
+	//.bicycle-modal--price-value {
+	//	font-size: rem(20px);
+	//}
+	//
+	//.bicycle-modal--properties {
+	//	padding-bottom: rem(65px);
+	//	padding-top: rem(5px);
+	//	border-top: 1px solid #e9e9e9;
+	//}
+	//
+	//.bicycle-modal--property-title {
+	//	margin-top: rem(15px);
+	//	font-weight: $font-weight-bold;
+	//}
+	//
+	//.bicycle-modal--property-value {
+	//	p {
+	//		margin-top: 0;
+	//	}
+	//}
+	//
+	//.bicycle-modal--property-value-manufacturer-guarantee {
+	//	& {
+	//		@include iconfont(check);
+	//	}
+	//
+	//	&:before {
+	//		margin: rem(0 8px 0 0);
+	//		font-size: rem(18px);
+	//		color: #00beee;
+	//	}
+	//}
 }
 
 .bicycle-request {
@@ -313,7 +347,8 @@
 			margin-top: rem(180px);
 		}
 
-		.bicycle-modal--header, .bicycle-modal--properties, .bicycle-modal--price {
+		.bicycle-modal--header,
+		.bicycle-modal--property {
 			padding-left: rem(20px);
 			padding-right: rem(20px);
 		}
@@ -326,17 +361,29 @@
 			font-size: rem(30px);
 		}
 
-		.bicycle-modal--price-value {
+		.bicycle-modal--property-value-large {
 			font-size: rem(24px);
 		}
 
-		.bicycle-modal--properties {
-			padding-top: rem(10px);
+		.bicycle-modal--sizes {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 		}
 
-		.bicycle-modal--property-value {
-			margin-top: rem(15px);
+		.bicycle-modal--size {
+			& + .bicycle-modal--size {
+				border-top: 0;
+				border-left: 1px solid #e9e9e9;
+			}
 		}
+
+		//.bicycle-modal--properties {
+		//	padding-top: rem(10px);
+		//}
+
+		//.bicycle-modal--property-value {
+		//	margin-top: rem(15px);
+		//}
 	}
 
 	.bicycle-request {

@@ -52,7 +52,7 @@ mod.wizards.newContentElement.wizardItems {
 
 [59 in tree.rootLineIds]
 	TCAdefaults.tx_entity_domain_model_entity {
-		tx_entitybicyclemarket_condition = new
+		tx_entitybicyclemarket_condition =
 	}
 
 	TCEFORM.tx_entity_domain_model_entity {
