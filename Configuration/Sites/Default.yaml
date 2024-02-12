@@ -15,7 +15,7 @@ languages:
     flag: de
 baseVariants:
   -
-    base: 'http://radlfluesterer.local/'
+    base: 'https://radlfluesterer-de.ddev.site/'
     condition: 'applicationContext == "Development"'
   - base: 'https://www.radlfluesterer.de/'
     condition: 'applicationContext == "Production"'
