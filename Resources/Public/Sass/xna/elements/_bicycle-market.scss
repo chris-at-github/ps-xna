@@ -10,9 +10,19 @@
 		overflow: hidden;
 	}
 
-	.bicycle-item--title {
+	.bicycle-item--footer {
+		display: grid;
+		grid-template-columns: 1fr max-content;
+		grid-gap: rem(10px);
+		align-items: start;
+	}
+
+	.bicycle-item--body {
 		margin: rem(15px 0 0 0);
 		padding: 0 8px;
+	}
+
+	.bicycle-item--title {
 		font-size: rem(20px);
 		font-weight: $font-weight-bold;
 		color: #00beee;
@@ -21,7 +31,46 @@
 
 	.bicycle-item--brand {
 		margin: rem(1px 0 0 0);
+	}
+
+	.bicycle-item--price-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		margin: rem(15px 0 0 0);
 		padding: 0 8px;
+	}
+
+	.bicycle-item--price {
+		display: flex;
+		justify-content: center;
+		padding: rem(4px 0);
+		border-radius: $border-radius-sm;
+	}
+
+	.bicycle-item--price-current {
+		min-width: 100px;
+		background: #00beee;
+		color: $white;
+	}
+
+	.bicycle-item--price-original {
+		& {
+			display: block;
+			width: max-content;
+			position: relative;
+			margin: 0 auto;
+			color: #656565;
+			//text-decoration: line-through;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: calc(50% - 1px);
+			left: -2px; right: -2px;
+			border-top: 1px solid #656565;
+		}
 	}
 
 	&:hover {
@@ -151,6 +200,23 @@
 
 	.bicycle-modal--property-value-html > *:first-child {
 		margin-top: 0;
+	}
+
+	.bicycle-modal--original-price {
+		& {
+			width: max-content;
+			position: relative;
+			margin: rem(0 0 -5px 0);
+			color: #656565;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: calc(50% - 1px);
+			left: -2px; right: -2px;
+			border-top: 1px solid #656565;
+		}
 	}
 
 	.bicycle-modal--item-number {
