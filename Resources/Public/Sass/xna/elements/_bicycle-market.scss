@@ -8,6 +8,20 @@
 	.bicycle-item--image {
 		border-radius: 8px;
 		overflow: hidden;
+		position: relative;
+	}
+
+	.bicycle-item--sticker {
+		& {
+			position: absolute;
+			bottom: 15px; right: 15px;
+			z-index: 10;
+		}
+
+		svg {
+			width: rem(40px);
+			height: rem(40px);
+		}
 	}
 
 	.bicycle-item--footer {
@@ -138,6 +152,19 @@
 			top: 0; left: 0;
 			width: 100%;
 			height: 100%;
+		}
+	}
+
+	.bicycle-modal--sticker {
+		& {
+			position: absolute;
+			bottom: 15px; right: 15px;
+			z-index: 10;
+		}
+
+		svg {
+			width: rem(70px);
+			height: rem(70px);
 		}
 	}
 
