@@ -18,9 +18,32 @@
 	}
 }
 
+.ce-textpic.ce-intext {
+	&.ce-right {
+		.image {
+			width: max-content;
+			margin: rem(5px) auto;
+		}
+	}
+}
+
 .ce-block-image-text--right {
 	.ce-image--container {
 		text-align: right;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.ce-textpic.ce-intext {
+		&.ce-right {
+			.ce-gallery {
+				float: right;
+			}
+
+			.image {
+				margin: rem(5px) 0 rem(30px) rem(30px);
+			}
+		}
 	}
 }
 
